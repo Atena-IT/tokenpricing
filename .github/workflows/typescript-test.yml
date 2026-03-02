@@ -1,0 +1,45 @@
+name: TypeScript Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "libraries/typescript/**"
+  pull_request:
+    paths:
+      - "libraries/typescript/**"
+
+jobs:
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+          cache-dependency-path: libraries/typescript/pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: libraries/typescript
+        run: pnpm install --frozen-lockfile
+
+      - name: Run unit tests
+        working-directory: libraries/typescript
+        run: pnpm test:coverage
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v5
+        with:
+          files: libraries/typescript/coverage/coverage-final.json
+          flags: typescript
+          fail_ci_if_error: false

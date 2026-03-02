@@ -1,0 +1,41 @@
+name: TypeScript Lint
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "libraries/typescript/**"
+  pull_request:
+    paths:
+      - "libraries/typescript/**"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+          cache-dependency-path: libraries/typescript/pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: libraries/typescript
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint (Biome)
+        working-directory: libraries/typescript
+        run: pnpm lint
+
+      - name: Type check
+        working-directory: libraries/typescript
+        run: pnpm typecheck

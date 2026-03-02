@@ -1,9 +1,9 @@
-# tokenpricing — AGENTS.md
+# tokenpricing (Python SDK) — AGENTS.md
 
-This file orients AI coding agents working on tokenpricing. Keep it concise, follow progressive disclosure, and always link to detailed docs in AGENTS-docs.
+This file orients AI coding agents working on the Python SDK. Keep it concise, follow progressive disclosure, and always link to detailed docs in AGENTS-docs.
 
 ## Why
-- Provide up-to-date LLM token pricing across providers using LLMTracker (updates ~6h).
+- Provide up-to-date API pricing math for 1k+ AI models using LLMTracker (updates ~6h).
 - Focus on pricing data only — no token counting. For counting, see tokencost.
 - Credit LLMTracker in code and docs: repo and website.
 
@@ -36,7 +36,7 @@ When a user requests a self-contained task (e.g., a new feature, critical bug fi
 
 This ensures proper tracking, collaboration, and review process for substantial changes.
 
-Common commands
+Common commands (run from `libraries/python/`):
 ```bash
 # Setup
 uv sync
@@ -44,7 +44,7 @@ uv sync
 # Test
 uv run pytest -q
 
-# Format & lint (pre-commit)
+# Format & lint (pre-commit — run from repo root)
 uv run pre-commit install
 uv run pre-commit run -a
 ```
@@ -74,7 +74,7 @@ Design decisions
 - No Token Counting: different tokenizers and use-cases make estimates unreliable; https://github.com/AgentOps-AI/tokencost already covers this very well.
 - Data Source: LLMTracker JSON at https://raw.githubusercontent.com/MrUnreal/LLMTracker/main/data/current/prices.json
 - Multi-currency: USD base via JSDelivr currency API (https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json) cached daily (24h) with uppercased currency tags.
-- CLI: planned (Typer recommended); not implemented yet.
+- CLI: implemented with Click; `tokenpricing pricing` and `tokenpricing cost` commands.
 
 What not to do
 - Don't fetch more often than needed; rely on 6h cache.

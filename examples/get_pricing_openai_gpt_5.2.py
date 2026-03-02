@@ -1,6 +1,6 @@
 import asyncio
 
-from tokenprice import get_pricing
+from tokenpricing import get_pricing
 
 
 async def main():

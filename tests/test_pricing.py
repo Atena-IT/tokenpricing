@@ -4,7 +4,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from tokenprice import compute_cost, get_pricing
+from tokenpricing import compute_cost, get_pricing
 
 
 @pytest.fixture

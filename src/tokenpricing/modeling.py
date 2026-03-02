@@ -97,7 +97,7 @@ class PricingData(BaseModel):
         Returns:
             Suggested model_id string if a close match is found, else None.
         """
-        from tokenprice.suggestions import suggest_model
+        from tokenpricing.suggestions import suggest_model
 
         display_names = {m.model_id: m.display_name for m in self.models.values()}
         match = suggest_model(

@@ -1,4 +1,4 @@
-"""Public facade API for tokenprice.
+"""Public facade API for tokenpricing.
 
 Exposes async and sync versions:
 - get_pricing(model_id, currency="USD") [async]
@@ -17,9 +17,9 @@ from __future__ import annotations
 
 from decimal import Decimal
 
-from tokenprice.currency import get_usd_rate
-from tokenprice.pricing import get_pricing_data
-from tokenprice.safeasyncio import make_sync
+from tokenpricing.currency import get_usd_rate
+from tokenpricing.pricing import get_pricing_data
+from tokenpricing.safeasyncio import make_sync
 
 
 async def get_pricing(model_id: str, currency: str = "USD"):
@@ -57,7 +57,7 @@ async def get_pricing(model_id: str, currency: str = "USD"):
     inp = Decimal(str(model.pricing.input_per_million)) * rate
     outp = Decimal(str(model.pricing.output_per_million)) * rate
 
-    from tokenprice.modeling import PricingInfo
+    from tokenpricing.modeling import PricingInfo
 
     return PricingInfo(
         input_per_million=float(inp),

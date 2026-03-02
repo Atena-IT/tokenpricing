@@ -1,16 +1,18 @@
 """Fetch and manage LLM pricing data from LLMTracker.
 
-Data source: https://github.com/MrUnreal/LLMTracker
+Data source: https://github.com/DiTo97/LLMTracker
 Website: https://mrunreal.github.io/LLMTracker/
 """
 
 import httpx
 from async_lru import alru_cache
 
-from tokenprice.modeling import PricingData
+from tokenpricing.modeling import PricingData
 
 # LLMTracker data URL - updated every 6 hours
-LLMTRACKER_URL = "https://raw.githubusercontent.com/MrUnreal/LLMTracker/main/data/current/prices.json"
+LLMTRACKER_URL = (
+    "https://raw.githubusercontent.com/DiTo97/LLMTracker/main/data/current/prices.json"
+)
 
 # Cache TTL: 6 hours (21600 seconds) - aligns with LLMTracker update frequency
 CACHE_TTL_SECONDS = 6 * 60 * 60

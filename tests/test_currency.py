@@ -2,7 +2,7 @@ from decimal import Decimal
 
 import pytest
 
-import tokenprice.currency as currency
+import tokenpricing.currency as currency
 
 
 @pytest.mark.unit

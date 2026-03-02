@@ -1,5 +1,5 @@
 [project]
-name = "tokenprice"
+name = "tokenpricing"
 version = "0.1.1"
 description = "API pricing estimates for 1k+ LLMs"
 readme = "README.md"
@@ -40,4 +40,8 @@ filterwarnings = [
 ]
 
 [project.scripts]
-tokenprice = "tokenprice.commandline:main"
+tokenpricing = "tokenpricing.commandline:main"
+
+[project.urls]
+Homepage = "https://github.com/Atena-IT/tokenpricing"
+Repository = "https://github.com/Atena-IT/tokenpricing"

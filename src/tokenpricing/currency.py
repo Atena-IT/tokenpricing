@@ -84,7 +84,7 @@ async def get_usd_rate(currency: str) -> Decimal:
         return rates[code]
 
     # Currency not found - try to suggest a similar one for the error message
-    from tokenprice.suggestions import suggest_currency
+    from tokenpricing.suggestions import suggest_currency
 
     match = suggest_currency(query=code, currency_codes=list(rates.keys()))
     if match is not None:

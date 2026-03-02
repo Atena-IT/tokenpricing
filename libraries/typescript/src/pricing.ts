@@ -5,7 +5,7 @@
  */
 
 import { TtlCache } from "./cache.js";
-import { type RawPricingData, parsePricingData } from "./modeling.js";
+import { parsePricingData, type RawPricingData } from "./modeling.js";
 
 /** LLMTracker data URL — updated every 6 hours */
 const LLMTRACKER_URL =

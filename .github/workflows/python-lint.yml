@@ -31,4 +31,5 @@ jobs:
         run: uv sync --group dev
 
       - name: Run pre-commit
-        run: uv run pre-commit run -a
+        working-directory: libraries/python
+        run: uv run pre-commit run -a --config ../../.pre-commit-config.yaml

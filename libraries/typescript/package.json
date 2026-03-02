@@ -18,9 +18,7 @@
       }
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsup",
     "test": "vitest run",
@@ -30,15 +28,7 @@
     "lint:fix": "biome check --write .",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": [
-    "llm",
-    "pricing",
-    "token",
-    "cost",
-    "openai",
-    "anthropic",
-    "ai"
-  ],
+  "keywords": ["llm", "pricing", "token", "cost", "openai", "anthropic", "ai"],
   "author": "Federico Minutoli",
   "license": "MIT",
   "repository": {

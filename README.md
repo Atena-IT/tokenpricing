@@ -7,7 +7,7 @@ API pricing estimates for 1k+ LLMs from [LLMTracker](https://mrunreal.github.io/
 | Library | Language | Package | Status |
 |---------|----------|---------|--------|
 | [Python SDK](libraries/python/) | Python 3.12+ | [`tokenpricing`](https://pypi.org/project/tokenpricing/) | Stable |
-| [TypeScript SDK](libraries/typescript/) | TypeScript / Node 18+ | [`tokenpricing`](https://www.npmjs.com/package/tokenpricing) | In development |
+| [TypeScript SDK](libraries/typescript/) | TypeScript / Node 18+ | [`tokenpricing`](https://www.npmjs.com/package/tokenpricing) | Stable |
 
 ## Quick Start
 
@@ -63,7 +63,7 @@ tokenpricing/
 Each library is self-contained. See the individual READMEs for setup and development instructions:
 
 - [Python SDK development](libraries/python/README.md#development)
-- [TypeScript SDK development](libraries/typescript/README.md) (coming soon)
+- [TypeScript SDK development](libraries/typescript/README.md#development)
 
 ## Credits
 

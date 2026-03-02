@@ -8,5 +8,5 @@
  * Data source: LLMTracker (https://github.com/DiTo97/LLMTracker)
  */
 
-export { getPricing, computeCost } from "./core.js";
+export { computeCost, getPricing } from "./core.js";
 export type { PricingInfo } from "./modeling.js";

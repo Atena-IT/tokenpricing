@@ -2,7 +2,7 @@
 
 import pytest
 
-from tokenprice.suggestions import (
+from tokenpricing.suggestions import (
     DEFAULT_SCORE_THRESHOLD,
     FuzzyMatch,
     suggest_match,

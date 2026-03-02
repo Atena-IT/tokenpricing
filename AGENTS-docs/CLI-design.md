@@ -19,19 +19,19 @@ Status: CLI shipped with Click. Commands: `price` and `cost` as specified below.
 
 ```bash
 # Price for a model in USD (default)
-tokenprice pricing openai/gpt-4o
+tokenpricing pricing openai/gpt-4o
 
 # Price converted to EUR (when FX is implemented)
-tokenprice pricing openai/gpt-4o --currency EUR
+tokenpricing pricing openai/gpt-4o --currency EUR
 
 # Disambiguate by provider
-tokenprice pricing anthropic/command-r+
+tokenpricing pricing anthropic/command-r+
 
 # JSON output for scripting
-tokenprice pricing openai/gpt-4o --json
+tokenpricing pricing openai/gpt-4o --json
 
 # Compute cost for a usage
-tokenprice cost openai/gpt-4o --in 1000 --out 500 --currency EUR
+tokenpricing cost openai/gpt-4o --in 1000 --out 500 --currency EUR
 ```
 
 ## Behavior

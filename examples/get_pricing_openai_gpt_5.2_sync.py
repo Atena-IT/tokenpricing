@@ -1,6 +1,6 @@
 """Example: Get pricing using sync API (no asyncio needed)."""
 
-from tokenprice import get_pricing_sync
+from tokenpricing import get_pricing_sync
 
 
 def main():

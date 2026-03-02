@@ -5,7 +5,7 @@ import json
 
 import click
 
-from tokenprice.core import compute_cost, get_pricing
+from tokenpricing.core import compute_cost, get_pricing
 
 
 @click.group(help="Query LLM token pricing and compute costs")

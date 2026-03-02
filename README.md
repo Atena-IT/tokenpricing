@@ -1,14 +1,14 @@
-# tokenprice
+# tokenpricing
 
-[![PyPI version](https://img.shields.io/pypi/v/tokenprice)](https://pypi.org/project/tokenprice/)
+[![PyPI version](https://img.shields.io/pypi/v/tokenpricing)](https://pypi.org/project/tokenpricing/)
 
 API pricing estimates for 1k+ LLMs from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
 
-## Why tokenprice?
+## Why tokenpricing?
 
-Token pricing for LLMs changes frequently across different providers. This library provides up-to-date pricing information by leveraging [LLMTracker](https://github.com/MrUnreal/LLMTracker), which updates pricing data every six hours from various sources.
+Token pricing for LLMs changes frequently across different providers. This library provides up-to-date pricing information by leveraging [LLMTracker](https://github.com/DiTo97/LLMTracker), which updates pricing data every six hours from various sources.
 
-**Important:** This library does **not** estimate token counts from strings or messages. Any estimation would be too approximate for anything beyond plain text, and the [tokencost](https://github.com/AgentOps-AI/tokencost) package already handles that use case well. tokenprice focuses solely on providing accurate, current pricing data.
+**Important:** This library does **not** estimate token counts from strings or messages. Any estimation would be too approximate for anything beyond plain text, and the [tokencost](https://github.com/AgentOps-AI/tokencost) package already handles that use case well. tokenpricing focuses solely on providing accurate, current pricing data.
 
 ## Features
 
@@ -20,13 +20,13 @@ Token pricing for LLMs changes frequently across different providers. This libra
 ## Installation
 
 ```bash
-uv add tokenprice
+uv add tokenpricing
 ```
 
 Or with pip:
 
 ```bash
-pip install tokenprice
+pip install tokenpricing
 ```
 
 ## Usage
@@ -46,7 +46,7 @@ The public API exposes both async and sync functions:
 ```python
 import asyncio
 
-from tokenprice import get_pricing, compute_cost
+from tokenpricing import get_pricing, compute_cost
 
 
 async def main():
@@ -71,7 +71,7 @@ asyncio.run(main())
 For simpler scripts, Jupyter notebooks, or environments where async is inconvenient, use the sync versions:
 
 ```python
-from tokenprice import get_pricing_sync, compute_cost_sync
+from tokenpricing import get_pricing_sync, compute_cost_sync
 
 model_id = "openai/gpt-5.2"
 
@@ -90,10 +90,10 @@ Both sync and async APIs share the same underlying cache, so mixing them won't c
 
 ### Helpful Error Messages
 
-When you make a typo in a model ID or currency code, tokenprice provides helpful "Did you mean?" suggestions:
+When you make a typo in a model ID or currency code, tokenpricing provides helpful "Did you mean?" suggestions:
 
 ```python
-from tokenprice import get_pricing_sync
+from tokenpricing import get_pricing_sync
 
 # Typo in model name: "gpt4" instead of "gpt-4"
 get_pricing_sync("openai/gpt4")
@@ -163,20 +163,20 @@ Internal modules and models are not considered public and may change. Both APIs 
 
 ## CLI
 
-Install via UV or pip, then use the `tokenprice` command.
+Install via UV or pip, then use the `tokenpricing` command.
 
 ```bash
 # Show price per 1M tokens (USD default)
-tokenprice pricing openai/gpt-5.2
+tokenpricing pricing openai/gpt-5.2
 
 # Convert to another currency (uses cached FX rates)
-tokenprice pricing openai/gpt-5.2 --currency EUR
+tokenpricing pricing openai/gpt-5.2 --currency EUR
 
 # JSON output for scripting
-tokenprice pricing openai/gpt-5.2 --json
+tokenpricing pricing openai/gpt-5.2 --json
 
 # Compute total cost for a usage
-tokenprice cost openai/gpt-5.2 --in 1000 --out 500 --currency EUR
+tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --currency EUR
 ```
 
 ## License

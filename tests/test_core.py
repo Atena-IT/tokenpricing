@@ -8,7 +8,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from tokenprice import compute_cost_sync, get_pricing_sync
+from tokenpricing import compute_cost_sync, get_pricing_sync
 
 
 @pytest.fixture
@@ -67,7 +67,7 @@ def sample_currency_response() -> dict:
 
 def test_get_pricing_sync_usd(sample_llmtracker_response):
     """Test sync get_pricing returns correct pricing in USD."""
-    with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_get:
+    with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_get:
         mock_response = Mock()
         mock_response.json.return_value = sample_llmtracker_response
         mock_get.return_value = mock_response
@@ -83,8 +83,8 @@ def test_get_pricing_sync_with_currency(
     sample_llmtracker_response, sample_currency_response, monkeypatch
 ):
     """Test sync get_pricing converts currency correctly."""
-    import tokenprice.pricing as pricing_mod
-    import tokenprice.currency as currency_mod
+    import tokenpricing.pricing as pricing_mod
+    import tokenpricing.currency as currency_mod
     from decimal import Decimal
 
     # Clear caches
@@ -92,7 +92,7 @@ def test_get_pricing_sync_with_currency(
     currency_mod._get_usd_rates_bucketed.cache_clear()
 
     # Mock the pricing data fetch
-    with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_pricing:
+    with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_pricing:
         mock_pricing_response = Mock()
         mock_pricing_response.json.return_value = sample_llmtracker_response
         mock_pricing.return_value = mock_pricing_response
@@ -119,7 +119,7 @@ def test_get_pricing_sync_with_currency(
 
 def test_get_pricing_sync_not_found(sample_llmtracker_response):
     """Test sync get_pricing raises ValueError for unknown model."""
-    with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_get:
+    with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_get:
         mock_response = Mock()
         mock_response.json.return_value = sample_llmtracker_response
         mock_get.return_value = mock_response
@@ -130,7 +130,7 @@ def test_get_pricing_sync_not_found(sample_llmtracker_response):
 
 def test_compute_cost_sync_usd(sample_llmtracker_response):
     """Test sync compute_cost calculates correctly in USD."""
-    with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_get:
+    with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_get:
         mock_response = Mock()
         mock_response.json.return_value = sample_llmtracker_response
         mock_get.return_value = mock_response
@@ -145,8 +145,8 @@ def test_compute_cost_sync_with_currency(
     sample_llmtracker_response, sample_currency_response, monkeypatch
 ):
     """Test sync compute_cost calculates correctly with currency conversion."""
-    import tokenprice.pricing as pricing_mod
-    import tokenprice.currency as currency_mod
+    import tokenpricing.pricing as pricing_mod
+    import tokenpricing.currency as currency_mod
     from decimal import Decimal
 
     # Clear caches
@@ -154,7 +154,7 @@ def test_compute_cost_sync_with_currency(
     currency_mod._get_usd_rates_bucketed.cache_clear()
 
     # Mock the pricing data fetch
-    with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_pricing:
+    with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_pricing:
         mock_pricing_response = Mock()
         mock_pricing_response.json.return_value = sample_llmtracker_response
         mock_pricing.return_value = mock_pricing_response
@@ -181,7 +181,7 @@ def test_compute_cost_sync_with_currency(
 
 def test_compute_cost_sync_negative_tokens(sample_llmtracker_response):
     """Test sync compute_cost raises ValueError for negative token counts."""
-    with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_get:
+    with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_get:
         mock_response = Mock()
         mock_response.json.return_value = sample_llmtracker_response
         mock_get.return_value = mock_response
@@ -198,11 +198,11 @@ class TestDidYouMeanSuggestions:
 
     def test_model_not_found_with_suggestion(self, sample_llmtracker_response):
         """Test that model not found error includes 'Did you mean?' suggestion."""
-        import tokenprice.pricing as pricing_mod
+        import tokenpricing.pricing as pricing_mod
 
         pricing_mod._get_pricing_data_bucketed.cache_clear()
 
-        with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_get:
+        with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_get:
             mock_response = Mock()
             mock_response.json.return_value = sample_llmtracker_response
             mock_get.return_value = mock_response
@@ -217,11 +217,11 @@ class TestDidYouMeanSuggestions:
 
     def test_model_not_found_no_suggestion(self, sample_llmtracker_response):
         """Test that completely unrelated model gives no suggestion."""
-        import tokenprice.pricing as pricing_mod
+        import tokenpricing.pricing as pricing_mod
 
         pricing_mod._get_pricing_data_bucketed.cache_clear()
 
-        with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_get:
+        with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_get:
             mock_response = Mock()
             mock_response.json.return_value = sample_llmtracker_response
             mock_get.return_value = mock_response
@@ -238,13 +238,13 @@ class TestDidYouMeanSuggestions:
         self, sample_llmtracker_response, monkeypatch
     ):
         """Test that currency not found error includes 'Did you mean?' suggestion."""
-        import tokenprice.pricing as pricing_mod
-        import tokenprice.currency as currency_mod
+        import tokenpricing.pricing as pricing_mod
+        import tokenpricing.currency as currency_mod
 
         pricing_mod._get_pricing_data_bucketed.cache_clear()
         currency_mod._get_usd_rates_bucketed.cache_clear()
 
-        with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_pricing:
+        with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_pricing:
             mock_pricing_response = Mock()
             mock_pricing_response.json.return_value = sample_llmtracker_response
             mock_pricing.return_value = mock_pricing_response
@@ -272,13 +272,13 @@ class TestDidYouMeanSuggestions:
         self, sample_llmtracker_response, monkeypatch
     ):
         """Test that completely unrelated currency gives no suggestion."""
-        import tokenprice.pricing as pricing_mod
-        import tokenprice.currency as currency_mod
+        import tokenpricing.pricing as pricing_mod
+        import tokenpricing.currency as currency_mod
 
         pricing_mod._get_pricing_data_bucketed.cache_clear()
         currency_mod._get_usd_rates_bucketed.cache_clear()
 
-        with patch("tokenprice.pricing.httpx.AsyncClient.get") as mock_pricing:
+        with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_pricing:
             mock_pricing_response = Mock()
             mock_pricing_response.json.return_value = sample_llmtracker_response
             mock_pricing.return_value = mock_pricing_response

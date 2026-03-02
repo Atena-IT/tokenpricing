@@ -1,4 +1,4 @@
-"""tokenprice - LLM token pricing library.
+"""tokenpricing - LLM token pricing library.
 
 Public API (async):
 - get_pricing(model_id, currency="USD")
@@ -8,11 +8,10 @@ Public API (sync):
 - get_pricing_sync(model_id, currency="USD")
 - compute_cost_sync(model_id, input_tokens, output_tokens, currency="USD")
 
-Data source: LLMTracker (https://github.com/MrUnreal/LLMTracker)
-Website: https://mrunreal.github.io/LLMTracker/
+Data source: LLMTracker (https://github.com/DiTo97/LLMTracker)
 """
 
-from tokenprice.core import (
+from tokenpricing.core import (
     compute_cost,
     compute_cost_sync,
     get_pricing,

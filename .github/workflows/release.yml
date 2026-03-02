@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/tokenprice
+      url: https://pypi.org/p/tokenpricing
     permissions:
       id-token: write
 
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/tokenprice
+      url: https://test.pypi.org/p/tokenpricing
     permissions:
       id-token: write
 

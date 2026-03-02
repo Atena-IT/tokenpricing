@@ -33,10 +33,10 @@ All work follows TDD: write failing tests before implementation. Use pytest for 
 
 ### Currency Cache
 
-- Entry points: `tokenprice.currency.get_usd_rates()` and `get_usd_rate(currency)`.
+- Entry points: `tokenpricing.currency.get_usd_rates()` and `get_usd_rate(currency)`.
 - Cache: async-lru with TTL (24h) on the internal cached getter.
 - Test pattern:
-  - Clear cache with `tokenprice.currency._get_usd_rates_bucketed.cache_clear()` before each test.
+  - Clear cache with `tokenpricing.currency._get_usd_rates_bucketed.cache_clear()` before each test.
   - Monkeypatch `_sync_get_usd_rates` to track call counts and return a small mapping of `Decimal` rates.
   - Assert only one underlying fetch within the TTL window; subsequent calls re-use the cached object.
   - Verify USD short-circuit: `get_usd_rate('USD')` returns `Decimal('1')` without fetching rates.

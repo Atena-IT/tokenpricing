@@ -1,6 +1,6 @@
 """Example: Compute cost using sync API (no asyncio needed)."""
 
-from tokenprice import compute_cost_sync
+from tokenpricing import compute_cost_sync
 
 
 def main():

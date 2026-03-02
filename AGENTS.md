@@ -1,6 +1,6 @@
-# tokenprice — AGENTS.md
+# tokenpricing — AGENTS.md
 
-This file orients AI coding agents working on tokenprice. Keep it concise, follow progressive disclosure, and always link to detailed docs in AGENTS-docs.
+This file orients AI coding agents working on tokenpricing. Keep it concise, follow progressive disclosure, and always link to detailed docs in AGENTS-docs.
 
 ## Why
 - Provide up-to-date LLM token pricing across providers using LLMTracker (updates ~6h).
@@ -10,15 +10,15 @@ This file orients AI coding agents working on tokenprice. Keep it concise, follo
 ## What
 - Stack: Python 3.12, `httpx` (async), `async-lru` (TTL), `pydantic` models, `pytest` (+pytest-asyncio), `ruff`, package manager `uv`.
 - Key modules:
-  - src/tokenprice/pricing.py — async fetch + 6h TTL cache of LLMTracker JSON.
-  - src/tokenprice/currency.py — USD base rates from JSDelivr currency API with 24h TTL cache.
-  - src/tokenprice/modeling.py — Pydantic models for dataset, search helpers.
-  - src/tokenprice/core.py — public facade exposing async and sync versions of `get_pricing` and `compute_cost`.
-  - src/tokenprice/safeasyncio.py — utilities for safely running async code in sync contexts.
-  - src/tokenprice/__init__.py — exports `get_pricing`, `get_pricing_sync`, `compute_cost`, and `compute_cost_sync`.
+  - src/tokenpricing/pricing.py — async fetch + 6h TTL cache of LLMTracker JSON.
+  - src/tokenpricing/currency.py — USD base rates from JSDelivr currency API with 24h TTL cache.
+  - src/tokenpricing/modeling.py — Pydantic models for dataset, search helpers.
+  - src/tokenpricing/core.py — public facade exposing async and sync versions of `get_pricing` and `compute_cost`.
+  - src/tokenpricing/safeasyncio.py — utilities for safely running async code in sync contexts.
+  - src/tokenpricing/__init__.py — exports `get_pricing`, `get_pricing_sync`, `compute_cost`, and `compute_cost_sync`.
 - Current state (truth):
   - Pricing fetch + cache implemented.
-  - CLI implemented with Click: `tokenprice pricing` and `tokenprice cost`.
+  - CLI implemented with Click: `tokenpricing pricing` and `tokenpricing cost`.
   - Multi-currency implemented: daily USD base rates cached 24h from JSDelivr currency API.
   - Dual API (async + sync): Both versions share the same underlying async cache via safeasyncio module.
 - Project map: see repository tree; tests live in tests/test_*.py.

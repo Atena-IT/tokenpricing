@@ -4,7 +4,7 @@ from datetime import datetime
 
 import pytest
 
-from tokenprice.modeling import (
+from tokenpricing.modeling import (
     MetadataInfo,
     ModelInfo,
     PricingData,

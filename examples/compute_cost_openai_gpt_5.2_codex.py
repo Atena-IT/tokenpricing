@@ -1,12 +1,12 @@
-"""Example usage of tokenprice public API."""
+"""Example usage of tokenpricing public API."""
 
 import asyncio
 
-from tokenprice import compute_cost, get_pricing
+from tokenpricing import compute_cost, get_pricing
 
 
 async def main():
-    """Demonstrate basic usage of tokenprice public API."""
+    """Demonstrate basic usage of tokenpricing public API."""
     model_id = "openai/gpt-5.2-codex"
 
     pricing = await get_pricing(model_id)

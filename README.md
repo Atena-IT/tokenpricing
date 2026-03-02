@@ -6,7 +6,7 @@ API pricing estimates for 1k+ LLMs from [LLMTracker](https://mrunreal.github.io/
 
 ## Why tokenpricing?
 
-Token pricing for LLMs changes frequently across different providers. This library provides up-to-date pricing information by leveraging [LLMTracker](https://github.com/MrUnreal/LLMTracker), which updates pricing data every six hours from various sources.
+Token pricing for LLMs changes frequently across different providers. This library provides up-to-date pricing information by leveraging [LLMTracker](https://github.com/DiTo97/LLMTracker), which updates pricing data every six hours from various sources.
 
 **Important:** This library does **not** estimate token counts from strings or messages. Any estimation would be too approximate for anything beyond plain text, and the [tokencost](https://github.com/AgentOps-AI/tokencost) package already handles that use case well. tokenpricing focuses solely on providing accurate, current pricing data.
 

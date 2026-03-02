@@ -1,4 +1,4 @@
-name: Release to PyPI
+name: Python Release to PyPI
 
 on:
   release:
@@ -8,8 +8,24 @@ permissions:
   contents: write
 
 jobs:
+  check-tag:
+    name: Check release tag
+    runs-on: ubuntu-latest
+    outputs:
+      is-python: ${{ steps.check.outputs.is-python }}
+    steps:
+      - id: check
+        run: |
+          if [[ "${{ github.event.release.tag_name }}" == py-v* ]]; then
+            echo "is-python=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is-python=false" >> "$GITHUB_OUTPUT"
+          fi
+
   build:
     name: Build distribution
+    needs: check-tag
+    if: needs.check-tag.outputs.is-python == 'true'
     runs-on: ubuntu-latest
 
     steps:
@@ -27,13 +43,14 @@ jobs:
         run: uv pip install --system build
 
       - name: Build package
+        working-directory: libraries/python
         run: python -m build
 
       - name: Upload distribution artifacts
         uses: actions/upload-artifact@v6
         with:
           name: python-package-distributions
-          path: dist/
+          path: libraries/python/dist/
 
   publish-pypi:
     name: Publish to PyPI

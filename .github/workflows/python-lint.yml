@@ -1,12 +1,18 @@
-name: pre-commit
+name: Python Lint
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main]
+    paths:
+      - "libraries/python/**"
+      - ".pre-commit-config.yaml"
   pull_request:
+    paths:
+      - "libraries/python/**"
+      - ".pre-commit-config.yaml"
 
 jobs:
-  pre-commit:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,6 +27,7 @@ jobs:
         uses: actions/setup-python@v6
 
       - name: Install dependencies (dev)
+        working-directory: libraries/python
         run: uv sync --group dev
 
       - name: Run pre-commit

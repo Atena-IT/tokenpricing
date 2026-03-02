@@ -1,10 +1,13 @@
-name: Test
+name: Python Test
 
 on:
-  pull_request:
-    branches: [main]
   push:
     branches: [main]
+    paths:
+      - "libraries/python/**"
+  pull_request:
+    paths:
+      - "libraries/python/**"
 
 jobs:
   unit-tests:
@@ -25,13 +28,16 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
+        working-directory: libraries/python
         run: uv sync
 
       - name: Run unit tests
+        working-directory: libraries/python
         run: uv run pytest --cov=tokenpricing --cov-report=xml
 
       - name: Upload coverage
         uses: codecov/codecov-action@v5
         with:
-          files: ./coverage.xml
+          files: libraries/python/coverage.xml
+          flags: python
           fail_ci_if_error: false

@@ -1,0 +1,62 @@
+name: TypeScript Release to npm
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  check-tag:
+    name: Check release tag
+    runs-on: ubuntu-latest
+    outputs:
+      is-typescript: ${{ steps.check.outputs.is-typescript }}
+    steps:
+      - id: check
+        run: |
+          if [[ "${{ github.event.release.tag_name }}" == ts-v* ]]; then
+            echo "is-typescript=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is-typescript=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  publish:
+    name: Build and publish
+    needs: check-tag
+    if: needs.check-tag.outputs.is-typescript == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+          cache-dependency-path: libraries/typescript/pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: libraries/typescript
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        working-directory: libraries/typescript
+        run: pnpm build
+
+      - name: Publish to npm
+        working-directory: libraries/typescript
+        run: pnpm publish --provenance --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

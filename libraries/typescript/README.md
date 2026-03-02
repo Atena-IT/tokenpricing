@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/tokenpricing)](https://www.npmjs.com/package/tokenpricing)
 
-API pricing estimates for 1k+ LLMs from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
+API pricing math for 1k+ AI models from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
 
 ## Why tokenpricing?
 

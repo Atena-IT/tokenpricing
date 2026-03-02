@@ -3,7 +3,7 @@
 This file orients AI coding agents working on the Python SDK. Keep it concise, follow progressive disclosure, and always link to detailed docs in AGENTS-docs.
 
 ## Why
-- Provide up-to-date LLM token pricing across providers using LLMTracker (updates ~6h).
+- Provide up-to-date API pricing math for 1k+ AI models using LLMTracker (updates ~6h).
 - Focus on pricing data only — no token counting. For counting, see tokencost.
 - Credit LLMTracker in code and docs: repo and website.
 

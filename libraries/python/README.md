@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/tokenpricing)](https://pypi.org/project/tokenpricing/)
 
-API pricing estimates for 1k+ LLMs from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
+API pricing math for 1k+ AI models from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
 
 ## Why tokenpricing?
 

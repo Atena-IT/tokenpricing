@@ -1,6 +1,6 @@
 # tokenpricing
 
-API pricing estimates for 1k+ LLMs from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
+API pricing math for 1k+ AI models from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
 
 ## Libraries
 
@@ -41,6 +41,24 @@ console.log(`Input: €${pricing.inputPerMillion.toFixed(2)}/1M tokens`);
 
 const cost = await computeCost("openai/gpt-5.2", 1000, 500);
 console.log(`Total: $${cost.toFixed(6)}`);
+```
+
+### CLI (Python)
+
+Install via pip, then use the `tokenpricing` command.
+
+```bash
+# Show price per 1M tokens (USD default)
+tokenpricing pricing openai/gpt-5.2
+
+# Convert to another currency (uses cached FX rates)
+tokenpricing pricing openai/gpt-5.2 --currency EUR
+
+# JSON output for scripting
+tokenpricing pricing openai/gpt-5.2 --json
+
+# Compute total cost for a usage
+tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --currency EUR
 ```
 
 ## Data Source

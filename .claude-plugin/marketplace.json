@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "tokenpricing",
+  "description": "Live LLM token pricing and cost estimation from the command line",
+  "owner": {
+    "name": "Atena Reply S.r.l.",
+    "email": "atena@reply.it"
+  },
+  "plugins": [
+    {
+      "name": "tokenpricing",
+      "description": "Query live model pricing and compute workload costs across providers and currencies",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/tokenpricing"],
+      "category": "development"
+    }
+  ]
+}

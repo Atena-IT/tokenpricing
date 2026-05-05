@@ -122,6 +122,14 @@ tokenpricing pricing openai/gpt-5.2 --json
 tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --currency EUR
 ```
 
+## Claude Code skill
+
+The repository also ships a Claude Code marketplace manifest at `.claude-plugin/marketplace.json` and the canonical hidden skill at `skills/tokenpricing/SKILL.md`.
+
+The skill wraps the existing `tokenpricing` CLI for pricing lookups and workload cost calculations. It does not estimate token counts from raw text.
+
+The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
+
 ## Data Source
 
 Pricing data is sourced from [LLMTracker](https://github.com/MrUnreal/LLMTracker), which aggregates and updates pricing information from various LLM providers every six hours. The raw data is available at:

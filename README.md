@@ -61,6 +61,14 @@ tokenpricing pricing openai/gpt-5.2 --json
 tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --currency EUR
 ```
 
+## Claude Code skill
+
+This repository ships a Claude Code marketplace manifest at `.claude-plugin/marketplace.json` and the canonical hidden skill at `skills/tokenpricing/SKILL.md`.
+
+When the plugin is installed, Claude Code can pick up the skill automatically and shell out to the existing `tokenpricing` CLI for pricing lookups and workload cost calculations.
+
+The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
+
 ## Data Source
 
 Pricing data is sourced from [LLMTracker](https://github.com/MrUnreal/LLMTracker), which aggregates and updates pricing information from various LLM providers every six hours.
@@ -69,8 +77,10 @@ Pricing data is sourced from [LLMTracker](https://github.com/MrUnreal/LLMTracker
 
 ```
 tokenpricing/
+├── .claude-plugin/      Claude Code marketplace manifest
+├── skills/              Canonical coding-agent skill
 ├── libraries/
-│   ├── python/          Python SDK (PyPI)
+│   ├── python/          Python SDK + CLI (PyPI)
 │   └── typescript/      TypeScript SDK (npm)
 ├── .github/workflows/   CI/CD (path-filtered per library)
 └── LICENSE

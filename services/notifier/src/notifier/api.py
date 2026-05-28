@@ -46,7 +46,9 @@ def create_app(
         try:
             return get_service().get_subscription(subscription_id)
         except KeyError as exc:
-            raise HTTPException(status_code=404, detail="subscription not found") from exc
+            raise HTTPException(
+                status_code=404, detail="subscription not found"
+            ) from exc
 
     @app.patch("/subscriptions/{subscription_id}", response_model=SubscriptionRecord)
     async def update_subscription(
@@ -56,14 +58,18 @@ def create_app(
         try:
             return get_service().update_subscription(subscription_id, request)
         except KeyError as exc:
-            raise HTTPException(status_code=404, detail="subscription not found") from exc
+            raise HTTPException(
+                status_code=404, detail="subscription not found"
+            ) from exc
 
     @app.delete("/subscriptions/{subscription_id}", status_code=204)
     async def delete_subscription(subscription_id: str) -> Response:
         try:
             get_service().delete_subscription(subscription_id)
         except KeyError as exc:
-            raise HTTPException(status_code=404, detail="subscription not found") from exc
+            raise HTTPException(
+                status_code=404, detail="subscription not found"
+            ) from exc
         return Response(status_code=204)
 
     @app.post(
@@ -74,7 +80,9 @@ def create_app(
         try:
             return await get_service().verify_subscription(subscription_id)
         except KeyError as exc:
-            raise HTTPException(status_code=404, detail="subscription not found") from exc
+            raise HTTPException(
+                status_code=404, detail="subscription not found"
+            ) from exc
 
     @app.post(
         "/subscriptions/{subscription_id}/test",
@@ -84,7 +92,9 @@ def create_app(
         try:
             return await get_service().send_test_notification(subscription_id)
         except KeyError as exc:
-            raise HTTPException(status_code=404, detail="subscription not found") from exc
+            raise HTTPException(
+                status_code=404, detail="subscription not found"
+            ) from exc
 
     @app.post(
         "/subscriptions/{subscription_id}/rotate-secret",
@@ -94,7 +104,9 @@ def create_app(
         try:
             return get_service().rotate_secret(subscription_id)
         except KeyError as exc:
-            raise HTTPException(status_code=404, detail="subscription not found") from exc
+            raise HTTPException(
+                status_code=404, detail="subscription not found"
+            ) from exc
 
     @app.post("/sync", response_model=SyncResult)
     async def sync(force_refresh: bool = False) -> SyncResult:

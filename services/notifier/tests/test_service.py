@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 
+import pytest
 from tokenpricing.modeling import (
     MetadataInfo,
     ModelInfo,
@@ -75,6 +76,7 @@ def build_dataset(input_price: float) -> PricingData:
     )
 
 
+@pytest.mark.anyio
 async def test_sync_and_delivery_flow(tmp_path) -> None:
     dispatcher = RecordingDispatcher()
     service = NotifierService(

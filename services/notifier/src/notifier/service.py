@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from typing import Awaitable, Callable
 
@@ -108,12 +108,16 @@ class NotifierService:
             payload={"message": "tokenpricing notifier webhook test"},
         )
         persisted = self.store.save_events(None, [event])[0]
-        self.store.enqueue_deliveries([self._build_delivery(subscription, persisted, now)])
+        self.store.enqueue_deliveries(
+            [self._build_delivery(subscription, persisted, now)]
+        )
 
     async def sync_once(self, *, force_refresh: bool = False) -> SyncResult:
         latest_snapshot = self.store.get_latest_snapshot_models()
         previous_models = (
-            {model.model_id: model for model in latest_snapshot[1]} if latest_snapshot else {}
+            {model.model_id: model for model in latest_snapshot[1]}
+            if latest_snapshot
+            else {}
         )
         data = await self.pricing_fetcher(force_refresh)
         current_models_list = normalize_pricing_data(data)

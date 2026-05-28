@@ -5,8 +5,6 @@ import secrets
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
-
 from notifier.models import (
     DeliveryListItem,
     DeliveryRecord,
@@ -136,7 +134,9 @@ class NotifierStore:
         subscription_id = secrets.token_hex(12)
         now = utcnow()
         secret = request.secret or secrets.token_urlsafe(32)
-        filters_json = json.dumps(request.filters.model_dump(mode="json"), sort_keys=True)
+        filters_json = json.dumps(
+            request.filters.model_dump(mode="json"), sort_keys=True
+        )
         with self._connect() as connection:
             connection.execute(
                 """
@@ -202,7 +202,9 @@ class NotifierStore:
                 """,
                 (
                     str(request.webhook_url or current.webhook_url),
-                    request.description if request.description is not None else current.description,
+                    request.description
+                    if request.description is not None
+                    else current.description,
                     status.value,
                     json.dumps(filters.model_dump(mode="json"), sort_keys=True),
                     now.isoformat(),
@@ -321,7 +323,9 @@ class NotifierStore:
             status=row["status"],
         )
 
-    def save_events(self, snapshot_id: int | None, events: list[DetectedEvent]) -> list[DetectedEvent]:
+    def save_events(
+        self, snapshot_id: int | None, events: list[DetectedEvent]
+    ) -> list[DetectedEvent]:
         if not events:
             return []
         with self._connect() as connection:
@@ -342,7 +346,9 @@ class NotifierStore:
                     for event in events
                 ],
             )
-        return [event.model_copy(update={"snapshot_id": snapshot_id}) for event in events]
+        return [
+            event.model_copy(update={"snapshot_id": snapshot_id}) for event in events
+        ]
 
     def enqueue_deliveries(
         self,
@@ -369,8 +375,12 @@ class NotifierStore:
                         delivery.attempts,
                         delivery.max_attempts,
                         delivery.next_attempt_at.isoformat(),
-                        delivery.last_attempt_at.isoformat() if delivery.last_attempt_at else None,
-                        delivery.delivered_at.isoformat() if delivery.delivered_at else None,
+                        delivery.last_attempt_at.isoformat()
+                        if delivery.last_attempt_at
+                        else None,
+                        delivery.delivered_at.isoformat()
+                        if delivery.delivered_at
+                        else None,
                         delivery.last_error,
                         delivery.response_status,
                         delivery.created_at.isoformat(),

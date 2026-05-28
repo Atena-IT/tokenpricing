@@ -54,7 +54,9 @@ class SubscriptionFilters(BaseModel):
     category: str | None = None
     supports_vision: bool | None = None
     supports_function_calling: bool | None = None
-    event_types: list[EventType] = Field(default_factory=lambda: DEFAULT_EVENT_TYPES.copy())
+    event_types: list[EventType] = Field(
+        default_factory=lambda: DEFAULT_EVENT_TYPES.copy()
+    )
 
 
 class SubscriptionCreate(BaseModel):

@@ -28,13 +28,17 @@ async def dispatch_webhook(
     headers = {
         "Content-Type": "application/json",
         "X-Tokenpricing-Delivery": delivery.id,
-        "X-Tokenpricing-Event": str(delivery.payload.get("event", {}).get("type", "unknown")),
+        "X-Tokenpricing-Event": str(
+            delivery.payload.get("event", {}).get("type", "unknown")
+        ),
         "X-Tokenpricing-Timestamp": timestamp,
         "X-Tokenpricing-Signature": sign_payload(secret, timestamp, body),
     }
     async with httpx.AsyncClient(timeout=timeout_seconds) as client:
         try:
-            response = await client.post(str(delivery.webhook_url), content=body, headers=headers)
+            response = await client.post(
+                str(delivery.webhook_url), content=body, headers=headers
+            )
         except httpx.HTTPError as exc:
             return DeliveryAttemptResult(success=False, error=str(exc))
     if 200 <= response.status_code < 300:

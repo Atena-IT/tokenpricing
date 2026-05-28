@@ -9,6 +9,12 @@ API pricing math for 1k+ AI models from [LLMTracker](https://mrunreal.github.io/
 | [Python SDK](libraries/python/) | Python 3.12+ | [`tokenpricing`](https://pypi.org/project/tokenpricing/) | Stable |
 | [TypeScript SDK](libraries/typescript/) | TypeScript / Node 18+ | [`tokenpricing`](https://www.npmjs.com/package/tokenpricing) | Stable |
 
+## Services
+
+| Service | Language | Path | Status |
+|---------|----------|------|--------|
+| Notifier | Python 3.12+ | [services/notifier/](services/notifier/) | Experimental |
+
 ## Quick Start
 
 ### Python
@@ -79,6 +85,8 @@ Pricing data is sourced from [LLMTracker](https://github.com/MrUnreal/LLMTracker
 tokenpricing/
 ├── .claude-plugin/      Claude Code marketplace manifest
 ├── skills/              Canonical coding-agent skill
+├── services/
+│   └── notifier/        Webhook notification service
 ├── libraries/
 │   ├── python/          Python SDK + CLI (PyPI)
 │   └── typescript/      TypeScript SDK (npm)

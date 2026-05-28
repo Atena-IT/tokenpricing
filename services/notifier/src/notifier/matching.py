@@ -22,7 +22,10 @@ def subscription_matches_event(
 
     if filters.model_id and filters.model_id != event.model.model_id:
         return False
-    if _normalize_text(filters.provider) not in {None, _normalize_text(event.model.provider)}:
+    if _normalize_text(filters.provider) not in {
+        None,
+        _normalize_text(event.model.provider),
+    }:
         return False
     if _normalize_text(filters.model_family) not in {
         None,

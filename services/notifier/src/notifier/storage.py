@@ -5,12 +5,14 @@ import secrets
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
+
 from notifier.models import (
     DeliveryListItem,
     DeliveryRecord,
     DeliveryStatus,
     DetectedEvent,
     EventListItem,
+    ModelStatus,
     NormalizedModel,
     SecretRotationResponse,
     SubscriptionCreate,
@@ -320,7 +322,7 @@ class NotifierStore:
             input_per_million=row["input_per_million"],
             output_per_million=row["output_per_million"],
             currency=row["currency"],
-            status=row["status"],
+            status=ModelStatus(row["status"]),
         )
 
     def save_events(

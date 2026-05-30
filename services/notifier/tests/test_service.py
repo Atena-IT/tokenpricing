@@ -11,8 +11,13 @@ from tokenpricing.modeling import (
     ProviderInfo,
 )
 
-from notifier.models import EventType, SubscriptionCreate, SubscriptionFilters
-from notifier.service import NotifierService
+from notifier.models import (
+    EventType,
+    ModelStatus,
+    SubscriptionCreate,
+    SubscriptionFilters,
+)
+from notifier.service import NotifierService, infer_model_status
 
 
 class SequenceFetcher:
@@ -76,7 +81,7 @@ def build_dataset(input_price: float) -> PricingData:
     )
 
 
-@pytest.mark.anyio
+@pytest.mark.asyncio
 async def test_sync_and_delivery_flow(tmp_path) -> None:
     dispatcher = RecordingDispatcher()
     service = NotifierService(
@@ -103,3 +108,8 @@ async def test_sync_and_delivery_flow(tmp_path) -> None:
     assert second_sync.deliveries_enqueued == 1
     assert flush_result.sent == 1
     assert dispatcher.deliveries[0][1] == subscription.secret
+
+
+def test_infer_model_status_uses_word_boundaries() -> None:
+    assert infer_model_status("non-deprecated") == ModelStatus.ACTIVE
+    assert infer_model_status("Legacy model", "", "") == ModelStatus.DEPRECATED

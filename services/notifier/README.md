@@ -7,7 +7,7 @@ Webhook notification service for tokenpricing pricing changes and model lifecycl
 - stores webhook subscriptions in SQLite
 - derives a normalized model family from the upstream model identifier
 - snapshots pricing data from the Python `tokenpricing` SDK
-- detects pricing changes, model additions, removals, and explicit deprecation-style markers
+- detects pricing changes, model additions, removals, and heuristic deprecation-style markers
 - signs outgoing webhooks and retries failed deliveries with backoff
 - exposes a FastAPI management API plus CLI commands for serving, syncing, and running a worker loop
 
@@ -48,3 +48,11 @@ Deliveries include the following headers:
 - `X-Tokenpricing-Signature`
 
 The signature is an HMAC-SHA256 over `{timestamp}.{raw_json_body}`.
+
+## Model status detection
+
+The notifier infers deprecation status heuristically from upstream text fields because the
+current `tokenpricing.modeling.ModelInfo` payload does not expose a dedicated lifecycle or
+deprecation field. It currently matches whole-word markers such as `deprecated`, `legacy`,
+`retired`, `sunset`, and `EOL`, so false positives and false negatives remain possible when
+upstream naming changes.

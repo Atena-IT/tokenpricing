@@ -41,3 +41,30 @@ def test_detect_events_for_price_change_and_removal() -> None:
     assert EventType.PRICING_CHANGED in event_types
     assert EventType.PRICING_INCREASED in event_types
     assert EventType.MODEL_REMOVED in event_types
+
+
+def test_detect_events_for_add_deprecate_and_price_decrease() -> None:
+    previous = {
+        "openai/gpt-5.2": build_model(
+            input_per_million=2.0,
+            status=ModelStatus.ACTIVE,
+        ),
+    }
+    current = {
+        "openai/gpt-5.2": build_model(
+            input_per_million=1.0,
+            status=ModelStatus.DEPRECATED,
+        ),
+        "openai/new-model": build_model(
+            model_id="openai/new-model",
+            model_family="new-model",
+        ),
+    }
+
+    events = detect_events(previous, current, occurred_at=datetime.now(timezone.utc))
+    event_types = {event.type for event in events}
+
+    assert EventType.MODEL_ADDED in event_types
+    assert EventType.MODEL_DEPRECATED in event_types
+    assert EventType.PRICING_CHANGED in event_types
+    assert EventType.PRICING_DECREASED in event_types

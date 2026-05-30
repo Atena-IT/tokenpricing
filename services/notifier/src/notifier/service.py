@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Awaitable, Callable
@@ -29,6 +30,9 @@ from notifier.webhooks import dispatch_webhook, next_retry_time
 
 PricingFetcher = Callable[[bool], Awaitable[PricingData]]
 WebhookDispatcher = Callable[[DeliveryRecord, str], Awaitable]
+DEPRECATED_STATUS_PATTERN = re.compile(
+    r"(?<![\w-])(deprecated|legacy|retired|sunset|eol)(?![\w-])"
+)
 
 
 async def default_pricing_fetcher(force_refresh: bool = False) -> PricingData:
@@ -70,6 +74,7 @@ class NotifierService:
         return self.store.rotate_secret(subscription_id)
 
     async def verify_subscription(self, subscription_id: str) -> DeliveryFlushResult:
+        self.get_subscription(subscription_id)
         subscription = self.store.mark_verified(subscription_id)
         await self._enqueue_test_delivery(subscription, event_type=EventType.TEST)
         return await self.flush_deliveries()
@@ -96,9 +101,9 @@ class NotifierService:
                 model_family=subscription.filters.model_family or "notifier-test",
                 model_type=subscription.filters.model_type or "service",
                 category=subscription.filters.category or "test",
-                supports_vision=subscription.filters.supports_vision or False,
+                supports_vision=subscription.filters.supports_vision is True,
                 supports_function_calling=(
-                    subscription.filters.supports_function_calling or False
+                    subscription.filters.supports_function_calling is True
                 ),
                 input_per_million=0.0,
                 output_per_million=0.0,
@@ -186,9 +191,13 @@ class NotifierService:
     async def flush_deliveries(self) -> DeliveryFlushResult:
         deliveries = self.store.get_due_deliveries()
         attempted = sent = failed = 0
+        subscription_cache: dict[str, SubscriptionRecord] = {}
         for delivery in deliveries:
             attempted += 1
-            subscription = self.get_subscription(delivery.subscription_id)
+            subscription = subscription_cache.get(delivery.subscription_id)
+            if subscription is None:
+                subscription = self.get_subscription(delivery.subscription_id)
+                subscription_cache[delivery.subscription_id] = subscription
             attempt_time = utcnow()
             result = await self.webhook_dispatcher(delivery, subscription.secret)
             next_attempt = next_retry_time(attempt_time, delivery.attempts + 1)
@@ -254,6 +263,6 @@ def normalize_pricing_data(data: PricingData) -> list[NormalizedModel]:
 
 def infer_model_status(*fields: str) -> ModelStatus:
     joined = " ".join(field.lower() for field in fields)
-    if any(term in joined for term in {"deprecated", "legacy", "retired"}):
+    if DEPRECATED_STATUS_PATTERN.search(joined):
         return ModelStatus.DEPRECATED
     return ModelStatus.ACTIVE

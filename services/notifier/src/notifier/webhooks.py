@@ -9,6 +9,7 @@ import httpx
 
 from notifier.models import DeliveryAttemptResult, DeliveryRecord
 
+MAX_ERROR_LENGTH = 2048
 RETRY_DELAYS = [0, 60, 300, 1800, 7200]
 
 
@@ -46,10 +47,16 @@ async def dispatch_webhook(
     return DeliveryAttemptResult(
         success=False,
         status_code=response.status_code,
-        error=response.text or response.reason_phrase,
+        error=_truncate_error(response.text or response.reason_phrase),
     )
 
 
 def next_retry_time(now: datetime, attempt_number: int) -> datetime:
     delay = RETRY_DELAYS[min(attempt_number, len(RETRY_DELAYS) - 1)]
     return now + timedelta(seconds=delay)
+
+
+def _truncate_error(message: str | None) -> str | None:
+    if message is None or len(message) <= MAX_ERROR_LENGTH:
+        return message
+    return f"{message[:MAX_ERROR_LENGTH]}..."

@@ -1,0 +1,40 @@
+name: Notifier Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "services/notifier/**"
+      - "libraries/python/**"
+  pull_request:
+    paths:
+      - "services/notifier/**"
+      - "libraries/python/**"
+
+jobs:
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "latest"
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        working-directory: services/notifier
+        run: uv sync --group dev
+
+      - name: Run unit tests
+        working-directory: services/notifier
+        run: uv run pytest

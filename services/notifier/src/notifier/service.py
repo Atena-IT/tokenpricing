@@ -191,14 +191,31 @@ class NotifierService:
     async def flush_deliveries(self) -> DeliveryFlushResult:
         deliveries = self.store.get_due_deliveries()
         attempted = sent = failed = 0
-        subscription_cache: dict[str, SubscriptionRecord] = {}
+        subscription_cache: dict[str, SubscriptionRecord | None] = {}
         for delivery in deliveries:
             attempted += 1
-            subscription = subscription_cache.get(delivery.subscription_id)
-            if subscription is None:
-                subscription = self.get_subscription(delivery.subscription_id)
-                subscription_cache[delivery.subscription_id] = subscription
             attempt_time = utcnow()
+            if delivery.subscription_id not in subscription_cache:
+                try:
+                    subscription_cache[delivery.subscription_id] = (
+                        self.get_subscription(delivery.subscription_id)
+                    )
+                except KeyError:
+                    subscription_cache[delivery.subscription_id] = None
+            subscription = subscription_cache[delivery.subscription_id]
+            if subscription is None:
+                failed += 1
+                self.store.update_delivery(
+                    delivery.id,
+                    status=DeliveryStatus.DEAD_LETTER,
+                    attempts=delivery.attempts + 1,
+                    next_attempt_at=attempt_time,
+                    last_attempt_at=attempt_time,
+                    delivered_at=None,
+                    last_error="subscription deleted before delivery",
+                    response_status=None,
+                )
+                continue
             result = await self.webhook_dispatcher(delivery, subscription.secret)
             next_attempt = next_retry_time(attempt_time, delivery.attempts + 1)
             if result.success:

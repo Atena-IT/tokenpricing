@@ -50,10 +50,9 @@ def detect_events(
                     payload={"before": before, "after": after},
                 )
             )
-            if (
-                current.input_per_million > previous.input_per_million
-                or current.output_per_million > previous.output_per_million
-            ):
+            current_total = current.input_per_million + current.output_per_million
+            previous_total = previous.input_per_million + previous.output_per_million
+            if current_total > previous_total:
                 events.append(
                     DetectedEvent(
                         type=EventType.PRICING_INCREASED,
@@ -62,10 +61,7 @@ def detect_events(
                         payload={"before": before, "after": after},
                     )
                 )
-            if (
-                current.input_per_million < previous.input_per_million
-                or current.output_per_million < previous.output_per_million
-            ):
+            elif current_total < previous_total:
                 events.append(
                     DetectedEvent(
                         type=EventType.PRICING_DECREASED,

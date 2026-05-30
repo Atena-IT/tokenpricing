@@ -12,6 +12,7 @@ from tokenpricing.modeling import (
 )
 
 from notifier.models import (
+    DeliveryStatus,
     EventType,
     ModelStatus,
     SubscriptionCreate,
@@ -108,6 +109,56 @@ async def test_sync_and_delivery_flow(tmp_path) -> None:
     assert second_sync.deliveries_enqueued == 1
     assert flush_result.sent == 1
     assert dispatcher.deliveries[0][1] == subscription.secret
+
+
+@pytest.mark.asyncio
+async def test_flush_deliveries_dead_letters_deleted_subscriptions(tmp_path) -> None:
+    dispatcher = RecordingDispatcher()
+    service = NotifierService(
+        tmp_path / "notifier.db",
+        pricing_fetcher=SequenceFetcher(build_dataset(1.0), build_dataset(1.5)),
+        webhook_dispatcher=dispatcher,
+    )
+    deleted_subscription = service.create_subscription(
+        SubscriptionCreate(
+            webhook_url="https://example.com/deleted",
+            filters=SubscriptionFilters(
+                provider="openai",
+                event_types=[EventType.PRICING_CHANGED],
+            ),
+        )
+    )
+    active_subscription = service.create_subscription(
+        SubscriptionCreate(
+            webhook_url="https://example.com/active",
+            filters=SubscriptionFilters(
+                provider="openai",
+                event_types=[EventType.PRICING_CHANGED],
+            ),
+        )
+    )
+
+    await service.sync_once()
+    await service.sync_once()
+    service.delete_subscription(deleted_subscription.id)
+
+    flush_result = await service.flush_deliveries()
+    deliveries = service.store.list_deliveries()
+    deleted_delivery = next(
+        item for item in deliveries if item.subscription_id == deleted_subscription.id
+    )
+    active_delivery = next(
+        item for item in deliveries if item.subscription_id == active_subscription.id
+    )
+
+    assert flush_result.attempted == 2
+    assert flush_result.sent == 1
+    assert flush_result.failed == 1
+    assert len(dispatcher.deliveries) == 1
+    assert dispatcher.deliveries[0][1] == active_subscription.secret
+    assert active_delivery.status == DeliveryStatus.SENT.value
+    assert deleted_delivery.status == DeliveryStatus.DEAD_LETTER.value
+    assert deleted_delivery.last_error == "subscription deleted before delivery"
 
 
 def test_infer_model_status_uses_word_boundaries() -> None:

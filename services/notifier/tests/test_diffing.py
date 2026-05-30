@@ -68,3 +68,25 @@ def test_detect_events_for_add_deprecate_and_price_decrease() -> None:
     assert EventType.MODEL_DEPRECATED in event_types
     assert EventType.PRICING_CHANGED in event_types
     assert EventType.PRICING_DECREASED in event_types
+
+
+def test_detect_events_uses_total_price_for_direction() -> None:
+    previous = {
+        "openai/gpt-5.2": build_model(
+            input_per_million=1.0,
+            output_per_million=2.0,
+        ),
+    }
+    current = {
+        "openai/gpt-5.2": build_model(
+            input_per_million=2.0,
+            output_per_million=1.5,
+        ),
+    }
+
+    events = detect_events(previous, current, occurred_at=datetime.now(timezone.utc))
+    event_types = {event.type for event in events}
+
+    assert EventType.PRICING_CHANGED in event_types
+    assert EventType.PRICING_INCREASED in event_types
+    assert EventType.PRICING_DECREASED not in event_types

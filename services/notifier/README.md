@@ -56,3 +56,7 @@ current `tokenpricing.modeling.ModelInfo` payload does not expose a dedicated li
 deprecation field. It currently matches whole-word markers such as `deprecated`, `legacy`,
 `retired`, `sunset`, and `EOL`, so false positives and false negatives remain possible when
 upstream naming changes.
+
+On a cold start with an empty database, the first sync only seeds the baseline snapshot and
+does not emit `MODEL_ADDED` events. Later syncs report changes relative to that stored
+baseline.

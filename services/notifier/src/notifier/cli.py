@@ -2,12 +2,15 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import logging
 from pathlib import Path
 
 import uvicorn
 
 from notifier.api import DEFAULT_DB_PATH, create_app
 from notifier.service import NotifierService
+
+logger = logging.getLogger(__name__)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -44,10 +47,13 @@ async def run_sync_command(args: argparse.Namespace) -> None:
 async def run_worker_command(args: argparse.Namespace) -> None:
     service = NotifierService(Path(args.db_path))
     while True:
-        result = await service.sync_once(force_refresh=args.force_refresh)
-        print(result.model_dump_json(indent=2))
-        flush = await service.flush_deliveries()
-        print(flush.model_dump_json(indent=2))
+        try:
+            result = await service.sync_once(force_refresh=args.force_refresh)
+            print(result.model_dump_json(indent=2))
+            flush = await service.flush_deliveries()
+            print(flush.model_dump_json(indent=2))
+        except Exception:
+            logger.exception("notifier worker cycle failed")
         await asyncio.sleep(args.poll_interval)
 
 

@@ -1,0 +1,33 @@
+name: Dashboard Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "services/dashboard/**"
+  pull_request:
+    paths:
+      - "services/dashboard/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: services/dashboard/package-lock.json
+      - name: Install dependencies
+        working-directory: services/dashboard
+        run: npm ci
+      - name: Lint
+        working-directory: services/dashboard
+        run: npm run lint
+      - name: Typecheck
+        working-directory: services/dashboard
+        run: npm run typecheck
+      - name: Build
+        working-directory: services/dashboard
+        run: npm run build

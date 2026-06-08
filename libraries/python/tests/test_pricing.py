@@ -20,6 +20,8 @@ def sample_llmtracker_response() -> dict:
                 "pricing": {
                     "input_per_million": 30.0,
                     "output_per_million": 60.0,
+                    "cache_read_per_million": 15.0,
+                    "cache_creation_per_million": 45.0,
                     "currency": "USD",
                 },
                 "context_window": 8192,
@@ -92,6 +94,22 @@ class TestPublicAPI:
             # 1000 input @ $30/M + 500 output @ $60/M = 0.03 + 0.03
             total = await compute_cost("openai/gpt-4", 1000, 500)
             assert pytest.approx(total, rel=1e-6) == 0.06
+
+    @pytest.mark.asyncio
+    async def test_compute_cost_with_cache_tokens(self, sample_llmtracker_response: dict):
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = sample_llmtracker_response
+
+        with patch("httpx.AsyncClient.get", return_value=mock_response):
+            total = await compute_cost(
+                "openai/gpt-4",
+                1000,
+                500,
+                cache_read_tokens=1000,
+                cache_creation_tokens=500,
+            )
+            assert pytest.approx(total, rel=1e-6) == 0.0975
 
     @pytest.mark.asyncio
     async def test_compute_cost_negative_tokens(self, sample_llmtracker_response: dict):

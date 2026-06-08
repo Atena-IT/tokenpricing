@@ -1,0 +1,33 @@
+[project]
+name = "tokenpricing-sync"
+version = "0.1.0"
+description = "Canonical pricing data sync for tokenpricing"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.13.4",
+    "tokenpricing",
+]
+
+[project.scripts]
+tokenpricing-sync = "tokenpricing_sync.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv.sources]
+tokenpricing = { path = "../../libraries/python", editable = true }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "ruff>=0.15.14",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

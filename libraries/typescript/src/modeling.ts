@@ -10,6 +10,8 @@
 export interface PricingInfo {
   inputPerMillion: number;
   outputPerMillion: number;
+  cacheReadPerMillion?: number;
+  cacheCreationPerMillion?: number;
   currency: string;
 }
 
@@ -18,12 +20,16 @@ export interface PricingInfo {
 export interface RawSourceInfo {
   price_input: number;
   price_output: number;
+  price_cache_read?: number | null;
+  price_cache_creation?: number | null;
   last_updated: string;
 }
 
 export interface RawPricingInfo {
   input_per_million: number;
   output_per_million: number;
+  cache_read_per_million?: number | null;
+  cache_creation_per_million?: number | null;
   currency: string;
 }
 
@@ -40,14 +46,14 @@ export interface RawModelInfo {
   supports_streaming: boolean;
   category: string;
   sources: Record<string, RawSourceInfo>;
-  affiliate_links: Record<string, string>;
+  affiliate_links?: Record<string, string>;
 }
 
 export interface RawProviderInfo {
   name: string;
   website: string;
   pricing_page: string;
-  affiliate_link: string;
+  affiliate_link?: string | null;
 }
 
 export interface RawMetadataInfo {
@@ -101,6 +107,8 @@ export function toPricingInfo(
   return {
     inputPerMillion: raw.input_per_million,
     outputPerMillion: raw.output_per_million,
+    cacheReadPerMillion: raw.cache_read_per_million ?? undefined,
+    cacheCreationPerMillion: raw.cache_creation_per_million ?? undefined,
     currency: currency ?? raw.currency,
   };
 }

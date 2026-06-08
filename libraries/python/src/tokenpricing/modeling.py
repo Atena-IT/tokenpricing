@@ -14,6 +14,14 @@ class PricingInfo(BaseModel):
     output_per_million: float = Field(
         description="Price per million output tokens in the specified currency"
     )
+    cache_read_per_million: float | None = Field(
+        default=None,
+        description="Price per million cached input tokens for cache hits",
+    )
+    cache_creation_per_million: float | None = Field(
+        default=None,
+        description="Price per million cached input tokens for cache writes",
+    )
     currency: str = Field(default="USD", description="Currency code (e.g., USD, EUR)")
 
 
@@ -22,6 +30,8 @@ class SourceInfo(BaseModel):
 
     price_input: float
     price_output: float
+    price_cache_read: float | None = None
+    price_cache_creation: float | None = None
     last_updated: datetime
 
 
@@ -51,7 +61,10 @@ class ProviderInfo(BaseModel):
     name: str = Field(description="Provider display name")
     website: str = Field(description="Provider website URL")
     pricing_page: str = Field(description="URL to provider's pricing page")
-    affiliate_link: str = Field(description="Affiliate or signup link")
+    affiliate_link: str | None = Field(
+        default=None,
+        description="Affiliate or signup link",
+    )
 
 
 class MetadataInfo(BaseModel):

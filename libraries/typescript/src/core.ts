@@ -49,6 +49,16 @@ export async function getPricing(
   return {
     inputPerMillion: model.pricing.input_per_million * rate,
     outputPerMillion: model.pricing.output_per_million * rate,
+    cacheReadPerMillion:
+      model.pricing.cache_read_per_million === undefined ||
+      model.pricing.cache_read_per_million === null
+        ? undefined
+        : model.pricing.cache_read_per_million * rate,
+    cacheCreationPerMillion:
+      model.pricing.cache_creation_per_million === undefined ||
+      model.pricing.cache_creation_per_million === null
+        ? undefined
+        : model.pricing.cache_creation_per_million * rate,
     currency: target,
   };
 }
@@ -56,13 +66,27 @@ export async function getPricing(
 /**
  * Compute total cost for a specific model given token counts.
  */
+export interface ComputeCostOptions {
+  cacheReadTokens?: number;
+  cacheCreationTokens?: number;
+}
+
 export async function computeCost(
   modelId: string,
   inputTokens: number,
   outputTokens: number,
   currency = "USD",
+  options: ComputeCostOptions = {},
 ): Promise<number> {
-  if (inputTokens < 0 || outputTokens < 0) {
+  const cacheReadTokens = options.cacheReadTokens ?? 0;
+  const cacheCreationTokens = options.cacheCreationTokens ?? 0;
+
+  if (
+    inputTokens < 0 ||
+    outputTokens < 0 ||
+    cacheReadTokens < 0 ||
+    cacheCreationTokens < 0
+  ) {
     throw new Error("Token counts must be non-negative");
   }
 
@@ -70,5 +94,13 @@ export async function computeCost(
   const perMillion = 1_000_000;
   const inputCost = (inputTokens / perMillion) * pricing.inputPerMillion;
   const outputCost = (outputTokens / perMillion) * pricing.outputPerMillion;
-  return inputCost + outputCost;
+  const cacheReadCost =
+    pricing.cacheReadPerMillion === undefined
+      ? 0
+      : (cacheReadTokens / perMillion) * pricing.cacheReadPerMillion;
+  const cacheCreationCost =
+    pricing.cacheCreationPerMillion === undefined
+      ? 0
+      : (cacheCreationTokens / perMillion) * pricing.cacheCreationPerMillion;
+  return inputCost + outputCost + cacheReadCost + cacheCreationCost;
 }

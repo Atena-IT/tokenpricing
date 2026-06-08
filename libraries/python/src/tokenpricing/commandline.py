@@ -45,6 +45,8 @@ def price_command(model: str, currency: str, as_json: bool) -> None:
                         "currency": pricing.currency,
                         "input_per_million": pricing.input_per_million,
                         "output_per_million": pricing.output_per_million,
+                        "cache_read_per_million": pricing.cache_read_per_million,
+                        "cache_creation_per_million": pricing.cache_creation_per_million,
                     }
                 )
             )
@@ -56,6 +58,14 @@ def price_command(model: str, currency: str, as_json: bool) -> None:
             click.echo(
                 f"  Output per 1M tokens: {pricing.output_per_million:.6f} {pricing.currency}"
             )
+            if pricing.cache_read_per_million is not None:
+                click.echo(
+                    f"  Cache read per 1M tokens: {pricing.cache_read_per_million:.6f} {pricing.currency}"
+                )
+            if pricing.cache_creation_per_million is not None:
+                click.echo(
+                    f"  Cache write per 1M tokens: {pricing.cache_creation_per_million:.6f} {pricing.currency}"
+                )
 
     asyncio.run(_run())
 
@@ -67,6 +77,22 @@ def price_command(model: str, currency: str, as_json: bool) -> None:
 @click.argument("model", metavar="MODEL")
 @click.option("--in", "input_tokens", type=int, required=True, help="Input tokens")
 @click.option("--out", "output_tokens", type=int, required=True, help="Output tokens")
+@click.option(
+    "--cache-read",
+    "cache_read_tokens",
+    type=int,
+    default=0,
+    show_default=True,
+    help="Cached input tokens served from cache hits",
+)
+@click.option(
+    "--cache-write",
+    "cache_creation_tokens",
+    type=int,
+    default=0,
+    show_default=True,
+    help="Cached input tokens written into cache",
+)
 @click.option(
     "--currency",
     type=str,
@@ -85,6 +111,8 @@ def cost_command(
     input_tokens: int,
     output_tokens: int,
     currency: str,
+    cache_read_tokens: int,
+    cache_creation_tokens: int,
     as_json: bool,
 ) -> None:
     async def _run() -> None:
@@ -94,6 +122,8 @@ def cost_command(
                 input_tokens=input_tokens,
                 output_tokens=output_tokens,
                 currency=currency,
+                cache_read_tokens=cache_read_tokens,
+                cache_creation_tokens=cache_creation_tokens,
             )
         except (ValueError, RuntimeError) as e:
             raise click.ClickException(str(e)) from e
@@ -106,13 +136,15 @@ def cost_command(
                         "currency": currency.upper(),
                         "input_tokens": input_tokens,
                         "output_tokens": output_tokens,
+                        "cache_read_tokens": cache_read_tokens,
+                        "cache_creation_tokens": cache_creation_tokens,
                         "total": total,
                     }
                 )
             )
         else:
             click.echo(
-                f"Cost for {model} ({currency.upper()}): {total:.6f} on {input_tokens} in / {output_tokens} out"
+                f"Cost for {model} ({currency.upper()}): {total:.6f} on {input_tokens} in / {output_tokens} out / {cache_read_tokens} cache-read / {cache_creation_tokens} cache-write"
             )
 
     asyncio.run(_run())

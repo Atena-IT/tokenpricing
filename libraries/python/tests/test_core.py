@@ -24,6 +24,8 @@ def sample_llmtracker_response() -> dict:
                 "pricing": {
                     "input_per_million": 30.0,
                     "output_per_million": 60.0,
+                    "cache_read_per_million": 15.0,
+                    "cache_creation_per_million": 45.0,
                     "currency": "USD",
                 },
                 "context_window": 8192,
@@ -77,6 +79,8 @@ def test_get_pricing_sync_usd(sample_llmtracker_response):
         assert pricing.input_per_million == 30.0
         assert pricing.output_per_million == 60.0
         assert pricing.currency == "USD"
+        assert pricing.cache_read_per_million == 15.0
+        assert pricing.cache_creation_per_million == 45.0
 
 
 def test_get_pricing_sync_with_currency(
@@ -114,6 +118,8 @@ def test_get_pricing_sync_with_currency(
         # 30.0 * 0.92 = 27.6
         assert abs(pricing.input_per_million - 27.6) < 0.01
         assert abs(pricing.output_per_million - 55.2) < 0.01
+        assert abs(pricing.cache_read_per_million - 13.8) < 0.01
+        assert abs(pricing.cache_creation_per_million - 41.4) < 0.01
         assert pricing.currency == "EUR"
 
 
@@ -179,6 +185,24 @@ def test_compute_cost_sync_with_currency(
         assert abs(cost - 0.0552) < 0.0001
 
 
+def test_compute_cost_sync_with_cache_tokens(sample_llmtracker_response):
+    """Test sync compute_cost calculates correctly with cache-token support."""
+    with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_get:
+        mock_response = Mock()
+        mock_response.json.return_value = sample_llmtracker_response
+        mock_get.return_value = mock_response
+
+        cost = compute_cost_sync(
+            "openai/gpt-4",
+            input_tokens=1000,
+            output_tokens=500,
+            cache_read_tokens=1000,
+            cache_creation_tokens=500,
+        )
+
+        assert abs(cost - 0.0975) < 0.0001
+
+
 def test_compute_cost_sync_negative_tokens(sample_llmtracker_response):
     """Test sync compute_cost raises ValueError for negative token counts."""
     with patch("tokenpricing.pricing.httpx.AsyncClient.get") as mock_get:
@@ -191,6 +215,14 @@ def test_compute_cost_sync_negative_tokens(sample_llmtracker_response):
 
         with pytest.raises(ValueError, match="Token counts must be non-negative"):
             compute_cost_sync("openai/gpt-4", input_tokens=1000, output_tokens=-1)
+
+        with pytest.raises(ValueError, match="Token counts must be non-negative"):
+            compute_cost_sync(
+                "openai/gpt-4",
+                input_tokens=1000,
+                output_tokens=1,
+                cache_read_tokens=-1,
+            )
 
 
 class TestDidYouMeanSuggestions:

@@ -11,7 +11,7 @@ from tokenpricing.modeling import PricingData
 
 # LLMTracker data URL - updated every 6 hours
 LLMTRACKER_URL = (
-    "https://raw.githubusercontent.com/DiTo97/LLMTracker/main/data/current/prices.json"
+    "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data/current/prices.json"
 )
 
 # Cache TTL: 6 hours (21600 seconds) - aligns with LLMTracker update frequency

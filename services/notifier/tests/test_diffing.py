@@ -16,6 +16,8 @@ def build_model(**overrides):
         "supports_function_calling": True,
         "input_per_million": 1.0,
         "output_per_million": 2.0,
+        "cache_read_per_million": 0.5,
+        "cache_creation_per_million": 1.5,
         "currency": "USD",
         "status": ModelStatus.ACTIVE,
     }
@@ -90,3 +92,18 @@ def test_detect_events_uses_total_price_for_direction() -> None:
     assert EventType.PRICING_CHANGED in event_types
     assert EventType.PRICING_INCREASED in event_types
     assert EventType.PRICING_DECREASED not in event_types
+
+
+def test_detect_events_for_cache_price_change() -> None:
+    previous = {"openai/gpt-5.2": build_model()}
+    current = {
+        "openai/gpt-5.2": build_model(
+            cache_read_per_million=0.75,
+            cache_creation_per_million=1.75,
+        )
+    }
+
+    events = detect_events(previous, current, occurred_at=datetime.now(timezone.utc))
+    event_types = {event.type for event in events}
+
+    assert EventType.CACHE_PRICE_CHANGED in event_types

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #f8fafc;
+  background: #020617;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #020617;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}

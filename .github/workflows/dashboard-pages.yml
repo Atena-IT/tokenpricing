@@ -1,0 +1,56 @@
+name: Dashboard Pages Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "services/dashboard/**"
+      - "data/current/prices.json"
+      - "data/changelog/latest.json"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: dashboard-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: services/dashboard/package-lock.json
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Install dependencies
+        working-directory: services/dashboard
+        run: npm ci
+      - name: Build dashboard
+        working-directory: services/dashboard
+        env:
+          GITHUB_PAGES: "true"
+        run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: services/dashboard/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -8,7 +8,7 @@ Public API (sync):
 - get_pricing_sync(model_id, currency="USD")
 - compute_cost_sync(model_id, input_tokens, output_tokens, currency="USD")
 
-Data source: LLMTracker (https://github.com/DiTo97/LLMTracker)
+Data source: tokenpricing canonical dataset (https://github.com/Atena-IT/tokenpricing)
 """
 
 from tokenpricing.core import (

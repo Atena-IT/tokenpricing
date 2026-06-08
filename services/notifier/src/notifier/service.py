@@ -107,6 +107,8 @@ class NotifierService:
                 ),
                 input_per_million=0.0,
                 output_per_million=0.0,
+                cache_read_per_million=0.0,
+                cache_creation_per_million=0.0,
                 currency="USD",
                 status=ModelStatus.ACTIVE,
             ),
@@ -271,6 +273,8 @@ def normalize_pricing_data(data: PricingData) -> list[NormalizedModel]:
                 supports_function_calling=model.supports_function_calling,
                 input_per_million=model.pricing.input_per_million,
                 output_per_million=model.pricing.output_per_million,
+                cache_read_per_million=model.pricing.cache_read_per_million,
+                cache_creation_per_million=model.pricing.cache_creation_per_million,
                 currency=model.pricing.currency,
                 status=status,
             )

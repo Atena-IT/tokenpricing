@@ -9,7 +9,7 @@ import { parsePricingData, type RawPricingData } from "./modeling.js";
 
 /** LLMTracker data URL — updated every 6 hours */
 const LLMTRACKER_URL =
-  "https://raw.githubusercontent.com/DiTo97/LLMTracker/main/data/current/prices.json";
+  "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data/current/prices.json";
 
 /** Cache TTL: 6 hours (21600000 ms) — aligns with LLMTracker update frequency */
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;

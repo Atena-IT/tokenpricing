@@ -1,5 +1,5 @@
 /**
- * Data models for LLM pricing information from LLMTracker.
+ * Data models for canonical tokenpricing dataset pricing information.
  *
  * Internal types match the raw JSON (snake_case).
  * Public PricingInfo uses camelCase.

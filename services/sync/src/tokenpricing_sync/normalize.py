@@ -223,9 +223,9 @@ def merge_model(existing: ModelInfo, incoming: ModelInfo) -> ModelInfo:
 def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[str, Any]) -> PricingData:
     models: dict[str, ModelInfo] = {}
     providers: dict[str, ProviderInfo] = {}
-    last_scrape = datetime.now(timezone.utc)
 
     openrouter_fetched_at = str(openrouter_payload["fetched_at"])
+    last_scrape = datetime.fromisoformat(openrouter_fetched_at)
     openrouter_data = openrouter_payload.get("data", [])
     if isinstance(openrouter_data, dict):
         openrouter_models = openrouter_data.get("data", [])
@@ -237,9 +237,8 @@ def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[
             continue
         models[model.model_id] = model if model.model_id not in models else merge_model(models[model.model_id], model)
         providers.setdefault(model.provider, build_provider_info(model.provider, raw.get("top_provider") or raw))
-        last_scrape = max(last_scrape, datetime.fromisoformat(openrouter_fetched_at))
-
     litellm_fetched_at = str(litellm_payload["fetched_at"])
+    last_scrape = max(last_scrape, datetime.fromisoformat(litellm_fetched_at))
     litellm_models = litellm_payload.get("data", {})
     for model_id, raw in litellm_models.items():
         if not isinstance(raw, dict):
@@ -249,8 +248,6 @@ def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[
             continue
         models[model.model_id] = model if model.model_id not in models else merge_model(models[model.model_id], model)
         providers.setdefault(model.provider, build_provider_info(model.provider, raw))
-        last_scrape = max(last_scrape, datetime.fromisoformat(litellm_fetched_at))
-
     category_counts = Counter(model.category for model in models.values())
     return PricingData(
         generated_at=datetime.now(timezone.utc),

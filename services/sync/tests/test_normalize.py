@@ -53,3 +53,18 @@ def test_build_provider_info_uses_empty_urls_when_metadata_is_missing() -> None:
 
     assert provider.website == ""
     assert provider.pricing_page == ""
+
+
+def test_normalize_sources_uses_latest_upstream_fetch_time_for_last_scrape() -> None:
+    openrouter = {
+        "fetched_at": "2026-06-08T00:00:00+00:00",
+        "data": {"data": []},
+    }
+    litellm = {
+        "fetched_at": "2026-06-08T01:30:00+00:00",
+        "data": {},
+    }
+
+    dataset = normalize_sources(openrouter, litellm)
+
+    assert dataset.metadata.last_scrape.isoformat() == "2026-06-08T01:30:00+00:00"

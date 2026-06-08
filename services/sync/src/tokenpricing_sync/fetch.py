@@ -14,14 +14,20 @@ USER_AGENT = "tokenpricing-sync/0.1.0 (https://github.com/Atena-IT/tokenpricing)
 
 
 def _wrap_source_payload(source: str, source_url: str, data: Any) -> dict[str, Any]:
-    model_count = len(data.get("data", [])) if source == "openrouter" and isinstance(data, dict) else len(data)
-    return {
+    payload = {
         "source": source,
         "fetched_at": datetime.now(timezone.utc).isoformat(),
-        "source_url": source_url,
-        "model_count": model_count,
-        "data": data,
     }
+    if source == "openrouter" and isinstance(data, dict):
+        payload["api_url"] = source_url
+        payload["model_count"] = len(data.get("data", []))
+        payload["data"] = data.get("data", [])
+        return payload
+
+    payload["source_url"] = source_url
+    payload["model_count"] = len(data)
+    payload["data"] = data
+    return payload
 
 
 def _fetch_json(url: str) -> Any:

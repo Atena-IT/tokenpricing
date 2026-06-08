@@ -1,4 +1,4 @@
-from tokenpricing_sync.normalize import normalize_sources
+from tokenpricing_sync.normalize import build_provider_info, normalize_sources
 
 
 def test_normalize_sources_preserves_cache_fields() -> None:
@@ -46,3 +46,10 @@ def test_normalize_sources_preserves_cache_fields() -> None:
     assert model.pricing.cache_read_per_million == 1.0
     assert model.pricing.cache_creation_per_million == 3.0
     assert model.model_type == "chat"
+
+
+def test_build_provider_info_uses_empty_urls_when_metadata_is_missing() -> None:
+    provider = build_provider_info("openai")
+
+    assert provider.website == ""
+    assert provider.pricing_page == ""

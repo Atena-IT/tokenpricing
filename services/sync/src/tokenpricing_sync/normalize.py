@@ -108,8 +108,8 @@ def parse_int(value: Any) -> int:
 def build_provider_info(provider_id: str, raw: dict[str, Any] | None = None) -> ProviderInfo:
     raw = raw or {}
     name = raw.get("name") or provider_id.replace("-", " ").title()
-    website = raw.get("website") or raw.get("provider_website") or "https://example.com"
-    pricing_page = raw.get("pricing_page") or website
+    website = raw.get("website") or raw.get("provider_website") or ""
+    pricing_page = raw.get("pricing_page") or website or ""
     affiliate_link = raw.get("affiliate_link")
     return ProviderInfo(
         name=name,

@@ -1,31 +1,51 @@
 version: 2
+
+multi-ecosystem-groups:
+  weekly-dependencies:
+    schedule:
+      interval: "weekly"
+
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    patterns:
+      - "*"
+    multi-ecosystem-group: "weekly-dependencies"
     pull-request-branch-name:
       separator: "/"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
     reviewers:
       - "DiTo97"
 
   - package-ecosystem: "pip"
-    directory: "/libraries/python"
+    directories:
+      - "/libraries/python"
+      - "/services/notifier"
+      - "/services/sync"
     schedule:
       interval: "weekly"
+    patterns:
+      - "*"
+    multi-ecosystem-group: "weekly-dependencies"
     pull-request-branch-name:
       separator: "/"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
     reviewers:
       - "DiTo97"
 
   - package-ecosystem: "npm"
-    directory: "/libraries/typescript"
+    directories:
+      - "/libraries/typescript"
+      - "/services/dashboard"
     schedule:
       interval: "weekly"
+    patterns:
+      - "*"
+    multi-ecosystem-group: "weekly-dependencies"
     pull-request-branch-name:
       separator: "/"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
     reviewers:
       - "DiTo97"

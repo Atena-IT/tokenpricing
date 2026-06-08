@@ -17,6 +17,8 @@ const SAMPLE_PRICING_DATA = {
       pricing: {
         input_per_million: 30,
         output_per_million: 60,
+        cache_read_per_million: 15,
+        cache_creation_per_million: 45,
         currency: "USD",
       },
       context_window: 8192,
@@ -80,7 +82,7 @@ const SAMPLE_FX_DATA = {
 
 function mockPricingFetch() {
   mockFetch.mockImplementation((url: string) => {
-    if (url.includes("LLMTracker")) {
+    if (url.includes("prices.json")) {
       return Promise.resolve({
         ok: true,
         json: () => Promise.resolve(SAMPLE_PRICING_DATA),
@@ -121,6 +123,14 @@ describe("getPricing", () => {
     expect(pricing.currency).toBe("EUR");
   });
 
+  it("should expose cache pricing in requested currency", async () => {
+    mockPricingFetch();
+
+    const pricing = await getPricing("openai/gpt-4", "EUR");
+    expect(pricing.cacheReadPerMillion).toBeCloseTo(15 * 0.92);
+    expect(pricing.cacheCreationPerMillion).toBeCloseTo(45 * 0.92);
+  });
+
   it("should throw for unknown model with suggestion", async () => {
     mockPricingFetch();
 
@@ -158,6 +168,16 @@ describe("computeCost", () => {
     expect(cost).toBeCloseTo(0.06 * 0.92);
   });
 
+  it("should include cache tokens when requested", async () => {
+    mockPricingFetch();
+
+    const cost = await computeCost("openai/gpt-4", 1000, 500, "USD", {
+      cacheReadTokens: 1000,
+      cacheCreationTokens: 500,
+    });
+    expect(cost).toBeCloseTo(0.0975);
+  });
+
   it("should return 0 for zero tokens", async () => {
     mockPricingFetch();
 
@@ -169,5 +189,8 @@ describe("computeCost", () => {
     await expect(computeCost("openai/gpt-4", -1, 0)).rejects.toThrow(
       "non-negative",
     );
+    await expect(
+      computeCost("openai/gpt-4", 1, 0, "USD", { cacheReadTokens: -1 }),
+    ).rejects.toThrow("non-negative");
   });
 });

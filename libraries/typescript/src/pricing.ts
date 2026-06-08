@@ -1,21 +1,21 @@
 /**
- * Fetch and cache LLM pricing data from LLMTracker.
+ * Fetch and cache canonical pricing data from tokenpricing.
  *
- * Data source: https://github.com/DiTo97/LLMTracker
+ * Data source: https://github.com/Atena-IT/tokenpricing
  */
 
 import { TtlCache } from "./cache.js";
 import { parsePricingData, type RawPricingData } from "./modeling.js";
 
-/** LLMTracker data URL — updated every 6 hours */
-const LLMTRACKER_URL =
-  "https://raw.githubusercontent.com/DiTo97/LLMTracker/main/data/current/prices.json";
+/** Canonical pricing data URL — updated every 6 hours */
+const CANONICAL_DATASET_URL =
+  "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data/current/prices.json";
 
-/** Cache TTL: 6 hours (21600000 ms) — aligns with LLMTracker update frequency */
+/** Cache TTL: 6 hours (21600000 ms) — aligns with canonical dataset refresh frequency */
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 
 async function fetchPricingData(): Promise<RawPricingData> {
-  const response = await fetch(LLMTRACKER_URL);
+  const response = await fetch(CANONICAL_DATASET_URL);
   if (!response.ok) {
     throw new Error(
       `Failed to fetch pricing data: ${response.status} ${response.statusText}`,

@@ -18,7 +18,7 @@ from notifier.models import (
     SubscriptionCreate,
     SubscriptionFilters,
 )
-from notifier.service import NotifierService, infer_model_status
+from notifier.service import NotifierService, infer_model_status, normalize_pricing_data
 
 
 class SequenceFetcher:
@@ -52,6 +52,8 @@ def build_dataset(input_price: float) -> PricingData:
         pricing=PricingInfo(
             input_per_million=input_price,
             output_per_million=2.0,
+            cache_read_per_million=0.5,
+            cache_creation_per_million=1.5,
             currency="USD",
         ),
         context_window=128000,
@@ -164,3 +166,11 @@ async def test_flush_deliveries_dead_letters_deleted_subscriptions(tmp_path) -> 
 def test_infer_model_status_uses_word_boundaries() -> None:
     assert infer_model_status("non-deprecated") == ModelStatus.ACTIVE
     assert infer_model_status("Legacy model", "", "") == ModelStatus.DEPRECATED
+
+
+def test_normalize_pricing_data_preserves_cache_prices() -> None:
+    data = build_dataset(1.0)
+    normalized = normalize_pricing_data(data)
+
+    assert normalized[0].cache_read_per_million == 0.5
+    assert normalized[0].cache_creation_per_million == 1.5

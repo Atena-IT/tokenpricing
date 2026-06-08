@@ -12,6 +12,7 @@ class EventType(str, Enum):
     PRICING_CHANGED = "pricing_changed"
     PRICING_INCREASED = "pricing_increased"
     PRICING_DECREASED = "pricing_decreased"
+    CACHE_PRICE_CHANGED = "cache_price_changed"
     MODEL_DEPRECATED = "model_deprecated"
     MODEL_REMOVED = "model_removed"
     MODEL_ADDED = "model_added"
@@ -39,6 +40,7 @@ class ModelStatus(str, Enum):
 
 DEFAULT_EVENT_TYPES = [
     EventType.PRICING_CHANGED,
+    EventType.CACHE_PRICE_CHANGED,
     EventType.MODEL_DEPRECATED,
     EventType.MODEL_REMOVED,
 ]
@@ -107,6 +109,8 @@ class NormalizedModel(BaseModel):
     supports_function_calling: bool
     input_per_million: float
     output_per_million: float
+    cache_read_per_million: float | None = None
+    cache_creation_per_million: float | None = None
     currency: str
     status: ModelStatus
 

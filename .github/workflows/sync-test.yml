@@ -1,0 +1,33 @@
+name: Sync Service Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "services/sync/**"
+      - "libraries/python/**"
+  pull_request:
+    paths:
+      - "services/sync/**"
+      - "libraries/python/**"
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: latest
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        working-directory: services/sync
+        run: uv sync --group dev
+      - name: Run tests
+        working-directory: services/sync
+        run: uv run pytest
+      - name: Run lint
+        working-directory: services/sync
+        run: uv run ruff check .

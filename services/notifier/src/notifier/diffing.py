@@ -71,6 +71,31 @@ def detect_events(
                     )
                 )
 
+        cache_changed = (
+            current.cache_read_per_million != previous.cache_read_per_million
+            or current.cache_creation_per_million != previous.cache_creation_per_million
+        )
+        if cache_changed:
+            events.append(
+                DetectedEvent(
+                    type=EventType.CACHE_PRICE_CHANGED,
+                    occurred_at=event_time,
+                    model=current,
+                    payload={
+                        "before": {
+                            "cache_read_per_million": previous.cache_read_per_million,
+                            "cache_creation_per_million": previous.cache_creation_per_million,
+                            "currency": previous.currency,
+                        },
+                        "after": {
+                            "cache_read_per_million": current.cache_read_per_million,
+                            "cache_creation_per_million": current.cache_creation_per_million,
+                            "currency": current.currency,
+                        },
+                    },
+                )
+            )
+
         if (
             previous.status != ModelStatus.DEPRECATED
             and current.status == ModelStatus.DEPRECATED

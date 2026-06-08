@@ -41,6 +41,8 @@ CREATE TABLE IF NOT EXISTS snapshot_models (
     supports_function_calling INTEGER NOT NULL,
     input_per_million REAL NOT NULL,
     output_per_million REAL NOT NULL,
+    cache_read_per_million REAL,
+    cache_creation_per_million REAL,
     currency TEXT NOT NULL,
     status TEXT NOT NULL,
     PRIMARY KEY (snapshot_id, model_id),
@@ -111,6 +113,24 @@ class NotifierStore:
     def _initialize(self) -> None:
         with self._connect() as connection:
             connection.executescript(SCHEMA)
+            self._ensure_snapshot_model_columns(connection)
+
+    @staticmethod
+    def _ensure_snapshot_model_columns(connection: sqlite3.Connection) -> None:
+        columns = {
+            row["name"]
+            for row in connection.execute(
+                "PRAGMA table_info(snapshot_models)"
+            ).fetchall()
+        }
+        if "cache_read_per_million" not in columns:
+            connection.execute(
+                "ALTER TABLE snapshot_models ADD COLUMN cache_read_per_million REAL"
+            )
+        if "cache_creation_per_million" not in columns:
+            connection.execute(
+                "ALTER TABLE snapshot_models ADD COLUMN cache_creation_per_million REAL"
+            )
 
     def _row_to_subscription(self, row: sqlite3.Row) -> SubscriptionRecord:
         return SubscriptionRecord(
@@ -285,8 +305,9 @@ class NotifierStore:
                 INSERT INTO snapshot_models (
                     snapshot_id, model_id, provider, display_name, model_family,
                     model_type, category, supports_vision, supports_function_calling,
-                    input_per_million, output_per_million, currency, status
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    input_per_million, output_per_million, cache_read_per_million,
+                    cache_creation_per_million, currency, status
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 [
                     (
@@ -301,6 +322,8 @@ class NotifierStore:
                         int(model.supports_function_calling),
                         model.input_per_million,
                         model.output_per_million,
+                        model.cache_read_per_million,
+                        model.cache_creation_per_million,
                         model.currency,
                         model.status.value,
                     )
@@ -321,6 +344,8 @@ class NotifierStore:
             supports_function_calling=bool(row["supports_function_calling"]),
             input_per_million=row["input_per_million"],
             output_per_million=row["output_per_million"],
+            cache_read_per_million=row["cache_read_per_million"],
+            cache_creation_per_million=row["cache_creation_per_million"],
             currency=row["currency"],
             status=ModelStatus(row["status"]),
         )

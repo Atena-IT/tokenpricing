@@ -1,7 +1,6 @@
-"""Fetch and manage LLM pricing data from LLMTracker.
+"""Fetch and manage canonical pricing data from tokenpricing.
 
-Data source: https://github.com/DiTo97/LLMTracker
-Website: https://mrunreal.github.io/LLMTracker/
+Data source: https://github.com/Atena-IT/tokenpricing
 """
 
 import httpx
@@ -9,30 +8,28 @@ from async_lru import alru_cache
 
 from tokenpricing.modeling import PricingData
 
-# LLMTracker data URL - updated every 6 hours
-LLMTRACKER_URL = (
-    "https://raw.githubusercontent.com/DiTo97/LLMTracker/main/data/current/prices.json"
-)
+# Canonical pricing data URL - updated every 6 hours
+CANONICAL_DATASET_URL = "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data/current/prices.json"
 
-# Cache TTL: 6 hours (21600 seconds) - aligns with LLMTracker update frequency
+# Cache TTL: 6 hours (21600 seconds) - aligns with canonical dataset refresh frequency
 CACHE_TTL_SECONDS = 6 * 60 * 60
 
 
 async def fetch_pricing_data() -> PricingData:
-    """Fetch pricing data from LLMTracker.
+    """Fetch pricing data from the tokenpricing canonical dataset.
 
-    This function makes an async HTTP request to LLMTracker's pricing data endpoint
+    This function makes an async HTTP request to the canonical pricing data endpoint
     and parses it into a PricingData object.
 
     Returns:
-        PricingData: Parsed pricing data from LLMTracker
+        PricingData: Parsed pricing data from the canonical dataset
 
     Raises:
         httpx.HTTPError: If the HTTP request fails
         pydantic.ValidationError: If the response data is invalid
     """
     async with httpx.AsyncClient() as client:
-        response = await client.get(LLMTRACKER_URL)
+        response = await client.get(CANONICAL_DATASET_URL)
         response.raise_for_status()
         data = response.json()  # httpx .json() is not async
         return PricingData.model_validate(data)

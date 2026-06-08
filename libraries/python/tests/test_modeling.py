@@ -19,10 +19,16 @@ class TestPricingInfo:
 
     def test_pricing_info_creation(self):
         pricing = PricingInfo(
-            input_per_million=2.5, output_per_million=10.0, currency="USD"
+            input_per_million=2.5,
+            output_per_million=10.0,
+            cache_read_per_million=1.25,
+            cache_creation_per_million=3.75,
+            currency="USD",
         )
         assert pricing.input_per_million == 2.5
         assert pricing.output_per_million == 10.0
+        assert pricing.cache_read_per_million == 1.25
+        assert pricing.cache_creation_per_million == 3.75
         assert pricing.currency == "USD"
 
     def test_pricing_info_default_currency(self):
@@ -35,9 +41,17 @@ class TestSourceInfo:
 
     def test_source_info_creation(self):
         now = datetime.now()
-        source = SourceInfo(price_input=2.5, price_output=10.0, last_updated=now)
+        source = SourceInfo(
+            price_input=2.5,
+            price_output=10.0,
+            price_cache_read=1.0,
+            price_cache_creation=3.0,
+            last_updated=now,
+        )
         assert source.price_input == 2.5
         assert source.price_output == 10.0
+        assert source.price_cache_read == 1.0
+        assert source.price_cache_creation == 3.0
         assert source.last_updated == now
 
 

@@ -1,6 +1,6 @@
 # tokenpricing
 
-API pricing math for 1k+ AI models from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
+API pricing math for 1k+ AI models with a canonical in-repo dataset, cache-token pricing support, multi-currency conversion, and a modern web dashboard.
 
 ## Libraries
 
@@ -14,6 +14,8 @@ API pricing math for 1k+ AI models from [LLMTracker](https://mrunreal.github.io/
 | Service | Language | Path | Status |
 |---------|----------|------|--------|
 | Notifier | Python 3.12+ | [services/notifier/](services/notifier/) | Experimental |
+| Sync | Python 3.12+ | [services/sync/](services/sync/) | Internal |
+| Dashboard | TypeScript / React | [services/dashboard/](services/dashboard/) | Experimental |
 
 ## Quick Start
 
@@ -29,7 +31,13 @@ from tokenpricing import get_pricing_sync, compute_cost_sync
 pricing = get_pricing_sync("openai/gpt-5.2", currency="EUR")
 print(f"Input: €{pricing.input_per_million:.2f}/1M tokens")
 
-cost = compute_cost_sync("openai/gpt-5.2", input_tokens=1000, output_tokens=500)
+cost = compute_cost_sync(
+    "openai/gpt-5.2",
+    input_tokens=1000,
+    output_tokens=500,
+    cache_read_tokens=250,
+    cache_creation_tokens=100,
+)
 print(f"Total: ${cost:.6f}")
 ```
 
@@ -45,7 +53,10 @@ import { getPricing, computeCost } from "tokenpricing";
 const pricing = await getPricing("openai/gpt-5.2", "EUR");
 console.log(`Input: €${pricing.inputPerMillion.toFixed(2)}/1M tokens`);
 
-const cost = await computeCost("openai/gpt-5.2", 1000, 500);
+const cost = await computeCost("openai/gpt-5.2", 1000, 500, "USD", {
+  cacheReadTokens: 250,
+  cacheCreationTokens: 100,
+});
 console.log(`Total: $${cost.toFixed(6)}`);
 ```
 
@@ -63,8 +74,8 @@ tokenpricing pricing openai/gpt-5.2 --currency EUR
 # JSON output for scripting
 tokenpricing pricing openai/gpt-5.2 --json
 
-# Compute total cost for a usage
-tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --currency EUR
+# Compute total cost for a usage, including cache tokens when available
+tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --cache-read 250 --cache-write 100 --currency EUR
 ```
 
 ## Claude Code skill
@@ -77,16 +88,19 @@ The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
 
 ## Data Source
 
-Pricing data is sourced from [LLMTracker](https://github.com/MrUnreal/LLMTracker), which aggregates and updates pricing information from various LLM providers every six hours.
+Pricing data is now synchronized directly inside this repository from OpenRouter and LiteLLM, normalized into the tokenpricing schema, and published as the canonical dataset every six hours.
 
 ## Repository Structure
 
 ```
 tokenpricing/
 ├── .claude-plugin/      Claude Code marketplace manifest
+├── data/                Canonical synced pricing snapshots + changelog
 ├── skills/              Canonical coding-agent skill
 ├── services/
-│   └── notifier/        Webhook notification service
+│   ├── dashboard/       Vite + React pricing explorer
+│   ├── notifier/        Webhook notification service
+│   └── sync/            Canonical data sync pipeline
 ├── libraries/
 │   ├── python/          Python SDK + CLI (PyPI)
 │   └── typescript/      TypeScript SDK (npm)
@@ -103,7 +117,7 @@ Each library is self-contained. See the individual READMEs for setup and develop
 
 ## Credits
 
-- Pricing data: [LLMTracker](https://github.com/MrUnreal/LLMTracker) by MrUnreal
+- Canonical dataset: this repository (`data/current/prices.json`), synchronized from OpenRouter and LiteLLM and incorporating the prior LLMTracker fork enhancements
 
 ## License
 

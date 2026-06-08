@@ -2,17 +2,17 @@
 
 [![npm version](https://img.shields.io/npm/v/tokenpricing)](https://www.npmjs.com/package/tokenpricing)
 
-API pricing math for 1k+ AI models from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
+API pricing math for 1k+ AI models from the canonical tokenpricing dataset with multi-currency and cache-token pricing support.
 
 ## Why tokenpricing?
 
-Token pricing for LLMs changes frequently across different providers. This library provides up-to-date pricing information by leveraging [LLMTracker](https://github.com/MrUnreal/LLMTracker), which updates pricing data every six hours from various sources.
+Token pricing for AI models changes frequently across different providers and model types. This library now consumes the canonical dataset published from this repository, synchronized directly from upstream pricing sources every six hours.
 
 **Important:** This library does **not** estimate token counts from strings or messages. tokenpricing focuses solely on providing accurate, current pricing data.
 
 ## Features
 
-- Up-to-date LLM pricing from [LLMTracker](https://mrunreal.github.io/LLMTracker/)
+- Up-to-date AI model pricing from the tokenpricing canonical dataset
 - Caching with 6-hour TTL for pricing data
 - Multi-currency conversion via JSDelivr currency API with a 24-hour cached USD rates map
 - TypeScript-first with full type definitions
@@ -55,7 +55,7 @@ console.log(`Input: €${pricing.inputPerMillion.toFixed(2)}/1M tokens`);
 ### Compute Cost
 
 ```typescript
-const cost = await computeCost("openai/gpt-5.2", 1000, 500, "EUR");
+const cost = await computeCost("openai/gpt-5.2", 1000, 500, "EUR", { cacheReadTokens: 250, cacheCreationTokens: 100 });
 console.log(`Total cost: €${cost.toFixed(6)}`);
 ```
 
@@ -81,7 +81,7 @@ Get pricing info for a specific model.
 - `currency` — Target currency code (default: `"USD"`)
 - Returns `Promise<PricingInfo>`
 
-### `computeCost(modelId, inputTokens, outputTokens, currency?)`
+### `computeCost(modelId, inputTokens, outputTokens, currency?, options?)`
 
 Compute total cost for a specific model given token counts.
 
@@ -89,6 +89,7 @@ Compute total cost for a specific model given token counts.
 - `inputTokens` — Number of input tokens
 - `outputTokens` — Number of output tokens
 - `currency` — Target currency code (default: `"USD"`)
+- `options.cacheReadTokens` / `options.cacheCreationTokens` — optional cached-token usage
 - Returns `Promise<number>`
 
 ### `PricingInfo`
@@ -97,15 +98,17 @@ Compute total cost for a specific model given token counts.
 interface PricingInfo {
   inputPerMillion: number;
   outputPerMillion: number;
+  cacheReadPerMillion?: number;
+  cacheCreationPerMillion?: number;
   currency: string;
 }
 ```
 
 ## Data Source
 
-Pricing data is sourced from [LLMTracker](https://github.com/MrUnreal/LLMTracker), which aggregates and updates pricing information from various LLM providers every six hours.
+Pricing data is sourced from the canonical tokenpricing dataset generated in this repository from OpenRouter and LiteLLM.
 
-Caching uses a 6-hour TTL aligned to LLMTracker's refresh cadence. Currency conversion uses daily USD base rates from the JSDelivr currency API with a 24-hour cache.
+Caching uses a 6-hour TTL aligned to the canonical sync cadence. Currency conversion uses daily USD base rates from the JSDelivr currency API with a 24-hour cache.
 
 ## Development
 
@@ -128,7 +131,7 @@ pnpm typecheck      # TypeScript type check
 
 ## Credits
 
-- Pricing data: [LLMTracker](https://github.com/MrUnreal/LLMTracker) by MrUnreal
+- Canonical data sync: [Atena-IT/tokenpricing](https://github.com/Atena-IT/tokenpricing)
 
 ## License
 

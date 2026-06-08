@@ -15,6 +15,8 @@ const SAMPLE_DATA = {
       pricing: {
         input_per_million: 30,
         output_per_million: 60,
+        cache_read_per_million: 15,
+        cache_creation_per_million: 45,
         currency: "USD",
       },
       context_window: 8192,

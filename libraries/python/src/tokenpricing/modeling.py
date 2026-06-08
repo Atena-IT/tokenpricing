@@ -1,4 +1,4 @@
-"""Data models for LLM pricing information from LLMTracker."""
+"""Data models for canonical AI model pricing information."""
 
 from datetime import datetime
 
@@ -14,6 +14,14 @@ class PricingInfo(BaseModel):
     output_per_million: float = Field(
         description="Price per million output tokens in the specified currency"
     )
+    cache_read_per_million: float | None = Field(
+        default=None,
+        description="Price per million cached input tokens for cache hits",
+    )
+    cache_creation_per_million: float | None = Field(
+        default=None,
+        description="Price per million cached input tokens for cache writes",
+    )
     currency: str = Field(default="USD", description="Currency code (e.g., USD, EUR)")
 
 
@@ -22,11 +30,13 @@ class SourceInfo(BaseModel):
 
     price_input: float
     price_output: float
+    price_cache_read: float | None = None
+    price_cache_creation: float | None = None
     last_updated: datetime
 
 
 class ModelInfo(BaseModel):
-    """Complete information about an LLM model."""
+    """Complete information about an AI model."""
 
     provider: str = Field(description="Provider identifier (e.g., openai, anthropic)")
     model_id: str = Field(description="Unique model identifier")
@@ -34,7 +44,9 @@ class ModelInfo(BaseModel):
     pricing: PricingInfo
     context_window: int = Field(description="Maximum context window size in tokens")
     max_output_tokens: int = Field(description="Maximum output tokens")
-    model_type: str = Field(description="Type of model (e.g., chat, embedding)")
+    model_type: str = Field(
+        description="Type of AI model (e.g., chat, embedding, image, audio)"
+    )
     supports_vision: bool = Field(default=False)
     supports_function_calling: bool = Field(default=False)
     supports_streaming: bool = Field(default=False)
@@ -46,12 +58,15 @@ class ModelInfo(BaseModel):
 
 
 class ProviderInfo(BaseModel):
-    """Information about an LLM provider."""
+    """Information about an AI model provider."""
 
     name: str = Field(description="Provider display name")
     website: str = Field(description="Provider website URL")
     pricing_page: str = Field(description="URL to provider's pricing page")
-    affiliate_link: str = Field(description="Affiliate or signup link")
+    affiliate_link: str | None = Field(
+        default=None,
+        description="Affiliate or signup link",
+    )
 
 
 class MetadataInfo(BaseModel):
@@ -66,7 +81,7 @@ class MetadataInfo(BaseModel):
 
 
 class PricingData(BaseModel):
-    """Complete pricing dataset from LLMTracker."""
+    """Complete pricing dataset from the tokenpricing canonical dataset."""
 
     generated_at: datetime = Field(description="Timestamp when data was generated")
     models: dict[str, ModelInfo] = Field(

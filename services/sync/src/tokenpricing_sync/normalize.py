@@ -243,6 +243,8 @@ def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[
     last_scrape = max(last_scrape, datetime.fromisoformat(litellm_fetched_at))
     litellm_models = litellm_payload.get("data", {})
     for model_id, raw in litellm_models.items():
+        if model_id == "sample_spec":
+            continue
         if not isinstance(raw, dict):
             continue
         model = normalize_litellm_model(model_id, raw, litellm_fetched_at)

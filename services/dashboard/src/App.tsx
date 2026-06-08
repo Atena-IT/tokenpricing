@@ -15,6 +15,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 import { loadChangelogData, loadPricingData, type ChangelogData, type RawModelInfo } from "./lib/data";
 import { formatInteger, formatPrice } from "./lib/utils";
 
+function parseTokenCount(value: string) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
 function App() {
   const [models, setModels] = useState<RawModelInfo[]>([]);
   const [changelog, setChangelog] = useState<ChangelogData | null>(null);
@@ -78,16 +83,16 @@ function App() {
       return null;
     }
     const million = 1_000_000;
-    const inputCost = (Number(inputTokens) / million) * model.pricing.input_per_million;
-    const outputCost = (Number(outputTokens) / million) * model.pricing.output_per_million;
+    const inputCost = (parseTokenCount(inputTokens) / million) * model.pricing.input_per_million;
+    const outputCost = (parseTokenCount(outputTokens) / million) * model.pricing.output_per_million;
     const cacheReadCost =
       model.pricing.cache_read_per_million == null
         ? 0
-        : (Number(cacheReadTokens) / million) * model.pricing.cache_read_per_million;
+        : (parseTokenCount(cacheReadTokens) / million) * model.pricing.cache_read_per_million;
     const cacheWriteCost =
       model.pricing.cache_creation_per_million == null
         ? 0
-        : (Number(cacheWriteTokens) / million) * model.pricing.cache_creation_per_million;
+        : (parseTokenCount(cacheWriteTokens) / million) * model.pricing.cache_creation_per_million;
     return {
       inputCost,
       outputCost,

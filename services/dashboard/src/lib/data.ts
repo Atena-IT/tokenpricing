@@ -1,5 +1,7 @@
-const CANONICAL_DATA_ROOT =
+const DEFAULT_CANONICAL_DATA_ROOT =
   "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data";
+const CANONICAL_DATA_ROOT =
+  (import.meta.env.VITE_CANONICAL_DATA_ROOT?.trim() || DEFAULT_CANONICAL_DATA_ROOT).replace(/\/+$/, "");
 
 export interface RawPricingInfo {
   input_per_million: number;

@@ -15,7 +15,9 @@ from tokenpricing.modeling import (
 
 
 def parse_price_per_million(value: Any) -> float | None:
-    if value in (None, "", 0, "0"):
+    if value is None:
+        return None
+    if isinstance(value, str) and value.strip() == "":
         return None
     return round(float(value) * 1_000_000, 6)
 

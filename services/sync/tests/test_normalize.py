@@ -48,6 +48,33 @@ def test_normalize_sources_preserves_cache_fields() -> None:
     assert model.model_type == "chat"
 
 
+def test_normalize_sources_preserves_zero_cache_fields() -> None:
+    dataset = normalize_sources(
+        {
+            "fetched_at": "2026-06-08T00:00:00+00:00",
+            "data": {"data": []},
+        },
+        {
+            "fetched_at": "2026-06-08T00:00:00+00:00",
+            "data": {
+                "openai/gpt-5.2": {
+                    "input_cost_per_token": 0.000002,
+                    "output_cost_per_token": 0.000006,
+                    "cache_read_input_token_cost": 0,
+                    "cache_creation_input_token_cost": 0.0,
+                    "max_input_tokens": 128000,
+                    "max_output_tokens": 8192,
+                    "mode": "chat",
+                }
+            },
+        },
+    )
+    model = dataset.models["openai/gpt-5.2"]
+
+    assert model.pricing.cache_read_per_million == 0.0
+    assert model.pricing.cache_creation_per_million == 0.0
+
+
 def test_build_provider_info_uses_empty_urls_when_metadata_is_missing() -> None:
     provider = build_provider_info("openai")
 

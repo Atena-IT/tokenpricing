@@ -123,7 +123,6 @@ describe("getPricing", () => {
     expect(pricing.currency).toBe("EUR");
   });
 
-
   it("should expose cache pricing in requested currency", async () => {
     mockPricingFetch();
 
@@ -168,7 +167,6 @@ describe("computeCost", () => {
     const cost = await computeCost("openai/gpt-4", 1000, 500, "EUR");
     expect(cost).toBeCloseTo(0.06 * 0.92);
   });
-
 
   it("should include cache tokens when requested", async () => {
     mockPricingFetch();

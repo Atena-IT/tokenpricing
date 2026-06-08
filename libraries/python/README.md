@@ -2,17 +2,17 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/tokenpricing)](https://pypi.org/project/tokenpricing/)
 
-API pricing math for 1k+ AI models from [LLMTracker](https://mrunreal.github.io/LLMTracker) with multi-currency support.
+API pricing math for 1k+ AI models from the canonical tokenpricing dataset with multi-currency and cache-token pricing support.
 
 ## Why tokenpricing?
 
-Token pricing for LLMs changes frequently across different providers. This library provides up-to-date pricing information by leveraging [LLMTracker](https://github.com/MrUnreal/LLMTracker), which updates pricing data every six hours from various sources.
+Token pricing for LLMs changes frequently across different providers. This library now consumes the canonical dataset published from this repository, synchronized directly from upstream pricing sources every six hours.
 
 **Important:** This library does **not** estimate token counts from strings or messages. Any estimation would be too approximate for anything beyond plain text, and the [tokencost](https://github.com/AgentOps-AI/tokencost) package already handles that use case well. tokenpricing focuses solely on providing accurate, current pricing data.
 
 ## Features
 
-- Up-to-date LLM pricing from [LLMTracker](https://mrunreal.github.io/LLMTracker/)
+- Up-to-date LLM pricing from the tokenpricing canonical dataset
 - Async caching via async-lru with a 6-hour TTL for pricing data
 - Multi-currency conversion via JSDelivr currency API with a 24-hour cached USD rates map
 - Clean, typed data models (Pydantic)
@@ -35,11 +35,11 @@ The public API exposes both async and sync functions:
 
 **Async API:**
 - `get_pricing(model_id, currency="USD")`
-- `compute_cost(model_id, input_tokens, output_tokens, currency="USD")`
+- `compute_cost(model_id, input_tokens, output_tokens, currency="USD", cache_read_tokens=0, cache_creation_tokens=0)`
 
 **Sync API:**
 - `get_pricing_sync(model_id, currency="USD")`
-- `compute_cost_sync(model_id, input_tokens, output_tokens, currency="USD")`
+- `compute_cost_sync(model_id, input_tokens, output_tokens, currency="USD", cache_read_tokens=0, cache_creation_tokens=0)`
 
 ### Async Example
 
@@ -59,7 +59,7 @@ async def main():
     print(f"  Output per 1M tokens: €{pricing.output_per_million:.2f}")
 
     # Compute total cost for a usage
-    total = await compute_cost(model_id, input_tokens=1000, output_tokens=500, currency="EUR")
+    total = await compute_cost(model_id, input_tokens=1000, output_tokens=500, currency="EUR", cache_read_tokens=250, cache_creation_tokens=100)
     print(f"Total cost (EUR): €{total:.6f}")
 
 
@@ -82,7 +82,14 @@ print(f"  Input per 1M tokens: €{pricing.input_per_million:.2f}")
 print(f"  Output per 1M tokens: €{pricing.output_per_million:.2f}")
 
 # Compute total cost for a usage
-total = compute_cost_sync(model_id, input_tokens=1000, output_tokens=500, currency="EUR")
+total = compute_cost_sync(
+    model_id,
+    input_tokens=1000,
+    output_tokens=500,
+    currency="EUR",
+    cache_read_tokens=250,
+    cache_creation_tokens=100,
+)
 print(f"Total cost (EUR): €{total:.6f}")
 ```
 
@@ -119,7 +126,7 @@ tokenpricing pricing openai/gpt-5.2 --currency EUR
 tokenpricing pricing openai/gpt-5.2 --json
 
 # Compute total cost for a usage
-tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --currency EUR
+tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --cache-read 250 --cache-write 100 --currency EUR
 ```
 
 ## Claude Code skill
@@ -132,14 +139,14 @@ The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
 
 ## Data Source
 
-Pricing data is sourced from [LLMTracker](https://github.com/MrUnreal/LLMTracker), which aggregates and updates pricing information from various LLM providers every six hours. The raw data is available at:
+Pricing data is sourced from the canonical tokenpricing dataset generated in this repository from OpenRouter and LiteLLM. The raw data is available at:
 ```
-https://raw.githubusercontent.com/MrUnreal/LLMTracker/main/data/current/prices.json
+https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data/current/prices.json
 ```
 
-Caching uses async-lru with a 6-hour TTL aligned to LLMTracker's refresh cadence. Caching is fully transparent to callers of the public API.
+Caching uses async-lru with a 6-hour TTL aligned to the canonical sync cadence. Caching is fully transparent to callers of the public API.
 
-Note: Pricing data from LLMTracker is denominated in USD; currency conversion uses daily USD base rates from the JSDelivr currency API with a 24h cache (keys uppercased).
+Note: Pricing data is denominated in USD; currency conversion uses daily USD base rates from the JSDelivr currency API with a 24h cache (keys uppercased).
 
 ## Development
 
@@ -181,7 +188,7 @@ Internal modules and models are not considered public and may change. Both APIs 
 
 ## Credits
 
-- Pricing data: [LLMTracker](https://github.com/MrUnreal/LLMTracker) by MrUnreal
+- Canonical data sync: [Atena-IT/tokenpricing](https://github.com/Atena-IT/tokenpricing)
 
 ## License
 

@@ -8,6 +8,6 @@
  * Data source: tokenpricing canonical dataset (https://github.com/Atena-IT/tokenpricing)
  */
 
-export { computeCost, getPricing } from "./core.js";
 export type { ComputeCostOptions } from "./core.js";
+export { computeCost, getPricing } from "./core.js";
 export type { PricingInfo } from "./modeling.js";

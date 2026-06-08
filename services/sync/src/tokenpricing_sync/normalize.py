@@ -96,6 +96,14 @@ def infer_supports_streaming(raw: dict[str, Any]) -> bool:
         return bool(raw.get("supports_streaming"))
     return True
 
+def parse_int(value: Any) -> int:
+    if value in (None, ""):
+        return 0
+    try:
+        return int(float(value))
+    except (TypeError, ValueError):
+        return 0
+
 
 def build_provider_info(provider_id: str, raw: dict[str, Any] | None = None) -> ProviderInfo:
     raw = raw or {}
@@ -139,8 +147,8 @@ def normalize_openrouter_model(raw: dict[str, Any], fetched_at: str) -> ModelInf
             cache_creation_per_million=source.price_cache_creation,
             currency="USD",
         ),
-        context_window=int(raw.get("context_length") or top_provider.get("context_length") or 0),
-        max_output_tokens=int(top_provider.get("max_completion_tokens") or raw.get("top_provider", {}).get("max_output_tokens") or 0),
+        context_window=parse_int(raw.get("context_length") or top_provider.get("context_length")),
+        max_output_tokens=parse_int(top_provider.get("max_completion_tokens") or raw.get("top_provider", {}).get("max_output_tokens")),
         model_type=model_type,
         supports_vision=infer_supports_vision(raw, model_type, haystack),
         supports_function_calling=infer_supports_function_calling(raw),
@@ -176,8 +184,8 @@ def normalize_litellm_model(model_id: str, raw: dict[str, Any], fetched_at: str)
             cache_creation_per_million=source.price_cache_creation,
             currency="USD",
         ),
-        context_window=int(raw.get("max_input_tokens") or raw.get("max_tokens") or 0),
-        max_output_tokens=int(raw.get("max_output_tokens") or raw.get("max_tokens") or 0),
+        context_window=parse_int(raw.get("max_input_tokens") or raw.get("max_tokens")),
+        max_output_tokens=parse_int(raw.get("max_output_tokens") or raw.get("max_tokens")),
         model_type=model_type,
         supports_vision=infer_supports_vision(raw, model_type, haystack),
         supports_function_calling=bool(raw.get("supports_function_calling", False)),
@@ -218,7 +226,12 @@ def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[
     last_scrape = datetime.now(timezone.utc)
 
     openrouter_fetched_at = str(openrouter_payload["fetched_at"])
-    for raw in openrouter_payload["data"].get("data", []):
+    openrouter_data = openrouter_payload.get("data", [])
+    if isinstance(openrouter_data, dict):
+        openrouter_models = openrouter_data.get("data", [])
+    else:
+        openrouter_models = openrouter_data
+    for raw in openrouter_models:
         model = normalize_openrouter_model(raw, openrouter_fetched_at)
         if model is None:
             continue
@@ -227,7 +240,8 @@ def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[
         last_scrape = max(last_scrape, datetime.fromisoformat(openrouter_fetched_at))
 
     litellm_fetched_at = str(litellm_payload["fetched_at"])
-    for model_id, raw in litellm_payload["data"].items():
+    litellm_models = litellm_payload.get("data", {})
+    for model_id, raw in litellm_models.items():
         if not isinstance(raw, dict):
             continue
         model = normalize_litellm_model(model_id, raw, litellm_fetched_at)

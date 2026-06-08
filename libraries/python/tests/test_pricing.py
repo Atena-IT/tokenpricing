@@ -96,7 +96,9 @@ class TestPublicAPI:
             assert pytest.approx(total, rel=1e-6) == 0.06
 
     @pytest.mark.asyncio
-    async def test_compute_cost_with_cache_tokens(self, sample_llmtracker_response: dict):
+    async def test_compute_cost_with_cache_tokens(
+        self, sample_llmtracker_response: dict
+    ):
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = sample_llmtracker_response

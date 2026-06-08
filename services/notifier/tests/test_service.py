@@ -168,7 +168,6 @@ def test_infer_model_status_uses_word_boundaries() -> None:
     assert infer_model_status("Legacy model", "", "") == ModelStatus.DEPRECATED
 
 
-
 def test_normalize_pricing_data_preserves_cache_prices() -> None:
     data = build_dataset(1.0)
     normalized = normalize_pricing_data(data)

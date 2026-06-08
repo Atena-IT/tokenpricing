@@ -61,7 +61,9 @@ async def get_pricing(model_id: str, currency: str = "USD"):
 
     cache_read = model.pricing.cache_read_per_million
     cache_creation = model.pricing.cache_creation_per_million
-    cache_read_value = float(Decimal(str(cache_read)) * rate) if cache_read is not None else None
+    cache_read_value = (
+        float(Decimal(str(cache_read)) * rate) if cache_read is not None else None
+    )
     cache_creation_value = (
         float(Decimal(str(cache_creation)) * rate)
         if cache_creation is not None
@@ -116,14 +118,15 @@ async def compute_cost(
     output_cost = (output_tokens / per_million) * pricing.output_per_million
     cache_read_cost = 0.0
     if pricing.cache_read_per_million is not None:
-        cache_read_cost = (cache_read_tokens / per_million) * pricing.cache_read_per_million
+        cache_read_cost = (
+            cache_read_tokens / per_million
+        ) * pricing.cache_read_per_million
 
     cache_creation_cost = 0.0
     if pricing.cache_creation_per_million is not None:
         cache_creation_cost = (
-            (cache_creation_tokens / per_million)
-            * pricing.cache_creation_per_million
-        )
+            cache_creation_tokens / per_million
+        ) * pricing.cache_creation_per_million
 
     return input_cost + output_cost + cache_read_cost + cache_creation_cost
 

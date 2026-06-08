@@ -71,7 +71,6 @@ def detect_events(
                     )
                 )
 
-
         cache_changed = (
             current.cache_read_per_million != previous.cache_read_per_million
             or current.cache_creation_per_million != previous.cache_creation_per_million

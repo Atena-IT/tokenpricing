@@ -8,7 +8,9 @@ import httpx
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/models"
 LITELLM_RAW_URL = "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
 OPENROUTER_FALLBACK_URL = "https://raw.githubusercontent.com/DiTo97/LLMTracker/main/data/current/openrouter.json"
-LITELLM_FALLBACK_URL = "https://raw.githubusercontent.com/DiTo97/LLMTracker/main/data/current/litellm.json"
+LITELLM_FALLBACK_URL = (
+    "https://raw.githubusercontent.com/DiTo97/LLMTracker/main/data/current/litellm.json"
+)
 REQUEST_TIMEOUT = 60.0
 USER_AGENT = "tokenpricing-sync/0.1.0 (https://github.com/Atena-IT/tokenpricing)"
 
@@ -46,7 +48,9 @@ def fetch_openrouter() -> dict[str, Any]:
     except (httpx.HTTPError, ValueError):
         fallback = _fetch_json(OPENROUTER_FALLBACK_URL)
         if not isinstance(fallback, dict) or "data" not in fallback:
-            raise ValueError("OpenRouter fallback payload is not in the expected format")
+            raise ValueError(
+                "OpenRouter fallback payload is not in the expected format"
+            )
         return fallback
 
 

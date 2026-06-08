@@ -119,7 +119,9 @@ class NotifierStore:
     def _ensure_snapshot_model_columns(connection: sqlite3.Connection) -> None:
         columns = {
             row["name"]
-            for row in connection.execute("PRAGMA table_info(snapshot_models)").fetchall()
+            for row in connection.execute(
+                "PRAGMA table_info(snapshot_models)"
+            ).fetchall()
         }
         if "cache_read_per_million" not in columns:
             connection.execute(

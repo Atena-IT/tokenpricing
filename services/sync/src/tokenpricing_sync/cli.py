@@ -48,7 +48,9 @@ def sync() -> dict[str, Any]:
     write_json(CURRENT_DATA_DIR / "openrouter.json", openrouter)
     write_json(CURRENT_DATA_DIR / "litellm.json", litellm)
     write_json(CURRENT_DATA_DIR / "prices.json", dataset.model_dump(mode="json"))
-    write_json(HISTORY_DIR / f"prices-{timestamp}.json", dataset.model_dump(mode="json"))
+    write_json(
+        HISTORY_DIR / f"prices-{timestamp}.json", dataset.model_dump(mode="json")
+    )
     write_json(CHANGELOG_DIR / "latest.json", changelog)
     return {
         "snapshot": str(CURRENT_DATA_DIR / "prices.json"),
@@ -74,8 +76,12 @@ def normalize_only() -> dict[str, Any]:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="tokenpricing canonical data sync")
     subparsers = parser.add_subparsers(dest="command", required=True)
-    subparsers.add_parser("sync", help="fetch sources and regenerate the canonical dataset")
-    subparsers.add_parser("normalize", help="regenerate the canonical dataset from local raw source files")
+    subparsers.add_parser(
+        "sync", help="fetch sources and regenerate the canonical dataset"
+    )
+    subparsers.add_parser(
+        "normalize", help="regenerate the canonical dataset from local raw source files"
+    )
     return parser
 
 

@@ -28,7 +28,9 @@ def extract_provider(model_id: str, raw_provider: str | None = None) -> str:
     if "/" in model_id:
         return model_id.split("/", 1)[0].lower()
     model_lower = model_id.lower()
-    if model_lower.startswith(("gpt-", "o1-", "o3-", "o4-", "ada", "babbage", "davinci", "curie")):
+    if model_lower.startswith(
+        ("gpt-", "o1-", "o3-", "o4-", "ada", "babbage", "davinci", "curie")
+    ):
         return "openai"
     if "claude" in model_lower:
         return "anthropic"
@@ -58,7 +60,9 @@ def infer_model_type(raw_mode: str | None, model_id: str, display_name: str) -> 
         return "embedding"
     if any(token in haystack for token in ("image", "flux", "sdxl", "midjourney")):
         return "image-generation"
-    if any(token in haystack for token in ("transcribe", "whisper", "speech", "tts", "stt")):
+    if any(
+        token in haystack for token in ("transcribe", "whisper", "speech", "tts", "stt")
+    ):
         return "transcription"
     if any(token in haystack for token in ("rerank", "reranker")):
         return "reranking"
@@ -67,9 +71,26 @@ def infer_model_type(raw_mode: str | None, model_id: str, display_name: str) -> 
 
 def infer_category(model_id: str, display_name: str) -> str:
     haystack = f"{model_id} {display_name}".lower()
-    if any(token in haystack for token in ("mini", "nano", "small", "flash", "haiku", "lite")):
+    if any(
+        token in haystack
+        for token in ("mini", "nano", "small", "flash", "haiku", "lite")
+    ):
         return "budget"
-    if any(token in haystack for token in ("opus", "sonnet", "pro", "ultra", "flagship", "o3", "o4", "gpt-5", "gemini-2.5-pro", "gemini-3")):
+    if any(
+        token in haystack
+        for token in (
+            "opus",
+            "sonnet",
+            "pro",
+            "ultra",
+            "flagship",
+            "o3",
+            "o4",
+            "gpt-5",
+            "gemini-2.5-pro",
+            "gemini-3",
+        )
+    ):
         return "flagship"
     return "standard"
 
@@ -79,7 +100,9 @@ def infer_supports_vision(raw: dict[str, Any], model_type: str, haystack: str) -
         return True
     if model_type == "image-generation":
         return True
-    modality = str(raw.get("modality") or raw.get("architecture", {}).get("modality") or "").lower()
+    modality = str(
+        raw.get("modality") or raw.get("architecture", {}).get("modality") or ""
+    ).lower()
     return "vision" in haystack or "image" in haystack or "image" in modality
 
 
@@ -98,6 +121,7 @@ def infer_supports_streaming(raw: dict[str, Any]) -> bool:
         return bool(raw.get("supports_streaming"))
     return True
 
+
 def parse_int(value: Any) -> int:
     if value in (None, ""):
         return 0
@@ -107,7 +131,9 @@ def parse_int(value: Any) -> int:
         return 0
 
 
-def build_provider_info(provider_id: str, raw: dict[str, Any] | None = None) -> ProviderInfo:
+def build_provider_info(
+    provider_id: str, raw: dict[str, Any] | None = None
+) -> ProviderInfo:
     raw = raw or {}
     name = raw.get("name") or provider_id.replace("-", " ").title()
     website = raw.get("website") or raw.get("provider_website") or ""
@@ -121,7 +147,9 @@ def build_provider_info(provider_id: str, raw: dict[str, Any] | None = None) -> 
     )
 
 
-def normalize_openrouter_model(raw: dict[str, Any], fetched_at: str) -> ModelInfo | None:
+def normalize_openrouter_model(
+    raw: dict[str, Any], fetched_at: str
+) -> ModelInfo | None:
     model_id = str(raw.get("id") or "").strip()
     if not model_id:
         return None
@@ -129,7 +157,9 @@ def normalize_openrouter_model(raw: dict[str, Any], fetched_at: str) -> ModelInf
     provider = extract_provider(model_id, raw.get("provider"))
     pricing = raw.get("pricing") or {}
     top_provider = raw.get("top_provider") or {}
-    model_type = infer_model_type(raw.get("architecture", {}).get("modality"), model_id, display_name)
+    model_type = infer_model_type(
+        raw.get("architecture", {}).get("modality"), model_id, display_name
+    )
     haystack = f"{model_id} {display_name}".lower()
     source = SourceInfo(
         price_input=parse_price_per_million(pricing.get("prompt")) or 0.0,
@@ -149,8 +179,13 @@ def normalize_openrouter_model(raw: dict[str, Any], fetched_at: str) -> ModelInf
             cache_creation_per_million=source.price_cache_creation,
             currency="USD",
         ),
-        context_window=parse_int(raw.get("context_length") or top_provider.get("context_length")),
-        max_output_tokens=parse_int(top_provider.get("max_completion_tokens") or raw.get("top_provider", {}).get("max_output_tokens")),
+        context_window=parse_int(
+            raw.get("context_length") or top_provider.get("context_length")
+        ),
+        max_output_tokens=parse_int(
+            top_provider.get("max_completion_tokens")
+            or raw.get("top_provider", {}).get("max_output_tokens")
+        ),
         model_type=model_type,
         supports_vision=infer_supports_vision(raw, model_type, haystack),
         supports_function_calling=infer_supports_function_calling(raw),
@@ -161,7 +196,9 @@ def normalize_openrouter_model(raw: dict[str, Any], fetched_at: str) -> ModelInf
     )
 
 
-def normalize_litellm_model(model_id: str, raw: dict[str, Any], fetched_at: str) -> ModelInfo | None:
+def normalize_litellm_model(
+    model_id: str, raw: dict[str, Any], fetched_at: str
+) -> ModelInfo | None:
     if not model_id:
         return None
     display_name = str(raw.get("label") or raw.get("litellm_provider") or model_id)
@@ -171,8 +208,12 @@ def normalize_litellm_model(model_id: str, raw: dict[str, Any], fetched_at: str)
     source = SourceInfo(
         price_input=parse_price_per_million(raw.get("input_cost_per_token")) or 0.0,
         price_output=parse_price_per_million(raw.get("output_cost_per_token")) or 0.0,
-        price_cache_read=parse_price_per_million(raw.get("cache_read_input_token_cost")),
-        price_cache_creation=parse_price_per_million(raw.get("cache_creation_input_token_cost")),
+        price_cache_read=parse_price_per_million(
+            raw.get("cache_read_input_token_cost")
+        ),
+        price_cache_creation=parse_price_per_million(
+            raw.get("cache_creation_input_token_cost")
+        ),
         last_updated=datetime.fromisoformat(fetched_at),
     )
     return ModelInfo(
@@ -187,7 +228,9 @@ def normalize_litellm_model(model_id: str, raw: dict[str, Any], fetched_at: str)
             currency="USD",
         ),
         context_window=parse_int(raw.get("max_input_tokens") or raw.get("max_tokens")),
-        max_output_tokens=parse_int(raw.get("max_output_tokens") or raw.get("max_tokens")),
+        max_output_tokens=parse_int(
+            raw.get("max_output_tokens") or raw.get("max_tokens")
+        ),
         model_type=model_type,
         supports_vision=infer_supports_vision(raw, model_type, haystack),
         supports_function_calling=bool(raw.get("supports_function_calling", False)),
@@ -201,28 +244,44 @@ def normalize_litellm_model(model_id: str, raw: dict[str, Any], fetched_at: str)
 def merge_model(existing: ModelInfo, incoming: ModelInfo) -> ModelInfo:
     merged_sources = {**existing.sources, **incoming.sources}
     pricing = PricingInfo(
-        input_per_million=existing.pricing.input_per_million or incoming.pricing.input_per_million,
-        output_per_million=existing.pricing.output_per_million or incoming.pricing.output_per_million,
-        cache_read_per_million=existing.pricing.cache_read_per_million if existing.pricing.cache_read_per_million is not None else incoming.pricing.cache_read_per_million,
-        cache_creation_per_million=existing.pricing.cache_creation_per_million if existing.pricing.cache_creation_per_million is not None else incoming.pricing.cache_creation_per_million,
+        input_per_million=existing.pricing.input_per_million
+        or incoming.pricing.input_per_million,
+        output_per_million=existing.pricing.output_per_million
+        or incoming.pricing.output_per_million,
+        cache_read_per_million=existing.pricing.cache_read_per_million
+        if existing.pricing.cache_read_per_million is not None
+        else incoming.pricing.cache_read_per_million,
+        cache_creation_per_million=existing.pricing.cache_creation_per_million
+        if existing.pricing.cache_creation_per_million is not None
+        else incoming.pricing.cache_creation_per_million,
         currency="USD",
     )
     return existing.model_copy(
         update={
-            "display_name": existing.display_name if existing.display_name != existing.model_id else incoming.display_name,
+            "display_name": existing.display_name
+            if existing.display_name != existing.model_id
+            else incoming.display_name,
             "pricing": pricing,
             "context_window": max(existing.context_window, incoming.context_window),
-            "max_output_tokens": max(existing.max_output_tokens, incoming.max_output_tokens),
+            "max_output_tokens": max(
+                existing.max_output_tokens, incoming.max_output_tokens
+            ),
             "supports_vision": existing.supports_vision or incoming.supports_vision,
-            "supports_function_calling": existing.supports_function_calling or incoming.supports_function_calling,
-            "supports_streaming": existing.supports_streaming or incoming.supports_streaming,
+            "supports_function_calling": existing.supports_function_calling
+            or incoming.supports_function_calling,
+            "supports_streaming": existing.supports_streaming
+            or incoming.supports_streaming,
             "sources": merged_sources,
-            "category": existing.category if existing.category != "standard" else incoming.category,
+            "category": existing.category
+            if existing.category != "standard"
+            else incoming.category,
         }
     )
 
 
-def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[str, Any]) -> PricingData:
+def normalize_sources(
+    openrouter_payload: dict[str, Any], litellm_payload: dict[str, Any]
+) -> PricingData:
     models: dict[str, ModelInfo] = {}
     providers: dict[str, ProviderInfo] = {}
 
@@ -237,8 +296,15 @@ def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[
         model = normalize_openrouter_model(raw, openrouter_fetched_at)
         if model is None:
             continue
-        models[model.model_id] = model if model.model_id not in models else merge_model(models[model.model_id], model)
-        providers.setdefault(model.provider, build_provider_info(model.provider, raw.get("top_provider") or raw))
+        models[model.model_id] = (
+            model
+            if model.model_id not in models
+            else merge_model(models[model.model_id], model)
+        )
+        providers.setdefault(
+            model.provider,
+            build_provider_info(model.provider, raw.get("top_provider") or raw),
+        )
     litellm_fetched_at = str(litellm_payload["fetched_at"])
     last_scrape = max(last_scrape, datetime.fromisoformat(litellm_fetched_at))
     litellm_models = litellm_payload.get("data", {})
@@ -250,7 +316,11 @@ def normalize_sources(openrouter_payload: dict[str, Any], litellm_payload: dict[
         model = normalize_litellm_model(model_id, raw, litellm_fetched_at)
         if model is None:
             continue
-        models[model.model_id] = model if model.model_id not in models else merge_model(models[model.model_id], model)
+        models[model.model_id] = (
+            model
+            if model.model_id not in models
+            else merge_model(models[model.model_id], model)
+        )
         providers.setdefault(model.provider, build_provider_info(model.provider, raw))
     category_counts = Counter(model.category for model in models.values())
     return PricingData(

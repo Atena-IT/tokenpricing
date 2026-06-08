@@ -1,5 +1,5 @@
 /**
- * tokenpricing — LLM token pricing library for TypeScript.
+ * tokenpricing — AI model token pricing library for TypeScript.
  *
  * Public API:
  * - getPricing(modelId, currency?) — get pricing info for a model

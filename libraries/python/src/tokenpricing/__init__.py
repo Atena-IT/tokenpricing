@@ -1,4 +1,4 @@
-"""tokenpricing - LLM token pricing library.
+"""tokenpricing - AI model token pricing library.
 
 Public API (async):
 - get_pricing(model_id, currency="USD")

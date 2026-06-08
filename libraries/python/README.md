@@ -6,13 +6,13 @@ API pricing math for 1k+ AI models from the canonical tokenpricing dataset with 
 
 ## Why tokenpricing?
 
-Token pricing for LLMs changes frequently across different providers. This library now consumes the canonical dataset published from this repository, synchronized directly from upstream pricing sources every six hours.
+Token pricing for AI models changes frequently across different providers and model types. This library now consumes the canonical dataset published from this repository, synchronized directly from upstream pricing sources every six hours.
 
 **Important:** This library does **not** estimate token counts from strings or messages. Any estimation would be too approximate for anything beyond plain text, and the [tokencost](https://github.com/AgentOps-AI/tokencost) package already handles that use case well. tokenpricing focuses solely on providing accurate, current pricing data.
 
 ## Features
 
-- Up-to-date LLM pricing from the tokenpricing canonical dataset
+- Up-to-date AI model pricing from the tokenpricing canonical dataset
 - Async caching via async-lru with a 6-hour TTL for pricing data
 - Multi-currency conversion via JSDelivr currency API with a 24-hour cached USD rates map
 - Clean, typed data models (Pydantic)

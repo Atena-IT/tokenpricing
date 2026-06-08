@@ -122,7 +122,7 @@ function App() {
                   tokenpricing dashboard
                 </h1>
                 <p className="max-w-3xl text-base text-slate-300 md:text-lg">
-                  Restored from the original LLMTracker experience, rebuilt on a modern Vite + React stack with curated shadcn-style primitives, first-class cache-token pricing, and a canonical dataset published from this repository.
+                  Restored from the original LLMTracker experience, rebuilt on a modern Vite + React stack with curated shadcn-style primitives, first-class cache-token pricing, and a canonical dataset for AI model types published from this repository.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 text-sm text-slate-300">

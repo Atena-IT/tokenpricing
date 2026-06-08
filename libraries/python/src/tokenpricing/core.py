@@ -6,7 +6,7 @@ Exposes async and sync versions:
 - compute_cost(model_id, input_tokens, output_tokens, currency="USD") [async]
 - compute_cost_sync(model_id, input_tokens, output_tokens, currency="USD") [sync]
 
-Under the hood, uses async cached pricing data from LLMTracker and optional
+Under the hood, uses async cached pricing data from the tokenpricing canonical dataset and optional
 forex conversion via JSDelivr currency API (cached for 24h).
 
 When lookups fail, errors include "Did you mean X?" suggestions when a close

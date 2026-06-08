@@ -8,7 +8,7 @@ import click
 from tokenpricing.core import compute_cost, get_pricing
 
 
-@click.group(help="Query LLM token pricing and compute costs")
+@click.group(help="Query AI model token pricing and compute costs")
 def main(): ...
 
 

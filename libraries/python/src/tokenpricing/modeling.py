@@ -1,4 +1,4 @@
-"""Data models for LLM pricing information from LLMTracker."""
+"""Data models for canonical AI model pricing information."""
 
 from datetime import datetime
 
@@ -36,7 +36,7 @@ class SourceInfo(BaseModel):
 
 
 class ModelInfo(BaseModel):
-    """Complete information about an LLM model."""
+    """Complete information about an AI model."""
 
     provider: str = Field(description="Provider identifier (e.g., openai, anthropic)")
     model_id: str = Field(description="Unique model identifier")
@@ -44,7 +44,9 @@ class ModelInfo(BaseModel):
     pricing: PricingInfo
     context_window: int = Field(description="Maximum context window size in tokens")
     max_output_tokens: int = Field(description="Maximum output tokens")
-    model_type: str = Field(description="Type of model (e.g., chat, embedding)")
+    model_type: str = Field(
+        description="Type of AI model (e.g., chat, embedding, image, audio)"
+    )
     supports_vision: bool = Field(default=False)
     supports_function_calling: bool = Field(default=False)
     supports_streaming: bool = Field(default=False)
@@ -56,7 +58,7 @@ class ModelInfo(BaseModel):
 
 
 class ProviderInfo(BaseModel):
-    """Information about an LLM provider."""
+    """Information about an AI model provider."""
 
     name: str = Field(description="Provider display name")
     website: str = Field(description="Provider website URL")
@@ -79,7 +81,7 @@ class MetadataInfo(BaseModel):
 
 
 class PricingData(BaseModel):
-    """Complete pricing dataset from LLMTracker."""
+    """Complete pricing dataset from the tokenpricing canonical dataset."""
 
     generated_at: datetime = Field(description="Timestamp when data was generated")
     models: dict[str, ModelInfo] = Field(

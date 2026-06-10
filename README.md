@@ -162,7 +162,7 @@ Each library and service is self-contained. See the individual READMEs for setup
 
 ## Credits
 
-- Canonical dataset: this repository (`database/current/prices.json`), synchronized from OpenRouter and LiteLLM and incorporating the prior LLMTracker fork enhancements
+- Canonical database: this repository (`database/current/prices.json`), synchronized from OpenRouter and LiteLLM and inspired by the original [LLMTracker](https://github.com/MrUnreal/LLMTracker) implementation
 
 ## License
 

@@ -1,6 +1,18 @@
 # tokenpricing
 
-API pricing math for 1k+ AI models with a canonical in-repo pricing database, cache-token pricing support, multi-currency conversion, change notifications, and a modern web dashboard.
+[![Python Tests](https://github.com/Atena-IT/tokenpricing/actions/workflows/python-test.yml/badge.svg)](https://github.com/Atena-IT/tokenpricing/actions/workflows/python-test.yml)
+[![TypeScript Tests](https://github.com/Atena-IT/tokenpricing/actions/workflows/typescript-test.yml/badge.svg)](https://github.com/Atena-IT/tokenpricing/actions/workflows/typescript-test.yml)
+[![Dashboard Build](https://github.com/Atena-IT/tokenpricing/actions/workflows/dashboard-build.yml/badge.svg)](https://github.com/Atena-IT/tokenpricing/actions/workflows/dashboard-build.yml)
+[![Database Sync](https://github.com/Atena-IT/tokenpricing/actions/workflows/database-sync.yml/badge.svg)](https://github.com/Atena-IT/tokenpricing/actions/workflows/database-sync.yml)
+[![PyPI](https://img.shields.io/pypi/v/tokenpricing?logo=pypi&logoColor=white)](https://pypi.org/project/tokenpricing/)
+[![npm](https://img.shields.io/npm/v/tokenpricing?logo=npm)](https://www.npmjs.com/package/tokenpricing)
+[![Dashboard](https://img.shields.io/badge/dashboard-live-9E4754)](https://atena-it.github.io/tokenpricing/)
+[![Docs](https://img.shields.io/badge/docs-vitepress-004048)](https://atena-it.github.io/tokenpricing/docs/)
+[![License](https://img.shields.io/github/license/Atena-IT/tokenpricing)](LICENSE)
+
+API pricing math for 3k+ AI models with a canonical in-repo pricing database, cache-token pricing support, multi-currency conversion, change notifications, and a modern web dashboard.
+
+**[Live dashboard](https://atena-it.github.io/tokenpricing/)** · **[Documentation](https://atena-it.github.io/tokenpricing/docs/)**
 
 ## What this repository offers
 
@@ -138,6 +150,7 @@ Pricing data is now synchronized directly inside this repository from OpenRouter
 tokenpricing/
 ├── .claude-plugin/      Claude Code marketplace manifest
 ├── database/            Canonical synced pricing snapshots + changelog
+├── docs/                VitePress documentation site (published at /docs/)
 ├── skills/              Canonical coding-agent skill
 ├── services/
 │   ├── dashboard/       Vite + React pricing explorer
@@ -149,6 +162,12 @@ tokenpricing/
 ├── .github/workflows/   CI/CD (path-filtered per library)
 └── LICENSE
 ```
+
+## Documentation
+
+Full documentation — quickstart, CLI reference, SDK guides, webhook notifications, and the database schema — lives at **[atena-it.github.io/tokenpricing/docs](https://atena-it.github.io/tokenpricing/docs/)**, built with VitePress from [`docs/`](docs/).
+
+Model types follow the OpenRouter output-modality taxonomy: `text`, `image`, `embeddings`, `audio`, `video`, `rerank`, `speech`, `transcription`.
 
 ## Development
 

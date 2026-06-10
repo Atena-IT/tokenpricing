@@ -80,7 +80,8 @@ def build_parser() -> argparse.ArgumentParser:
         "sync", help="fetch sources and regenerate the canonical database"
     )
     subparsers.add_parser(
-        "normalize", help="regenerate the canonical database from local raw source files"
+        "normalize",
+        help="regenerate the canonical database from local raw source files",
     )
     return parser
 

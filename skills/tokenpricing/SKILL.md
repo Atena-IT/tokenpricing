@@ -1,7 +1,7 @@
 ---
 name: tokenpricing
-description: Query live LLM token pricing (including cache read/write rates) and compute workload cost from known token counts. Use when the user asks what a model costs per 1M tokens, wants to compare model pricing across providers or currencies, needs total spend for a workload with known input/output (and optionally cache) token counts, or asks what prompt caching costs or saves for a model. This skill shells out to the tokenpricing CLI. Do not use it for counting tokens from raw text, subscription or invoice questions, or billing topics that are not model-pricing math. Triggers include "what does openai/gpt-5.2 cost", "compare Claude and GPT pricing in EUR", "what would 250000 input and 40000 output tokens cost", "how much do cache reads cost on claude", "would prompt caching save me money here", or "show me machine-readable pricing for this model".
-allowed-tools: Bash(tokenpricing:*), Bash(uv run --project libraries/python tokenpricing:*)
+description: Query live LLM token pricing (including cache read/write rates), compute workload cost from known token counts, and set up webhook notifications for pricing changes. Use when the user asks what a model costs per 1M tokens, wants to compare model pricing across providers or currencies, needs total spend for a workload with known input/output (and optionally cache) token counts, asks what prompt caching costs or saves for a model, or wants alerts when model prices change or models are added, deprecated, or removed. This skill shells out to the tokenpricing CLI and the notifier service. Do not use it for counting tokens from raw text, subscription or invoice questions, or billing topics that are not model-pricing math. Triggers include "what does openai/gpt-5.2 cost", "compare Claude and GPT pricing in EUR", "what would 250000 input and 40000 output tokens cost", "how much do cache reads cost on claude", "would prompt caching save me money here", "notify my webhook when claude prices change", or "show me machine-readable pricing for this model".
+allowed-tools: Bash(tokenpricing:*), Bash(uv run --project libraries/python tokenpricing:*), Bash(notifier:*), Bash(uv run --project services/notifier notifier:*)
 hidden: true
 ---
 
@@ -38,6 +38,46 @@ uv run --project libraries/python tokenpricing cost MODEL --in INPUT_TOKENS --ou
 ```
 
 `--cache-read` is the count of cached input tokens served from cache hits; `--cache-write` is the count of input tokens written into the cache. Both default to 0, so plain input/output costing needs no extra flags.
+
+## Webhook notifications (notifier service)
+
+Use when the user wants alerts for pricing changes, cache price changes, or model lifecycle events (added, deprecated, removed). The notifier is a separate service in this repository under `services/notifier`; it stores state in SQLite (default `~/.tokenpricing/notifier.db`).
+
+### Serve the management API
+
+```bash
+uv run --project services/notifier notifier serve --host 127.0.0.1 --port 8000
+```
+
+### Create a webhook subscription
+
+POST to the running API. Filters are optional — omit them to receive everything. `model_type` follows the OpenRouter taxonomy: text, image, embeddings, audio, video, rerank, speech, transcription.
+
+```bash
+curl -X POST http://127.0.0.1:8000/subscriptions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "webhook_url": "https://example.com/hooks/tokenpricing",
+    "description": "Anthropic price moves",
+    "filters": {
+      "provider": "anthropic",
+      "event_types": ["pricing_changed", "cache_price_changed", "model_deprecated", "model_removed"]
+    }
+  }'
+```
+
+Available event types: `pricing_changed`, `pricing_increased`, `pricing_decreased`, `cache_price_changed`, `model_deprecated`, `model_removed`, `model_added`. Other endpoints: `GET/PATCH/DELETE /subscriptions/{id}`, `POST /subscriptions/{id}/test` (send a test delivery), `POST /subscriptions/{id}/verify`, `POST /subscriptions/{id}/rotate-secret`, `GET /events`, `GET /deliveries`.
+
+### Poll and deliver
+
+```bash
+uv run --project services/notifier notifier sync --deliver   # one polling cycle + flush deliveries
+uv run --project services/notifier notifier worker           # long-running poller (default every 6h)
+```
+
+### Verifying deliveries on the receiving end
+
+Each delivery is HMAC-SHA256 signed: the `X-Tokenpricing-Signature` header is `sha256=<hexdigest>` of `"{X-Tokenpricing-Timestamp}." + body` keyed with the subscription secret (returned on creation, rotatable via the API). Failed deliveries retry with backoff (1m, 5m, 30m, 2h) before dead-lettering.
 
 ## Recommended workflow
 

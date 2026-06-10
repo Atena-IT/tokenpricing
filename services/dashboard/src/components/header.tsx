@@ -25,6 +25,12 @@ export function Header({ generatedAt }: { generatedAt: string }) {
           <span className="text-[15px] font-semibold tracking-tight">tokenpricing</span>
         </a>
         <div className="flex items-center gap-1.5">
+          <a
+            href={`${import.meta.env.BASE_URL}docs/`}
+            className="inline-flex h-9 items-center rounded-md px-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            Docs
+          </a>
           {generatedAt ? (
             <span className="mr-2 hidden items-center gap-2 text-xs text-muted-foreground sm:flex">
               <span className="inline-flex h-2 w-2 rounded-full bg-success" aria-hidden />

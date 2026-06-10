@@ -147,7 +147,11 @@ const columns: ColumnDef<ModelRow>[] = [
 export function ExplorerView({ models }: { models: ModelRow[] }) {
   const [query, setQuery] = useState("");
   const [provider, setProvider] = useState("all");
-  const [modelType, setModelType] = useState("chat");
+  // OpenRouter taxonomy uses "text"; fall back gracefully if the loaded
+  // dataset still carries the legacy "chat" type.
+  const [modelType, setModelType] = useState(() =>
+    models.some((model) => model.model_type === "text") || models.length === 0 ? "text" : "chat",
+  );
   const [sorting, setSorting] = useState<SortingState>([{ id: "model", desc: false }]);
 
   const providers = useMemo(() => {

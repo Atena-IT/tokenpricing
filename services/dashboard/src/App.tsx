@@ -81,10 +81,14 @@ function App() {
         setGeneratedAt(pricingData.generated_at);
         setChangelog(changelogData);
 
-        // Seed pickers with well-known chat models so Compare and Calculator
+        // Seed pickers with well-known text models so Compare and Calculator
         // open with a meaningful example instead of an alphabetical artifact.
+        // Accept the legacy "chat" type until the database adopts the
+        // OpenRouter taxonomy everywhere.
         const chatModels = entries.filter(
-          (model) => model.model_type === "chat" && model.pricing.input_per_million > 0,
+          (model) =>
+            (model.model_type === "text" || model.model_type === "chat") &&
+            model.pricing.input_per_million > 0,
         );
         const findByPrefix = (prefix: string) =>
           chatModels.find((model) => model.model_id.startsWith(prefix) && model.category === "flagship")

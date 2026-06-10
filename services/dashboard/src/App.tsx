@@ -1,4 +1,4 @@
-import { AlertCircle, ArrowLeftRight, Calculator, History, TableProperties } from "lucide-react";
+import { AlertCircle, ArrowLeftRight, Calculator, History, TableProperties, TrendingUp } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 import { CalculatorView } from "./components/calculator";
@@ -7,6 +7,7 @@ import { buildModelOptions, CompareView } from "./components/compare";
 import { ExplorerView } from "./components/explorer";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
+import { HistoryView } from "./components/history";
 import { StatsRow } from "./components/stats";
 import { Card } from "./components/ui/card";
 import { Skeleton } from "./components/ui/skeleton";
@@ -146,6 +147,10 @@ function App() {
                 <Calculator className="h-3.5 w-3.5" />
                 Calculator
               </TabsTrigger>
+              <TabsTrigger value="history">
+                <TrendingUp className="h-3.5 w-3.5" />
+                History
+              </TabsTrigger>
               <TabsTrigger value="changelog">
                 <History className="h-3.5 w-3.5" />
                 Changelog
@@ -182,6 +187,16 @@ function App() {
                     options={modelOptions}
                     selected={calculatorModel}
                     onSelect={setCalculatorModel}
+                  />
+                </TabsContent>
+                <TabsContent value="history">
+                  <HistoryView
+                    models={models}
+                    options={modelOptions}
+                    modelA={compareA}
+                    modelB={compareB}
+                    onChangeA={setCompareA}
+                    onChangeB={setCompareB}
                   />
                 </TabsContent>
                 <TabsContent value="changelog">

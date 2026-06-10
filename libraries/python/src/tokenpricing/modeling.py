@@ -81,7 +81,7 @@ class MetadataInfo(BaseModel):
 
 
 class PricingData(BaseModel):
-    """Complete pricing dataset from the tokenpricing canonical dataset."""
+    """Complete pricing database from tokenpricing's canonical database."""
 
     generated_at: datetime = Field(description="Timestamp when data was generated")
     models: dict[str, ModelInfo] = Field(

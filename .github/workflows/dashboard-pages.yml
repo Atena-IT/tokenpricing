@@ -6,8 +6,8 @@ on:
     branches: [main]
     paths:
       - "services/dashboard/**"
-      - "data/current/prices.json"
-      - "data/changelog/latest.json"
+      - "database/current/prices.json"
+      - "database/changelog/latest.json"
 
 permissions:
   contents: read

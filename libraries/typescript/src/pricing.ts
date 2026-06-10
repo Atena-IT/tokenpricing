@@ -9,9 +9,9 @@ import { parsePricingData, type RawPricingData } from "./modeling.js";
 
 /** Canonical pricing data URL — updated every 6 hours */
 const CANONICAL_DATASET_URL =
-  "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data/current/prices.json";
+  "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/current/prices.json";
 
-/** Cache TTL: 6 hours (21600000 ms) — aligns with canonical dataset refresh frequency */
+/** Cache TTL: 6 hours (21600000 ms) — aligns with canonical database refresh frequency */
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 
 async function fetchPricingData(): Promise<RawPricingData> {

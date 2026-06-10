@@ -2,17 +2,17 @@
 
 [![npm version](https://img.shields.io/npm/v/tokenpricing)](https://www.npmjs.com/package/tokenpricing)
 
-API pricing math for 1k+ AI models from the canonical tokenpricing dataset with multi-currency and cache-token pricing support.
+API pricing math for 1k+ AI models from the canonical tokenpricing database with multi-currency and cache-token pricing support.
 
 ## Why tokenpricing?
 
-Token pricing for AI models changes frequently across different providers and model types. This library now consumes the canonical dataset published from this repository, synchronized directly from upstream pricing sources every six hours.
+Token pricing for AI models changes frequently across different providers and model types. This library now consumes the canonical database published from this repository, synchronized directly from upstream pricing sources every six hours.
 
 **Important:** This library does **not** estimate token counts from strings or messages. tokenpricing focuses solely on providing accurate, current pricing data.
 
 ## Features
 
-- Up-to-date AI model pricing from the tokenpricing canonical dataset
+- Up-to-date AI model pricing from the tokenpricing canonical database
 - Caching with 6-hour TTL for pricing data
 - Multi-currency conversion via JSDelivr currency API with a 24-hour cached USD rates map
 - TypeScript-first with full type definitions
@@ -131,7 +131,7 @@ pnpm typecheck      # TypeScript type check
 
 ## Credits
 
-- Canonical data sync: [Atena-IT/tokenpricing](https://github.com/Atena-IT/tokenpricing)
+- Canonical database sync: [Atena-IT/tokenpricing](https://github.com/Atena-IT/tokenpricing)
 
 ## License
 

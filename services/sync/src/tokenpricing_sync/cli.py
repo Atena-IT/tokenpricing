@@ -74,7 +74,7 @@ def normalize_only() -> dict[str, Any]:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="tokenpricing canonical data sync")
+    parser = argparse.ArgumentParser(description="tokenpricing canonical database sync")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser(
         "sync", help="fetch sources and regenerate the canonical dataset"

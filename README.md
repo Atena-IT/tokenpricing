@@ -1,6 +1,15 @@
 # tokenpricing
 
-API pricing math for 1k+ AI models with a canonical in-repo dataset, cache-token pricing support, multi-currency conversion, and a modern web dashboard.
+API pricing math for 1k+ AI models with a canonical in-repo pricing database, cache-token pricing support, multi-currency conversion, change notifications, and a modern web dashboard.
+
+## What this repository offers
+
+- Python SDK and CLI for pricing lookups, model discovery, and cost computation
+- TypeScript SDK for the same canonical pricing and cost APIs in Node.js apps
+- Canonical in-repo pricing database synchronized from OpenRouter and LiteLLM every six hours
+- Notifier service for webhook subscriptions, pricing-change events, and model lifecycle alerts
+- Dashboard service for browsing the pricing catalog and changelog visually
+- Claude Code skill and marketplace manifest for agent-assisted pricing lookups
 
 ## Libraries
 
@@ -78,6 +87,36 @@ tokenpricing pricing openai/gpt-5.2 --json
 tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --cache-read 250 --cache-write 100 --currency EUR
 ```
 
+### Notifier service
+
+```bash
+cd services/notifier
+uv sync --group dev
+uv run notifier serve --db-path ./database/notifier.db --host 127.0.0.1 --port 8000
+```
+
+Then you can create subscriptions through the FastAPI service and run manual sync cycles with:
+
+```bash
+uv run notifier sync --db-path ./database/notifier.db --deliver
+```
+
+### Dashboard
+
+```bash
+cd services/dashboard
+npm install
+npm run build
+```
+
+### Canonical database sync
+
+```bash
+cd services/sync
+uv sync --group dev
+uv run tokenpricing-sync sync
+```
+
 ## Claude Code skill
 
 This repository ships a Claude Code marketplace manifest at `.claude-plugin/marketplace.json` and the canonical hidden skill at `skills/tokenpricing/SKILL.md`.
@@ -86,7 +125,7 @@ When the plugin is installed, Claude Code can pick up the skill automatically an
 
 The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
 
-## Data Source
+## Canonical database
 
 Pricing data is now synchronized directly inside this repository from OpenRouter and LiteLLM, normalized into the tokenpricing schema, and published as the canonical dataset every six hours.
 
@@ -95,12 +134,12 @@ Pricing data is now synchronized directly inside this repository from OpenRouter
 ```
 tokenpricing/
 ├── .claude-plugin/      Claude Code marketplace manifest
-├── data/                Canonical synced pricing snapshots + changelog
+├── database/            Canonical synced pricing snapshots + changelog
 ├── skills/              Canonical coding-agent skill
 ├── services/
 │   ├── dashboard/       Vite + React pricing explorer
 │   ├── notifier/        Webhook notification service
-│   └── sync/            Canonical data sync pipeline
+│   └── sync/            Canonical database sync pipeline
 ├── libraries/
 │   ├── python/          Python SDK + CLI (PyPI)
 │   └── typescript/      TypeScript SDK (npm)
@@ -110,14 +149,17 @@ tokenpricing/
 
 ## Development
 
-Each library is self-contained. See the individual READMEs for setup and development instructions:
+Each library and service is self-contained. See the individual READMEs for setup and development instructions:
 
 - [Python SDK development](libraries/python/README.md#development)
 - [TypeScript SDK development](libraries/typescript/README.md#development)
+- [Notifier service](services/notifier/README.md)
+- [Dashboard service](services/dashboard/README.md)
+- [Sync service](services/sync/README.md)
 
 ## Credits
 
-- Canonical dataset: this repository (`data/current/prices.json`), synchronized from OpenRouter and LiteLLM and incorporating the prior LLMTracker fork enhancements
+- Canonical dataset: this repository (`database/current/prices.json`), synchronized from OpenRouter and LiteLLM and incorporating the prior LLMTracker fork enhancements
 
 ## License
 

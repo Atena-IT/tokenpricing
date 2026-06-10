@@ -1,5 +1,5 @@
 const DEFAULT_CANONICAL_DATA_ROOT =
-  "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data";
+  "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database";
 const CANONICAL_DATA_ROOT =
   (import.meta.env.VITE_CANONICAL_DATA_ROOT?.trim() || DEFAULT_CANONICAL_DATA_ROOT).replace(/\/+$/, "");
 

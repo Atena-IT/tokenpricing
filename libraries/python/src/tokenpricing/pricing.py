@@ -9,7 +9,7 @@ from async_lru import alru_cache
 from tokenpricing.modeling import PricingData
 
 # Canonical pricing data URL - updated every 6 hours
-CANONICAL_DATASET_URL = "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data/current/prices.json"
+CANONICAL_DATASET_URL = "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/current/prices.json"
 
 # Cache TTL: 6 hours (21600 seconds) - aligns with canonical dataset refresh frequency
 CACHE_TTL_SECONDS = 6 * 60 * 60

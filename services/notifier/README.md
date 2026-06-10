@@ -23,19 +23,19 @@ uv run ruff format --check .
 ## Running the API
 
 ```bash
-uv run notifier serve --db-path ./data/notifier.db --host 127.0.0.1 --port 8000
+uv run notifier serve --db-path ./database/notifier.db --host 127.0.0.1 --port 8000
 ```
 
 ## Running one sync cycle
 
 ```bash
-uv run notifier sync --db-path ./data/notifier.db --deliver
+uv run notifier sync --db-path ./database/notifier.db --deliver
 ```
 
 ## Running the worker loop
 
 ```bash
-uv run notifier worker --db-path ./data/notifier.db --poll-interval 21600
+uv run notifier worker --db-path ./database/notifier.db --poll-interval 21600
 ```
 
 ## Webhook payload

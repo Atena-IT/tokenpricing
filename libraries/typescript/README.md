@@ -131,7 +131,7 @@ pnpm typecheck      # TypeScript type check
 
 ## Credits
 
-- Canonical data sync: [Atena-IT/tokenpricing](https://github.com/Atena-IT/tokenpricing)
+- Canonical database sync: [Atena-IT/tokenpricing](https://github.com/Atena-IT/tokenpricing)
 
 ## License
 

@@ -141,7 +141,7 @@ The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
 
 Pricing data is sourced from the canonical tokenpricing dataset generated in this repository from OpenRouter and LiteLLM. The raw data is available at:
 ```
-https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/data/current/prices.json
+https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/current/prices.json
 ```
 
 Caching uses async-lru with a 6-hour TTL aligned to the canonical sync cadence. Caching is fully transparent to callers of the public API.
@@ -188,7 +188,7 @@ Internal modules and models are not considered public and may change. Both APIs 
 
 ## Credits
 
-- Canonical data sync: [Atena-IT/tokenpricing](https://github.com/Atena-IT/tokenpricing)
+- Canonical database sync: [Atena-IT/tokenpricing](https://github.com/Atena-IT/tokenpricing)
 
 ## License
 

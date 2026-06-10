@@ -1,9 +1,5 @@
 # tokenpricing
 
-[![Python Tests](https://github.com/Atena-IT/tokenpricing/actions/workflows/python-test.yml/badge.svg)](https://github.com/Atena-IT/tokenpricing/actions/workflows/python-test.yml)
-[![TypeScript Tests](https://github.com/Atena-IT/tokenpricing/actions/workflows/typescript-test.yml/badge.svg)](https://github.com/Atena-IT/tokenpricing/actions/workflows/typescript-test.yml)
-[![Dashboard Build](https://github.com/Atena-IT/tokenpricing/actions/workflows/dashboard-build.yml/badge.svg)](https://github.com/Atena-IT/tokenpricing/actions/workflows/dashboard-build.yml)
-[![Database Sync](https://github.com/Atena-IT/tokenpricing/actions/workflows/database-sync.yml/badge.svg)](https://github.com/Atena-IT/tokenpricing/actions/workflows/database-sync.yml)
 [![PyPI](https://img.shields.io/pypi/v/tokenpricing?logo=pypi&logoColor=white)](https://pypi.org/project/tokenpricing/)
 [![npm](https://img.shields.io/npm/v/tokenpricing?logo=npm)](https://www.npmjs.com/package/tokenpricing)
 [![Dashboard](https://img.shields.io/badge/dashboard-live-9E4754)](https://atena-it.github.io/tokenpricing/)

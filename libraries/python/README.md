@@ -139,7 +139,7 @@ The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
 
 ## Data Source
 
-Pricing data is sourced from the canonical tokenpricing dataset generated in this repository from OpenRouter and LiteLLM. The raw data is available at:
+Pricing data is sourced from the canonical tokenpricing database generated in this repository from OpenRouter and LiteLLM. The raw data is available at:
 ```
 https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/current/prices.json
 ```

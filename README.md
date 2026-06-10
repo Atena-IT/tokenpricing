@@ -89,16 +89,19 @@ tokenpricing cost openai/gpt-5.2 --in 1000 --out 500 --cache-read 250 --cache-wr
 
 ### Notifier service
 
+By default, the notifier stores its SQLite database in the current user's home
+directory under `.tokenpricing/notifier.db`.
+
 ```bash
 cd services/notifier
 uv sync --group dev
-uv run notifier serve --db-path ./database/notifier.db --host 127.0.0.1 --port 8000
+uv run notifier serve --host 127.0.0.1 --port 8000
 ```
 
 Then you can create subscriptions through the FastAPI service and run manual sync cycles with:
 
 ```bash
-uv run notifier sync --db-path ./database/notifier.db --deliver
+uv run notifier sync --deliver
 ```
 
 ### Dashboard
@@ -127,7 +130,7 @@ The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
 
 ## Canonical database
 
-Pricing data is now synchronized directly inside this repository from OpenRouter and LiteLLM, normalized into the tokenpricing schema, and published as the canonical dataset every six hours.
+Pricing data is now synchronized directly inside this repository from OpenRouter and LiteLLM, normalized into the tokenpricing schema, and published as the canonical database every six hours.
 
 ## Repository Structure
 

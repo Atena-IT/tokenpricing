@@ -3,10 +3,12 @@ from __future__ import annotations
 import argparse
 import asyncio
 import builtins
+from pathlib import Path
 
 import pytest
 
 from notifier import cli
+from notifier.api import DEFAULT_DB_PATH
 
 
 class DummyResult:
@@ -15,6 +17,13 @@ class DummyResult:
 
     def model_dump_json(self, indent: int = 2) -> str:
         return self.payload
+
+
+def test_build_parser_uses_home_directory_default_db_path() -> None:
+    args = cli.build_parser().parse_args(["serve"])
+
+    assert args.db_path == str(DEFAULT_DB_PATH)
+    assert DEFAULT_DB_PATH == Path.home() / ".tokenpricing" / "notifier.db"
 
 
 @pytest.mark.asyncio

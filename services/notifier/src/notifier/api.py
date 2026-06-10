@@ -15,7 +15,7 @@ from notifier.models import (
 )
 from notifier.service import NotifierService
 
-DEFAULT_DB_PATH = Path("./database/notifier.db")
+DEFAULT_DB_PATH = Path.home() / ".tokenpricing" / "notifier.db"
 
 
 def create_app(

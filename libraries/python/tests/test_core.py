@@ -30,7 +30,7 @@ def sample_llmtracker_response() -> dict:
                 },
                 "context_window": 8192,
                 "max_output_tokens": 4096,
-                "model_type": "chat",
+                "model_type": "text",
                 "supports_vision": False,
                 "supports_function_calling": True,
                 "supports_streaming": True,

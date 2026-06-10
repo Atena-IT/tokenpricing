@@ -16,7 +16,7 @@ describe("parsePricingData", () => {
         },
         context_window: 8192,
         max_output_tokens: 4096,
-        model_type: "chat",
+        model_type: "text",
         supports_vision: false,
         supports_function_calling: true,
         supports_streaming: true,

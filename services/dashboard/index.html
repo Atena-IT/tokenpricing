@@ -4,7 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tokenpricing dashboard</title>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=sentient@300,301,400,401,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Canonical API pricing for 3,000+ AI models — input, output, and cache token rates, model comparison, cost calculator, and change tracking."
+    />
+    <title>tokenpricing — AI model pricing explorer</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("tokenpricing-theme");
+          var dark =
+            stored === "dark" ||
+            (stored !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (_error) {
+          /* default to light */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

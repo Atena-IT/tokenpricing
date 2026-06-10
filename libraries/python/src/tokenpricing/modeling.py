@@ -45,7 +45,10 @@ class ModelInfo(BaseModel):
     context_window: int = Field(description="Maximum context window size in tokens")
     max_output_tokens: int = Field(description="Maximum output tokens")
     model_type: str = Field(
-        description="Type of AI model (e.g., chat, embedding, image, audio)"
+        description=(
+            "Output modality of the model, following the OpenRouter taxonomy: "
+            "text, image, embeddings, audio, video, rerank, speech, transcription"
+        )
     )
     supports_vision: bool = Field(default=False)
     supports_function_calling: bool = Field(default=False)

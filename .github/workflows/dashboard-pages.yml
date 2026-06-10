@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "services/dashboard/**"
+      - "docs/**"
       - "database/current/prices.json"
       - "database/changelog/latest.json"
 
@@ -40,6 +41,16 @@ jobs:
         env:
           GITHUB_PAGES: "true"
         run: npm run build
+      - name: Install docs dependencies
+        working-directory: docs
+        run: npm ci
+      - name: Build docs
+        working-directory: docs
+        env:
+          GITHUB_PAGES: "true"
+        run: npm run build
+      - name: Merge docs into site artifact
+        run: cp -r docs/.vitepress/dist services/dashboard/dist/docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

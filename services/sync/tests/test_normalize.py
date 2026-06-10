@@ -45,7 +45,7 @@ def test_normalize_sources_preserves_cache_fields() -> None:
     assert model.pricing.output_per_million == 6.0
     assert model.pricing.cache_read_per_million == 1.0
     assert model.pricing.cache_creation_per_million == 3.0
-    assert model.model_type == "chat"
+    assert model.model_type == "text"
 
 
 def test_normalize_sources_preserves_zero_cache_fields() -> None:

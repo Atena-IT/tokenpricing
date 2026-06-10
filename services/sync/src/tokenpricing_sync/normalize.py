@@ -42,31 +42,39 @@ def extract_provider(model_id: str, raw_provider: str | None = None) -> str:
 
 
 def infer_model_type(raw_mode: str | None, model_id: str, display_name: str) -> str:
+    """Classify a model into the OpenRouter output-modality taxonomy:
+    text, image, embeddings, audio, video, rerank, speech, transcription."""
     mode = (raw_mode or "").lower().replace("_", "-")
-    if mode in {"chat", "completion", "responses", "language"}:
-        return "chat"
+    if mode in {"chat", "completion", "responses", "language", "text"}:
+        return "text"
     if mode in {"embedding", "embeddings"}:
-        return "embedding"
+        return "embeddings"
     if mode in {"image-generation", "image-edit", "image", "images"}:
-        return "image-generation"
-    if mode in {"audio", "audio-transcription", "audio-speech", "transcription"}:
+        return "image"
+    if mode in {"audio-speech", "speech", "tts"}:
+        return "speech"
+    if mode in {"audio-transcription", "transcription", "stt"}:
         return "transcription"
+    if mode == "audio":
+        return "audio"
     if mode in {"rerank", "reranking"}:
-        return "reranking"
+        return "rerank"
     if mode == "video":
         return "video"
     haystack = f"{model_id} {display_name}".lower()
     if any(token in haystack for token in ("embed", "embedding")):
-        return "embedding"
+        return "embeddings"
     if any(token in haystack for token in ("image", "flux", "sdxl", "midjourney")):
-        return "image-generation"
-    if any(
-        token in haystack for token in ("transcribe", "whisper", "speech", "tts", "stt")
-    ):
+        return "image"
+    if any(token in haystack for token in ("tts", "text-to-speech", "speech-0")):
+        return "speech"
+    if any(token in haystack for token in ("transcribe", "whisper", "stt")):
         return "transcription"
     if any(token in haystack for token in ("rerank", "reranker")):
-        return "reranking"
-    return "chat"
+        return "rerank"
+    if any(token in haystack for token in ("video", "sora", "veo")):
+        return "video"
+    return "text"
 
 
 def infer_category(model_id: str, display_name: str) -> str:
@@ -98,7 +106,7 @@ def infer_category(model_id: str, display_name: str) -> str:
 def infer_supports_vision(raw: dict[str, Any], model_type: str, haystack: str) -> bool:
     if raw.get("supports_vision") is True:
         return True
-    if model_type == "image-generation":
+    if model_type == "image":
         return True
     modality = str(
         raw.get("modality") or raw.get("architecture", {}).get("modality") or ""

@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v6
       - uses: astral-sh/setup-uv@v7
@@ -32,26 +31,13 @@ jobs:
             printf '%s\0' "${history_files[@]:42}" | xargs -0 rm -f --
           fi
       - name: Commit refreshed data
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet; then
             echo "No data changes"
             exit 0
           fi
-          branch="automation/data-sync"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B "$branch"
           git add data/current data/history data/changelog
           git commit -m "chore: refresh canonical pricing data"
-          git push --force origin "HEAD:refs/heads/$branch"
-          if gh pr view "$branch" --json number >/dev/null 2>&1; then
-            echo "Updated existing pull request for $branch"
-          else
-            gh pr create \
-              --base main \
-              --head "$branch" \
-              --title "chore: refresh canonical pricing data" \
-              --body "Automated canonical pricing data refresh."
-          fi
+          git push

@@ -1,3 +1,5 @@
+import { deriveModelName, formatProvider } from "./utils";
+
 const DEFAULT_CANONICAL_DATA_ROOT =
   "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database";
 const CANONICAL_DATA_ROOT =
@@ -28,6 +30,22 @@ export interface RawModelInfo {
 export interface RawPricingData {
   generated_at: string;
   models: Record<string, RawModelInfo>;
+}
+
+/** Raw record enriched with display-ready fields derived once at load time. */
+export interface ModelRow extends RawModelInfo {
+  name: string;
+  providerLabel: string;
+}
+
+export function normalizeModels(data: RawPricingData): ModelRow[] {
+  return Object.values(data.models)
+    .map((model) => ({
+      ...model,
+      name: deriveModelName(model),
+      providerLabel: formatProvider(model.provider),
+    }))
+    .sort((left, right) => left.name.localeCompare(right.name, "en-US"));
 }
 
 interface ChangelogSummary {

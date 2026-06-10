@@ -5,11 +5,24 @@ import { cn } from "../../lib/utils";
 export function Card({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn(
-        "rounded-3xl border border-white/10 bg-slate-950/60 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur",
-        className,
-      )}
+      className={cn("rounded-xl border bg-card text-card-foreground shadow-sm", className)}
       {...props}
     />
   );
+}
+
+export function CardHeader({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("flex flex-col gap-1.5 p-5", className)} {...props} />;
+}
+
+export function CardTitle({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) {
+  return <h3 className={cn("m-0 font-serif text-lg font-normal leading-none", className)} {...props} />;
+}
+
+export function CardDescription({ className, ...props }: HTMLAttributes<HTMLParagraphElement>) {
+  return <p className={cn("m-0 text-sm text-muted-foreground", className)} {...props} />;
+}
+
+export function CardContent({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("p-5 pt-0", className)} {...props} />;
 }

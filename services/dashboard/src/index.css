@@ -1,27 +1,145 @@
 @import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Sentient", "Sentient Fallback", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/*
+ * Brand palette (Atena Reply): burgundy #9E4754 (runner / ATENA) as the
+ * interactive primary, petrol teal #004048 (REPLY wordmark) as the ink and
+ * secondary chart hue. Neutrals are lightly petrol-tinted to match.
+ */
 :root {
-  font-family: "Inter", system-ui, sans-serif;
-  color: #f8fafc;
-  background: #020617;
+  --background: #fafaf9;
+  --foreground: #122a2e;
+  --card: #ffffff;
+  --card-foreground: #122a2e;
+  --popover: #ffffff;
+  --popover-foreground: #122a2e;
+  --primary: #9e4754;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f2f1;
+  --secondary-foreground: #1d3a3f;
+  --muted: #f0f2f1;
+  --muted-foreground: #62757a;
+  --accent: #f0f2f1;
+  --accent-foreground: #122a2e;
+  --destructive: #c93a3a;
+  --success: #1a8a4a;
+  --warning: #c77414;
+  --border: #e3e7e6;
+  --input: #e3e7e6;
+  --ring: #9e4754;
+  --chart-1: #9e4754;
+  --chart-2: #00606c;
+  --chart-3: #c77414;
+  --chart-4: #41555a;
+}
+
+.dark {
+  --background: #0b1314;
+  --foreground: #f3f6f5;
+  --card: #111c1e;
+  --card-foreground: #f3f6f5;
+  --popover: #111c1e;
+  --popover-foreground: #f3f6f5;
+  --primary: #c4727f;
+  --primary-foreground: #2a1015;
+  --secondary: #1b2a2c;
+  --secondary-foreground: #dbe4e2;
+  --muted: #1b2a2c;
+  --muted-foreground: #91a4a6;
+  --accent: #1b2a2c;
+  --accent-foreground: #f3f6f5;
+  --destructive: #f08080;
+  --success: #4cc47e;
+  --warning: #e8a44d;
+  --border: #20302f;
+  --input: #2a3b3a;
+  --ring: #c4727f;
+  --chart-1: #cd8390;
+  --chart-2: #3fb5c4;
+  --chart-3: #e8a44d;
+  --chart-4: #8da4a8;
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  background: #020617;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 * {
   box-sizing: border-box;
+  border-color: var(--border);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+::selection {
+  background-color: color-mix(in srgb, var(--primary) 25%, transparent);
 }
 
-button,
-input {
-  font: inherit;
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Subtle, theme-aware scrollbars for data panes */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--muted-foreground) 35%, transparent) transparent;
+}
+
+/* Strip number-input spinners; token counts read better as plain fields */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }

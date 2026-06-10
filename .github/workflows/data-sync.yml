@@ -45,7 +45,7 @@ jobs:
           git checkout -B "$branch"
           git add data/current data/history data/changelog
           git commit -m "chore: refresh canonical pricing data"
-          git push --force-with-lease origin "HEAD:refs/heads/$branch"
+          git push --force origin "HEAD:refs/heads/$branch"
           if gh pr view "$branch" --json number >/dev/null 2>&1; then
             echo "Updated existing pull request for $branch"
           else

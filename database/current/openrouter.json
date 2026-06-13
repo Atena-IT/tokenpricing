@@ -1,9 +1,54 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-06-13T12:52:00.670092+00:00",
+  "fetched_at": "2026-06-13T18:43:39.008881+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 337,
   "data": [
+    {
+      "id": "openrouter/fusion",
+      "canonical_slug": "openrouter/fusion",
+      "hugging_face_id": null,
+      "name": "OpenRouter: Fusion",
+      "created": 1781371647,
+      "description": "Fusion turns your prompt into a small multi-model deliberation. A panel of expert models (see below) analyzes your prompt in parallel with web search and web fetch enabled, then a...",
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "top_provider": {
+        "context_length": null,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openrouter/fusion/endpoints"
+      }
+    },
     {
       "id": "moonshotai/kimi-k2.7-code",
       "canonical_slug": "moonshotai/kimi-k2.7-code-20260612",
@@ -13,11 +58,10 @@
       "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
       "context_length": 262144,
       "architecture": {
-        "modality": "text+image+video->text",
+        "modality": "text+image->text",
         "input_modalities": [
           "text",
-          "image",
-          "video"
+          "image"
         ],
         "output_modalities": [
           "text"
@@ -26,20 +70,23 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000095",
-        "completion": "0.000004",
-        "input_cache_read": "0.00000019"
+        "prompt": "0.00000075",
+        "completion": "0.0000035",
+        "input_cache_read": "0.00000016"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 262144,
         "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
+        "logprobs",
         "max_tokens",
+        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -51,6 +98,7 @@
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -1494,51 +1542,6 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.7-opus-fast-20260512/endpoints"
-      }
-    },
-    {
-      "id": "openrouter/fusion",
-      "canonical_slug": "openrouter/fusion",
-      "hugging_face_id": null,
-      "name": "OpenRouter: Fusion",
-      "created": 1778603606,
-      "description": "Fusion turns your prompt into a small multi-model deliberation. A panel of expert models (see below) analyzes your prompt in parallel with web search and web fetch enabled, then a...",
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Router",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "top_provider": {
-        "context_length": null,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/openrouter/fusion/endpoints"
       }
     },
     {

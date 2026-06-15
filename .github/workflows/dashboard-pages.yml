@@ -32,7 +32,7 @@ jobs:
           cache: npm
           cache-dependency-path: services/dashboard/package-lock.json
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Install dependencies
         working-directory: services/dashboard
         run: npm ci

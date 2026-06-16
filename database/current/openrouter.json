@@ -1,9 +1,68 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-06-16T14:07:06.217132+00:00",
+  "fetched_at": "2026-06-16T19:24:34.942161+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 336,
+  "model_count": 337,
   "data": [
+    {
+      "id": "z-ai/glm-5.2",
+      "canonical_slug": "z-ai/glm-5.2-20260616",
+      "hugging_face_id": "zai-org/GLM-5.2",
+      "name": "Z.ai: GLM 5.2",
+      "created": 1781631930,
+      "description": "GLM-5.2 is Z.ai’s flagship model for the era of long-horizon tasks. With a truly usable 1M-token context window, it can handle project-level engineering context, execute long-running tasks more reliably, follow...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 131072,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "seed",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": "2098-12-31",
+      "links": {
+        "details": "/api/v1/models/z-ai/glm-5.2-20260616/endpoints"
+      }
+    },
     {
       "id": "openrouter/fusion",
       "canonical_slug": "openrouter/fusion",
@@ -70,13 +129,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000075",
+        "prompt": "0.00000074",
         "completion": "0.0000035",
-        "input_cache_read": "0.00000016"
+        "input_cache_read": "0.00000015"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 262144,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,

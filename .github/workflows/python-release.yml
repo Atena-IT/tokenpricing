@@ -1,33 +1,114 @@
 name: Python Release to PyPI
 
+# Released automatically: a push to main that touches the Python package picks
+# the next version from the conventional-commit history and publishes it. No
+# manually-tagged GitHub release is required. A manual run (workflow_dispatch)
+# can force a specific bump level.
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
+    paths:
+      - "libraries/python/**"
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "Version bump level (auto = derive from conventional commits)"
+        type: choice
+        default: auto
+        options: [auto, patch, minor, major]
+
+# Only one release of this package at a time so the version-bump commit never
+# races another run.
+concurrency:
+  group: python-release
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
-  check-tag:
-    name: Check release tag
+  version:
+    name: Resolve next version
     runs-on: ubuntu-latest
     outputs:
-      is-python: ${{ steps.check.outputs.is-python }}
+      release: ${{ steps.bump.outputs.release }}
+      version: ${{ steps.bump.outputs.version }}
+      tag: ${{ steps.bump.outputs.tag }}
+      level: ${{ steps.bump.outputs.level }}
     steps:
-      - id: check
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # full history + tags for the conventional-commit scan
+
+      - id: bump
+        env:
+          MANUAL_BUMP: ${{ github.event.inputs.bump }}
         run: |
-          if [[ "${{ github.event.release.tag_name }}" == py-v* ]]; then
-            echo "is-python=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "is-python=false" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+          PKG_PATH="libraries/python"
+          TAG_PREFIX="python-v"
+
+          # Last released version: newest python tag (new or legacy py-v prefix),
+          # falling back to the manifest version, then 0.0.0.
+          LAST=$(git tag --list 'python-v*' 'py-v*' \
+                 | sed -E 's/^(python-v|py-v)//' | sort -V | tail -n1 || true)
+          if [ -z "$LAST" ]; then
+            LAST=$(grep -E '^version' "$PKG_PATH/pyproject.toml" | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
           fi
+          LAST=${LAST:-0.0.0}
+          echo "Last released version: $LAST"
+
+          # Commit range = everything affecting the package since the last tag.
+          RANGE_REF=""
+          for ref in "python-v$LAST" "py-v$LAST"; do
+            if git rev-parse -q --verify "refs/tags/$ref" >/dev/null; then RANGE_REF="$ref"; break; fi
+          done
+          if [ -n "$RANGE_REF" ]; then RANGE="$RANGE_REF..HEAD"; else RANGE="HEAD"; fi
+          LOG=$(git log $RANGE --format='%s%n%b%n--commit--' -- "$PKG_PATH" || true)
+
+          # Decide the bump from conventional-commit prefixes.
+          LEVEL="none"
+          if echo "$LOG" | grep -qiE 'BREAKING CHANGE|^[a-z]+(\(.+\))?!:'; then
+            LEVEL="major"
+          elif echo "$LOG" | grep -qiE '^feat(\(.+\))?:'; then
+            LEVEL="minor"
+          elif echo "$LOG" | grep -qiE '^(fix|perf|refactor)(\(.+\))?:'; then
+            LEVEL="patch"
+          fi
+
+          # Manual override wins over the derived level.
+          if [ -n "${MANUAL_BUMP:-}" ] && [ "${MANUAL_BUMP}" != "auto" ]; then
+            LEVEL="${MANUAL_BUMP}"
+          fi
+
+          if [ "$LEVEL" = "none" ]; then
+            echo "No releasable commits since $LAST (need feat/fix/perf/refactor or BREAKING). Skipping."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          IFS=. read -r MA MI PA <<< "$LAST"
+          # Pre-1.0: a breaking change bumps the minor, not the major.
+          if [ "$MA" -eq 0 ] && [ "$LEVEL" = "major" ]; then LEVEL="minor"; fi
+          case "$LEVEL" in
+            major) MA=$((MA + 1)); MI=0; PA=0 ;;
+            minor) MI=$((MI + 1)); PA=0 ;;
+            patch) PA=$((PA + 1)) ;;
+          esac
+          NEW="$MA.$MI.$PA"
+          echo "Next version: $NEW ($LEVEL)"
+          {
+            echo "release=true"
+            echo "level=$LEVEL"
+            echo "version=$NEW"
+            echo "tag=${TAG_PREFIX}${NEW}"
+          } >> "$GITHUB_OUTPUT"
 
   build:
     name: Build distribution
-    needs: check-tag
-    if: needs.check-tag.outputs.is-python == 'true'
+    needs: version
+    if: needs.version.outputs.release == 'true'
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v6
 
@@ -39,38 +120,21 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
 
-      - name: Install build dependencies
-        run: uv pip install --system build
+      - name: Set package version
+        working-directory: libraries/python
+        run: |
+          sed -i -E 's/^version = "[^"]+"/version = "${{ needs.version.outputs.version }}"/' pyproject.toml
+          grep -E '^version' pyproject.toml
 
       - name: Build package
         working-directory: libraries/python
-        run: python -m build
+        run: uv build
 
       - name: Upload distribution artifacts
         uses: actions/upload-artifact@v7
         with:
           name: python-package-distributions
           path: libraries/python/dist/
-
-  publish-pypi:
-    name: Publish to PyPI
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: pypi
-      url: https://pypi.org/p/tokenpricing
-    permissions:
-      id-token: write
-
-    steps:
-      - name: Download distribution artifacts
-        uses: actions/download-artifact@v8
-        with:
-          name: python-package-distributions
-          path: dist/
-
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
 
   publish-testpypi:
     name: Publish to TestPyPI
@@ -81,7 +145,6 @@ jobs:
       url: https://test.pypi.org/p/tokenpricing
     permissions:
       id-token: write
-
     steps:
       - name: Download distribution artifacts
         uses: actions/download-artifact@v8
@@ -93,3 +156,61 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
+
+  publish-pypi:
+    name: Publish to PyPI
+    needs: [build, publish-testpypi]
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/tokenpricing
+    permissions:
+      id-token: write
+    steps:
+      - name: Download distribution artifacts
+        uses: actions/download-artifact@v8
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+  finalize:
+    name: Commit bump, tag, and release
+    needs: [version, publish-pypi]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Bump manifest and push
+        env:
+          NEW: ${{ needs.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          sed -i -E "s/^version = \"[^\"]+\"/version = \"$NEW\"/" libraries/python/pyproject.toml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Manifest already at $NEW"
+          else
+            git add libraries/python/pyproject.toml
+            # [skip ci] stops the bump commit from re-triggering this workflow.
+            git commit -m "chore(release): python v$NEW [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Create tag and GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ needs.version.outputs.tag }}
+          VERSION: ${{ needs.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          gh release create "$TAG" \
+            --target main \
+            --title "Python SDK $VERSION" \
+            --generate-notes

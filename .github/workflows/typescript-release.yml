@@ -1,36 +1,120 @@
 name: TypeScript Release to npm
 
+# Released automatically: a push to main that touches the TypeScript package
+# picks the next version from the conventional-commit history and publishes it.
+# A manual run (workflow_dispatch) can force a specific bump level.
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
+    paths:
+      - "libraries/typescript/**"
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "Version bump level (auto = derive from conventional commits)"
+        type: choice
+        default: auto
+        options: [auto, patch, minor, major]
+
+concurrency:
+  group: typescript-release
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
-  check-tag:
-    name: Check release tag
+  version:
+    name: Resolve next version
     runs-on: ubuntu-latest
     outputs:
-      is-typescript: ${{ steps.check.outputs.is-typescript }}
+      release: ${{ steps.bump.outputs.release }}
+      version: ${{ steps.bump.outputs.version }}
+      tag: ${{ steps.bump.outputs.tag }}
+      level: ${{ steps.bump.outputs.level }}
     steps:
-      - id: check
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # full history + tags for the conventional-commit scan
+
+      - id: bump
+        env:
+          MANUAL_BUMP: ${{ github.event.inputs.bump }}
         run: |
-          if [[ "${{ github.event.release.tag_name }}" == ts-v* ]]; then
-            echo "is-typescript=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "is-typescript=false" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+          PKG_PATH="libraries/typescript"
+          TAG_PREFIX="typescript-v"
+
+          # Last released version: newest typescript tag (new or legacy ts-v
+          # prefix), falling back to the manifest version, then 0.0.0.
+          LAST=$(git tag --list 'typescript-v*' 'ts-v*' \
+                 | sed -E 's/^(typescript-v|ts-v)//' | sort -V | tail -n1 || true)
+          if [ -z "$LAST" ]; then
+            LAST=$(node -p "require('./$PKG_PATH/package.json').version")
+          fi
+          LAST=${LAST:-0.0.0}
+          echo "Last released version: $LAST"
+
+          # Commit range = everything affecting the package since the last tag.
+          RANGE_REF=""
+          for ref in "typescript-v$LAST" "ts-v$LAST"; do
+            if git rev-parse -q --verify "refs/tags/$ref" >/dev/null; then RANGE_REF="$ref"; break; fi
+          done
+          if [ -n "$RANGE_REF" ]; then RANGE="$RANGE_REF..HEAD"; else RANGE="HEAD"; fi
+          LOG=$(git log $RANGE --format='%s%n%b%n--commit--' -- "$PKG_PATH" || true)
+
+          # Decide the bump from conventional-commit prefixes.
+          LEVEL="none"
+          if echo "$LOG" | grep -qiE 'BREAKING CHANGE|^[a-z]+(\(.+\))?!:'; then
+            LEVEL="major"
+          elif echo "$LOG" | grep -qiE '^feat(\(.+\))?:'; then
+            LEVEL="minor"
+          elif echo "$LOG" | grep -qiE '^(fix|perf|refactor)(\(.+\))?:'; then
+            LEVEL="patch"
           fi
 
-  publish:
-    name: Build and publish
-    needs: check-tag
-    if: needs.check-tag.outputs.is-typescript == 'true'
+          # Manual override wins over the derived level.
+          if [ -n "${MANUAL_BUMP:-}" ] && [ "${MANUAL_BUMP}" != "auto" ]; then
+            LEVEL="${MANUAL_BUMP}"
+          fi
+
+          if [ "$LEVEL" = "none" ]; then
+            echo "No releasable commits since $LAST (need feat/fix/perf/refactor or BREAKING). Skipping."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          IFS=. read -r MA MI PA <<< "$LAST"
+          # Pre-1.0: a breaking change bumps the minor, not the major.
+          if [ "$MA" -eq 0 ] && [ "$LEVEL" = "major" ]; then LEVEL="minor"; fi
+          case "$LEVEL" in
+            major) MA=$((MA + 1)); MI=0; PA=0 ;;
+            minor) MI=$((MI + 1)); PA=0 ;;
+            patch) PA=$((PA + 1)) ;;
+          esac
+          NEW="$MA.$MI.$PA"
+          echo "Next version: $NEW ($LEVEL)"
+          {
+            echo "release=true"
+            echo "level=$LEVEL"
+            echo "version=$NEW"
+            echo "tag=${TAG_PREFIX}${NEW}"
+          } >> "$GITHUB_OUTPUT"
+
+  # Test deployment: builds and validates the publishable tarball without
+  # pushing to the registry (npm's closest analogue to TestPyPI). Produces a
+  # GitHub deployment record under the npm-test environment.
+  publish-dry-run:
+    name: Validate package (dry run)
+    needs: version
+    if: needs.version.outputs.release == 'true'
     runs-on: ubuntu-latest
+    environment:
+      name: npm-test
+      url: https://www.npmjs.com/package/tokenpricing
     permissions:
       contents: read
       id-token: write
-
     steps:
       - uses: actions/checkout@v6
 
@@ -47,6 +131,52 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: libraries/typescript/pnpm-lock.yaml
 
+      - name: Set package version
+        working-directory: libraries/typescript
+        run: npm version "${{ needs.version.outputs.version }}" --no-git-tag-version --allow-same-version
+
+      - name: Install dependencies
+        working-directory: libraries/typescript
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        working-directory: libraries/typescript
+        run: pnpm build
+
+      - name: Publish (dry run)
+        working-directory: libraries/typescript
+        run: pnpm publish --no-git-checks --dry-run
+
+  publish-npm:
+    name: Publish to npm
+    needs: [version, publish-dry-run]
+    runs-on: ubuntu-latest
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/tokenpricing
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: latest
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+          cache-dependency-path: libraries/typescript/pnpm-lock.yaml
+
+      - name: Set package version
+        working-directory: libraries/typescript
+        run: npm version "${{ needs.version.outputs.version }}" --no-git-tag-version --allow-same-version
+
       - name: Install dependencies
         working-directory: libraries/typescript
         run: pnpm install --frozen-lockfile
@@ -60,3 +190,42 @@ jobs:
         run: pnpm publish --provenance --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  finalize:
+    name: Commit bump, tag, and release
+    needs: [version, publish-npm]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Bump manifest and push
+        env:
+          NEW: ${{ needs.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          (cd libraries/typescript && npm version "$NEW" --no-git-tag-version --allow-same-version)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Manifest already at $NEW"
+          else
+            git add libraries/typescript/package.json
+            # [skip ci] stops the bump commit from re-triggering this workflow.
+            git commit -m "chore(release): typescript v$NEW [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Create tag and GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ needs.version.outputs.tag }}
+          VERSION: ${{ needs.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          gh release create "$TAG" \
+            --target main \
+            --title "TypeScript SDK $VERSION" \
+            --generate-notes

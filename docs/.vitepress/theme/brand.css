@@ -1,4 +1,8 @@
-/* Atena Reply brand palette: burgundy #9E4754, petrol teal #004048. */
+/* Atena Reply brand palette: burgundy #9E4754, petrol teal #004048.
+ * Type and neutrals are kept in lockstep with the dashboard
+ * (services/dashboard/src/index.css) so the docs and the app read as one
+ * product: Inter for body, JetBrains Mono for code, Sentient for display
+ * headings, on a lightly petrol-tinted neutral scale. */
 :root {
   --vp-c-brand-1: #9e4754;
   --vp-c-brand-2: #8a3a47;
@@ -6,6 +10,22 @@
   --vp-c-brand-soft: rgba(158, 71, 84, 0.14);
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(120deg, #9e4754 30%, #00606c);
+
+  /* Fonts — match the dashboard's --font-sans / --font-mono / --font-serif. */
+  --vp-font-family-base: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Neutrals — petrol-tinted, matching the dashboard light theme. */
+  --vp-c-bg: #fafaf9;
+  --vp-c-bg-alt: #f0f2f1;
+  --vp-c-bg-soft: #f0f2f1;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-text-1: #122a2e;
+  --vp-c-text-2: #62757a;
+  --vp-c-text-3: #8a9b9e;
+  --vp-c-divider: #e3e7e6;
+  --vp-c-border: #e3e7e6;
+  --vp-c-gutter: #e3e7e6;
 }
 
 .dark {
@@ -14,4 +34,30 @@
   --vp-c-brand-3: #9e4754;
   --vp-c-brand-soft: rgba(196, 114, 127, 0.16);
   --vp-home-hero-name-background: linear-gradient(120deg, #cd8390 30%, #3fb5c4);
+
+  /* Neutrals — matching the dashboard dark theme. */
+  --vp-c-bg: #0b1314;
+  --vp-c-bg-alt: #111c1e;
+  --vp-c-bg-soft: #1b2a2c;
+  --vp-c-bg-elv: #111c1e;
+  --vp-c-text-1: #f3f6f5;
+  --vp-c-text-2: #91a4a6;
+  --vp-c-text-3: #6f8285;
+  --vp-c-divider: #20302f;
+  --vp-c-border: #20302f;
+  --vp-c-gutter: #0b1314;
+}
+
+/* Display headings in Sentient at a light weight — the dashboard's h1 and card
+ * titles use the same serif-at-normal-weight treatment. */
+.VPNavBarTitle .title,
+.VPHomeHero .name,
+.VPHomeHero .text,
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: "Sentient", "Sentient Fallback", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }

@@ -52,7 +52,7 @@ jobs:
       - name: Merge docs into site artifact
         run: cp -r docs/.vitepress/dist services/dashboard/dist/docs
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: services/dashboard/dist
   deploy:

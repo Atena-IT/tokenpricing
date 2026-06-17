@@ -101,55 +101,10 @@ jobs:
             echo "tag=${TAG_PREFIX}${NEW}"
           } >> "$GITHUB_OUTPUT"
 
-  # Test deployment: builds and validates the publishable tarball without
-  # pushing to the registry (npm's closest analogue to TestPyPI). Produces a
-  # GitHub deployment record under the npm-test environment.
-  publish-dry-run:
-    name: Validate package (dry run)
-    needs: version
-    if: needs.version.outputs.release == 'true'
-    runs-on: ubuntu-latest
-    environment:
-      name: npm-test
-      url: https://www.npmjs.com/package/tokenpricing
-    permissions:
-      contents: read
-      id-token: write
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          version: latest
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: "22"
-          registry-url: "https://registry.npmjs.org"
-          cache: "pnpm"
-          cache-dependency-path: libraries/typescript/pnpm-lock.yaml
-
-      - name: Set package version
-        working-directory: libraries/typescript
-        run: npm version "${{ needs.version.outputs.version }}" --no-git-tag-version --allow-same-version
-
-      - name: Install dependencies
-        working-directory: libraries/typescript
-        run: pnpm install --frozen-lockfile
-
-      - name: Build
-        working-directory: libraries/typescript
-        run: pnpm build
-
-      - name: Publish (dry run)
-        working-directory: libraries/typescript
-        run: pnpm publish --no-git-checks --dry-run
-
   publish-npm:
     name: Publish to npm
-    needs: [version, publish-dry-run]
+    needs: version
+    if: needs.version.outputs.release == 'true'
     runs-on: ubuntu-latest
     environment:
       name: npm

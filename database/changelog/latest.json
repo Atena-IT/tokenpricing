@@ -1,10 +1,137 @@
 {
-  "generated_at": "2026-06-18T13:27:52.441364+00:00",
+  "generated_at": "2026-06-18T19:03:46.835417+00:00",
   "summary": {
-    "model_additions": 0,
+    "model_additions": 2,
     "model_removals": 0,
-    "pricing_changes": 0,
-    "cache_price_changes": 0
+    "pricing_changes": 1,
+    "cache_price_changes": 3
   },
-  "changes": []
+  "changes": [
+    {
+      "type": "model_added",
+      "model_id": "poolside/laguna-m.1",
+      "model_type": "text",
+      "after": {
+        "provider": "poolside",
+        "model_id": "poolside/laguna-m.1",
+        "display_name": "Poolside: Laguna M.1",
+        "pricing": {
+          "input_per_million": 0.2,
+          "output_per_million": 0.4,
+          "cache_read_per_million": 0.1,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.2,
+            "price_output": 0.4,
+            "price_cache_read": 0.1,
+            "price_cache_creation": null,
+            "last_updated": "2026-06-18T19:03:46.654257Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "poolside/laguna-xs.2",
+      "model_type": "text",
+      "after": {
+        "provider": "poolside",
+        "model_id": "poolside/laguna-xs.2",
+        "display_name": "Poolside: Laguna XS.2",
+        "pricing": {
+          "input_per_million": 0.1,
+          "output_per_million": 0.2,
+          "cache_read_per_million": 0.05,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.1,
+            "price_output": 0.2,
+            "price_cache_read": 0.05,
+            "price_cache_creation": null,
+            "last_updated": "2026-06-18T19:03:46.654257Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "qwen/qwen3.5-35b-a3b",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.05,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "qwen/qwen3.6-35b-a3b",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.15,
+        "output_per_million": 1.0,
+        "cache_read_per_million": 0.05,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.14,
+        "output_per_million": 1.0,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "qwen/qwen3.6-35b-a3b",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.05,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "z-ai/glm-5.2",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.26,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.7,
+        "cache_creation_per_million": null
+      }
+    }
+  ]
 }

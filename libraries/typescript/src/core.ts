@@ -81,13 +81,21 @@ export async function computeCost(
   const cacheReadTokens = options.cacheReadTokens ?? 0;
   const cacheCreationTokens = options.cacheCreationTokens ?? 0;
 
-  if (
-    inputTokens < 0 ||
-    outputTokens < 0 ||
-    cacheReadTokens < 0 ||
-    cacheCreationTokens < 0
-  ) {
-    throw new Error("Token counts must be non-negative");
+  const counts = {
+    inputTokens,
+    outputTokens,
+    cacheReadTokens,
+    cacheCreationTokens,
+  };
+  for (const [name, value] of Object.entries(counts)) {
+    // Number.isFinite rejects NaN and ±Infinity, which would otherwise slip
+    // past a bare `< 0` check and silently produce a NaN/Infinity cost.
+    if (!Number.isFinite(value)) {
+      throw new Error(`Token count must be a finite number: ${name}=${value}`);
+    }
+    if (value < 0) {
+      throw new Error("Token counts must be non-negative");
+    }
   }
 
   const pricing = await getPricing(modelId, currency);

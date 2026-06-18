@@ -1,79 +1,10 @@
 {
-  "generated_at": "2026-06-18T08:01:09.779705+00:00",
+  "generated_at": "2026-06-18T13:27:52.441364+00:00",
   "summary": {
-    "model_additions": 2,
+    "model_additions": 0,
     "model_removals": 0,
     "pricing_changes": 0,
     "cache_price_changes": 0
   },
-  "changes": [
-    {
-      "type": "model_added",
-      "model_id": "google/gemini-3-pro-image",
-      "model_type": "image",
-      "after": {
-        "provider": "google",
-        "model_id": "google/gemini-3-pro-image",
-        "display_name": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
-        "pricing": {
-          "input_per_million": 2.0,
-          "output_per_million": 12.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 0.375,
-          "currency": "USD"
-        },
-        "context_window": 65536,
-        "max_output_tokens": 32768,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "openrouter": {
-            "price_input": 2.0,
-            "price_output": 12.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 0.375,
-            "last_updated": "2026-06-18T08:01:09.585552Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "google/gemini-3.1-flash-image",
-      "model_type": "image",
-      "after": {
-        "provider": "google",
-        "model_id": "google/gemini-3.1-flash-image",
-        "display_name": "Google: Nano Banana 2 (Gemini 3.1 Flash Image)",
-        "pricing": {
-          "input_per_million": 0.5,
-          "output_per_million": 3.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 131072,
-        "max_output_tokens": 65536,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.5,
-            "price_output": 3.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-06-18T08:01:09.585552Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    }
-  ]
+  "changes": []
 }

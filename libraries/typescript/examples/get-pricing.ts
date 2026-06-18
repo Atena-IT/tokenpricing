@@ -1,4 +1,4 @@
-import { getPricing } from "tokenpricing";
+import { getPricing } from "@atenareply/tokenpricing";
 
 const modelId = "openai/gpt-5.2";
 

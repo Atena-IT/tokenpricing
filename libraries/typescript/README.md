@@ -22,19 +22,19 @@ Token pricing for AI models changes frequently across different providers and mo
 ## Installation
 
 ```bash
-pnpm add tokenpricing
+pnpm add @atenareply/tokenpricing
 ```
 
 Or with npm:
 
 ```bash
-npm install tokenpricing
+npm install @atenareply/tokenpricing
 ```
 
 ## Usage
 
 ```typescript
-import { getPricing, computeCost } from "tokenpricing";
+import { getPricing, computeCost } from "@atenareply/tokenpricing";
 ```
 
 ### Get Pricing

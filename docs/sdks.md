@@ -34,11 +34,11 @@ total = compute_cost_sync(
 ## TypeScript
 
 ```bash
-npm install tokenpricing
+npm install @atenareply/tokenpricing
 ```
 
 ```typescript
-import { getPricing, computeCost } from "tokenpricing";
+import { getPricing, computeCost } from "@atenareply/tokenpricing";
 
 const pricing = await getPricing("anthropic/claude-opus-4", "EUR");
 // pricing.inputPerMillion, pricing.outputPerMillion,

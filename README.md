@@ -1,7 +1,7 @@
 # tokenpricing
 
 [![PyPI](https://img.shields.io/pypi/v/tokenpricing?logo=pypi&logoColor=white)](https://pypi.org/project/tokenpricing/)
-[![npm](https://img.shields.io/npm/v/tokenpricing?logo=npm)](https://www.npmjs.com/package/tokenpricing)
+[![npm](https://img.shields.io/npm/v/@atenareply/tokenpricing?logo=npm)](https://www.npmjs.com/package/@atenareply/tokenpricing)
 [![Dashboard](https://img.shields.io/badge/dashboard-live-9E4754)](https://atena-it.github.io/tokenpricing/)
 [![Docs](https://img.shields.io/badge/docs-vitepress-004048)](https://atena-it.github.io/tokenpricing/docs/)
 [![License](https://img.shields.io/github/license/Atena-IT/tokenpricing)](LICENSE)
@@ -24,7 +24,7 @@ API pricing math for 3k+ AI models with a canonical in-repo pricing database, ca
 | Library | Language | Package | Status |
 |---------|----------|---------|--------|
 | [Python SDK](libraries/python/) | Python 3.12+ | [`tokenpricing`](https://pypi.org/project/tokenpricing/) | Stable |
-| [TypeScript SDK](libraries/typescript/) | TypeScript / Node 18+ | [`tokenpricing`](https://www.npmjs.com/package/tokenpricing) | Stable |
+| [TypeScript SDK](libraries/typescript/) | TypeScript / Node 18+ | [`@atenareply/tokenpricing`](https://www.npmjs.com/package/@atenareply/tokenpricing) | Stable |
 
 ## Services
 
@@ -61,11 +61,11 @@ print(f"Total: ${cost:.6f}")
 ### TypeScript
 
 ```bash
-npm install tokenpricing
+npm install @atenareply/tokenpricing
 ```
 
 ```typescript
-import { getPricing, computeCost } from "tokenpricing";
+import { getPricing, computeCost } from "@atenareply/tokenpricing";
 
 const pricing = await getPricing("openai/gpt-5.2", "EUR");
 console.log(`Input: €${pricing.inputPerMillion.toFixed(2)}/1M tokens`);

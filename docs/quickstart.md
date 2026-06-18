@@ -11,7 +11,7 @@ pip install tokenpricing
 ```
 
 ```bash [TypeScript]
-npm install tokenpricing
+npm install @atenareply/tokenpricing
 ```
 
 :::
@@ -60,7 +60,7 @@ cost = compute_cost_sync(
 ```
 
 ```typescript [TypeScript]
-import { getPricing, computeCost } from "tokenpricing";
+import { getPricing, computeCost } from "@atenareply/tokenpricing";
 
 const pricing = await getPricing("openai/gpt-5.2", "EUR");
 

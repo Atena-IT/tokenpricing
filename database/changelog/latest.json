@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-17T19:06:17.877679+00:00",
+  "generated_at": "2026-06-18T01:25:20.193842+00:00",
   "summary": {
-    "model_additions": 0,
-    "model_removals": 1,
+    "model_additions": 1,
+    "model_removals": 0,
     "pricing_changes": 0,
     "cache_price_changes": 0
   },
   "changes": [
     {
-      "type": "model_removed",
-      "model_id": "xiaomi/mimo-v2-flash",
+      "type": "model_added",
+      "model_id": "cohere/north-mini-code:free",
       "model_type": "text",
-      "before": {
-        "provider": "xiaomi",
-        "model_id": "xiaomi/mimo-v2-flash",
-        "display_name": "Xiaomi: MiMo-V2-Flash",
+      "after": {
+        "provider": "cohere",
+        "model_id": "cohere/north-mini-code:free",
+        "display_name": "Cohere: North Mini Code (free)",
         "pricing": {
-          "input_per_million": 0.1,
-          "output_per_million": 0.3,
-          "cache_read_per_million": 0.01,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 262144,
-        "max_output_tokens": 65536,
+        "context_window": 256000,
+        "max_output_tokens": 64000,
         "model_type": "text",
         "supports_vision": false,
         "supports_function_calling": true,
@@ -31,11 +31,11 @@
         "category": "budget",
         "sources": {
           "openrouter": {
-            "price_input": 0.1,
-            "price_output": 0.3,
-            "price_cache_read": 0.01,
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-06-17T13:30:38.727491Z"
+            "last_updated": "2026-06-18T01:25:20.015589Z"
           }
         },
         "affiliate_links": {}

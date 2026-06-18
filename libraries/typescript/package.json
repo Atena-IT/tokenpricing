@@ -1,5 +1,5 @@
 {
-  "name": "tokenpricing",
+  "name": "@atenareply/tokenpricing",
   "version": "0.1.0",
   "description": "API pricing math for 1k+ AI models with multi-currency support",
   "type": "module",
@@ -21,6 +21,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup",
     "test": "vitest run",

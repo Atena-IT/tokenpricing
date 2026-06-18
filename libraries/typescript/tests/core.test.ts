@@ -193,4 +193,18 @@ describe("computeCost", () => {
       computeCost("openai/gpt-4", 1, 0, "USD", { cacheReadTokens: -1 }),
     ).rejects.toThrow("non-negative");
   });
+
+  it("should throw for non-finite token counts", async () => {
+    await expect(computeCost("openai/gpt-4", Number.NaN, 0)).rejects.toThrow(
+      "finite number",
+    );
+    await expect(
+      computeCost("openai/gpt-4", Number.POSITIVE_INFINITY, 0),
+    ).rejects.toThrow("finite number");
+    await expect(
+      computeCost("openai/gpt-4", 1, 0, "USD", {
+        cacheCreationTokens: Number.NaN,
+      }),
+    ).rejects.toThrow("finite number");
+  });
 });

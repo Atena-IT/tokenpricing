@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-19T13:24:26.494925+00:00",
+  "generated_at": "2026-06-19T18:51:44.593100+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 1,
-    "pricing_changes": 0,
-    "cache_price_changes": 5
+    "model_removals": 0,
+    "pricing_changes": 1,
+    "cache_price_changes": 6
   },
   "changes": [
     {
@@ -12,11 +12,43 @@
       "model_id": "moonshotai/kimi-k2-thinking",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": null,
+        "cache_read_per_million": 0.6,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.6,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.74,
+        "output_per_million": 3.5,
+        "cache_read_per_million": 0.15,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.68,
+        "output_per_million": 3.41,
+        "cache_read_per_million": 0.144,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.15,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.144,
         "cache_creation_per_million": null
       }
     },
@@ -25,11 +57,11 @@
       "model_id": "openai/gpt-4o",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": null,
+        "cache_read_per_million": 1.25,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 1.25,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       }
     },
@@ -38,11 +70,11 @@
       "model_id": "openai/gpt-5-mini",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.025,
+        "cache_read_per_million": 0.03,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.03,
+        "cache_read_per_million": 0.025,
         "cache_creation_per_million": null
       }
     },
@@ -51,11 +83,11 @@
       "model_id": "openai/gpt-5.1-chat",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.13,
+        "cache_read_per_million": 0.125,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.125,
+        "cache_read_per_million": 0.13,
         "cache_creation_per_million": null
       }
     },
@@ -64,46 +96,12 @@
       "model_id": "qwen/qwen3.5-35b-a3b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": null,
+        "cache_read_per_million": 0.05,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.05,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "meta-llama/llama-3-70b-instruct",
-      "model_type": "text",
-      "before": {
-        "provider": "meta-llama",
-        "model_id": "meta-llama/llama-3-70b-instruct",
-        "display_name": "Meta: Llama 3 70B Instruct",
-        "pricing": {
-          "input_per_million": 0.51,
-          "output_per_million": 0.74,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 8192,
-        "max_output_tokens": 8000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.51,
-            "price_output": 0.74,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-06-19T08:13:08.985846Z"
-          }
-        },
-        "affiliate_links": {}
       }
     }
   ]

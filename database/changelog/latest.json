@@ -1,75 +1,10 @@
 {
-  "generated_at": "2026-06-22T08:27:34.183233+00:00",
+  "generated_at": "2026-06-22T14:09:47.350089+00:00",
   "summary": {
     "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 2,
-    "cache_price_changes": 2
+    "pricing_changes": 0,
+    "cache_price_changes": 0
   },
-  "changes": [
-    {
-      "type": "pricing_changed",
-      "model_id": "moonshotai/kimi-k2.6",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.66,
-        "output_per_million": 3.5,
-        "cache_read_per_million": 0.33,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.66,
-        "output_per_million": 3.41,
-        "cache_read_per_million": 0.144,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "moonshotai/kimi-k2.6",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.33,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.144,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "~moonshotai/kimi-latest",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.66,
-        "output_per_million": 3.5,
-        "cache_read_per_million": 0.33,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.66,
-        "output_per_million": 3.41,
-        "cache_read_per_million": 0.144,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "~moonshotai/kimi-latest",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.33,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.144,
-        "cache_creation_per_million": null
-      }
-    }
-  ]
+  "changes": []
 }

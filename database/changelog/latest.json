@@ -1,10 +1,43 @@
 {
-  "generated_at": "2026-06-23T01:14:20.855026+00:00",
+  "generated_at": "2026-06-23T07:32:01.293075+00:00",
   "summary": {
     "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 0,
-    "cache_price_changes": 0
+    "pricing_changes": 1,
+    "cache_price_changes": 1
   },
-  "changes": []
+  "changes": [
+    {
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.612,
+        "output_per_million": 3.069,
+        "cache_read_per_million": 0.1296,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.68,
+        "output_per_million": 3.41,
+        "cache_read_per_million": 0.144,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.1296,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.144,
+        "cache_creation_per_million": null
+      }
+    }
+  ]
 }

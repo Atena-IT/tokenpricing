@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-06-23T13:15:59.430561+00:00",
+  "fetched_at": "2026-06-23T18:55:35.640065+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 339,
+  "model_count": 338,
   "data": [
     {
       "id": "google/gemini-3.1-flash-image",
@@ -7303,13 +7303,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.000001",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.00000024",
+        "completion": "0.00000096"
       },
       "top_provider": {
         "context_length": 196608,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 196608,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12626,66 +12625,6 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/z-ai/glm-4.6-20251208/endpoints"
-      },
-      "reasoning": {
-        "mandatory": false
-      }
-    },
-    {
-      "id": "essentialai/rnj-1-instruct",
-      "canonical_slug": "essentialai/rnj-1-instruct",
-      "hugging_face_id": "EssentialAI/rnj-1-instruct",
-      "name": "EssentialAI: Rnj 1 Instruct",
-      "created": 1765094847,
-      "description": "Rnj-1 is an 8B-parameter, dense, open-weight model family developed by Essential AI and trained from scratch with a focus on programming, math, and scientific reasoning. The model demonstrates strong performance...",
-      "context_length": 32768,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.00000015"
-      },
-      "top_provider": {
-        "context_length": 32768,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "frequency_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/essentialai/rnj-1-instruct/endpoints"
       },
       "reasoning": {
         "mandatory": false
@@ -24098,7 +24037,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000065",
+        "prompt": "0.00000007",
         "completion": "0.00000014"
       },
       "top_provider": {
@@ -24110,7 +24049,6 @@
       "supported_parameters": [
         "frequency_penalty",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -24121,7 +24059,6 @@
         "structured_outputs",
         "temperature",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -25146,32 +25083,26 @@
         "instruct_type": "chatml"
       },
       "pricing": {
-        "prompt": "0.00000017",
-        "completion": "0.00000043"
+        "prompt": "0.00000025",
+        "completion": "0.0000005"
       },
       "top_provider": {
         "context_length": 32768,
-        "max_completion_tokens": 32768,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
-        "structured_outputs",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},

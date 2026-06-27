@@ -8,6 +8,7 @@ from typing import Any
 
 from tokenpricing.modeling import PricingData
 
+from tokenpricing_sync.build_db import build_db
 from tokenpricing_sync.diff import compare_datasets
 from tokenpricing_sync.fetch import fetch_litellm, fetch_openrouter
 from tokenpricing_sync.normalize import normalize_sources
@@ -52,10 +53,12 @@ def sync() -> dict[str, Any]:
         HISTORY_DIR / f"prices-{timestamp}.json", dataset.model_dump(mode="json")
     )
     write_json(CHANGELOG_DIR / "latest.json", changelog)
+    db_path = build_db()
     return {
         "snapshot": str(CURRENT_DATABASE_DIR / "prices.json"),
         "history_snapshot": str(HISTORY_DIR / f"prices-{timestamp}.json"),
         "changelog": str(CHANGELOG_DIR / "latest.json"),
+        "database": str(db_path),
         "models": dataset.metadata.total_models,
         "summary": changelog["summary"],
     }
@@ -83,6 +86,30 @@ def build_parser() -> argparse.ArgumentParser:
         "normalize",
         help="regenerate the canonical database from local raw source files",
     )
+    build_db_parser = subparsers.add_parser(
+        "build-db",
+        help="build prices.db from the current on-disk JSON files",
+    )
+    build_db_parser.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="destination path for the SQLite file (default: database/current/prices.db)",
+    )
+    build_db_parser.add_argument(
+        "--prices-json",
+        type=Path,
+        default=None,
+        dest="prices_json",
+        help="path to prices.json (default: database/current/prices.json)",
+    )
+    build_db_parser.add_argument(
+        "--history-dir",
+        type=Path,
+        default=None,
+        dest="history_dir",
+        help="directory containing timestamped history snapshots (default: database/history)",
+    )
     return parser
 
 
@@ -94,5 +121,13 @@ def main() -> None:
         return
     if args.command == "normalize":
         print(json.dumps(normalize_only(), indent=2))
+        return
+    if args.command == "build-db":
+        db_path = build_db(
+            prices_json=args.prices_json,
+            history_dir=args.history_dir,
+            output=args.output,
+        )
+        print(json.dumps({"database": str(db_path)}, indent=2))
         return
     parser.error("unknown command")

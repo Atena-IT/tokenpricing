@@ -6,16 +6,34 @@ All pricing data lives in the repository under `database/`, normalized from Open
 
 | Path | Content |
 | --- | --- |
-| `database/current/prices.json` | The canonical model catalog with current prices |
+| `database/current/prices.json` | The canonical model catalog with current prices (source of truth, committed to git) |
 | `database/history/prices-<timestamp>.json` | Immutable snapshots, one per sync |
 | `database/changelog/latest.json` | Diff summary of the most recent sync window |
 | `database/current/openrouter.json` / `litellm.json` | Raw upstream payloads from the last sync |
+| `prices.db` *(CI artifact)* | Derived SQLite database built from `prices.json` — **not committed to git**, published as a workflow artifact after each sync |
 
 Raw access (no authentication required):
 
 ```
 https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/current/prices.json
 https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/changelog/latest.json
+```
+
+## SQLite artifact (`prices.db`)
+
+`prices.db` is a derived, read-only SQLite database built from the canonical JSON after every sync run. It follows the v1 schema described in [ADR 0001](../wiki/decisions/0001-canonical-pricing-database-storage.md) and includes:
+
+- `models` — full catalog with indexes on `provider`, `category`, `model_type`
+- `providers` — provider metadata
+- `model_sources` — per-source provenance (OpenRouter / LiteLLM)
+- `price_history` — time-series pricing from all history snapshots
+- `models_fts` — FTS5 full-text index over `model_id` and `display_name`
+
+The file is excluded from git (binary changes every 6 hours would bloat history). Download it from the latest `database-sync` workflow run artifact `prices-db`. To build locally:
+
+```bash
+cd services/sync
+uv run tokenpricing-sync build-db
 ```
 
 ## Model record

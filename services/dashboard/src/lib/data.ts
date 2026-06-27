@@ -1,4 +1,5 @@
 import { deriveModelName, formatProvider } from "./utils";
+import { loadPricingDataFromSqlite } from "./sqlite-db";
 
 const DEFAULT_CANONICAL_DATA_ROOT =
   "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database";
@@ -75,8 +76,28 @@ async function fetchJson<T>(path: string): Promise<T> {
   return (await response.json()) as T;
 }
 
-export function loadPricingData() {
+/** Fetch pricing data from the JSON source (always available, ~2.9 MB). */
+export function loadPricingDataJson() {
   return fetchJson<RawPricingData>("current/prices.json");
+}
+
+/**
+ * Load pricing data, preferring the SQLite DB when available.
+ *
+ * Strategy:
+ *   1. Attempt to open prices.db via sql.js-httpvfs and query all models.
+ *   2. On ANY error (DB unreachable, worker fails, schema version mismatch,
+ *      VITE_SQLITE_ENABLED=false), silently fall back to the JSON path.
+ *
+ * The fallback is mandatory and airtight — the caller always gets data.
+ */
+export async function loadPricingData(): Promise<RawPricingData> {
+  try {
+    return await loadPricingDataFromSqlite();
+  } catch {
+    // SQLite path unavailable or disabled — use the JSON fallback.
+    return loadPricingDataJson();
+  }
 }
 
 export function loadChangelogData() {

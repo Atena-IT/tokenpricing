@@ -3,7 +3,7 @@
 - **Status:** Proposed
 - **Date:** 2026-06-27
 - **Deciders:** tokenpricing maintainers
-- **Tracking issue:** _(linked from the migration tracking issue)_
+- **Tracking issue:** [#60](https://github.com/Atena-IT/tokenpricing/issues/60)
 - **Supersedes:** —
 
 ## Context

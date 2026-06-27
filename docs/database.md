@@ -21,7 +21,7 @@ https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/changelog/
 
 ## SQLite artifact (`prices.db`)
 
-`prices.db` is a derived, read-only SQLite database built from the canonical JSON after every sync run. It follows the v1 schema described in [ADR 0001](../wiki/decisions/0001-canonical-pricing-database-storage.md) and includes:
+`prices.db` is a derived, read-only SQLite database built from the canonical JSON after every sync run. It follows the v1 schema described in [ADR 0001](https://github.com/Atena-IT/tokenpricing/blob/main/wiki/decisions/0001-canonical-pricing-database-storage.md) and includes:
 
 - `models` — full catalog with indexes on `provider`, `category`, `model_type`
 - `providers` — provider metadata

@@ -222,20 +222,37 @@ Notes:
 
 ## Publish target (resolved)
 
-`prices.db` is published as a **rolling GitHub Release** under the fixed tag
-`database-latest`, refreshed on every sync. This gives consumers a stable,
-unauthenticated download URL without committing a binary to git:
+The derived databases are published as a **rolling GitHub Release** under the
+fixed tag `database-latest`, refreshed on every sync. This gives consumers
+stable, unauthenticated download URLs without committing a binary to git.
+
+Two variants are published, because the full history is valuable to the web
+platform but pure overhead for SDK lookups:
+
+| Asset | Contents | Size (approx.) | Primary consumer |
+| --- | --- | --- | --- |
+| `prices.db` | Full schema incl. `price_history` | ~30 MB | Dashboard / history charts |
+| `prices-current.db` | Slim schema, no `price_history` | a few MB | Python SDK (default), SDK consumers |
 
 ```
 https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices.db
+https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices-current.db
 ```
 
-The release is created with `make_latest: false` so it never displaces the
-SDK package releases as the repository's "latest" release. The DB is also
-uploaded as a short-retention workflow artifact for debugging. GitHub Pages
-remains a future option specifically to unlock HTTP range-request streaming
-(`sql.js-httpvfs` chunked mode), which `raw.githubusercontent.com` / release
-assets do not reliably support.
+Both carry the identical v1 schema (`PRAGMA user_version = 1`); the slim
+variant omits only the `price_history` table and its index, so it is a drop-in
+for any consumer that does not query history. The release is created with
+`make_latest: false` so it never displaces the SDK package releases as the
+repository's "latest" release. Both files are also uploaded as a
+short-retention workflow artifact for debugging.
+
+This split is an interim optimization for the static-hosting model. The longer
+term direction is to move ingestion to a more resilient store. GitHub Pages
+remains the near-term option specifically to unlock HTTP range-request
+streaming (`sql.js-httpvfs` chunked mode) and browser-side use of the full DB
+(release assets are not reliably CORS- or `Range`-accessible from a browser),
+which is what the dashboard needs to actually read SQLite rather than falling
+back to JSON.
 
 ## Rollout
 

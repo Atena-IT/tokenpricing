@@ -16,7 +16,7 @@ from pathlib import Path
 
 import pytest
 
-from tokenpricing_sync.build_db import SCHEMA_VERSION, build_db
+from tokenpricing_sync.build_db import SCHEMA_VERSION, build_db, build_both_dbs
 
 # ---------------------------------------------------------------------------
 # Shared fixture data
@@ -288,3 +288,131 @@ def test_db_not_created_if_prices_json_missing(tmp_path: Path) -> None:
             history_dir=tmp_path / "history",
             output=tmp_path / "prices.db",
         )
+
+
+# ---------------------------------------------------------------------------
+# Slim database tests
+# ---------------------------------------------------------------------------
+
+
+@pytest.fixture()
+def fixture_slim_db(tmp_path: Path) -> tuple[Path, sqlite3.Connection]:
+    """Write fixture JSON to tmp_path, build the slim DB, return (db_path, connection)."""
+    prices_json = tmp_path / "prices.json"
+    prices_json.write_text(json.dumps(FIXTURE_PRICES))
+
+    history_dir = tmp_path / "history"
+    history_dir.mkdir()
+    (history_dir / "prices-20260626T000000Z.json").write_text(
+        json.dumps(FIXTURE_HISTORY)
+    )
+
+    db_path = tmp_path / "prices-current.db"
+    built = build_db(
+        prices_json=prices_json,
+        history_dir=history_dir,
+        output=db_path,
+        with_history=False,
+    )
+    con = sqlite3.connect(str(built))
+    con.row_factory = sqlite3.Row
+    yield built, con
+    con.close()
+
+
+def test_slim_schema_version(fixture_slim_db: tuple[Path, sqlite3.Connection]) -> None:
+    _, con = fixture_slim_db
+    version = con.execute("PRAGMA user_version").fetchone()[0]
+    assert version == SCHEMA_VERSION
+
+
+def test_slim_has_models(fixture_slim_db: tuple[Path, sqlite3.Connection]) -> None:
+    _, con = fixture_slim_db
+    count = con.execute("SELECT COUNT(*) FROM models").fetchone()[0]
+    assert count == len(FIXTURE_PRICES["models"])
+
+
+def test_slim_has_providers(fixture_slim_db: tuple[Path, sqlite3.Connection]) -> None:
+    _, con = fixture_slim_db
+    providers = {
+        r["provider"] for r in con.execute("SELECT provider FROM providers").fetchall()
+    }
+    assert "openai" in providers
+    assert "anthropic" in providers
+
+
+def test_slim_has_model_sources(
+    fixture_slim_db: tuple[Path, sqlite3.Connection],
+) -> None:
+    _, con = fixture_slim_db
+    rows = con.execute("SELECT * FROM model_sources").fetchall()
+    assert len(rows) > 0
+
+
+def test_slim_has_fts(fixture_slim_db: tuple[Path, sqlite3.Connection]) -> None:
+    _, con = fixture_slim_db
+    rows = con.execute(
+        "SELECT model_id FROM models_fts WHERE models_fts MATCH ?", ("GPT*",)
+    ).fetchall()
+    assert any(r["model_id"] == "openai/gpt-4o" for r in rows)
+
+
+def test_slim_no_price_history(
+    fixture_slim_db: tuple[Path, sqlite3.Connection],
+) -> None:
+    """Slim DB must NOT contain the price_history table."""
+    _, con = fixture_slim_db
+    row = con.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name='price_history'"
+    ).fetchone()
+    assert row is None, "price_history table must not exist in the slim database"
+
+
+def test_full_db_still_has_price_history(
+    fixture_db: tuple[Path, sqlite3.Connection],
+) -> None:
+    """Full DB must still contain price_history with the expected rows."""
+    _, con = fixture_db
+    count = con.execute("SELECT COUNT(*) FROM price_history").fetchone()[0]
+    assert count == 2
+
+
+def test_build_both_dbs(tmp_path: Path) -> None:
+    """build_both_dbs produces both a full and a slim database."""
+    prices_json = tmp_path / "prices.json"
+    prices_json.write_text(json.dumps(FIXTURE_PRICES))
+
+    history_dir = tmp_path / "history"
+    history_dir.mkdir()
+    (history_dir / "prices-20260626T000000Z.json").write_text(
+        json.dumps(FIXTURE_HISTORY)
+    )
+
+    full_output = tmp_path / "prices.db"
+    slim_output = tmp_path / "prices-current.db"
+
+    full_path, slim_path = build_both_dbs(
+        prices_json=prices_json,
+        history_dir=history_dir,
+        full_output=full_output,
+        slim_output=slim_output,
+    )
+
+    assert full_path.exists()
+    assert slim_path.exists()
+
+    # Full DB has price_history; slim does not.
+    with sqlite3.connect(str(full_path)) as full_con:
+        row = full_con.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name='price_history'"
+        ).fetchone()
+        assert row is not None, "Full DB must have price_history"
+
+    with sqlite3.connect(str(slim_path)) as slim_con:
+        row = slim_con.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name='price_history'"
+        ).fetchone()
+        assert row is None, "Slim DB must not have price_history"
+
+    # Slim DB is smaller than the full DB (it has no history rows).
+    assert slim_path.stat().st_size < full_path.stat().st_size

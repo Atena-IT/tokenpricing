@@ -51,10 +51,13 @@ cython_debug
 db.sqlite3
 db.sqlite3-journal
 
-# Derived SQLite database (built by CI, not committed to git)
+# Derived SQLite databases (built by CI, not committed to git)
 database/current/prices.db
 database/current/prices.db-wal
 database/current/prices.db-shm
+database/current/prices-current.db
+database/current/prices-current.db-wal
+database/current/prices-current.db-shm
 *.db-wal
 *.db-shm
 develop-eggs

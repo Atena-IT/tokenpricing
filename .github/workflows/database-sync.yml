@@ -47,25 +47,34 @@ jobs:
           git add database/current database/history database/changelog
           git commit -m "chore: refresh canonical pricing database"
           git push
-      - name: Upload prices.db as workflow artifact
+      - name: Upload databases as workflow artifacts
         uses: actions/upload-artifact@v4
         with:
           name: prices-db
-          path: database/current/prices.db
+          path: |
+            database/current/prices.db
+            database/current/prices-current.db
           if-no-files-found: error
           retention-days: 7
-      - name: Publish prices.db to the rolling database-latest release
+      - name: Publish databases to the rolling database-latest release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: database-latest
           name: Canonical pricing database (latest)
           body: |
-            Auto-published derived SQLite build of the canonical pricing database
-            (`database/current/prices.db`), schema v1 (`PRAGMA user_version = 1`).
+            Auto-published derived SQLite builds of the canonical pricing database,
+            schema v1 (`PRAGMA user_version = 1`).
 
-            This is a **rolling** release: the `prices.db` asset is replaced on
-            every database sync, so the download URL is stable. It is a data
-            artifact, not a software release.
-          files: database/current/prices.db
+            | Asset | Contents | Primary consumer |
+            |---|---|---|
+            | `prices.db` | Full database with `price_history` | Dashboard, history charts |
+            | `prices-current.db` | Slim database without `price_history` | Python SDK (default), other SDK consumers |
+
+            This is a **rolling** release: both assets are replaced on every
+            database sync, so the download URLs are stable. These are data
+            artifacts, not software releases.
+          files: |
+            database/current/prices.db
+            database/current/prices-current.db
           make_latest: false
           prerelease: false

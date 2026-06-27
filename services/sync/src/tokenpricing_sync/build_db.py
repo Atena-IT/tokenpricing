@@ -2,6 +2,15 @@
 
 The schema follows ADR 0001. Prices are stored as REAL. The database is
 derived from the JSON source of truth — never committed to git.
+
+Two variants are built by default:
+
+* **Full** (``prices.db``) — all v1 tables including ``price_history`` and its
+  index.  Intended for the web dashboard and other consumers that need the
+  time-series data.
+* **Slim** (``prices-current.db``) — same v1 schema *minus* ``price_history``
+  and its index.  Intended for SDK consumers that never query history; the
+  smaller file makes the first download faster.
 """
 
 from __future__ import annotations
@@ -16,7 +25,8 @@ from tokenpricing_sync.paths import CURRENT_DATABASE_DIR, HISTORY_DIR
 
 SCHEMA_VERSION = 1
 
-_DDL = """
+# DDL shared by both the full and slim databases.
+_DDL_BASE = """
 PRAGMA journal_mode = WAL;
 PRAGMA user_version = 1;
 
@@ -66,6 +76,13 @@ CREATE TABLE model_sources (
   PRIMARY KEY (model_id, source)
 );
 
+CREATE VIRTUAL TABLE models_fts USING fts5(
+  model_id, display_name, content='models', content_rowid='rowid'
+);
+"""
+
+# Additional DDL applied only to the full database.
+_DDL_HISTORY = """
 CREATE TABLE price_history (
   generated_at TEXT NOT NULL,
   model_id     TEXT NOT NULL,
@@ -76,10 +93,6 @@ CREATE TABLE price_history (
   PRIMARY KEY (generated_at, model_id)
 );
 CREATE INDEX idx_history_model ON price_history(model_id, generated_at);
-
-CREATE VIRTUAL TABLE models_fts USING fts5(
-  model_id, display_name, content='models', content_rowid='rowid'
-);
 """
 
 
@@ -213,16 +226,25 @@ def build_db(
     prices_json: Path | None = None,
     history_dir: Path | None = None,
     output: Path | None = None,
+    *,
+    with_history: bool = True,
 ) -> Path:
-    """Build (or rebuild) a SQLite prices.db from canonical JSON files.
+    """Build (or rebuild) a SQLite database from canonical JSON files.
 
     Args:
         prices_json: Path to the canonical prices.json.  Defaults to
             ``database/current/prices.json`` relative to the repo root.
         history_dir: Directory containing timestamped ``prices-*.json``
-            history snapshots.  Defaults to ``database/history``.
+            history snapshots.  Defaults to ``database/history``.  Only
+            consulted when *with_history* is ``True``.
         output: Destination path for the SQLite file.  Defaults to
-            ``database/current/prices.db``.
+            ``database/current/prices.db`` (full) or
+            ``database/current/prices-current.db`` (slim).
+        with_history: When ``True`` (default) the full database is built,
+            including the ``price_history`` table and index.  When ``False``
+            a slim database is produced that omits ``price_history``; this
+            variant is smaller and suitable for SDK consumers that never
+            query historical data.
 
     Returns:
         The resolved path to the written database file.
@@ -232,7 +254,10 @@ def build_db(
     if history_dir is None:
         history_dir = HISTORY_DIR
     if output is None:
-        output = CURRENT_DATABASE_DIR / "prices.db"
+        if with_history:
+            output = CURRENT_DATABASE_DIR / "prices.db"
+        else:
+            output = CURRENT_DATABASE_DIR / "prices-current.db"
 
     snapshot: dict[str, Any] = json.loads(prices_json.read_text())
     generated_at: str = (
@@ -249,7 +274,11 @@ def build_db(
 
     con = sqlite3.connect(str(output))
     try:
-        con.executescript(_DDL)
+        # Apply shared base schema, then optionally the history extension.
+        con.executescript(_DDL_BASE)
+        if with_history:
+            con.executescript(_DDL_HISTORY)
+
         con.execute(
             "INSERT INTO meta (generated_at, total_models, schema_version) VALUES (?, ?, ?)",
             (generated_at, total_models, SCHEMA_VERSION),
@@ -257,7 +286,8 @@ def build_db(
         _populate_from_snapshot(
             con, snapshot, include_models=True, include_providers=True
         )
-        _load_history_snapshots(con, history_dir)
+        if with_history:
+            _load_history_snapshots(con, history_dir)
 
         # Populate the FTS index from the models table.
         con.execute(
@@ -274,3 +304,41 @@ def build_db(
         con.close()
 
     return output
+
+
+def build_both_dbs(
+    prices_json: Path | None = None,
+    history_dir: Path | None = None,
+    full_output: Path | None = None,
+    slim_output: Path | None = None,
+) -> tuple[Path, Path]:
+    """Build both the full and slim databases from the canonical JSON files.
+
+    This is the primary entry-point used by ``sync()`` and the ``build-db``
+    CLI command.  It calls :func:`build_db` twice, sharing the same source
+    files, and returns the paths to both databases.
+
+    Args:
+        prices_json: Path to the canonical prices.json.
+        history_dir: Directory containing timestamped history snapshots.
+        full_output: Destination for the full DB (default:
+            ``database/current/prices.db``).
+        slim_output: Destination for the slim DB (default:
+            ``database/current/prices-current.db``).
+
+    Returns:
+        ``(full_path, slim_path)`` — the resolved paths to both files.
+    """
+    full_path = build_db(
+        prices_json=prices_json,
+        history_dir=history_dir,
+        output=full_output,
+        with_history=True,
+    )
+    slim_path = build_db(
+        prices_json=prices_json,
+        history_dir=history_dir,
+        output=slim_output,
+        with_history=False,
+    )
+    return full_path, slim_path

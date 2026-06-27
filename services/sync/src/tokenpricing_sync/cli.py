@@ -8,7 +8,7 @@ from typing import Any
 
 from tokenpricing.modeling import PricingData
 
-from tokenpricing_sync.build_db import build_db
+from tokenpricing_sync.build_db import build_both_dbs
 from tokenpricing_sync.diff import compare_datasets
 from tokenpricing_sync.fetch import fetch_litellm, fetch_openrouter
 from tokenpricing_sync.normalize import normalize_sources
@@ -53,12 +53,13 @@ def sync() -> dict[str, Any]:
         HISTORY_DIR / f"prices-{timestamp}.json", dataset.model_dump(mode="json")
     )
     write_json(CHANGELOG_DIR / "latest.json", changelog)
-    db_path = build_db()
+    full_db_path, slim_db_path = build_both_dbs()
     return {
         "snapshot": str(CURRENT_DATABASE_DIR / "prices.json"),
         "history_snapshot": str(HISTORY_DIR / f"prices-{timestamp}.json"),
         "changelog": str(CHANGELOG_DIR / "latest.json"),
-        "database": str(db_path),
+        "database": str(full_db_path),
+        "database_slim": str(slim_db_path),
         "models": dataset.metadata.total_models,
         "summary": changelog["summary"],
     }
@@ -110,6 +111,13 @@ def build_parser() -> argparse.ArgumentParser:
         dest="history_dir",
         help="directory containing timestamped history snapshots (default: database/history)",
     )
+    build_db_parser.add_argument(
+        "--slim-output",
+        type=Path,
+        default=None,
+        dest="slim_output",
+        help="destination path for the slim SQLite file without price_history (default: database/current/prices-current.db)",
+    )
     return parser
 
 
@@ -123,11 +131,17 @@ def main() -> None:
         print(json.dumps(normalize_only(), indent=2))
         return
     if args.command == "build-db":
-        db_path = build_db(
+        full_db_path, slim_db_path = build_both_dbs(
             prices_json=args.prices_json,
             history_dir=args.history_dir,
-            output=args.output,
+            full_output=args.output,
+            slim_output=args.slim_output,
         )
-        print(json.dumps({"database": str(db_path)}, indent=2))
+        print(
+            json.dumps(
+                {"database": str(full_db_path), "database_slim": str(slim_db_path)},
+                indent=2,
+            )
+        )
         return
     parser.error("unknown command")

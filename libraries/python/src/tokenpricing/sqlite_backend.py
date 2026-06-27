@@ -1,9 +1,15 @@
 """Optional SQLite read backend for tokenpricing.
 
-Downloads ``prices.db`` from a configurable URL (default: rolling GitHub
-Release at ``database-latest``), caches it on disk with a 6-hour freshness
-TTL, and serves lookups / searches via indexed SQL instead of parsing the
-full ~2.9 MB JSON.
+Downloads ``prices-current.db`` (the slim database, without ``price_history``)
+from a configurable URL (default: rolling GitHub Release at
+``database-latest``), caches it on disk with a 6-hour freshness TTL, and
+serves lookups / searches via indexed SQL instead of parsing the full ~2.9 MB
+JSON.
+
+The SDK never queries ``price_history``, so the slim database is a drop-in
+replacement for the full ``prices.db``.  Using it results in a materially
+smaller download on first use.  To switch to the full database set
+``TOKENPRICING_DB_URL`` to the ``prices.db`` release URL.
 
 Activation
 ----------
@@ -59,7 +65,7 @@ logger = logging.getLogger(__name__)
 
 DB_DOWNLOAD_URL = (
     os.environ.get("TOKENPRICING_DB_URL")
-    or "https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices.db"
+    or "https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices-current.db"
 )
 
 DB_CACHE_TTL_SECONDS = 6 * 60 * 60  # 6 hours – mirrors the JSON cache TTL
@@ -78,7 +84,7 @@ def _cache_dir() -> Path:
 
 
 def _db_path() -> Path:
-    return _cache_dir() / "prices.db"
+    return _cache_dir() / "prices-current.db"
 
 
 # ---------------------------------------------------------------------------

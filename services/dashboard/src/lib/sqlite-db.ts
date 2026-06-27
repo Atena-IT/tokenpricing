@@ -20,20 +20,21 @@ import type { RawModelInfo, RawPricingData } from "./data";
 const SQLITE_ENABLED =
   (import.meta.env.VITE_SQLITE_ENABLED as string | undefined)?.trim().toLowerCase() !== "false";
 
-/** The DB URL comes from an explicit env var or is derived from the same
- *  canonical data root the JSON path uses. */
+/** The DB URL comes from an explicit env var, or defaults to the full
+ *  database published on the rolling `database-latest` GitHub Release. The
+ *  dashboard needs the full DB (it includes `price_history` for the history
+ *  charts); the slim `prices-current.db` is for SDK consumers.
+ *
+ *  Note: browsers may be unable to fetch a release asset directly due to CORS
+ *  until the DB is served from GitHub Pages. That failure is caught upstream
+ *  and the app falls back to the JSON path, so there is no user-visible
+ *  regression in the meantime. */
 function resolvePricesDbUrl(): string {
   const explicit = (import.meta.env.VITE_PRICES_DB_URL as string | undefined)?.trim();
   if (explicit) {
     return explicit;
   }
-  const DEFAULT_CANONICAL_DATA_ROOT =
-    "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database";
-  const root = (
-    (import.meta.env.VITE_CANONICAL_DATA_ROOT as string | undefined)?.trim() ||
-    DEFAULT_CANONICAL_DATA_ROOT
-  ).replace(/\/+$/, "");
-  return `${root}/current/prices.db`;
+  return "https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices.db";
 }
 
 /**

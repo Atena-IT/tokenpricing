@@ -124,17 +124,22 @@ desirable.
 export TOKENPRICING_USE_SQLITE=1
 ```
 
-When active, the SDK downloads `prices.db` from the rolling GitHub Release,
-caches it on disk at `~/.cache/tokenpricing/prices.db` with the same 6-hour
-TTL, and serves lookups/searches via indexed SQL and FTS5 instead of scanning
-the whole JSON array.  On **any failure** (network error, schema mismatch,
-sqlite error) it silently falls back to the existing JSON path — the public
-API and return types are identical either way.
+When active, the SDK downloads **`prices-current.db`** — the _slim_ database
+from the rolling GitHub Release.  The slim database contains all v1 tables
+(`meta`, `providers`, `models`, `model_sources`, `models_fts`) but omits the
+`price_history` table, which the SDK never queries.  This makes the first
+download materially smaller than the full `prices.db`.
+
+The file is cached on disk at `~/.cache/tokenpricing/prices-current.db` with
+the same 6-hour TTL.  Lookups and searches are served via indexed SQL and
+FTS5 instead of scanning the whole JSON array.  On **any failure** (network
+error, schema mismatch, sqlite error) the SDK silently falls back to the
+existing JSON path — the public API and return types are identical either way.
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `TOKENPRICING_USE_SQLITE` | unset (OFF) | Set to `1` / `true` to enable |
-| `TOKENPRICING_DB_URL` | rolling `database-latest` release URL | Override the download URL |
+| `TOKENPRICING_DB_URL` | slim `prices-current.db` from `database-latest` | Override the download URL (e.g. to use the full `prices.db`) |
 | `TOKENPRICING_DB_CACHE_DIR` | `~/.cache/tokenpricing` | Override the on-disk cache directory |
 
 **Speedup rationale:** a single-model lookup reads ~tens of KB instead of

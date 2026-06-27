@@ -10,7 +10,8 @@ All pricing data lives in the repository under `database/`, normalized from Open
 | `database/history/prices-<timestamp>.json` | Immutable snapshots, one per sync |
 | `database/changelog/latest.json` | Diff summary of the most recent sync window |
 | `database/current/openrouter.json` / `litellm.json` | Raw upstream payloads from the last sync |
-| `prices.db` *(CI artifact)* | Derived SQLite database built from `prices.json` — **not committed to git**, published as a workflow artifact after each sync |
+| `prices.db` *(CI artifact)* | Full derived SQLite database — all v1 tables including `price_history` — **not committed to git**, published after each sync |
+| `prices-current.db` *(CI artifact)* | Slim derived SQLite database — same v1 schema minus `price_history` — **not committed to git**, default for SDK consumers |
 
 Raw access (no authentication required):
 
@@ -29,17 +30,18 @@ https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/changelog/
 - `price_history` — time-series pricing from all history snapshots
 - `models_fts` — FTS5 full-text index over `model_id` and `display_name`
 
-The file is excluded from git (binary changes every 6 hours would bloat history). It is published as a **rolling GitHub Release** (`database-latest`) on every sync, giving a stable download URL:
+The databases are excluded from git (binary changes every 6 hours would bloat history). They are published as a **rolling GitHub Release** (`database-latest`) on every sync, giving stable download URLs. Two variants are built — pick the one that matches your workload:
 
-```
-https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices.db
-```
+| Asset | Contents | Primary consumer |
+| --- | --- | --- |
+| [`prices.db`](https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices.db) | Full database **including `price_history`** | Dashboard / history charts |
+| [`prices-current.db`](https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices-current.db) | Slim database **without `price_history`** (smaller download) | Python SDK (default) and other SDK consumers |
 
-It is also attached to each `database-sync` workflow run as the `prices-db` artifact. To build it locally from the committed JSON:
+Both share the identical v1 schema (`PRAGMA user_version = 1`); the slim variant simply omits the `price_history` table and its index. Both are also attached to each `database-sync` workflow run as the `prices-db` artifact. To build them locally from the committed JSON:
 
 ```bash
 cd services/sync
-uv run tokenpricing-sync build-db
+uv run tokenpricing-sync build-db   # writes prices.db and prices-current.db
 ```
 
 ## Model record

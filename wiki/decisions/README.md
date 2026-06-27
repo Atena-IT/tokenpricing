@@ -10,6 +10,7 @@ that supersedes the old one (and update the old one's status to *Superseded*).
 | ADR | Title | Status |
 | --- | --- | --- |
 | [0001](0001-canonical-pricing-database-storage.md) | SQLite read layer for the canonical pricing database | Proposed |
+| [0002](0002-data-persistence-and-json-retention.md) | Data persistence and JSON retention | Proposed |
 
 ## Format
 

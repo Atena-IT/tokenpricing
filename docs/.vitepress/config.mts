@@ -52,16 +52,6 @@ export default defineConfig({
           { text: "Canonical database", link: "/database" },
         ],
       },
-      {
-        text: "Architecture decisions",
-        items: [
-          { text: "Overview", link: "/adr/" },
-          {
-            text: "0001 · SQLite read layer",
-            link: "/adr/0001-canonical-pricing-database-storage",
-          },
-        ],
-      },
     ],
     socialLinks: [{ icon: "github", link: "https://github.com/Atena-IT/tokenpricing" }],
     search: { provider: "local" },

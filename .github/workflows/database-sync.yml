@@ -51,3 +51,18 @@ jobs:
           path: database/current/prices.db
           if-no-files-found: error
           retention-days: 7
+      - name: Publish prices.db to the rolling database-latest release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: database-latest
+          name: Canonical pricing database (latest)
+          body: |
+            Auto-published derived SQLite build of the canonical pricing database
+            (`database/current/prices.db`), schema v1 (`PRAGMA user_version = 1`).
+
+            This is a **rolling** release: the `prices.db` asset is replaced on
+            every database sync, so the download URL is stable. It is a data
+            artifact, not a software release.
+          files: database/current/prices.db
+          make_latest: false
+          prerelease: false

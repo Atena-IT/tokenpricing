@@ -29,7 +29,13 @@ https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/changelog/
 - `price_history` — time-series pricing from all history snapshots
 - `models_fts` — FTS5 full-text index over `model_id` and `display_name`
 
-The file is excluded from git (binary changes every 6 hours would bloat history). Download it from the latest `database-sync` workflow run artifact `prices-db`. To build locally:
+The file is excluded from git (binary changes every 6 hours would bloat history). It is published as a **rolling GitHub Release** (`database-latest`) on every sync, giving a stable download URL:
+
+```
+https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices.db
+```
+
+It is also attached to each `database-sync` workflow run as the `prices-db` artifact. To build it locally from the committed JSON:
 
 ```bash
 cd services/sync

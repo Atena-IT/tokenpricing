@@ -220,6 +220,23 @@ Notes:
 - Schema versioning and a JSON↔DB equivalence test become permanent
   maintenance items.
 
+## Publish target (resolved)
+
+`prices.db` is published as a **rolling GitHub Release** under the fixed tag
+`database-latest`, refreshed on every sync. This gives consumers a stable,
+unauthenticated download URL without committing a binary to git:
+
+```
+https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices.db
+```
+
+The release is created with `make_latest: false` so it never displaces the
+SDK package releases as the repository's "latest" release. The DB is also
+uploaded as a short-retention workflow artifact for debugging. GitHub Pages
+remains a future option specifically to unlock HTTP range-request streaming
+(`sql.js-httpvfs` chunked mode), which `raw.githubusercontent.com` / release
+assets do not reliably support.
+
 ## Rollout
 
 Phasing, owners, and acceptance criteria live in the migration tracking issue.

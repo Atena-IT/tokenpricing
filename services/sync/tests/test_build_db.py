@@ -210,7 +210,9 @@ def test_gpt4o_fields_match(fixture_db: tuple[Path, sqlite3.Connection]) -> None
     assert row["model_type"] == fixture["model_type"]
     assert row["category"] == fixture["category"]
     assert bool(row["supports_vision"]) is fixture["supports_vision"]
-    assert bool(row["supports_function_calling"]) is fixture["supports_function_calling"]
+    assert (
+        bool(row["supports_function_calling"]) is fixture["supports_function_calling"]
+    )
     assert bool(row["supports_streaming"]) is fixture["supports_streaming"]
 
 

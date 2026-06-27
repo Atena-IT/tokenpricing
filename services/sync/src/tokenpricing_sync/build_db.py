@@ -235,11 +235,13 @@ def build_db(
         output = CURRENT_DATABASE_DIR / "prices.db"
 
     snapshot: dict[str, Any] = json.loads(prices_json.read_text())
-    generated_at: str = snapshot.get("generated_at") or datetime.now(
-        timezone.utc
-    ).isoformat()
+    generated_at: str = (
+        snapshot.get("generated_at") or datetime.now(timezone.utc).isoformat()
+    )
     metadata = snapshot.get("metadata") or {}
-    total_models: int = metadata.get("total_models") or len(snapshot.get("models") or {})
+    total_models: int = metadata.get("total_models") or len(
+        snapshot.get("models") or {}
+    )
 
     # Remove stale DB so we always start from a clean slate.
     if output.exists():
@@ -252,7 +254,9 @@ def build_db(
             "INSERT INTO meta (generated_at, total_models, schema_version) VALUES (?, ?, ?)",
             (generated_at, total_models, SCHEMA_VERSION),
         )
-        _populate_from_snapshot(con, snapshot, include_models=True, include_providers=True)
+        _populate_from_snapshot(
+            con, snapshot, include_models=True, include_providers=True
+        )
         _load_history_snapshots(con, history_dir)
 
         # Populate the FTS index from the models table.

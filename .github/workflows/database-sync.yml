@@ -34,6 +34,9 @@ jobs:
         working-directory: services/sync
         run: uv run tokenpricing-sync build-db
       - name: Commit refreshed data
+        # Only scheduled runs persist refreshed data to git. Manual dispatches
+        # refresh the release/artifact for testing without mutating the branch.
+        if: github.event_name == 'schedule'
         run: |
           if git diff --quiet; then
             echo "No database changes"

@@ -1,76 +1,29 @@
 {
-  "generated_at": "2026-06-29T13:46:32.344241+00:00",
+  "generated_at": "2026-06-29T18:54:29.589392+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 1,
+    "model_removals": 0,
     "pricing_changes": 1,
-    "cache_price_changes": 1
+    "cache_price_changes": 0
   },
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "stepfun/step-3.5-flash",
+      "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.09,
-        "output_per_million": 0.3,
-        "cache_read_per_million": 0.02,
+        "input_per_million": 0.95,
+        "output_per_million": 3.0,
+        "cache_read_per_million": 0.18,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.3,
-        "cache_read_per_million": null,
+        "input_per_million": 0.94,
+        "output_per_million": 3.0,
+        "cache_read_per_million": 0.18,
         "cache_creation_per_million": null,
         "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "stepfun/step-3.5-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.02,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "anthropic/claude-opus-4.6-fast",
-      "model_type": "text",
-      "before": {
-        "provider": "anthropic",
-        "model_id": "anthropic/claude-opus-4.6-fast",
-        "display_name": "Anthropic: Claude Opus 4.6 (Fast)",
-        "pricing": {
-          "input_per_million": 30.0,
-          "output_per_million": 150.0,
-          "cache_read_per_million": 3.0,
-          "cache_creation_per_million": 37.5,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "openrouter": {
-            "price_input": 30.0,
-            "price_output": 150.0,
-            "price_cache_read": 3.0,
-            "price_cache_creation": 37.5,
-            "last_updated": "2026-06-29T08:06:50.566443Z"
-          }
-        },
-        "affiliate_links": {}
       }
     }
   ]

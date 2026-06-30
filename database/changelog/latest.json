@@ -1,10 +1,45 @@
 {
-  "generated_at": "2026-06-30T07:35:34.360657+00:00",
+  "generated_at": "2026-06-30T12:56:54.238417+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 0,
+    "model_removals": 1,
     "pricing_changes": 0,
     "cache_price_changes": 0
   },
-  "changes": []
+  "changes": [
+    {
+      "type": "model_removed",
+      "model_id": "openrouter/owl-alpha",
+      "model_type": "text",
+      "before": {
+        "provider": "openrouter",
+        "model_id": "openrouter/owl-alpha",
+        "display_name": "Owl Alpha",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 1048756,
+        "max_output_tokens": 262144,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-06-30T07:35:34.184906Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    }
+  ]
 }

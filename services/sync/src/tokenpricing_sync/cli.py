@@ -11,6 +11,7 @@ from tokenpricing.modeling import PricingData
 from tokenpricing_sync.build_db import build_both_dbs
 from tokenpricing_sync.diff import compare_datasets
 from tokenpricing_sync.fetch import fetch_litellm, fetch_openrouter
+from tokenpricing_sync.history import write_compact_history
 from tokenpricing_sync.normalize import normalize_sources
 from tokenpricing_sync.paths import CHANGELOG_DIR, CURRENT_DATABASE_DIR, HISTORY_DIR
 
@@ -53,10 +54,16 @@ def sync() -> dict[str, Any]:
         HISTORY_DIR / f"prices-{timestamp}.json", dataset.model_dump(mode="json")
     )
     write_json(CHANGELOG_DIR / "latest.json", changelog)
+    compact_history_path = write_compact_history(
+        history_dir=HISTORY_DIR,
+        output_path=CURRENT_DATABASE_DIR / "price-history.json",
+        write_json_fn=write_json,
+    )
     full_db_path, slim_db_path = build_both_dbs()
     return {
         "snapshot": str(CURRENT_DATABASE_DIR / "prices.json"),
         "history_snapshot": str(HISTORY_DIR / f"prices-{timestamp}.json"),
+        "compact_history": str(compact_history_path),
         "changelog": str(CHANGELOG_DIR / "latest.json"),
         "database": str(full_db_path),
         "database_slim": str(slim_db_path),

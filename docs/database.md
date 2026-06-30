@@ -7,7 +7,8 @@ All pricing data lives in the repository under `database/`, normalized from Open
 | Path | Content |
 | --- | --- |
 | `database/current/prices.json` | The canonical model catalog with current prices (source of truth, committed to git) |
-| `database/history/prices-<timestamp>.json` | Immutable snapshots, one per sync |
+| `database/current/price-history.json` | Compact per-model price time-series — one entry per snapshot per model; committed to git; consumed by the dashboard history charts (replaces up to 12 × 2.8 MB individual snapshot fetches with a single request) |
+| `database/history/prices-<timestamp>.json` | Immutable full-catalog snapshots, one per sync |
 | `database/changelog/latest.json` | Diff summary of the most recent sync window |
 | `database/current/openrouter.json` / `litellm.json` | Raw upstream payloads from the last sync |
 | `prices.db` *(CI artifact)* | Full derived SQLite database — all v1 tables including `price_history` — **not committed to git**, published after each sync |

@@ -114,11 +114,101 @@ export interface HistorySnapshot {
 }
 
 /**
- * Snapshots live as timestamped files in `database/history/`; the directory
- * listing comes from the GitHub contents API (the raw CDN cannot list).
- * Returns the most recent `limit` snapshots in chronological order.
+ * Compact per-model price time-series produced by the sync service.
+ * Fetched as a single file instead of up to 12 full ~2.8 MB snapshots.
+ */
+interface CompactPricePoint {
+  /** ISO-8601 snapshot timestamp. */
+  t: string;
+  /** Input price per million tokens (USD). */
+  in: number | null;
+  /** Output price per million tokens (USD). */
+  out: number | null;
+  /** Cache-read price per million tokens (USD), or null. */
+  cr: number | null;
+  /** Cache-creation price per million tokens (USD), or null. */
+  cc: number | null;
+}
+
+interface CompactPriceHistory {
+  generated_at: string;
+  models: Record<string, CompactPricePoint[]>;
+}
+
+/**
+ * Convert the compact history artifact into the `HistorySnapshot[]` shape that
+ * the history chart already knows how to render.  Only the four pricing fields
+ * present in the compact format are populated; all other `RawModelInfo` fields
+ * are set to safe defaults because the chart only reads `pricing`.
+ */
+function compactHistoryToSnapshots(
+  compact: CompactPriceHistory,
+  limit: number,
+): HistorySnapshot[] {
+  // Collect all distinct timestamps across all models, sorted ascending.
+  const timestampSet = new Set<string>();
+  for (const points of Object.values(compact.models)) {
+    for (const point of points) {
+      timestampSet.add(point.t);
+    }
+  }
+  const timestamps = [...timestampSet].sort().slice(-limit);
+
+  return timestamps.map((ts) => {
+    const models: Record<string, RawModelInfo> = {};
+    for (const [modelId, points] of Object.entries(compact.models)) {
+      const point = points.find((p) => p.t === ts);
+      if (!point) {
+        continue;
+      }
+      // Populate only the fields the history chart reads (pricing.*).
+      models[modelId] = {
+        provider: modelId.split("/")[0] ?? "",
+        model_id: modelId,
+        display_name: modelId,
+        pricing: {
+          input_per_million: point.in ?? 0,
+          output_per_million: point.out ?? 0,
+          cache_read_per_million: point.cr,
+          cache_creation_per_million: point.cc,
+          currency: "USD",
+        },
+        context_window: 0,
+        max_output_tokens: 0,
+        model_type: "text",
+        supports_vision: false,
+        supports_function_calling: false,
+        supports_streaming: false,
+        category: "standard",
+      };
+    }
+    return { timestamp: ts, models };
+  });
+}
+
+/**
+ * Primary path: fetch the single compact history artifact
+ * (`current/price-history.json`) and convert it to `HistorySnapshot[]`.
+ *
+ * Falls back to the legacy multi-snapshot method if the compact file is
+ * missing (404) or cannot be parsed, so nothing breaks during rollout.
  */
 export async function loadHistorySnapshots(limit = 12): Promise<HistorySnapshot[]> {
+  try {
+    const compact = await fetchJson<CompactPriceHistory>("current/price-history.json");
+    return compactHistoryToSnapshots(compact, limit);
+  } catch {
+    // Compact file not yet available — fall back to the legacy snapshot listing.
+    return loadHistorySnapshotsLegacy(limit);
+  }
+}
+
+/**
+ * Legacy fallback: lists `database/history/` via the GitHub contents API and
+ * fetches up to `limit` full snapshots (~2.8 MB each).  Only called when the
+ * compact `price-history.json` is unavailable.
+ */
+async function loadHistorySnapshotsLegacy(limit = 12): Promise<HistorySnapshot[]> {
   const match = CANONICAL_DATA_ROOT.match(GITHUB_RAW_PATTERN);
   if (!match) {
     return [];

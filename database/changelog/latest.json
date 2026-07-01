@@ -1,90 +1,77 @@
 {
-  "generated_at": "2026-07-01T13:12:15.675099+00:00",
+  "generated_at": "2026-07-01T18:52:47.629190+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 0,
-    "pricing_changes": 4,
-    "cache_price_changes": 4
+    "model_removals": 1,
+    "pricing_changes": 3,
+    "cache_price_changes": 2
   },
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "minimax/minimax-m2",
+      "model_id": "deepseek/deepseek-chat-v3-0324",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.255,
-        "output_per_million": 1.0,
-        "cache_read_per_million": 0.03,
+        "input_per_million": 0.2,
+        "output_per_million": 0.77,
+        "cache_read_per_million": 0.135,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.255,
-        "output_per_million": 1.02,
-        "cache_read_per_million": null,
+        "input_per_million": 0.24,
+        "output_per_million": 0.9,
+        "cache_read_per_million": 0.135,
         "cache_creation_per_million": null,
         "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "minimax/minimax-m2",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "minimax/minimax-m2.1",
+      "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.29,
-        "output_per_million": 0.95,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
+        "input_per_million": 0.098,
+        "output_per_million": 0.196,
+        "cache_read_per_million": 0.02,
+        "cache_creation_per_million": 0.0,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.3,
-        "output_per_million": 1.2,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
+        "input_per_million": 0.09,
+        "output_per_million": 0.18,
+        "cache_read_per_million": 0.018,
+        "cache_creation_per_million": 0.0,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "moonshotai/kimi-k2-thinking",
+      "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.6,
-        "cache_creation_per_million": null
+        "cache_read_per_million": 0.02,
+        "cache_creation_per_million": 0.0
       },
       "after": {
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": null
+        "cache_read_per_million": 0.018,
+        "cache_creation_per_million": 0.0
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "qwen/qwen3-30b-a3b-thinking-2507",
+      "model_id": "~anthropic/claude-fable-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.08,
-        "output_per_million": 0.4,
-        "cache_read_per_million": 0.08,
-        "cache_creation_per_million": null,
+        "input_per_million": 10.0,
+        "output_per_million": 50.0,
+        "cache_read_per_million": 1.0,
+        "cache_creation_per_million": 12.5,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.13,
-        "output_per_million": 1.56,
+        "input_per_million": -1000000.0,
+        "output_per_million": -1000000.0,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
@@ -92,11 +79,11 @@
     },
     {
       "type": "cache_price_changed",
-      "model_id": "qwen/qwen3-30b-a3b-thinking-2507",
+      "model_id": "~anthropic/claude-fable-latest",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.08,
-        "cache_creation_per_million": null
+        "cache_read_per_million": 1.0,
+        "cache_creation_per_million": 12.5
       },
       "after": {
         "cache_read_per_million": null,
@@ -104,35 +91,37 @@
       }
     },
     {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3-8b",
+      "type": "model_removed",
+      "model_id": "anthropic/claude-fable-5",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.05,
-        "output_per_million": 0.4,
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.117,
-        "output_per_million": 0.455,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "qwen/qwen3-8b",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
+        "provider": "anthropic",
+        "model_id": "anthropic/claude-fable-5",
+        "display_name": "Anthropic: Claude Fable 5",
+        "pricing": {
+          "input_per_million": 10.0,
+          "output_per_million": 50.0,
+          "cache_read_per_million": 1.0,
+          "cache_creation_per_million": 12.5,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 10.0,
+            "price_output": 50.0,
+            "price_cache_read": 1.0,
+            "price_cache_creation": 12.5,
+            "last_updated": "2026-07-01T13:12:15.493920Z"
+          }
+        },
+        "affiliate_links": {}
       }
     }
   ]

@@ -1,48 +1,142 @@
 {
-  "generated_at": "2026-07-02T12:52:47.025971+00:00",
+  "generated_at": "2026-07-02T18:45:40.924358+00:00",
   "summary": {
-    "model_additions": 0,
+    "model_additions": 2,
     "model_removals": 0,
     "pricing_changes": 2,
-    "cache_price_changes": 0
+    "cache_price_changes": 2
   },
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
+      "model_id": "moonshotai/kimi-k2.6",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.09,
-        "output_per_million": 0.18,
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": 0.0,
+        "input_per_million": 0.55,
+        "output_per_million": 3.2,
+        "cache_read_per_million": 0.11,
+        "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.089,
-        "output_per_million": 0.18,
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": 0.0,
+        "input_per_million": 0.66,
+        "output_per_million": 3.41,
+        "cache_read_per_million": 0.14,
+        "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3-vl-8b-instruct",
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.6",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.08,
-        "output_per_million": 0.5,
-        "cache_read_per_million": null,
+        "cache_read_per_million": 0.11,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.14,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "poolside/laguna-xs-2.1",
+      "model_type": "text",
+      "after": {
+        "provider": "poolside",
+        "model_id": "poolside/laguna-xs-2.1",
+        "display_name": "Poolside: Laguna XS 2.1",
+        "pricing": {
+          "input_per_million": 0.06,
+          "output_per_million": 0.12,
+          "cache_read_per_million": 0.03,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.06,
+            "price_output": 0.12,
+            "price_cache_read": 0.03,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-02T18:45:40.746805Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "poolside/laguna-xs-2.1:free",
+      "model_type": "text",
+      "after": {
+        "provider": "poolside",
+        "model_id": "poolside/laguna-xs-2.1:free",
+        "display_name": "Poolside: Laguna XS 2.1 (free)",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-02T18:45:40.746805Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "~moonshotai/kimi-latest",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.55,
+        "output_per_million": 3.2,
+        "cache_read_per_million": 0.11,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.117,
-        "output_per_million": 0.455,
-        "cache_read_per_million": null,
+        "input_per_million": 0.66,
+        "output_per_million": 3.41,
+        "cache_read_per_million": 0.14,
         "cache_creation_per_million": null,
         "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "~moonshotai/kimi-latest",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.11,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.14,
+        "cache_creation_per_million": null
       }
     }
   ]

@@ -1,77 +1,10 @@
 {
-  "generated_at": "2026-07-02T01:17:00.537086+00:00",
+  "generated_at": "2026-07-02T07:22:30.822635+00:00",
   "summary": {
-    "model_additions": 1,
+    "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 1,
-    "cache_price_changes": 1
+    "pricing_changes": 0,
+    "cache_price_changes": 0
   },
-  "changes": [
-    {
-      "type": "model_added",
-      "model_id": "anthropic/claude-fable-5",
-      "model_type": "text",
-      "after": {
-        "provider": "anthropic",
-        "model_id": "anthropic/claude-fable-5",
-        "display_name": "Anthropic: Claude Fable 5",
-        "pricing": {
-          "input_per_million": 10.0,
-          "output_per_million": 50.0,
-          "cache_read_per_million": 1.0,
-          "cache_creation_per_million": 12.5,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 10.0,
-            "price_output": 50.0,
-            "price_cache_read": 1.0,
-            "price_cache_creation": 12.5,
-            "last_updated": "2026-07-02T01:17:00.318632Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "~anthropic/claude-fable-latest",
-      "model_type": "text",
-      "before": {
-        "input_per_million": -1000000.0,
-        "output_per_million": -1000000.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 10.0,
-        "output_per_million": 50.0,
-        "cache_read_per_million": 1.0,
-        "cache_creation_per_million": 12.5,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "~anthropic/claude-fable-latest",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 1.0,
-        "cache_creation_per_million": 12.5
-      }
-    }
-  ]
+  "changes": []
 }

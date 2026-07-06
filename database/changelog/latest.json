@@ -1,43 +1,10 @@
 {
-  "generated_at": "2026-07-06T01:04:24.157146+00:00",
+  "generated_at": "2026-07-06T07:51:02.875710+00:00",
   "summary": {
     "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 1,
-    "cache_price_changes": 1
+    "pricing_changes": 0,
+    "cache_price_changes": 0
   },
-  "changes": [
-    {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.2",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.574,
-        "output_per_million": 1.804,
-        "cache_read_per_million": 0.1066,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.686,
-        "output_per_million": 2.156,
-        "cache_read_per_million": 0.1274,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "z-ai/glm-5.2",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.1066,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.1274,
-        "cache_creation_per_million": null
-      }
-    }
-  ]
+  "changes": []
 }

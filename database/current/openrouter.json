@@ -1,9 +1,152 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-07-06T13:28:56.571202+00:00",
+  "fetched_at": "2026-07-06T18:51:54.459913+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 340,
+  "model_count": 342,
   "data": [
+    {
+      "id": "tencent/hy3:free",
+      "canonical_slug": "tencent/hy3-20260706",
+      "hugging_face_id": "tencent/Hy3",
+      "name": "Tencent: Hy3 (free)",
+      "created": 1783344048,
+      "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 262144,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.9,
+        "top_p": 1,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": "2026-07-21",
+      "links": {
+        "details": "/api/v1/models/tencent/hy3-20260706/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "supported_efforts": [
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
+      "id": "tencent/hy3",
+      "canonical_slug": "tencent/hy3-20260706",
+      "hugging_face_id": "tencent/Hy3",
+      "name": "Tencent: Hy3",
+      "created": 1783344048,
+      "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000014",
+        "completion": "0.00000058",
+        "input_cache_read": "0.000000035"
+      },
+      "top_provider": {
+        "context_length": 202752,
+        "max_completion_tokens": 131072,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.9,
+        "top_p": 1,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/tencent/hy3-20260706/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "supported_efforts": [
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
     {
       "id": "poolside/laguna-xs-2.1:free",
       "canonical_slug": "poolside/laguna-xs-2.1-20260625",
@@ -2495,6 +2638,14 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/x-ai/grok-build-0.1-20260520/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 39.8,
+          "coding_index": 51.5,
+          "agentic_index": 28
+        }
       },
       "reasoning": {
         "mandatory": true
@@ -5460,7 +5611,8 @@
       },
       "pricing": {
         "prompt": "0.000000105",
-        "completion": "0.00000028"
+        "completion": "0.00000028",
+        "input_cache_read": "0.000000028"
       },
       "top_provider": {
         "context_length": 32000,
@@ -10425,7 +10577,8 @@
       },
       "pricing": {
         "prompt": "0.000000385",
-        "completion": "0.00000245"
+        "completion": "0.00000245",
+        "input_cache_read": "0.000000111"
       },
       "top_provider": {
         "context_length": 131072,
@@ -11242,7 +11395,8 @@
       },
       "pricing": {
         "prompt": "0.000000375",
-        "completion": "0.000002025"
+        "completion": "0.000002025",
+        "input_cache_read": "0.000000203"
       },
       "top_provider": {
         "context_length": 256000,
@@ -13791,7 +13945,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-07-10",
       "links": {
         "details": "/api/v1/models/arcee-ai/trinity-mini-20251201/endpoints"
       },
@@ -25613,49 +25767,6 @@
       }
     },
     {
-      "id": "inflection/inflection-3-productivity",
-      "canonical_slug": "inflection/inflection-3-productivity",
-      "hugging_face_id": null,
-      "name": "Inflection: Inflection 3 Productivity",
-      "created": 1728604800,
-      "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional...",
-      "context_length": 8000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.00001"
-      },
-      "top_provider": {
-        "context_length": 8000,
-        "max_completion_tokens": 1024,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "stop",
-        "temperature",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2024-10-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/inflection/inflection-3-productivity/endpoints"
-      }
-    },
-    {
       "id": "inflection/inflection-3-pi",
       "canonical_slug": "inflection/inflection-3-pi",
       "hugging_face_id": null,
@@ -25696,6 +25807,49 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/inflection/inflection-3-pi/endpoints"
+      }
+    },
+    {
+      "id": "inflection/inflection-3-productivity",
+      "canonical_slug": "inflection/inflection-3-productivity",
+      "hugging_face_id": null,
+      "name": "Inflection: Inflection 3 Productivity",
+      "created": 1728604800,
+      "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional...",
+      "context_length": 8000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000025",
+        "completion": "0.00001"
+      },
+      "top_provider": {
+        "context_length": 8000,
+        "max_completion_tokens": 1024,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_tokens",
+        "stop",
+        "temperature",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2024-10-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inflection/inflection-3-productivity/endpoints"
       }
     },
     {
@@ -26597,6 +26751,63 @@
       }
     },
     {
+      "id": "openai/gpt-4o-mini-2024-07-18",
+      "canonical_slug": "openai/gpt-4o-mini-2024-07-18",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+      "created": 1721260800,
+      "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000075"
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": 16384,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p",
+        "web_search_options"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2023-10-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-4o-mini-2024-07-18/endpoints"
+      }
+    },
+    {
       "id": "openai/gpt-4o-mini",
       "canonical_slug": "openai/gpt-4o-mini",
       "hugging_face_id": null,
@@ -26660,63 +26871,6 @@
           "coding_index": 11.4,
           "agentic_index": 1
         }
-      }
-    },
-    {
-      "id": "openai/gpt-4o-mini-2024-07-18",
-      "canonical_slug": "openai/gpt-4o-mini-2024-07-18",
-      "hugging_face_id": null,
-      "name": "OpenAI: GPT-4o-mini (2024-07-18)",
-      "created": 1721260800,
-      "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "GPT",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000075"
-      },
-      "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 16384,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_logprobs",
-        "top_p",
-        "web_search_options"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2023-10-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/openai/gpt-4o-mini-2024-07-18/endpoints"
       }
     },
     {

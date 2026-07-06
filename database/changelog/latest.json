@@ -1,41 +1,116 @@
 {
-  "generated_at": "2026-07-06T13:28:56.812769+00:00",
+  "generated_at": "2026-07-06T18:51:54.671643+00:00",
   "summary": {
-    "model_additions": 0,
+    "model_additions": 2,
     "model_removals": 0,
-    "pricing_changes": 1,
-    "cache_price_changes": 1
+    "pricing_changes": 0,
+    "cache_price_changes": 3
   },
   "changes": [
     {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.2",
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.5",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.686,
-        "output_per_million": 2.156,
-        "cache_read_per_million": 0.1274,
-        "cache_creation_per_million": null,
-        "currency": "USD"
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
       },
       "after": {
-        "input_per_million": 0.9086,
-        "output_per_million": 2.8556,
-        "cache_read_per_million": 0.16874,
-        "cache_creation_per_million": null,
-        "currency": "USD"
+        "cache_read_per_million": 0.203,
+        "cache_creation_per_million": null
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "z-ai/glm-5.2",
+      "model_id": "qwen/qwen3.5-397b-a17b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.1274,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.16874,
+        "cache_read_per_million": 0.111,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "tencent/hy3",
+      "model_type": "text",
+      "after": {
+        "provider": "tencent",
+        "model_id": "tencent/hy3",
+        "display_name": "Tencent: Hy3",
+        "pricing": {
+          "input_per_million": 0.14,
+          "output_per_million": 0.58,
+          "cache_read_per_million": 0.035,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 131072,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.14,
+            "price_output": 0.58,
+            "price_cache_read": 0.035,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-06T18:51:54.459913Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "tencent/hy3:free",
+      "model_type": "text",
+      "after": {
+        "provider": "tencent",
+        "model_id": "tencent/hy3:free",
+        "display_name": "Tencent: Hy3 (free)",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 262144,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-06T18:51:54.459913Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "xiaomi/mimo-v2.5",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.028,
         "cache_creation_per_million": null
       }
     }

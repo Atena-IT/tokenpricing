@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-09T07:25:05.674763+00:00",
+  "generated_at": "2026-07-09T13:21:19.098904+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 2,
+    "model_removals": 3,
     "pricing_changes": 1,
-    "cache_price_changes": 1
+    "cache_price_changes": 0
   },
   "changes": [
     {
@@ -12,62 +12,49 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.56,
-        "output_per_million": 1.76,
-        "cache_read_per_million": 0.104,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.9,
         "output_per_million": 3.08,
         "cache_read_per_million": 0.18,
         "cache_creation_per_million": null,
         "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "z-ai/glm-5.2",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.104,
-        "cache_creation_per_million": null
       },
       "after": {
+        "input_per_million": 0.93,
+        "output_per_million": 3.0,
         "cache_read_per_million": 0.18,
-        "cache_creation_per_million": null
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
       "type": "model_removed",
-      "model_id": "liquid/lfm-2-24b-a2b",
+      "model_id": "google/gemini-2.5-flash-lite-preview-09-2025",
       "model_type": "text",
       "before": {
-        "provider": "liquid",
-        "model_id": "liquid/lfm-2-24b-a2b",
-        "display_name": "LiquidAI: LFM2-24B-A2B",
+        "provider": "google",
+        "model_id": "google/gemini-2.5-flash-lite-preview-09-2025",
+        "display_name": "Google: Gemini 2.5 Flash Lite Preview 09-2025",
         "pricing": {
-          "input_per_million": 0.03,
-          "output_per_million": 0.12,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
+          "input_per_million": 0.1,
+          "output_per_million": 0.4,
+          "cache_read_per_million": 0.01,
+          "cache_creation_per_million": 0.083333,
           "currency": "USD"
         },
-        "context_window": 128000,
-        "max_output_tokens": 0,
+        "context_window": 1048576,
+        "max_output_tokens": 65535,
         "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
+        "supports_vision": true,
+        "supports_function_calling": true,
         "supports_streaming": true,
-        "category": "standard",
+        "category": "budget",
         "sources": {
           "openrouter": {
-            "price_input": 0.03,
-            "price_output": 0.12,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-09T00:58:43.911102Z"
+            "price_input": 0.1,
+            "price_output": 0.4,
+            "price_cache_read": 0.01,
+            "price_cache_creation": 0.083333,
+            "last_updated": "2026-07-09T07:25:05.467594Z"
           }
         },
         "affiliate_links": {}
@@ -75,33 +62,67 @@
     },
     {
       "type": "model_removed",
-      "model_id": "switchpoint/router",
+      "model_id": "poolside/laguna-xs.2",
       "model_type": "text",
       "before": {
-        "provider": "switchpoint",
-        "model_id": "switchpoint/router",
-        "display_name": "Switchpoint Router",
+        "provider": "poolside",
+        "model_id": "poolside/laguna-xs.2",
+        "display_name": "Poolside: Laguna XS.2",
         "pricing": {
-          "input_per_million": 0.85,
-          "output_per_million": 3.4,
-          "cache_read_per_million": null,
+          "input_per_million": 0.1,
+          "output_per_million": 0.2,
+          "cache_read_per_million": 0.05,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 131072,
-        "max_output_tokens": 0,
+        "context_window": 262144,
+        "max_output_tokens": 32768,
         "model_type": "text",
         "supports_vision": false,
-        "supports_function_calling": false,
+        "supports_function_calling": true,
         "supports_streaming": true,
         "category": "standard",
         "sources": {
           "openrouter": {
-            "price_input": 0.85,
-            "price_output": 3.4,
+            "price_input": 0.1,
+            "price_output": 0.2,
+            "price_cache_read": 0.05,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-09T07:25:05.467594Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "poolside/laguna-xs.2:free",
+      "model_type": "text",
+      "before": {
+        "provider": "poolside",
+        "model_id": "poolside/laguna-xs.2:free",
+        "display_name": "Poolside: Laguna XS.2 (free)",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.0,
+            "price_output": 0.0,
             "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-07-09T00:58:43.911102Z"
+            "last_updated": "2026-07-09T07:25:05.467594Z"
           }
         },
         "affiliate_links": {}

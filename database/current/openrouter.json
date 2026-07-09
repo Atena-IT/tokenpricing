@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-07-09T00:58:43.911102+00:00",
+  "fetched_at": "2026-07-09T07:25:05.467594+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 345,
+  "model_count": 343,
   "data": [
     {
       "id": "x-ai/grok-4.5",
@@ -1083,13 +1083,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000056",
-        "completion": "0.00000176",
-        "input_cache_read": "0.000000104"
+        "prompt": "0.0000009",
+        "completion": "0.00000308",
+        "input_cache_read": "0.00000018"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 1048576,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -10068,63 +10068,6 @@
       },
       "reasoning": {
         "mandatory": false
-      }
-    },
-    {
-      "id": "liquid/lfm-2-24b-a2b",
-      "canonical_slug": "liquid/lfm-2-24b-a2b-20260224",
-      "hugging_face_id": "LiquidAI/LFM2-24B-A2B",
-      "name": "LiquidAI: LFM2-24B-A2B",
-      "created": 1772048711,
-      "description": "LFM2-24B-A2B is the largest model in the LFM2 family of hybrid architectures designed for efficient on-device deployment. Built as a 24B parameter Mixture-of-Experts model with only 2B active parameters per...",
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000003",
-        "completion": "0.00000012"
-      },
-      "top_provider": {
-        "context_length": 32768,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.1,
-        "top_p": null,
-        "top_k": 50,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": 1.05
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/liquid/lfm-2-24b-a2b-20260224/endpoints"
       }
     },
     {
@@ -20907,57 +20850,6 @@
             "rank": 85
           }
         ]
-      }
-    },
-    {
-      "id": "switchpoint/router",
-      "canonical_slug": "switchpoint/router",
-      "hugging_face_id": "",
-      "name": "Switchpoint Router",
-      "created": 1752272899,
-      "description": "Switchpoint AI's router instantly analyzes your request and directs it to the optimal AI from an ever-evolving library. As the world of LLMs advances, our router gets smarter, ensuring you...",
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000085",
-        "completion": "0.0000034"
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/switchpoint/router/endpoints"
-      },
-      "reasoning": {
-        "mandatory": false
       }
     },
     {

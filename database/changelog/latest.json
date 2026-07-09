@@ -1,61 +1,29 @@
 {
-  "generated_at": "2026-07-09T00:58:44.124609+00:00",
+  "generated_at": "2026-07-09T07:25:05.674763+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 0,
-    "pricing_changes": 2,
-    "cache_price_changes": 2
+    "model_removals": 2,
+    "pricing_changes": 1,
+    "cache_price_changes": 1
   },
   "changes": [
-    {
-      "type": "pricing_changed",
-      "model_id": "tencent/hy3",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.2,
-        "output_per_million": 0.8,
-        "cache_read_per_million": 0.5,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.14,
-        "output_per_million": 0.58,
-        "cache_read_per_million": 0.035,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "tencent/hy3",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.5,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.035,
-        "cache_creation_per_million": null
-      }
-    },
     {
       "type": "pricing_changed",
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.42,
-        "output_per_million": 1.32,
-        "cache_read_per_million": 0.078,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.56,
         "output_per_million": 1.76,
         "cache_read_per_million": 0.104,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.9,
+        "output_per_million": 3.08,
+        "cache_read_per_million": 0.18,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -63,12 +31,80 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.078,
+        "cache_read_per_million": 0.104,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.104,
+        "cache_read_per_million": 0.18,
         "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "liquid/lfm-2-24b-a2b",
+      "model_type": "text",
+      "before": {
+        "provider": "liquid",
+        "model_id": "liquid/lfm-2-24b-a2b",
+        "display_name": "LiquidAI: LFM2-24B-A2B",
+        "pricing": {
+          "input_per_million": 0.03,
+          "output_per_million": 0.12,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.03,
+            "price_output": 0.12,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-09T00:58:43.911102Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "switchpoint/router",
+      "model_type": "text",
+      "before": {
+        "provider": "switchpoint",
+        "model_id": "switchpoint/router",
+        "display_name": "Switchpoint Router",
+        "pricing": {
+          "input_per_million": 0.85,
+          "output_per_million": 3.4,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.85,
+            "price_output": 3.4,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-09T00:58:43.911102Z"
+          }
+        },
+        "affiliate_links": {}
       }
     }
   ]

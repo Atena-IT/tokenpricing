@@ -1,131 +1,361 @@
 {
-  "generated_at": "2026-07-09T13:21:19.098904+00:00",
+  "generated_at": "2026-07-09T18:50:24.701825+00:00",
   "summary": {
-    "model_additions": 0,
-    "model_removals": 3,
-    "pricing_changes": 1,
-    "cache_price_changes": 0
+    "model_additions": 6,
+    "model_removals": 0,
+    "pricing_changes": 5,
+    "cache_price_changes": 4
   },
   "changes": [
+    {
+      "type": "pricing_changed",
+      "model_id": "minimax/minimax-m2.5",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.12,
+        "output_per_million": 0.48,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.9,
+        "cache_read_per_million": 0.05,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "minimax/minimax-m2.5",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.05,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "minimax/minimax-m2.7",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.18,
+        "output_per_million": 0.72,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.24,
+        "output_per_million": 0.96,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.74,
+        "output_per_million": 3.5,
+        "cache_read_per_million": 0.15,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.72,
+        "output_per_million": 3.49,
+        "cache_read_per_million": 0.159,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.15,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.159,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "openai/gpt-5.6-luna",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "openai/gpt-5.6-luna",
+        "display_name": "OpenAI: GPT-5.6 Luna",
+        "pricing": {
+          "input_per_million": 1.0,
+          "output_per_million": 6.0,
+          "cache_read_per_million": 0.1,
+          "cache_creation_per_million": 1.25,
+          "currency": "USD"
+        },
+        "context_window": 1050000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "openrouter": {
+            "price_input": 1.0,
+            "price_output": 6.0,
+            "price_cache_read": 0.1,
+            "price_cache_creation": 1.25,
+            "last_updated": "2026-07-09T18:50:24.470825Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "openai/gpt-5.6-luna-pro",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "openai/gpt-5.6-luna-pro",
+        "display_name": "OpenAI: GPT-5.6 Luna Pro",
+        "pricing": {
+          "input_per_million": 1.0,
+          "output_per_million": 6.0,
+          "cache_read_per_million": 0.1,
+          "cache_creation_per_million": 1.25,
+          "currency": "USD"
+        },
+        "context_window": 1050000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "openrouter": {
+            "price_input": 1.0,
+            "price_output": 6.0,
+            "price_cache_read": 0.1,
+            "price_cache_creation": 1.25,
+            "last_updated": "2026-07-09T18:50:24.470825Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "openai/gpt-5.6-sol",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "openai/gpt-5.6-sol",
+        "display_name": "OpenAI: GPT-5.6 Sol",
+        "pricing": {
+          "input_per_million": 5.0,
+          "output_per_million": 30.0,
+          "cache_read_per_million": 0.5,
+          "cache_creation_per_million": 6.25,
+          "currency": "USD"
+        },
+        "context_window": 1050000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "openrouter": {
+            "price_input": 5.0,
+            "price_output": 30.0,
+            "price_cache_read": 0.5,
+            "price_cache_creation": 6.25,
+            "last_updated": "2026-07-09T18:50:24.470825Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "display_name": "OpenAI: GPT-5.6 Sol Pro",
+        "pricing": {
+          "input_per_million": 5.0,
+          "output_per_million": 30.0,
+          "cache_read_per_million": 0.5,
+          "cache_creation_per_million": 6.25,
+          "currency": "USD"
+        },
+        "context_window": 1050000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "openrouter": {
+            "price_input": 5.0,
+            "price_output": 30.0,
+            "price_cache_read": 0.5,
+            "price_cache_creation": 6.25,
+            "last_updated": "2026-07-09T18:50:24.470825Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "openai/gpt-5.6-terra",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "openai/gpt-5.6-terra",
+        "display_name": "OpenAI: GPT-5.6 Terra",
+        "pricing": {
+          "input_per_million": 2.5,
+          "output_per_million": 15.0,
+          "cache_read_per_million": 0.25,
+          "cache_creation_per_million": 3.125,
+          "currency": "USD"
+        },
+        "context_window": 1050000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "openrouter": {
+            "price_input": 2.5,
+            "price_output": 15.0,
+            "price_cache_read": 0.25,
+            "price_cache_creation": 3.125,
+            "last_updated": "2026-07-09T18:50:24.470825Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "openai/gpt-5.6-terra-pro",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "openai/gpt-5.6-terra-pro",
+        "display_name": "OpenAI: GPT-5.6 Terra Pro",
+        "pricing": {
+          "input_per_million": 2.5,
+          "output_per_million": 15.0,
+          "cache_read_per_million": 0.25,
+          "cache_creation_per_million": 3.125,
+          "currency": "USD"
+        },
+        "context_window": 1050000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "openrouter": {
+            "price_input": 2.5,
+            "price_output": 15.0,
+            "price_cache_read": 0.25,
+            "price_cache_creation": 3.125,
+            "last_updated": "2026-07-09T18:50:24.470825Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "openai/gpt-oss-120b",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.03,
+        "output_per_million": 0.15,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.036,
+        "output_per_million": 0.18,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
     {
       "type": "pricing_changed",
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.9,
-        "output_per_million": 3.08,
-        "cache_read_per_million": 0.18,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.93,
         "output_per_million": 3.0,
         "cache_read_per_million": 0.18,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.54,
+        "output_per_million": 1.76,
+        "cache_read_per_million": 0.1,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
-      "type": "model_removed",
-      "model_id": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "type": "cache_price_changed",
+      "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "provider": "google",
-        "model_id": "google/gemini-2.5-flash-lite-preview-09-2025",
-        "display_name": "Google: Gemini 2.5 Flash Lite Preview 09-2025",
-        "pricing": {
-          "input_per_million": 0.1,
-          "output_per_million": 0.4,
-          "cache_read_per_million": 0.01,
-          "cache_creation_per_million": 0.083333,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 65535,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.1,
-            "price_output": 0.4,
-            "price_cache_read": 0.01,
-            "price_cache_creation": 0.083333,
-            "last_updated": "2026-07-09T07:25:05.467594Z"
-          }
-        },
-        "affiliate_links": {}
+        "cache_read_per_million": 0.18,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.1,
+        "cache_creation_per_million": null
       }
     },
     {
-      "type": "model_removed",
-      "model_id": "poolside/laguna-xs.2",
+      "type": "cache_price_changed",
+      "model_id": "~openai/gpt-latest",
       "model_type": "text",
       "before": {
-        "provider": "poolside",
-        "model_id": "poolside/laguna-xs.2",
-        "display_name": "Poolside: Laguna XS.2",
-        "pricing": {
-          "input_per_million": 0.1,
-          "output_per_million": 0.2,
-          "cache_read_per_million": 0.05,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 262144,
-        "max_output_tokens": 32768,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.1,
-            "price_output": 0.2,
-            "price_cache_read": 0.05,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-09T07:25:05.467594Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "poolside/laguna-xs.2:free",
-      "model_type": "text",
-      "before": {
-        "provider": "poolside",
-        "model_id": "poolside/laguna-xs.2:free",
-        "display_name": "Poolside: Laguna XS.2 (free)",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 262144,
-        "max_output_tokens": 32768,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-09T07:25:05.467594Z"
-          }
-        },
-        "affiliate_links": {}
+        "cache_read_per_million": 0.5,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.5,
+        "cache_creation_per_million": 6.25
       }
     }
   ]

@@ -1,27 +1,59 @@
 {
-  "generated_at": "2026-07-10T12:58:14.380339+00:00",
+  "generated_at": "2026-07-10T18:44:05.304530+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 0,
-    "pricing_changes": 1,
-    "cache_price_changes": 1
+    "model_removals": 1,
+    "pricing_changes": 2,
+    "cache_price_changes": 2
   },
   "changes": [
+    {
+      "type": "pricing_changed",
+      "model_id": "deepseek/deepseek-v4-flash",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.18,
+        "cache_read_per_million": 0.018,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.084,
+        "output_per_million": 0.168,
+        "cache_read_per_million": 0.0168,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-v4-flash",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.018,
+        "cache_creation_per_million": 0.0
+      },
+      "after": {
+        "cache_read_per_million": 0.0168,
+        "cache_creation_per_million": 0.0
+      }
+    },
     {
       "type": "pricing_changed",
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.92,
-        "output_per_million": 3.0,
-        "cache_read_per_million": 0.18,
+        "input_per_million": 0.77,
+        "output_per_million": 2.42,
+        "cache_read_per_million": 0.143,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.77,
-        "output_per_million": 2.42,
-        "cache_read_per_million": 0.143,
+        "input_per_million": 0.42,
+        "output_per_million": 1.32,
+        "cache_read_per_million": 0.078,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -31,12 +63,46 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.18,
+        "cache_read_per_million": 0.143,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.143,
+        "cache_read_per_million": 0.078,
         "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "arcee-ai/trinity-mini",
+      "model_type": "text",
+      "before": {
+        "provider": "arcee-ai",
+        "model_id": "arcee-ai/trinity-mini",
+        "display_name": "Arcee AI: Trinity Mini",
+        "pricing": {
+          "input_per_million": 0.045,
+          "output_per_million": 0.15,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 131072,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.045,
+            "price_output": 0.15,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-10T12:58:14.205761Z"
+          }
+        },
+        "affiliate_links": {}
       }
     }
   ]

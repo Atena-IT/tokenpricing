@@ -1,61 +1,29 @@
 {
-  "generated_at": "2026-07-11T06:58:16.731293+00:00",
+  "generated_at": "2026-07-11T12:33:03.413818+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 1,
-    "pricing_changes": 2,
-    "cache_price_changes": 2
+    "model_removals": 0,
+    "pricing_changes": 1,
+    "cache_price_changes": 1
   },
   "changes": [
-    {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.084,
-        "output_per_million": 0.168,
-        "cache_read_per_million": 0.0168,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.077,
-        "output_per_million": 0.154,
-        "cache_read_per_million": 0.0154,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.0168,
-        "cache_creation_per_million": 0.0
-      },
-      "after": {
-        "cache_read_per_million": 0.0154,
-        "cache_creation_per_million": 0.0
-      }
-    },
     {
       "type": "pricing_changed",
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.42,
-        "output_per_million": 1.32,
-        "cache_read_per_million": 0.078,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.406,
         "output_per_million": 1.276,
         "cache_read_per_million": 0.0754,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.392,
+        "output_per_million": 1.232,
+        "cache_read_per_million": 0.0728,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -63,46 +31,12 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.078,
+        "cache_read_per_million": 0.0754,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0754,
+        "cache_read_per_million": 0.0728,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "meta-llama/llama-3-8b-instruct",
-      "model_type": "text",
-      "before": {
-        "provider": "meta-llama",
-        "model_id": "meta-llama/llama-3-8b-instruct",
-        "display_name": "Meta: Llama 3 8B Instruct",
-        "pricing": {
-          "input_per_million": 0.14,
-          "output_per_million": 0.14,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 8192,
-        "max_output_tokens": 0,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.14,
-            "price_output": 0.14,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-11T00:50:43.636671Z"
-          }
-        },
-        "affiliate_links": {}
       }
     }
   ]

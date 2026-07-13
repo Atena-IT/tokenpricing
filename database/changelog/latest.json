@@ -1,93 +1,104 @@
 {
-  "generated_at": "2026-07-13T13:01:37.471408+00:00",
+  "generated_at": "2026-07-13T18:47:47.295261+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 0,
-    "pricing_changes": 3,
+    "model_removals": 2,
+    "pricing_changes": 0,
     "cache_price_changes": 2
   },
   "changes": [
     {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-chat-v3.1",
+      "type": "cache_price_changed",
+      "model_id": "openai/gpt-5-nano",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.21,
-        "output_per_million": 0.79,
-        "cache_read_per_million": 0.13,
-        "cache_creation_per_million": null,
-        "currency": "USD"
+        "cache_read_per_million": 0.01,
+        "cache_creation_per_million": null
       },
       "after": {
-        "input_per_million": 0.25,
-        "output_per_million": 0.95,
-        "cache_read_per_million": 0.13,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.077,
-        "output_per_million": 0.154,
-        "cache_read_per_million": 0.0154,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.09,
-        "output_per_million": 0.18,
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
+        "cache_read_per_million": 0.005,
+        "cache_creation_per_million": null
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
+      "model_id": "openai/gpt-5.1",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.0154,
-        "cache_creation_per_million": 0.0
-      },
-      "after": {
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": 0.0
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.2",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.85,
-        "output_per_million": 2.5,
-        "cache_read_per_million": 0.1,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.93,
-        "output_per_million": 3.0,
-        "cache_read_per_million": 0.18,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "z-ai/glm-5.2",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.1,
+        "cache_read_per_million": 0.13,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.18,
+        "cache_read_per_million": 0.125,
         "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "liquid/lfm-2.5-1.2b-instruct:free",
+      "model_type": "text",
+      "before": {
+        "provider": "liquid",
+        "model_id": "liquid/lfm-2.5-1.2b-instruct:free",
+        "display_name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 32768,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-13T13:01:37.262312Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "model_type": "text",
+      "before": {
+        "provider": "liquid",
+        "model_id": "liquid/lfm-2.5-1.2b-thinking:free",
+        "display_name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 32768,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-13T13:01:37.262312Z"
+          }
+        },
+        "affiliate_links": {}
       }
     }
   ]

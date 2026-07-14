@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-14T12:41:17.544192+00:00",
+  "generated_at": "2026-07-14T18:36:20.345651+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 1,
+    "model_removals": 0,
     "pricing_changes": 1,
     "cache_price_changes": 1
   },
@@ -12,16 +12,16 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.9282,
-        "output_per_million": 2.9172,
-        "cache_read_per_million": 0.17238,
+        "input_per_million": 0.924,
+        "output_per_million": 2.904,
+        "cache_read_per_million": 0.1716,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.924,
-        "output_per_million": 2.904,
-        "cache_read_per_million": 0.1716,
+        "input_per_million": 0.91,
+        "output_per_million": 2.86,
+        "cache_read_per_million": 0.169,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -31,46 +31,12 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.17238,
+        "cache_read_per_million": 0.1716,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.1716,
+        "cache_read_per_million": 0.169,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "sao10k/l3.1-70b-hanami-x1",
-      "model_type": "text",
-      "before": {
-        "provider": "sao10k",
-        "model_id": "sao10k/l3.1-70b-hanami-x1",
-        "display_name": "Sao10K: Llama 3.1 70B Hanami x1",
-        "pricing": {
-          "input_per_million": 3.0,
-          "output_per_million": 3.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 16000,
-        "max_output_tokens": 0,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 3.0,
-            "price_output": 3.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-14T06:57:33.567296Z"
-          }
-        },
-        "affiliate_links": {}
       }
     }
   ]

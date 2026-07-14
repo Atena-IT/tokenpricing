@@ -1,46 +1,71 @@
 {
-  "generated_at": "2026-07-13T18:47:47.295261+00:00",
+  "generated_at": "2026-07-14T00:48:39.653029+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 2,
-    "pricing_changes": 0,
-    "cache_price_changes": 2
+    "model_removals": 1,
+    "pricing_changes": 2,
+    "cache_price_changes": 1
   },
   "changes": [
     {
-      "type": "cache_price_changed",
-      "model_id": "openai/gpt-5-nano",
+      "type": "pricing_changed",
+      "model_id": "openai/gpt-oss-120b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.01,
-        "cache_creation_per_million": null
+        "input_per_million": 0.036,
+        "output_per_million": 0.18,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       },
       "after": {
-        "cache_read_per_million": 0.005,
-        "cache_creation_per_million": null
+        "input_per_million": 0.03,
+        "output_per_million": 0.15,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "qwen/qwen3.6-27b",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.285,
+        "output_per_million": 2.4,
+        "cache_read_per_million": 0.15,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.289,
+        "output_per_million": 2.4,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "openai/gpt-5.1",
+      "model_id": "qwen/qwen3.6-27b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.13,
+        "cache_read_per_million": 0.15,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.125,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "model_removed",
-      "model_id": "liquid/lfm-2.5-1.2b-instruct:free",
+      "model_id": "openai/gpt-oss-120b:free",
       "model_type": "text",
       "before": {
-        "provider": "liquid",
-        "model_id": "liquid/lfm-2.5-1.2b-instruct:free",
-        "display_name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
+        "provider": "openai",
+        "model_id": "openai/gpt-oss-120b:free",
+        "display_name": "OpenAI: gpt-oss-120b (free)",
         "pricing": {
           "input_per_million": 0.0,
           "output_per_million": 0.0,
@@ -48,42 +73,8 @@
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 32768,
-        "max_output_tokens": 0,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-13T13:01:37.262312Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "liquid/lfm-2.5-1.2b-thinking:free",
-      "model_type": "text",
-      "before": {
-        "provider": "liquid",
-        "model_id": "liquid/lfm-2.5-1.2b-thinking:free",
-        "display_name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 32768,
-        "max_output_tokens": 0,
+        "context_window": 131072,
+        "max_output_tokens": 131072,
         "model_type": "text",
         "supports_vision": false,
         "supports_function_calling": true,
@@ -95,7 +86,7 @@
             "price_output": 0.0,
             "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-07-13T13:01:37.262312Z"
+            "last_updated": "2026-07-13T18:47:47.117182Z"
           }
         },
         "affiliate_links": {}

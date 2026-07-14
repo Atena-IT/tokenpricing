@@ -1,129 +1,29 @@
 {
-  "generated_at": "2026-07-14T06:57:33.738216+00:00",
+  "generated_at": "2026-07-14T12:41:17.544192+00:00",
   "summary": {
-    "model_additions": 2,
-    "model_removals": 0,
-    "pricing_changes": 2,
-    "cache_price_changes": 2
+    "model_additions": 0,
+    "model_removals": 1,
+    "pricing_changes": 1,
+    "cache_price_changes": 1
   },
   "changes": [
-    {
-      "type": "pricing_changed",
-      "model_id": "google/gemma-4-31b-it",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.12,
-        "output_per_million": 0.35,
-        "cache_read_per_million": 0.09,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.06,
-        "output_per_million": 0.35,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "google/gemma-4-31b-it",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.09,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "kwaipilot/kat-coder-air-v2.5",
-      "model_type": "text",
-      "after": {
-        "provider": "kwaipilot",
-        "model_id": "kwaipilot/kat-coder-air-v2.5",
-        "display_name": "Kwaipilot: KAT-Coder-Air V2.5",
-        "pricing": {
-          "input_per_million": 0.15,
-          "output_per_million": 0.6,
-          "cache_read_per_million": 0.03,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 256000,
-        "max_output_tokens": 80000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.15,
-            "price_output": 0.6,
-            "price_cache_read": 0.03,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-14T06:57:33.567296Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "kwaipilot/kat-coder-pro-v2.5",
-      "model_type": "text",
-      "after": {
-        "provider": "kwaipilot",
-        "model_id": "kwaipilot/kat-coder-pro-v2.5",
-        "display_name": "Kwaipilot: KAT-Coder-Pro V2.5",
-        "pricing": {
-          "input_per_million": 0.74,
-          "output_per_million": 2.96,
-          "cache_read_per_million": 0.15,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 256000,
-        "max_output_tokens": 80000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.74,
-            "price_output": 2.96,
-            "price_cache_read": 0.15,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-14T06:57:33.567296Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
     {
       "type": "pricing_changed",
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.93,
-        "output_per_million": 3.0,
-        "cache_read_per_million": 0.18,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.9282,
         "output_per_million": 2.9172,
         "cache_read_per_million": 0.17238,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.924,
+        "output_per_million": 2.904,
+        "cache_read_per_million": 0.1716,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -131,12 +31,46 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.18,
+        "cache_read_per_million": 0.17238,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.17238,
+        "cache_read_per_million": 0.1716,
         "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "sao10k/l3.1-70b-hanami-x1",
+      "model_type": "text",
+      "before": {
+        "provider": "sao10k",
+        "model_id": "sao10k/l3.1-70b-hanami-x1",
+        "display_name": "Sao10K: Llama 3.1 70B Hanami x1",
+        "pricing": {
+          "input_per_million": 3.0,
+          "output_per_million": 3.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 16000,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 3.0,
+            "price_output": 3.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-14T06:57:33.567296Z"
+          }
+        },
+        "affiliate_links": {}
       }
     }
   ]

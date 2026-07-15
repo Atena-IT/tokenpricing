@@ -1,42 +1,61 @@
 {
-  "generated_at": "2026-07-15T12:42:46.049855+00:00",
+  "generated_at": "2026-07-15T18:36:25.362326+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 0,
-    "pricing_changes": 2,
+    "model_removals": 1,
+    "pricing_changes": 3,
     "cache_price_changes": 2
   },
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "google/gemma-4-31b-it",
+      "model_id": "meta-llama/llama-3.2-3b-instruct",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.12,
-        "output_per_million": 0.37,
+        "input_per_million": 0.0509,
+        "output_per_million": 0.335,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.22,
-        "output_per_million": 0.55,
-        "cache_read_per_million": 0.12,
+        "input_per_million": 0.05,
+        "output_per_million": 0.33,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
-      "type": "cache_price_changed",
-      "model_id": "google/gemma-4-31b-it",
+      "type": "pricing_changed",
+      "model_id": "qwen/qwen3.7-max",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
+        "input_per_million": 1.25,
+        "output_per_million": 3.75,
+        "cache_read_per_million": 0.25,
+        "cache_creation_per_million": 1.5625,
+        "currency": "USD"
       },
       "after": {
-        "cache_read_per_million": 0.12,
-        "cache_creation_per_million": null
+        "input_per_million": 1.475,
+        "output_per_million": 4.425,
+        "cache_read_per_million": 0.295,
+        "cache_creation_per_million": 1.84375,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "qwen/qwen3.7-max",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.25,
+        "cache_creation_per_million": 1.5625
+      },
+      "after": {
+        "cache_read_per_million": 0.295,
+        "cache_creation_per_million": 1.84375
       }
     },
     {
@@ -44,16 +63,16 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.8946,
-        "output_per_million": 2.8116,
-        "cache_read_per_million": 0.16614,
+        "input_per_million": 0.8722,
+        "output_per_million": 2.7412,
+        "cache_read_per_million": 0.16198,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.8722,
-        "output_per_million": 2.7412,
-        "cache_read_per_million": 0.16198,
+        "input_per_million": 0.8526,
+        "output_per_million": 2.6796,
+        "cache_read_per_million": 0.15834,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -63,12 +82,46 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.16614,
+        "cache_read_per_million": 0.16198,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.16198,
+        "cache_read_per_million": 0.15834,
         "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "arcee-ai/coder-large",
+      "model_type": "text",
+      "before": {
+        "provider": "arcee-ai",
+        "model_id": "arcee-ai/coder-large",
+        "display_name": "Arcee AI: Coder Large",
+        "pricing": {
+          "input_per_million": 0.5,
+          "output_per_million": 0.8,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 32768,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.5,
+            "price_output": 0.8,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-15T12:42:45.863750Z"
+          }
+        },
+        "affiliate_links": {}
       }
     }
   ]

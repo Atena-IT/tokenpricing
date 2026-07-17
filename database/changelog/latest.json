@@ -1,73 +1,41 @@
 {
-  "generated_at": "2026-07-17T07:00:42.156645+00:00",
+  "generated_at": "2026-07-17T12:38:33.731015+00:00",
   "summary": {
     "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 2,
-    "cache_price_changes": 2
+    "pricing_changes": 1,
+    "cache_price_changes": 1
   },
   "changes": [
     {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.0196,
-        "cache_creation_per_million": 0.0
-      },
-      "after": {
-        "cache_read_per_million": 0.02,
-        "cache_creation_per_million": 0.0
-      }
-    },
-    {
       "type": "pricing_changed",
-      "model_id": "mistralai/mistral-nemo",
+      "model_id": "z-ai/glm-4.7-flash",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.019,
-        "output_per_million": 0.03,
-        "cache_read_per_million": null,
+        "input_per_million": 0.06,
+        "output_per_million": 0.4,
+        "cache_read_per_million": 0.01,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.02,
-        "output_per_million": 0.04,
+        "input_per_million": 0.0605,
+        "output_per_million": 0.4,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.2",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.9002,
-        "output_per_million": 2.8292,
-        "cache_read_per_million": 0.16718,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.9324,
-        "output_per_million": 2.9304,
-        "cache_read_per_million": 0.17316,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
       "type": "cache_price_changed",
-      "model_id": "z-ai/glm-5.2",
+      "model_id": "z-ai/glm-4.7-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.16718,
+        "cache_read_per_million": 0.01,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.17316,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       }
     }

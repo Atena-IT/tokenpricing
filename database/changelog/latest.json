@@ -1,39 +1,90 @@
 {
-  "generated_at": "2026-07-17T18:34:34.049945+00:00",
+  "generated_at": "2026-07-18T00:48:36.874710+00:00",
   "summary": {
     "model_additions": 1,
-    "model_removals": 2,
-    "pricing_changes": 3,
-    "cache_price_changes": 2
+    "model_removals": 0,
+    "pricing_changes": 4,
+    "cache_price_changes": 3
   },
   "changes": [
     {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.02,
-        "cache_creation_per_million": 0.0
-      },
-      "after": {
-        "cache_read_per_million": 0.0196,
-        "cache_creation_per_million": 0.0
-      }
-    },
-    {
       "type": "pricing_changed",
-      "model_id": "mistralai/mistral-nemo",
+      "model_id": "mancer/weaver",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.02,
-        "output_per_million": 0.04,
+        "input_per_million": 0.75,
+        "output_per_million": 1.0,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.019,
-        "output_per_million": 0.03,
+        "input_per_million": 0.5,
+        "output_per_million": 0.75,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2-thinking",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.15,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.75,
+        "output_per_million": 3.5,
+        "cache_read_per_million": 0.16,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 1.0,
+        "output_per_million": 4.4,
+        "cache_read_per_million": 0.2,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.16,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.2,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "qwen/qwen3.5-27b",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.195,
+        "output_per_million": 1.56,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.26,
+        "output_per_million": 2.6,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
@@ -41,20 +92,20 @@
     },
     {
       "type": "model_added",
-      "model_id": "openrouter/auto-beta",
+      "model_id": "thinkingmachines/inkling",
       "model_type": "text",
       "after": {
-        "provider": "openrouter",
-        "model_id": "openrouter/auto-beta",
-        "display_name": "Auto Router (Beta)",
+        "provider": "thinkingmachines",
+        "model_id": "thinkingmachines/inkling",
+        "display_name": "Thinking Machines: Inkling",
         "pricing": {
-          "input_per_million": -1000000.0,
-          "output_per_million": -1000000.0,
-          "cache_read_per_million": null,
+          "input_per_million": 1.0,
+          "output_per_million": 4.05,
+          "cache_read_per_million": 0.17,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 2000000,
+        "context_window": 1048576,
         "max_output_tokens": 0,
         "model_type": "text",
         "supports_vision": true,
@@ -63,11 +114,11 @@
         "category": "standard",
         "sources": {
           "openrouter": {
-            "price_input": -1000000.0,
-            "price_output": -1000000.0,
-            "price_cache_read": null,
+            "price_input": 1.0,
+            "price_output": 4.05,
+            "price_cache_read": 0.17,
             "price_cache_creation": null,
-            "last_updated": "2026-07-17T18:34:33.820755Z"
+            "last_updated": "2026-07-18T00:48:36.702570Z"
           }
         },
         "affiliate_links": {}
@@ -75,38 +126,19 @@
     },
     {
       "type": "pricing_changed",
-      "model_id": "qwen/qwen3-14b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.24,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.12,
-        "output_per_million": 0.24,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.9324,
-        "output_per_million": 2.9304,
-        "cache_read_per_million": 0.17316,
+        "input_per_million": 0.9226,
+        "output_per_million": 2.8996,
+        "cache_read_per_million": 0.17134,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.9226,
-        "output_per_million": 2.8996,
-        "cache_read_per_million": 0.17134,
+        "input_per_million": 0.9072,
+        "output_per_million": 2.8512,
+        "cache_read_per_million": 0.16848,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -116,80 +148,12 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.17316,
+        "cache_read_per_million": 0.17134,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.17134,
+        "cache_read_per_million": 0.16848,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "meta-llama/llama-3.2-11b-vision-instruct",
-      "model_type": "text",
-      "before": {
-        "provider": "meta-llama",
-        "model_id": "meta-llama/llama-3.2-11b-vision-instruct",
-        "display_name": "Meta: Llama 3.2 11B Vision Instruct",
-        "pricing": {
-          "input_per_million": 0.345,
-          "output_per_million": 0.345,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 131072,
-        "max_output_tokens": 16384,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.345,
-            "price_output": 0.345,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-17T12:38:33.552729Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
-      "model_type": "text",
-      "before": {
-        "provider": "nvidia",
-        "model_id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
-        "display_name": "NVIDIA: Llama 3.3 Nemotron Super 49B V1.5",
-        "pricing": {
-          "input_per_million": 0.4,
-          "output_per_million": 0.4,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 131072,
-        "max_output_tokens": 16384,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.4,
-            "price_output": 0.4,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-17T12:38:33.552729Z"
-          }
-        },
-        "affiliate_links": {}
       }
     }
   ]

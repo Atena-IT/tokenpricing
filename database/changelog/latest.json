@@ -1,127 +1,29 @@
 {
-  "generated_at": "2026-07-18T00:48:36.874710+00:00",
+  "generated_at": "2026-07-18T06:52:19.458021+00:00",
   "summary": {
-    "model_additions": 1,
+    "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 4,
-    "cache_price_changes": 3
+    "pricing_changes": 2,
+    "cache_price_changes": 1
   },
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "mancer/weaver",
+      "model_id": "qwen/qwen3-30b-a3b",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.75,
-        "output_per_million": 1.0,
+        "input_per_million": 0.12,
+        "output_per_million": 0.5,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.5,
-        "output_per_million": 0.75,
+        "input_per_million": 0.13,
+        "output_per_million": 0.52,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "moonshotai/kimi-k2-thinking",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "moonshotai/kimi-k2.7-code",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.75,
-        "output_per_million": 3.5,
-        "cache_read_per_million": 0.16,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 1.0,
-        "output_per_million": 4.4,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "moonshotai/kimi-k2.7-code",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.16,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3.5-27b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.195,
-        "output_per_million": 1.56,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.26,
-        "output_per_million": 2.6,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "thinkingmachines/inkling",
-      "model_type": "text",
-      "after": {
-        "provider": "thinkingmachines",
-        "model_id": "thinkingmachines/inkling",
-        "display_name": "Thinking Machines: Inkling",
-        "pricing": {
-          "input_per_million": 1.0,
-          "output_per_million": 4.05,
-          "cache_read_per_million": 0.17,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 0,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 1.0,
-            "price_output": 4.05,
-            "price_cache_read": 0.17,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-18T00:48:36.702570Z"
-          }
-        },
-        "affiliate_links": {}
       }
     },
     {
@@ -129,18 +31,18 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.9226,
-        "output_per_million": 2.8996,
-        "cache_read_per_million": 0.17134,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.9072,
         "output_per_million": 2.8512,
         "cache_read_per_million": 0.16848,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.343,
+        "output_per_million": 1.078,
+        "cache_read_per_million": 0.0637,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -148,11 +50,11 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.17134,
+        "cache_read_per_million": 0.16848,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.16848,
+        "cache_read_per_million": 0.0637,
         "cache_creation_per_million": null
       }
     }

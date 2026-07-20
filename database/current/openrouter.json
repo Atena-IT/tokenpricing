@@ -1,9 +1,69 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-07-20T12:56:29.232159+00:00",
+  "fetched_at": "2026-07-20T18:50:48.755824+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 338,
+  "model_count": 339,
   "data": [
+    {
+      "id": "meituan/longcat-2.0",
+      "canonical_slug": "meituan/longcat-2.0-20260720",
+      "hugging_face_id": "meituan-longcat/LongCat-2.0",
+      "name": "Meituan: LongCat 2.0",
+      "created": 1784554658,
+      "description": "LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, and agentic...",
+      "context_length": 1048756,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006"
+      },
+      "top_provider": {
+        "context_length": 1048756,
+        "max_completion_tokens": 262144,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/meituan/longcat-2.0-20260720/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supports_max_tokens": true
+      }
+    },
     {
       "id": "thinkingmachines/inkling",
       "canonical_slug": "thinkingmachines/inkling-20260715",
@@ -1488,6 +1548,7 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
+        "max_completion_tokens",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -1566,7 +1627,7 @@
       },
       "reasoning": {
         "mandatory": false,
-        "default_enabled": false,
+        "default_enabled": true,
         "supported_efforts": [
           "high",
           "low",
@@ -1683,7 +1744,7 @@
       },
       "reasoning": {
         "mandatory": false,
-        "default_enabled": false,
+        "default_enabled": true,
         "supported_efforts": [
           "high",
           "low",
@@ -2403,9 +2464,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000973",
-        "completion": "0.000003058",
-        "input_cache_read": "0.0000001807"
+        "prompt": "0.0000009478",
+        "completion": "0.0000029788",
+        "input_cache_read": "0.00000017602"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -2640,9 +2701,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000085",
-        "completion": "0.0000038",
-        "input_cache_read": "0.00000017"
+        "prompt": "0.00000082",
+        "completion": "0.00000375",
+        "input_cache_read": "0.00000016"
       },
       "top_provider": {
         "context_length": 262144,

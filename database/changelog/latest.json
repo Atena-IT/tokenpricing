@@ -1,27 +1,93 @@
 {
-  "generated_at": "2026-07-20T12:56:29.441952+00:00",
+  "generated_at": "2026-07-20T18:50:48.971800+00:00",
   "summary": {
-    "model_additions": 0,
+    "model_additions": 1,
     "model_removals": 0,
-    "pricing_changes": 1,
-    "cache_price_changes": 1
+    "pricing_changes": 2,
+    "cache_price_changes": 2
   },
   "changes": [
+    {
+      "type": "model_added",
+      "model_id": "meituan/longcat-2.0",
+      "model_type": "text",
+      "after": {
+        "provider": "meituan",
+        "model_id": "meituan/longcat-2.0",
+        "display_name": "Meituan: LongCat 2.0",
+        "pricing": {
+          "input_per_million": 0.3,
+          "output_per_million": 1.2,
+          "cache_read_per_million": 0.006,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 1048756,
+        "max_output_tokens": 262144,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.3,
+            "price_output": 1.2,
+            "price_cache_read": 0.006,
+            "price_cache_creation": null,
+            "last_updated": "2026-07-20T18:50:48.755824Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.85,
+        "output_per_million": 3.8,
+        "cache_read_per_million": 0.17,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.82,
+        "output_per_million": 3.75,
+        "cache_read_per_million": 0.16,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.17,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.16,
+        "cache_creation_per_million": null
+      }
+    },
     {
       "type": "pricing_changed",
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.9646,
-        "output_per_million": 3.0316,
-        "cache_read_per_million": 0.17914,
+        "input_per_million": 0.973,
+        "output_per_million": 3.058,
+        "cache_read_per_million": 0.1807,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.973,
-        "output_per_million": 3.058,
-        "cache_read_per_million": 0.1807,
+        "input_per_million": 0.9478,
+        "output_per_million": 2.9788,
+        "cache_read_per_million": 0.17602,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -31,11 +97,11 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.17914,
+        "cache_read_per_million": 0.1807,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.1807,
+        "cache_read_per_million": 0.17602,
         "cache_creation_per_million": null
       }
     }

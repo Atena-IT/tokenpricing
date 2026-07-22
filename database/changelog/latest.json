@@ -1,146 +1,42 @@
 {
-  "generated_at": "2026-07-21T18:41:51.300167+00:00",
+  "generated_at": "2026-07-22T00:51:02.750353+00:00",
   "summary": {
-    "model_additions": 4,
+    "model_additions": 0,
     "model_removals": 0,
     "pricing_changes": 2,
-    "cache_price_changes": 1
+    "cache_price_changes": 2
   },
   "changes": [
     {
-      "type": "model_added",
-      "model_id": "google/gemini-3.5-flash-lite",
+      "type": "pricing_changed",
+      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
       "model_type": "text",
+      "before": {
+        "input_per_million": 0.0975,
+        "output_per_million": 0.78,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
       "after": {
-        "provider": "google",
-        "model_id": "google/gemini-3.5-flash-lite",
-        "display_name": "Google: Gemini 3.5 Flash-Lite",
-        "pricing": {
-          "input_per_million": 0.3,
-          "output_per_million": 2.5,
-          "cache_read_per_million": 0.03,
-          "cache_creation_per_million": 0.083333,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.3,
-            "price_output": 2.5,
-            "price_cache_read": 0.03,
-            "price_cache_creation": 0.083333,
-            "last_updated": "2026-07-21T18:41:51.089844Z"
-          }
-        },
-        "affiliate_links": {}
+        "input_per_million": 0.1,
+        "output_per_million": 1.1,
+        "cache_read_per_million": 0.07,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
-      "type": "model_added",
-      "model_id": "google/gemini-3.6-flash",
+      "type": "cache_price_changed",
+      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
       "model_type": "text",
+      "before": {
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      },
       "after": {
-        "provider": "google",
-        "model_id": "google/gemini-3.6-flash",
-        "display_name": "Google: Gemini 3.6 Flash",
-        "pricing": {
-          "input_per_million": 1.5,
-          "output_per_million": 7.5,
-          "cache_read_per_million": 0.15,
-          "cache_creation_per_million": 0.083333,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "openrouter": {
-            "price_input": 1.5,
-            "price_output": 7.5,
-            "price_cache_read": 0.15,
-            "price_cache_creation": 0.083333,
-            "last_updated": "2026-07-21T18:41:51.089844Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "poolside/laguna-s-2.1",
-      "model_type": "text",
-      "after": {
-        "provider": "poolside",
-        "model_id": "poolside/laguna-s-2.1",
-        "display_name": "Poolside: Laguna S 2.1",
-        "pricing": {
-          "input_per_million": 0.1,
-          "output_per_million": 0.2,
-          "cache_read_per_million": 0.01,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 131072,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.1,
-            "price_output": 0.2,
-            "price_cache_read": 0.01,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-21T18:41:51.089844Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "poolside/laguna-s-2.1:free",
-      "model_type": "text",
-      "after": {
-        "provider": "poolside",
-        "model_id": "poolside/laguna-s-2.1:free",
-        "display_name": "Poolside: Laguna S 2.1 (free)",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 262144,
-        "max_output_tokens": 32768,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-07-21T18:41:51.089844Z"
-          }
-        },
-        "affiliate_links": {}
+        "cache_read_per_million": 0.07,
+        "cache_creation_per_million": null
       }
     },
     {
@@ -148,16 +44,16 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.8344,
-        "output_per_million": 2.6224,
-        "cache_read_per_million": 0.15496,
+        "input_per_million": 0.7938,
+        "output_per_million": 2.4948,
+        "cache_read_per_million": 0.14742,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.7938,
-        "output_per_million": 2.4948,
-        "cache_read_per_million": 0.14742,
+        "input_per_million": 0.8246,
+        "output_per_million": 2.5916,
+        "cache_read_per_million": 0.15314,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -167,31 +63,12 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.15496,
-        "cache_creation_per_million": null
-      },
-      "after": {
         "cache_read_per_million": 0.14742,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "~google/gemini-flash-latest",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 1.5,
-        "output_per_million": 9.0,
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": 0.083333,
-        "currency": "USD"
       },
       "after": {
-        "input_per_million": 1.5,
-        "output_per_million": 7.5,
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": 0.083333,
-        "currency": "USD"
+        "cache_read_per_million": 0.15314,
+        "cache_creation_per_million": null
       }
     }
   ]

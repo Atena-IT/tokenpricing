@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T12:34:04.396891+00:00",
+  "generated_at": "2026-07-25T18:32:13.959615+00:00",
   "summary": {
     "model_additions": 0,
     "model_removals": 0,
@@ -9,19 +9,19 @@
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "arcee-ai/trinity-large-thinking",
+      "model_id": "qwen/qwen3-30b-a3b-instruct-2507",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.25,
-        "output_per_million": 0.8,
-        "cache_read_per_million": 0.06,
+        "input_per_million": 0.1,
+        "output_per_million": 0.3,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.22,
-        "output_per_million": 0.85,
-        "cache_read_per_million": 0.06,
+        "input_per_million": 0.04815,
+        "output_per_million": 0.19305,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -31,16 +31,16 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.7574,
-        "output_per_million": 2.3804,
-        "cache_read_per_million": 0.14066,
+        "input_per_million": 0.721,
+        "output_per_million": 2.266,
+        "cache_read_per_million": 0.1339,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.721,
-        "output_per_million": 2.266,
-        "cache_read_per_million": 0.1339,
+        "input_per_million": 0.7616,
+        "output_per_million": 2.3936,
+        "cache_read_per_million": 0.14144,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -50,11 +50,11 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.14066,
+        "cache_read_per_million": 0.1339,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.1339,
+        "cache_read_per_million": 0.14144,
         "cache_creation_per_million": null
       }
     }

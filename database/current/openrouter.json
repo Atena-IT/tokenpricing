@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-07-28T00:50:04.674554+00:00",
+  "fetched_at": "2026-07-28T07:06:58.126835+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 341,
   "data": [
@@ -3075,9 +3075,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000007378",
-        "completion": "0.0000023188",
-        "input_cache_read": "0.00000013702"
+        "prompt": "0.0000007686",
+        "completion": "0.0000024156",
+        "input_cache_read": "0.00000014274"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -6659,7 +6659,7 @@
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 1048576,
+        "max_completion_tokens": 262144,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -9288,13 +9288,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000042",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.00000007",
+        "completion": "0.00000034"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 262144,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12134,9 +12133,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.000001",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.00000014",
+        "completion": "0.000001"
       },
       "top_provider": {
         "context_length": 262144,
@@ -27619,7 +27617,6 @@
       "supported_parameters": [
         "frequency_penalty",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -27632,7 +27629,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {

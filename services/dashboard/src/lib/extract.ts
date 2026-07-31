@@ -60,8 +60,16 @@ export function supportedFormats(): string {
 }
 
 async function extractPdf(file: File): Promise<ExtractedText> {
-  const pdfjs = await import("pdfjs-dist");
-  const worker = await import("pdfjs-dist/build/pdf.worker.mjs?url");
+  // pdfjs-dist is pinned to 4.x and imported from its legacy build, both
+  // deliberately. pdf.js 5 and later need Safari 17.4: they use Iterator
+  // helpers ("Can't find variable: Iterator" on older Safari) and async
+  // iteration over ReadableStream, and the 6.x legacy build still carries the
+  // second one. Vite builds this app for "baseline-widely-available", which
+  // reaches further back than that, so a newer parser would quietly break the
+  // browser support the rest of the dashboard already promises. Verified on
+  // Safari 17.1 and in Chromium with both features removed.
+  const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
+  const worker = await import("pdfjs-dist/legacy/build/pdf.worker.mjs?url");
   pdfjs.GlobalWorkerOptions.workerSrc = worker.default;
 
   const task = pdfjs.getDocument({ data: await file.arrayBuffer() });

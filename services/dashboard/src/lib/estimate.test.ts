@@ -25,10 +25,19 @@ describe("estimateTokens", () => {
     expect(estimateTokens("   \n\t  ").tokens).toBe(0);
   });
 
-  it("lands near the ~4 characters per token rule of thumb on English prose", () => {
+  it("uses the calibrated prose ratio on English prose", () => {
+    // Fitted against GPT-4o, GPT-4, Llama 3, Gemma and Claude; see estimate.ts.
+    // Deliberately not the folkloric "4 chars per token": modern tokenizers
+    // measured between 3.5 (Italian) and 4.8 (English) on the same corpus.
     const estimate = estimateTokens(PROSE);
-    expect(estimate.charsPerToken).toBeGreaterThan(3.5);
-    expect(estimate.charsPerToken).toBeLessThan(4.2);
+    expect(estimate.charsPerToken).toBeGreaterThan(4);
+    expect(estimate.charsPerToken).toBeLessThan(4.4);
+  });
+
+  it("reports a range wide enough to hold the spread between tokenizers", () => {
+    const estimate = estimateTokens(PROSE);
+    const halfWidth = (estimate.high - estimate.low) / 2 / estimate.tokens;
+    expect(halfWidth).toBeCloseTo(0.25, 2);
   });
 
   it("packs fewer characters per token on symbol-dense text than on prose", () => {

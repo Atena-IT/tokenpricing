@@ -1,4 +1,4 @@
-import { AlertCircle, Info, Upload } from "lucide-react";
+import { AlertCircle, ChevronRight, Info, Upload } from "lucide-react";
 import { useRef, useState } from "react";
 
 import { estimateTokens, type TokenEstimate } from "../lib/estimate";
@@ -43,12 +43,10 @@ export function FileEstimate({ onEstimate }: { onEstimate: (tokens: number) => v
 
   return (
     <div className="flex flex-col gap-2 rounded-md border border-dashed p-3">
-      <div className="flex flex-wrap items-center justify-between gap-2">
+      <div className="flex flex-wrap items-start justify-between gap-2">
         <div>
-          <div className="text-sm font-medium">Estimate from a file</div>
-          <div className="text-xs text-muted-foreground">
-            Fills the input tokens field. {supportedFormats()}
-          </div>
+          <div className="text-sm font-medium">Estimate tokens from a file</div>
+          <div className="text-xs text-muted-foreground">Fills the input tokens field.</div>
         </div>
         <Button variant="outline" size="sm" disabled={busy} onClick={() => inputRef.current?.click()}>
           <Upload className="h-3.5 w-3.5" />
@@ -68,6 +66,14 @@ export function FileEstimate({ onEstimate }: { onEstimate: (tokens: number) => v
           }}
         />
       </div>
+
+      <details className="group">
+        <summary className="flex w-fit cursor-pointer list-none items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
+          <ChevronRight className="h-3 w-3 transition-transform group-open:rotate-90" />
+          Supported formats
+        </summary>
+        <p className="m-0 mt-1 pl-4 text-xs text-muted-foreground">{supportedFormats()}</p>
+      </details>
 
       {result ? (
         <div className="flex flex-col gap-1 border-t pt-2 text-xs">

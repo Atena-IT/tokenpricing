@@ -1,48 +1,42 @@
 {
-  "generated_at": "2026-08-04T07:06:47.885636+00:00",
+  "generated_at": "2026-08-04T12:52:27.080660+00:00",
   "summary": {
     "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 2,
-    "cache_price_changes": 0
+    "pricing_changes": 1,
+    "cache_price_changes": 1
   },
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "qwen/qwen3-vl-30b-a3b-instruct",
+      "model_id": "qwen/qwen2.5-vl-72b-instruct",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.13,
-        "output_per_million": 0.52,
-        "cache_read_per_million": null,
+        "input_per_million": 0.8,
+        "output_per_million": 1.0,
+        "cache_read_per_million": 0.4,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.6,
+        "input_per_million": 0.25,
+        "output_per_million": 0.75,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3.5-122b-a10b",
+      "type": "cache_price_changed",
+      "model_id": "qwen/qwen2.5-vl-72b-instruct",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.4,
-        "output_per_million": 3.2,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
+        "cache_read_per_million": 0.4,
+        "cache_creation_per_million": null
       },
       "after": {
-        "input_per_million": 0.26,
-        "output_per_million": 2.08,
         "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
+        "cache_creation_per_million": null
       }
     }
   ]

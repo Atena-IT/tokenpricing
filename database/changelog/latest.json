@@ -1,78 +1,202 @@
 {
-  "generated_at": "2026-08-05T00:48:20.976145+00:00",
+  "generated_at": "2026-08-05T07:07:33.302907+00:00",
   "summary": {
-    "model_additions": 2,
+    "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 0,
-    "cache_price_changes": 0
+    "pricing_changes": 6,
+    "cache_price_changes": 6
   },
   "changes": [
     {
-      "type": "model_added",
-      "model_id": "gemini/gemini-robotics-er-1.6-preview",
+      "type": "pricing_changed",
+      "model_id": "azure/eu/gpt-5.6-luna",
       "model_type": "text",
+      "before": {
+        "input_per_million": 1.1,
+        "output_per_million": 6.6,
+        "cache_read_per_million": 0.11,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
       "after": {
-        "provider": "gemini",
-        "model_id": "gemini/gemini-robotics-er-1.6-preview",
-        "display_name": "gemini",
-        "pricing": {
-          "input_per_million": 1.0,
-          "output_per_million": 5.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 131072,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 1.0,
-            "price_output": 5.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-05T00:48:20.865307Z"
-          }
-        },
-        "affiliate_links": {}
+        "input_per_million": 0.22,
+        "output_per_million": 1.32,
+        "cache_read_per_million": 0.022,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
-      "type": "model_added",
-      "model_id": "gemini/gemini-robotics-er-2-preview",
+      "type": "cache_price_changed",
+      "model_id": "azure/eu/gpt-5.6-luna",
       "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.11,
+        "cache_creation_per_million": null
+      },
       "after": {
-        "provider": "gemini",
-        "model_id": "gemini/gemini-robotics-er-2-preview",
-        "display_name": "gemini",
-        "pricing": {
-          "input_per_million": 2.0,
-          "output_per_million": 10.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 131072,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 2.0,
-            "price_output": 10.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-05T00:48:20.865307Z"
-          }
-        },
-        "affiliate_links": {}
+        "cache_read_per_million": 0.022,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "azure/eu/gpt-5.6-terra",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 2.75,
+        "output_per_million": 16.5,
+        "cache_read_per_million": 0.275,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 2.2,
+        "output_per_million": 13.2,
+        "cache_read_per_million": 0.22,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "azure/eu/gpt-5.6-terra",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.275,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.22,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "azure/gpt-5.6-luna",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 1.0,
+        "output_per_million": 6.0,
+        "cache_read_per_million": 0.1,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.2,
+        "output_per_million": 1.2,
+        "cache_read_per_million": 0.02,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "azure/gpt-5.6-luna",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.1,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.02,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "azure/gpt-5.6-terra",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 2.5,
+        "output_per_million": 15.0,
+        "cache_read_per_million": 0.25,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 2.0,
+        "output_per_million": 12.0,
+        "cache_read_per_million": 0.2,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "azure/gpt-5.6-terra",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.25,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.2,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "azure/us/gpt-5.6-luna",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 1.1,
+        "output_per_million": 6.6,
+        "cache_read_per_million": 0.11,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.22,
+        "output_per_million": 1.32,
+        "cache_read_per_million": 0.022,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "azure/us/gpt-5.6-luna",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.11,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.022,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "azure/us/gpt-5.6-terra",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 2.75,
+        "output_per_million": 16.5,
+        "cache_read_per_million": 0.275,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 2.2,
+        "output_per_million": 13.2,
+        "cache_read_per_million": 0.22,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "azure/us/gpt-5.6-terra",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.275,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.22,
+        "cache_creation_per_million": null
       }
     }
   ]

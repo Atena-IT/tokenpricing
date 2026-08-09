@@ -1,41 +1,60 @@
 {
-  "generated_at": "2026-08-09T12:22:27.231957+00:00",
+  "generated_at": "2026-08-09T18:22:24.620513+00:00",
   "summary": {
     "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 1,
+    "pricing_changes": 2,
     "cache_price_changes": 1
   },
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.2",
+      "model_id": "gryphe/mythomax-l2-13b",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.098,
-        "output_per_million": 0.308,
-        "cache_read_per_million": 0.0182,
+        "input_per_million": 0.08,
+        "output_per_million": 0.11,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.07,
-        "output_per_million": 0.22,
-        "cache_read_per_million": 0.013,
+        "input_per_million": 0.06,
+        "output_per_million": 0.06,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.39,
+        "output_per_million": 2.34,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.5,
+        "output_per_million": 3.6,
+        "cache_read_per_million": 0.3,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "z-ai/glm-5.2",
+      "model_id": "qwen/qwen3.5-397b-a17b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.0182,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.013,
+        "cache_read_per_million": 0.3,
         "cache_creation_per_million": null
       }
     }

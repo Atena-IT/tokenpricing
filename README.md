@@ -140,6 +140,8 @@ The canonical skill source in this repository is `skills/tokenpricing/SKILL.md`.
 
 Pricing data is now synchronized directly inside this repository from OpenRouter and LiteLLM, normalized into the tokenpricing schema, and published as the canonical database every six hours.
 
+A separate weekly dataset (`database/current/artificial-analysis.json`) adds provider × model serving data — benchmark scores, throughput, latency and Openness Index — sourced from [Artificial Analysis](https://artificialanalysis.ai). See [docs/database.md](docs/database.md#artificial-analysis-dataset).
+
 ## Repository Structure
 
 ```
@@ -151,7 +153,8 @@ tokenpricing/
 ├── services/
 │   ├── dashboard/       Vite + React pricing explorer
 │   ├── notifier/        Webhook notification service
-│   └── sync/            Canonical database sync pipeline
+│   ├── sync/            Canonical database sync pipeline
+│   └── aa-sync/         Artificial Analysis acquisition (weekly)
 ├── libraries/
 │   ├── python/          Python SDK + CLI (PyPI)
 │   └── typescript/      TypeScript SDK (npm)
@@ -178,6 +181,7 @@ Each library and service is self-contained. See the individual READMEs for setup
 ## Credits
 
 - Canonical database: this repository (`database/current/prices.json`), synchronized from OpenRouter and LiteLLM and inspired by the original [LLMTracker](https://github.com/MrUnreal/LLMTracker) implementation
+- Provider × model performance and Openness Index data (`database/current/artificial-analysis.json`): [Artificial Analysis](https://artificialanalysis.ai) — benchmark, latency and throughput figures are third-party measurements produced by Artificial Analysis, not vendor-published and not measured by tokenpricing
 
 ## License
 

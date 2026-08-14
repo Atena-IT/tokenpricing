@@ -10,6 +10,8 @@ All pricing data lives in the repository under `database/`, normalized from Open
 | `database/history/prices-<timestamp>.json` | Immutable snapshots, one per sync |
 | `database/changelog/latest.json` | Diff summary of the most recent sync window |
 | `database/current/openrouter.json` / `litellm.json` | Raw upstream payloads from the last sync |
+| `database/current/artificial-analysis.json` | Artificial Analysis provider × model dataset, refreshed weekly |
+| `database/history/artificial-analysis-<timestamp>.json` | Immutable weekly snapshots |
 
 Raw access (no authentication required):
 
@@ -63,6 +65,30 @@ https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/changelog/
 ## Changelog
 
 `database/changelog/latest.json` summarizes the latest sync window with per-model change entries typed as `model_added`, `model_removed`, `pricing_changed`, or `cache_price_changed` — the same events the [notifier](/notifications) delivers to webhooks, and what the dashboard's Changelog tab renders.
+
+## Artificial Analysis dataset
+
+`database/current/artificial-analysis.json` is a separate weekly dataset covering
+each model **as served by each provider** — 1045 offerings across 51 providers —
+joined to the Artificial Analysis Openness Index.
+
+> **Data source: [Artificial Analysis](https://artificialanalysis.ai).** Benchmark,
+> latency and throughput figures are third-party measurements produced by
+> Artificial Analysis; they are not vendor-published and are not measured by
+> tokenpricing. Openness Index values follow the Artificial Analysis Openness Index
+> specification (V1.0, preliminary draft).
+
+It is kept separate from `prices.json` rather than merged into it because the grain
+differs (one row per model × reasoning variant × serving platform, versus one
+record per model) and because the public Artificial Analysis pages publish
+`Cost per Task USD` but no per-token input/output pricing. Each offering links back
+by `model_slug`, `display_name` and `creator`.
+
+Models with no Openness Index entry keep `openness: null` and are listed under
+`unmatched`; genuinely undecidable matches are listed under `ambiguous`. Neither is
+silently dropped, and absent openness never becomes zero. See the
+[service README](https://github.com/Atena-IT/tokenpricing/blob/main/services/aa-sync/README.md)
+for the matching rules.
 
 ## Browsing
 

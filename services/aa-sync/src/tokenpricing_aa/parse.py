@@ -1,243 +1,218 @@
-"""HTML parsing for Artificial Analysis pages.
+"""Projection of the Artificial Analysis flight payload into flat records.
 
-Every value parser here exists because of a rendering quirk observed in the
-captured pages; see ``tests/test_parse.py`` for the fixtures behind each one.
+There is no HTML table parsing here and no value cleaning. The payload carries
+typed JSON -- floats at full precision, real booleans, explicit ``null`` -- so the
+em-dash / U+2212 / currency-symbol / thousands-separator / trailing-asterisk
+handling that a table-scraping parser needs has no counterpart in this module.
+
+Two things AA's own table cannot express survive here:
+
+* ``intelligence_index_estimated`` is a real boolean field rather than a trailing
+  asterisk on a rendered score.
+* ``deprecated`` distinguishes superseded offerings, which the leaderboard's
+  ``Status: Current`` view hides but the payload retains.
 """
 
 from __future__ import annotations
 
 from typing import Any
 
-from bs4 import BeautifulSoup, Tag
-
-# The per-provider offering table, after the two-deep header is flattened.
-PROVIDER_COLUMNS = (
-    "Model",
-    "Context Window",
-    "Function Calling",
-    "JSON Mode",
-    "License",
-    "Artificial Analysis Intelligence Index",
-    "Cost per Task USD",
-    "Median Tokens/s",
-    "Median First Chunk (s)",
-    "Total Response (s)",
-    "Reasoning Time (s)",
-    "Further Analysis",
+from tokenpricing_aa.flight import (
+    PayloadNotFoundError,
+    clean,
+    objects_with_key,
+    reconstruct_payload,
 )
 
-OPENNESS_COLUMNS = (
-    "Creator",
-    "Model",
-    "Openness Index",
-    "Intelligence Index",
-    "Model Availability",
-    "Model Transparency",
-    "Pre-training Data Access",
-    "Pre-training Data License",
-    "Post-training Data Access",
-    "Post-training Data License",
+# Marker keys used to locate each record type in the payload stream.
+OFFERING_MARKER = "hostApiId"
+OPENNESS_MARKER = "opennessIndex"
+
+# (output field, path into the offering object). The single source of truth for
+# the projection; ``schema.py`` builds its drift manifest from these paths, so a
+# field cannot be read here without being covered there.
+OFFERING_FIELDS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("offering_id", ("id",)),
+    ("display_name", ("label",)),
+    ("host_api_id", ("hostApiId",)),
+    ("footnotes", ("footnotes",)),
+    ("provider_slug", ("host", "slug")),
+    ("provider_name", ("host", "name")),
+    ("model_slug", ("model", "slug")),
+    ("creator", ("model", "creator", "name")),
+    ("is_open_weights", ("model", "isOpenWeights")),
+    ("deprecated", ("model", "deprecated")),
+    ("reasoning_model", ("model", "reasoningModel")),
+    ("size_class", ("model", "sizeClass")),
+    ("context_window", ("features", "contextWindowTokens")),
+    ("supports_function_calling", ("features", "functionCalling")),
+    ("supports_json_mode", ("features", "jsonMode")),
+    ("openai_compatible", ("features", "openaiCompatible")),
+    # Intelligence
+    ("intelligence_index", ("model", "intelligenceIndex")),
+    ("intelligence_index_estimated", ("model", "intelligenceIndexIsEstimated")),
+    ("omniscience_index", ("model", "omniscience")),
+    ("omniscience_accuracy", ("model", "omniscienceAccuracy")),
+    ("omniscience_non_hallucination", ("model", "omniscienceNonHallucination")),
+    ("gdpval_normalized", ("model", "gdpvalNormalized")),
+    ("briefcase_elo", ("model", "briefcase", "elo")),
+    ("terminalbench_hard", ("model", "terminalbenchHard")),
+    ("terminalbench_v21", ("model", "terminalbenchV21")),
+    ("tau2_bench_telecom", ("model", "tau2")),
+    ("tau3_banking", ("model", "tauBanking")),
+    ("aa_lcr", ("model", "lcr")),
+    ("humanitys_last_exam", ("model", "hle")),
+    ("gpqa_diamond", ("model", "gpqa")),
+    ("scicode", ("model", "scicode")),
+    ("ifbench", ("model", "ifbench")),
+    ("critpt", ("model", "critpt")),
+    ("apex_agents", ("model", "apexAgents")),
+    ("itbench_sre", ("model", "itbenchSre")),
+    ("mmmu_pro", ("model", "mmmuPro")),
+    ("livecodebench", ("model", "livecodebench")),
+    ("aime_2025", ("model", "aime25")),
+    ("automation_bench", ("model", "automationBench")),
+    ("harvey_lab", ("model", "harveyLab")),
+    # Price
+    ("cost_per_task_usd", ("pricing", "costPerTask")),
+    ("price_class", ("pricing", "priceClass")),
+    ("input_price_usd_per_1m", ("pricing", "price1mInputTokens")),
+    ("output_price_usd_per_1m", ("pricing", "price1mOutputTokens")),
+    ("cache_hit_price_usd_per_1m", ("pricing", "cacheHitPrice")),
+    ("cache_write_price_usd_per_1m", ("pricing", "cacheWritePrice")),
+    # Speed
+    ("median_output_tokens_per_second", ("performance", "medianOutputTokensPerSecond")),
+    ("p5_output_tokens_per_second", ("performance", "percentile05OutputTokensPerSecond")),
+    ("p25_output_tokens_per_second", ("performance", "quartile25OutputTokensPerSecond")),
+    ("p75_output_tokens_per_second", ("performance", "quartile75OutputTokensPerSecond")),
+    ("p95_output_tokens_per_second", ("performance", "percentile95OutputTokensPerSecond")),
+    # Latency
+    ("median_first_chunk_seconds", ("performance", "medianTimeToFirstTokenSeconds")),
+    ("p5_first_chunk_seconds", ("performance", "percentile05TimeToFirstTokenSeconds")),
+    ("p25_first_chunk_seconds", ("performance", "quartile25TimeToFirstTokenSeconds")),
+    ("p75_first_chunk_seconds", ("performance", "quartile75TimeToFirstTokenSeconds")),
+    ("p95_first_chunk_seconds", ("performance", "percentile95TimeToFirstTokenSeconds")),
+    (
+        "first_answer_token_seconds",
+        ("performance", "medianTimeToFirstAnswerTokenSeconds"),
+    ),
+    ("total_response_seconds", ("performance", "medianEndToEndResponseTimeSeconds")),
+    ("reasoning_time_seconds", ("performance", "medianReasoningTimeSeconds")),
 )
 
-# AA renders "no data" as an em dash or a double hyphen. It is not zero.
-_NO_DATA = {"", "--", "—", "–", "N/A", "n/a"}
-
-# U+2212 MINUS SIGN, not ASCII hyphen. ``float("−31")`` raises ValueError.
-_MINUS_SIGN = "−"
+OPENNESS_FIELDS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("openness_record_id", ("id",)),
+    ("model_id", ("modelId",)),
+    ("openness_index", ("opennessIndex",)),
+    ("model_availability", ("modelAvailability",)),
+    ("model_transparency", ("modelTransparency",)),
+    ("pre_training_data_access", ("dataPretrainAccess",)),
+    ("pre_training_data_license", ("dataPretrainLicense",)),
+    ("post_training_data_access", ("dataPosttrainAccess",)),
+    ("post_training_data_license", ("dataPosttrainLicense",)),
+    # Published in the payload but absent from the rendered table.
+    ("transparency_methodology", ("transparencyMethodology",)),
+    ("transparency_pre_training_data", ("transparencyPreTrainingData",)),
+    ("transparency_post_training_data", ("transparencyPostTrainingData",)),
+)
 
 
 class ParseError(ValueError):
-    """Raised when a page no longer matches the shape this module expects."""
+    """The payload was found and decoded but does not hold the expected records."""
 
 
-def cell_text(node: Tag | None) -> str:
-    if node is None:
-        return ""
-    return " ".join(node.get_text(" ", strip=True).split())
+def dig(obj: Any, path: tuple[str, ...]) -> Any:
+    """Follow ``path`` through nested dicts, returning ``None`` if it dead-ends."""
+    cursor: Any = obj
+    for part in path:
+        if not isinstance(cursor, dict):
+            return None
+        cursor = cursor.get(part)
+    return cursor
 
 
-def is_estimated(value: str | None) -> bool:
-    """A trailing asterisk marks an estimated / partial score."""
-    return str(value or "").strip().endswith("*")
+def project(obj: dict[str, Any], fields: tuple[tuple[str, tuple[str, ...]], ...]) -> dict[str, Any]:
+    return {name: dig(obj, path) for name, path in fields}
 
 
-def parse_number(value: str | None) -> float | None:
-    """Parse an AA-rendered numeric cell.
-
-    Handles the U+2212 minus sign, currency and percent decoration, thousands
-    separators, the estimated-score asterisk, and the several spellings of
-    "no data". Returns ``None`` for absent values so that absent stays
-    distinguishable from zero.
-    """
-    if value is None:
-        return None
-    text = str(value).strip()
-    if text in _NO_DATA:
-        return None
-    text = (
-        text.replace(_MINUS_SIGN, "-")
-        .replace("$", "")
-        .replace("%", "")
-        .replace(",", "")
-        .rstrip("*")
-        .strip()
-    )
-    if text in _NO_DATA:
-        return None
-    try:
-        return float(text)
-    except ValueError:
-        return None
-
-
-def parse_context_window(value: str | None) -> int | None:
-    """Context windows are rendered human-readable: ``1M``, ``1.05M``, ``262k``."""
-    text = str(value or "").strip()
-    if text in _NO_DATA:
-        return None
-    multiplier = 1
-    if text[-1:] in {"M", "m"}:
-        multiplier, text = 1_000_000, text[:-1]
-    elif text[-1:] in {"k", "K"}:
-        multiplier, text = 1_000, text[:-1]
-    try:
-        return round(float(text.replace(",", "")) * multiplier)
-    except ValueError:
-        return None
-
-
-def parse_flag(cell: Tag | None) -> bool:
-    """Feature columns render a check icon only when the feature is supported.
-
-    AA emits ``<svg aria-label="Yes">`` for supported features and renders
-    nothing at all otherwise — there is no "No" icon anywhere in the captured
-    pages, so absence is the negative signal.
-    """
-    if cell is None:
-        return False
-    return any(
-        svg.get("aria-label") == "Yes" for svg in cell.select("svg[aria-label]")
-    )
-
-
-def _creator_from_cell(cell: Tag | None) -> str | None:
-    """The model cell carries the creator's logo; its alt text names the creator."""
-    if cell is None:
-        return None
-    for img in cell.select("img[alt]"):
-        alt = str(img.get("alt") or "").strip()
-        if alt.lower().endswith(" logo"):
-            return alt[: -len(" logo")].strip() or None
-    return None
-
-
-def _first_table(html: str) -> Tag:
-    soup = BeautifulSoup(html, "html.parser")
-    table = soup.find("table")
-    if table is None:
-        raise ParseError("no <table> found in document")
-    return table
-
-
-def _columns_from(headers: list[str], expected: tuple[str, ...], what: str) -> None:
-    if tuple(headers) != expected:
+def offering_objects(html: str) -> list[dict[str, Any]]:
+    """Raw offering objects from a page's payload, ``$undefined`` normalised away."""
+    payload = reconstruct_payload(html)
+    objects = [clean(obj) for obj in objects_with_key(payload, OFFERING_MARKER)]
+    if not objects:
         raise ParseError(
-            f"{what} columns changed: expected {list(expected)}, got {headers}"
+            "payload reconstructed but contains no offering objects "
+            f"(no {OFFERING_MARKER!r} records)"
+        )
+    return objects
+
+
+def parse_leaderboard(html: str) -> list[dict[str, Any]]:
+    """Project every offering on the provider leaderboard into a flat record.
+
+    One offering is one (provider x model x reasoning variant x serving endpoint).
+    ``offering_id`` is AA's own uuid and the only field unique across the set --
+    see ``docs/database.md`` for why no composite of the human-readable fields is.
+    """
+    records = [project(obj, OFFERING_FIELDS) for obj in offering_objects(html)]
+    missing = [r for r in records if not r.get("offering_id")]
+    if missing:
+        raise ParseError(f"{len(missing)} offering records carry no id")
+    return records
+
+
+def parse_openness(html: str) -> list[dict[str, Any]]:
+    """Project the Openness Index, resolving each score to its model slug.
+
+    Openness records live in their own id space and reference a model by
+    ``modelId``; that uuid does not appear anywhere in the leaderboard payload, so
+    the cross-dataset join runs on the model *slug* the openness page itself
+    supplies for each scored model.
+    """
+    payload = reconstruct_payload(html)
+    records = [clean(obj) for obj in objects_with_key(payload, OPENNESS_MARKER)]
+    if not records:
+        raise ParseError(
+            f"openness payload contains no {OPENNESS_MARKER!r} records"
         )
 
-
-def parse_provider_page(html: str, provider_slug: str) -> list[dict[str, Any]]:
-    """Parse one ``/providers/<slug>`` page into offering rows.
-
-    The header is two-deep (a column-group row then the real column row); the
-    real columns are located by finding the ``Model`` header rather than by
-    assuming a fixed offset.
-    """
-    table = _first_table(html)
-    headers = [cell_text(th) for th in table.select("thead th")]
-    try:
-        start = headers.index("Model")
-    except ValueError as exc:  # pragma: no cover - guarded by shape test
-        raise ParseError(
-            f"{provider_slug}: no 'Model' column in header {headers}"
-        ) from exc
-    _columns_from(headers[start:], PROVIDER_COLUMNS, f"provider page {provider_slug}")
+    entities = {
+        obj["id"]: obj
+        for obj in objects_with_key(payload, "slug")
+        if obj.get("id") and obj.get("slug")
+    }
 
     rows: list[dict[str, Any]] = []
-    for tr in table.select("tbody tr"):
-        cells = tr.find_all("td", recursive=False) or tr.select("td")
-        if len(cells) < len(PROVIDER_COLUMNS):
-            continue
-        name_cell = cells[0]
-        anchor = name_cell.select_one('a[href^="/models/"]') or tr.select_one(
-            'a[href^="/models/"]'
-        )
-        model_slug = (
-            str(anchor.get("href", "")).removeprefix("/models/") if anchor else ""
-        )
-        display_name = cell_text(name_cell)
-        if not display_name:
-            continue
-        cost = cell_text(cells[6])
-        intelligence = cell_text(cells[5])
-        rows.append(
-            {
-                "provider_slug": provider_slug,
-                "model_slug": model_slug,
-                "display_name": display_name,
-                "creator": _creator_from_cell(name_cell),
-                "context_window": parse_context_window(cell_text(cells[1])),
-                "supports_function_calling": parse_flag(cells[2]),
-                "supports_json_mode": parse_flag(cells[3]),
-                "license": cell_text(cells[4]) or None,
-                "intelligence_index": parse_number(intelligence),
-                "intelligence_index_estimated": is_estimated(intelligence),
-                "cost_per_task_usd": parse_number(cost),
-                "cost_per_task_estimated": is_estimated(cost),
-                "median_output_tokens_per_second": parse_number(cell_text(cells[7])),
-                "median_first_chunk_seconds": parse_number(cell_text(cells[8])),
-                "total_response_seconds": parse_number(cell_text(cells[9])),
-                "reasoning_time_seconds": parse_number(cell_text(cells[10])),
-            }
+    unresolved = 0
+    for record in records:
+        row = project(record, OPENNESS_FIELDS)
+        entity = entities.get(str(row.get("model_id")))
+        if entity is None:
+            unresolved += 1
+            row["model_slug"] = None
+            row["display_name"] = None
+        else:
+            row["model_slug"] = entity.get("slug")
+            row["display_name"] = entity.get("name")
+            row["model_family_slug"] = entity.get("model_family_slug")
+        rows.append(row)
+
+    if unresolved == len(rows):
+        raise ParseError(
+            f"none of the {len(rows)} openness records resolved to a model entity; "
+            "the modelId -> model relationship has changed"
         )
     return rows
 
 
-def parse_openness_page(html: str) -> list[dict[str, Any]]:
-    """Parse the Openness Index leaderboard.
-
-    The table body carries no anchors at all — there are no model slugs on this
-    page, which is why the join runs on normalised display names plus creator.
-    """
-    table = _first_table(html)
-    headers = [cell_text(th) for th in table.select("thead th")]
-    try:
-        start = headers.index("Creator")
-    except ValueError as exc:  # pragma: no cover - guarded by shape test
-        raise ParseError(f"no 'Creator' column in openness header {headers}") from exc
-    _columns_from(headers[start:], OPENNESS_COLUMNS, "openness index")
-
-    rows: list[dict[str, Any]] = []
-    for tr in table.select("tbody tr"):
-        cells = [cell_text(td) for td in tr.select("td")]
-        if len(cells) < len(OPENNESS_COLUMNS) + 1:
-            continue
-        rank, creator, name = cells[0], cells[1], cells[2]
-        if not name:
-            continue
-        rows.append(
-            {
-                "rank": int(parse_number(rank) or 0) or None,
-                "creator": creator or None,
-                "display_name": name,
-                "openness_index": parse_number(cells[3]),
-                "intelligence_index": parse_number(cells[4]),
-                "model_availability": parse_number(cells[5]),
-                "model_transparency": parse_number(cells[6]),
-                "pre_training_data_access": parse_number(cells[7]),
-                "pre_training_data_license": parse_number(cells[8]),
-                "post_training_data_access": parse_number(cells[9]),
-                "post_training_data_license": parse_number(cells[10]),
-            }
-        )
-    return rows
+__all__ = [
+    "OFFERING_FIELDS",
+    "OPENNESS_FIELDS",
+    "ParseError",
+    "PayloadNotFoundError",
+    "dig",
+    "offering_objects",
+    "parse_leaderboard",
+    "parse_openness",
+    "project",
+]

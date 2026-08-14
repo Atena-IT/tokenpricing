@@ -10,8 +10,8 @@ All pricing data lives in the repository under `database/`, normalized from Open
 | `database/history/prices-<timestamp>.json` | Immutable snapshots, one per sync |
 | `database/changelog/latest.json` | Diff summary of the most recent sync window |
 | `database/current/openrouter.json` / `litellm.json` | Raw upstream payloads from the last sync |
-| `database/current/artificial-analysis.json` | Artificial Analysis provider × model dataset, refreshed weekly |
-| `database/history/artificial-analysis-<timestamp>.json` | Immutable weekly snapshots |
+| `database/current/artificial-analysis.json` | Artificial Analysis provider × model × effort dataset, refreshed daily |
+| `database/history/artificial-analysis-<timestamp>.json` | Immutable daily snapshots |
 
 Raw access (no authentication required):
 
@@ -68,9 +68,9 @@ https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/changelog/
 
 ## Artificial Analysis dataset
 
-`database/current/artificial-analysis.json` is a separate weekly dataset covering
-each model **as served by each provider** — 1045 offerings across 51 providers —
-joined to the Artificial Analysis Openness Index.
+`database/current/artificial-analysis.json` is a separate daily dataset covering
+each model **as served by each provider at each reasoning effort** — 1082
+offerings across 58 providers — joined to the Artificial Analysis Openness Index.
 
 > **Data source: [Artificial Analysis](https://artificialanalysis.ai).** Benchmark,
 > latency and throughput figures are third-party measurements produced by
@@ -79,16 +79,21 @@ joined to the Artificial Analysis Openness Index.
 > specification (V1.0, preliminary draft).
 
 It is kept separate from `prices.json` rather than merged into it because the grain
-differs (one row per model × reasoning variant × serving platform, versus one
-record per model) and because the public Artificial Analysis pages publish
-`Cost per Task USD` but no per-token input/output pricing. Each offering links back
-by `model_slug`, `display_name` and `creator`.
+differs: one row per provider × model × reasoning variant × serving endpoint,
+versus one record per model. Each offering links back by `model_slug`,
+`display_name` and `creator`, and is keyed by `offering_id` — Artificial Analysis's
+own uuid, which is the only field unique across the dataset.
+
+Every column of the site's expanded 50-column view is included, per-token and
+cache pricing among them. Superseded models are **kept**, flagged `deprecated`
+rather than filtered out, so price history stays continuous when a model is
+replaced; filter on that field at query time if you only want current offerings.
 
 Models with no Openness Index entry keep `openness: null` and are listed under
 `unmatched`; genuinely undecidable matches are listed under `ambiguous`. Neither is
 silently dropped, and absent openness never becomes zero. See the
 [service README](https://github.com/Atena-IT/tokenpricing/blob/main/services/aa-sync/README.md)
-for the matching rules.
+for the join and the failure/drift alerting.
 
 ## Browsing
 

@@ -2,35 +2,68 @@
 
 Data source: Artificial Analysis (https://artificialanalysis.ai).
 
-Everything this module needs is server-rendered into the initial HTML document:
-there is no JSON API behind these pages and no browser is required. The spike
-(`experiments/aa-scrape-spike`) recommended Playwright, but that was only needed
-to reach the *expanded* column view of the aggregate leaderboard. The per-provider
-pages and the Openness Index table are fully rendered on a plain GET, so this
-workload is plain HTTP.
+Two GETs per run. Everything this service needs is server-rendered into the initial
+HTML document of the provider leaderboard, whose flight payload carries every
+offering of every provider with every field -- including the superseded offerings
+its rendered table hides. There is no JSON API behind these pages, no browser is
+required, and the per-provider ``/providers/<slug>`` pages add nothing: see
+``flight.py`` for the measurements behind that.
 """
 
 from __future__ import annotations
 
-import re
+import logging
 from datetime import UTC, datetime
 from typing import Any
 
 import httpx
 
 BASE_URL = "https://artificialanalysis.ai"
-PROVIDER_INDEX_URL = f"{BASE_URL}/leaderboards/providers"
+LEADERBOARD_URL = f"{BASE_URL}/leaderboards/providers"
 OPENNESS_URL = f"{BASE_URL}/evaluations/artificial-analysis-openness-index"
-PROVIDER_PAGE_URL = f"{BASE_URL}/providers/{{slug}}"
 
-REQUEST_TIMEOUT = 60.0
+REQUEST_TIMEOUT = 90.0
 USER_AGENT = "tokenpricing-aa-sync/0.1.0 (https://github.com/Atena-IT/tokenpricing)"
 
-# Politeness: the whole capture is ~60 requests once a week, so there is nothing to
-# rate limit against. A small delay keeps us well inside any reasonable budget.
-REQUEST_DELAY_SECONDS = 1.0
+# Two requests a week. Retries exist to ride out a transient blip, not to grind
+# against a block: a 403 is returned as-is on the first attempt.
+MAX_ATTEMPTS = 4
+BACKOFF_SECONDS = (2.0, 8.0, 30.0)
 
-_PROVIDER_HREF = re.compile(r"/providers/([a-z0-9._-]+)")
+# Statuses worth a retry. Anything else is a decision by the far end, and
+# repeating the request will not change it.
+RETRY_STATUSES = frozenset({408, 425, 429, 500, 502, 503, 504})
+
+logger = logging.getLogger(__name__)
+
+
+class FetchBlockedError(RuntimeError):
+    """A page could not be retrieved after exhausting retries.
+
+    Carries the evidence needed to tell a block from an outage without digging
+    through logs: the final status (``None`` for a transport failure), how many
+    attempts were made, and every status seen along the way.
+    """
+
+    def __init__(
+        self,
+        url: str,
+        status: int | None,
+        attempts: int,
+        history: list[str],
+        detail: str = "",
+    ) -> None:
+        self.url = url
+        self.status = status
+        self.attempts = attempts
+        self.history = history
+        self.detail = detail
+        described = f"HTTP {status}" if status is not None else "transport failure"
+        super().__init__(
+            f"{url} unreachable after {attempts} attempt(s): {described}"
+            + (f" ({detail})" if detail else "")
+            + f"; attempts: {', '.join(history)}"
+        )
 
 
 def _client(client: httpx.Client | None = None) -> httpx.Client:
@@ -43,30 +76,16 @@ def _client(client: httpx.Client | None = None) -> httpx.Client:
     )
 
 
-def discover_provider_slugs(html: str) -> list[str]:
-    """Extract provider slugs from the aggregate leaderboard markup.
-
-    The leaderboard is only used for *discovery* — its rows are filtered
-    (``Status: Current``) and cover roughly half of what the per-provider pages
-    expose, so the row data itself is taken from the provider pages instead.
-
-    Some discovered slugs do not resolve to a live page; callers must tolerate
-    404s rather than assuming every slug is fetchable.
-    """
-    slugs = {
-        slug
-        for slug in _PROVIDER_HREF.findall(html)
-        # Next.js chunk filenames land under the same prefix in the asset graph.
-        if not slug.endswith(".js")
-    }
-    return sorted(slugs)
-
-
-def fetch_provider_pages(
+def get_page(
+    url: str,
     client: httpx.Client | None = None,
     sleep: Any = None,
-) -> dict[str, Any]:
-    """Fetch the provider index plus every discoverable provider page."""
+) -> str:
+    """GET ``url``, retrying only transient failures.
+
+    Raises ``FetchBlockedError`` when the failure is persistent or is a refusal
+    (403, 404, 451, ...) that retrying cannot fix.
+    """
     if sleep is None:
         import time
 
@@ -74,51 +93,75 @@ def fetch_provider_pages(
 
     owns_client = client is None
     http = _client(client)
+    history: list[str] = []
     try:
-        index = http.get(PROVIDER_INDEX_URL)
-        index.raise_for_status()
-        slugs = discover_provider_slugs(index.text)
-        if not slugs:
-            raise ValueError("No provider slugs discovered on the provider leaderboard")
-
-        pages: dict[str, str] = {}
-        missing: list[dict[str, Any]] = []
-        for slug in slugs:
-            sleep(REQUEST_DELAY_SECONDS)
-            response = http.get(PROVIDER_PAGE_URL.format(slug=slug))
-            if response.status_code != 200:
-                missing.append({"slug": slug, "status": response.status_code})
+        for attempt in range(1, MAX_ATTEMPTS + 1):
+            try:
+                response = http.get(url)
+            except httpx.HTTPError as exc:
+                history.append(f"attempt {attempt}: {type(exc).__name__}")
+                if attempt == MAX_ATTEMPTS:
+                    raise FetchBlockedError(
+                        url, None, attempt, history, str(exc)
+                    ) from exc
+                sleep(BACKOFF_SECONDS[min(attempt - 1, len(BACKOFF_SECONDS) - 1)])
                 continue
-            pages[slug] = response.text
+
+            history.append(f"attempt {attempt}: HTTP {response.status_code}")
+            if response.status_code == 200:
+                return response.text
+
+            if response.status_code not in RETRY_STATUSES:
+                raise FetchBlockedError(
+                    url,
+                    response.status_code,
+                    attempt,
+                    history,
+                    "not a retryable status",
+                )
+
+            if attempt == MAX_ATTEMPTS:
+                raise FetchBlockedError(
+                    url,
+                    response.status_code,
+                    attempt,
+                    history,
+                    "retryable status persisted",
+                )
+            logger.warning(
+                "%s returned %s, retrying (attempt %s/%s)",
+                url,
+                response.status_code,
+                attempt,
+                MAX_ATTEMPTS,
+            )
+            sleep(BACKOFF_SECONDS[min(attempt - 1, len(BACKOFF_SECONDS) - 1)])
     finally:
         if owns_client:
             http.close()
 
+    raise AssertionError("unreachable")  # pragma: no cover
+
+
+def fetch_leaderboard(
+    client: httpx.Client | None = None, sleep: Any = None
+) -> dict[str, Any]:
+    """Fetch the provider leaderboard page."""
     return {
-        "source": "artificial_analysis_providers",
-        "source_url": PROVIDER_INDEX_URL,
+        "source": "artificial_analysis_leaderboard",
+        "source_url": LEADERBOARD_URL,
         "fetched_at": datetime.now(UTC).isoformat(),
-        "discovered_slugs": slugs,
-        "unreachable_slugs": missing,
-        "pages": pages,
+        "page": get_page(LEADERBOARD_URL, client=client, sleep=sleep),
     }
 
 
-def fetch_openness_page(client: httpx.Client | None = None) -> dict[str, Any]:
-    """Fetch the Openness Index leaderboard."""
-    owns_client = client is None
-    http = _client(client)
-    try:
-        response = http.get(OPENNESS_URL)
-        response.raise_for_status()
-        html = response.text
-    finally:
-        if owns_client:
-            http.close()
-
+def fetch_openness_page(
+    client: httpx.Client | None = None, sleep: Any = None
+) -> dict[str, Any]:
+    """Fetch the Openness Index page."""
     return {
         "source": "artificial_analysis_openness",
         "source_url": OPENNESS_URL,
         "fetched_at": datetime.now(UTC).isoformat(),
-        "page": html,
+        "page": get_page(OPENNESS_URL, client=client, sleep=sleep),
     }

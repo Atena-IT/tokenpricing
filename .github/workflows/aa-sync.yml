@@ -3,14 +3,18 @@ name: Artificial Analysis Sync
 on:
   workflow_dispatch:
   schedule:
-    # Weekly, off-peak. The whole capture is ~60 requests, so one run is enough.
-    - cron: "17 4 * * 0"
+    # Daily, off-peak. The whole capture is two requests now that the leaderboard
+    # payload supersedes the per-provider pages, so a daily cadence is nearly free.
+    - cron: "17 4 * * *"
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      # The sync alerts on failure by opening or commenting on an issue itself;
+      # see services/aa-sync/src/tokenpricing_aa/alerting.py.
+      issues: write
     steps:
       - uses: actions/checkout@v6
       - uses: astral-sh/setup-uv@v7
@@ -24,9 +28,14 @@ jobs:
         run: uv sync
       - name: Refresh Artificial Analysis dataset
         working-directory: services/aa-sync
+        env:
+          # Consumed by alerting.deliver_via_github_issue. Each of the three
+          # failure modes (payload-not-found, request-blocked, schema-drift)
+          # opens its own named issue, or comments on the open one that matches.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv run tokenpricing-aa-sync sync
       - name: Upload raw capture
-        # ~60MB of source HTML, kept out of git but retained so that a failed
+        # ~12MB of source HTML, kept out of git but retained so that a failed
         # parse can be diagnosed against its exact input.
         if: always()
         uses: actions/upload-artifact@v4

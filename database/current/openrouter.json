@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-08-14T12:27:45.381584+00:00",
+  "fetched_at": "2026-08-14T18:29:57.940126+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 411,
   "data": [
@@ -33,7 +33,7 @@
         "image": "0.000000375",
         "audio": "0.000000375",
         "input_audio_cache": "0.0000000375",
-        "web_search": "0.007",
+        "web_search": "0.014",
         "internal_reasoning": "0.000001875",
         "input_cache_read": "0.0000000375",
         "input_cache_write": "0.0000000208333333333333"
@@ -113,7 +113,7 @@
         "image": "0.0000001875",
         "audio": "0.0000001875",
         "input_audio_cache": "0.00000001875",
-        "web_search": "0.007",
+        "web_search": "0.014",
         "internal_reasoning": "0.0000009375",
         "input_cache_read": "0.00000001875",
         "input_cache_write": "0.0000000208333333333333"
@@ -224,7 +224,7 @@
       "name": "Qwen: Qwen3.8 2.4T A95B",
       "created": 1786551702,
       "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is...",
-      "context_length": 1010000,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -1297,13 +1297,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000079996",
-        "completion": "0.000000252",
-        "input_cache_read": "0.0000000252"
+        "prompt": "0.0000000798",
+        "completion": "0.0000001596",
+        "input_cache_read": "0.00000001596"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -3583,7 +3583,7 @@
       "pricing": {
         "prompt": "0.0000001",
         "completion": "0.0000006",
-        "web_search": "0.005",
+        "web_search": "0.01",
         "input_cache_read": "0.00000001",
         "input_cache_write": "0.000000125",
         "overrides": [
@@ -3746,7 +3746,7 @@
       "pricing": {
         "prompt": "0.0000001",
         "completion": "0.0000006",
-        "web_search": "0.005",
+        "web_search": "0.01",
         "input_cache_read": "0.00000001",
         "input_cache_write": "0.000000125",
         "overrides": [
@@ -3925,7 +3925,7 @@
       "pricing": {
         "prompt": "0.000001",
         "completion": "0.000006",
-        "web_search": "0.005",
+        "web_search": "0.01",
         "input_cache_read": "0.0000001",
         "input_cache_write": "0.00000125",
         "overrides": [
@@ -4088,7 +4088,7 @@
       "pricing": {
         "prompt": "0.000001",
         "completion": "0.000006",
-        "web_search": "0.005",
+        "web_search": "0.01",
         "input_cache_read": "0.0000001",
         "input_cache_write": "0.00000125",
         "overrides": [
@@ -5989,13 +5989,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000063",
-        "completion": "0.00000198",
-        "input_cache_read": "0.0000000945"
+        "prompt": "0.00000119",
+        "completion": "0.00000374",
+        "input_cache_read": "0.000000221"
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": null,
+        "context_length": 1048576,
+        "max_completion_tokens": 262144,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -11036,7 +11036,7 @@
         "image": "0.000000375",
         "audio": "0.000000375",
         "input_audio_cache": "0.0000000375",
-        "web_search": "0.007",
+        "web_search": "0.014",
         "internal_reasoning": "0.000001875",
         "input_cache_read": "0.0000000375",
         "input_cache_write": "0.0000000208333333333333"
@@ -12262,6 +12262,7 @@
         "include_reasoning",
         "logit_bias",
         "logprobs",
+        "max_completion_tokens",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -12414,6 +12415,7 @@
         "include_reasoning",
         "logit_bias",
         "logprobs",
+        "max_completion_tokens",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -13208,9 +13210,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000095",
-        "completion": "0.000004",
-        "input_cache_read": "0.00000016"
+        "prompt": "0.0000005605",
+        "completion": "0.00000236",
+        "input_cache_read": "0.0000000944"
       },
       "top_provider": {
         "context_length": 262144,
@@ -18886,13 +18888,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.0000036",
-        "input_cache_read": "0.0000003"
+        "prompt": "0.00000039",
+        "completion": "0.00000234"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 262144,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -25367,12 +25368,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.000002",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.00000055",
+        "completion": "0.0000022",
+        "input_cache_read": "0.00000011"
       },
       "top_provider": {
-        "context_length": 202752,
+        "context_length": 204800,
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
@@ -33307,11 +33308,11 @@
       },
       "pricing": {
         "prompt": "0.0000002",
-        "completion": "0.0000008"
+        "completion": "0.000000696"
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 16384,
+        "context_length": 128000,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,

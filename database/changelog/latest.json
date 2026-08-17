@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-17T00:24:15.174199+00:00",
+  "generated_at": "2026-08-17T06:23:49.100089+00:00",
   "summary": {
-    "model_additions": 0,
+    "model_additions": 1,
     "model_removals": 0,
     "pricing_changes": 8,
-    "cache_price_changes": 10
+    "cache_price_changes": 8
   },
   "changes": [
     {
@@ -12,16 +12,16 @@
       "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.06146,
-        "output_per_million": 0.12292,
-        "cache_read_per_million": 0.012292,
+        "input_per_million": 0.06426,
+        "output_per_million": 0.12852,
+        "cache_read_per_million": 0.012852,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.06426,
-        "output_per_million": 0.12852,
-        "cache_read_per_million": 0.012852,
+        "input_per_million": 0.0826,
+        "output_per_million": 0.1652,
+        "cache_read_per_million": 0.01652,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       }
@@ -31,12 +31,12 @@
       "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.012292,
-        "cache_creation_per_million": 0.0
-      },
-      "after": {
         "cache_read_per_million": 0.012852,
         "cache_creation_per_million": 0.0
+      },
+      "after": {
+        "cache_read_per_million": 0.01652,
+        "cache_creation_per_million": 0.0
       }
     },
     {
@@ -44,16 +44,16 @@
       "model_id": "deepseek/deepseek-v4-pro",
       "model_type": "text",
       "before": {
-        "input_per_million": 1.168,
-        "output_per_million": 2.336,
-        "cache_read_per_million": 0.09855,
+        "input_per_million": 0.435,
+        "output_per_million": 0.87,
+        "cache_read_per_million": 0.003625,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.435,
-        "output_per_million": 0.87,
-        "cache_read_per_million": 0.003625,
+        "input_per_million": 1.32,
+        "output_per_million": 3.96,
+        "cache_read_per_million": 0.044,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       }
@@ -63,11 +63,11 @@
       "model_id": "deepseek/deepseek-v4-pro",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.09855,
+        "cache_read_per_million": 0.003625,
         "cache_creation_per_million": 0.0
       },
       "after": {
-        "cache_read_per_million": 0.003625,
+        "cache_read_per_million": 0.044,
         "cache_creation_per_million": 0.0
       }
     },
@@ -76,16 +76,16 @@
       "model_id": "deepseek/deepseek-v4-pro-0813",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.66,
-        "output_per_million": 1.98,
-        "cache_read_per_million": 0.022,
+        "input_per_million": 0.435,
+        "output_per_million": 0.87,
+        "cache_read_per_million": 0.003625,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.435,
-        "output_per_million": 0.87,
-        "cache_read_per_million": 0.003625,
+        "input_per_million": 1.32,
+        "output_per_million": 3.96,
+        "cache_read_per_million": 0.044,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -95,88 +95,43 @@
       "model_id": "deepseek/deepseek-v4-pro-0813",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.022,
-        "cache_creation_per_million": null
-      },
-      "after": {
         "cache_read_per_million": 0.003625,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "google/gemma-4-26b-a4b-it",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.12,
-        "output_per_million": 0.4,
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null,
-        "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.07,
-        "output_per_million": 0.34,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "google/gemma-4-26b-a4b-it",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "nvidia/nemotron-3-nano-30b-a3b",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.025,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.03,
+        "cache_read_per_million": 0.044,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "qwen/qwen3-vl-235b-a22b-instruct",
+      "model_id": "moonshotai/kimi-k2.6",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.26,
-        "output_per_million": 1.04,
-        "cache_read_per_million": null,
+        "input_per_million": 0.5415,
+        "output_per_million": 2.28,
+        "cache_read_per_million": 0.0912,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.21,
-        "output_per_million": 1.9,
-        "cache_read_per_million": 0.1,
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "cache_read_per_million": 0.16,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "qwen/qwen3-vl-235b-a22b-instruct",
+      "model_id": "moonshotai/kimi-k2.6",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": null,
+        "cache_read_per_million": 0.0912,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.1,
+        "cache_read_per_million": 0.16,
         "cache_creation_per_million": null
       }
     },
@@ -185,11 +140,11 @@
       "model_id": "qwen/qwen3.8-27b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.05,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": null,
+        "cache_read_per_million": 0.05,
         "cache_creation_per_million": null
       }
     },
@@ -198,18 +153,18 @@
       "model_id": "z-ai/glm-4.6",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.55,
-        "output_per_million": 2.2,
-        "cache_read_per_million": 0.11,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.5,
         "output_per_million": 2.0,
         "cache_read_per_million": 0.1,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.55,
+        "output_per_million": 2.2,
+        "cache_read_per_million": 0.11,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -217,11 +172,11 @@
       "model_id": "z-ai/glm-4.6",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.11,
+        "cache_read_per_million": 0.1,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.1,
+        "cache_read_per_million": 0.11,
         "cache_creation_per_million": null
       }
     },
@@ -230,18 +185,18 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.308,
-        "output_per_million": 0.968,
-        "cache_read_per_million": 0.0572,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.462,
         "output_per_million": 1.452,
         "cache_read_per_million": 0.0858,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 1.19,
+        "output_per_million": 3.74,
+        "cache_read_per_million": 0.221,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -249,12 +204,46 @@
       "model_id": "z-ai/glm-5.2",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.0572,
+        "cache_read_per_million": 0.0858,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0858,
+        "cache_read_per_million": 0.221,
         "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "z-ai/glm-5.2:free",
+      "model_type": "text",
+      "after": {
+        "provider": "z-ai",
+        "model_id": "z-ai/glm-5.2:free",
+        "display_name": "Z.ai: GLM 5.2 (free)",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-08-17T06:23:48.892243Z"
+          }
+        },
+        "affiliate_links": {}
       }
     },
     {
@@ -262,16 +251,16 @@
       "model_id": "~deepseek/deepseek-v4-flash-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.0603,
-        "output_per_million": 0.1206,
-        "cache_read_per_million": 0.01206,
+        "input_per_million": 0.0675,
+        "output_per_million": 0.135,
+        "cache_read_per_million": 0.0135,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.0675,
-        "output_per_million": 0.135,
-        "cache_read_per_million": 0.0135,
+        "input_per_million": 0.0603,
+        "output_per_million": 0.1206,
+        "cache_read_per_million": 0.01206,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -281,12 +270,31 @@
       "model_id": "~deepseek/deepseek-v4-flash-latest",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.01206,
+        "cache_read_per_million": 0.0135,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0135,
+        "cache_read_per_million": 0.01206,
         "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "~moonshotai/kimi-latest",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 2.8,
+        "output_per_million": 14.0,
+        "cache_read_per_million": 0.29,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 2.6,
+        "output_per_million": 13.0,
+        "cache_read_per_million": 0.29,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     }
   ]

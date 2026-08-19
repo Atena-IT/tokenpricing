@@ -1,520 +1,42 @@
 {
-  "generated_at": "2026-08-19T06:22:32.976991+00:00",
+  "generated_at": "2026-08-19T12:22:25.153765+00:00",
   "summary": {
-    "model_additions": 15,
+    "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 6,
-    "cache_price_changes": 6
+    "pricing_changes": 4,
+    "cache_price_changes": 4
   },
   "changes": [
     {
-      "type": "model_added",
-      "model_id": "bedrock/guardrails",
+      "type": "pricing_changed",
+      "model_id": "deepseek/deepseek-chat-v3-0324",
       "model_type": "text",
+      "before": {
+        "input_per_million": 0.27,
+        "output_per_million": 1.12,
+        "cache_read_per_million": 0.135,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
       "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/guardrails",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
+        "input_per_million": 0.25,
+        "output_per_million": 1.0,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
-      "type": "model_added",
-      "model_id": "databricks/databricks-claude-opus-4-6",
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-chat-v3-0324",
       "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.135,
+        "cache_creation_per_million": null
+      },
       "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-claude-opus-4-6",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 5.00003,
-          "output_per_million": 25.00001,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "litellm": {
-            "price_input": 5.00003,
-            "price_output": 25.00001,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-claude-sonnet-4-6",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-claude-sonnet-4-6",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 2.99999,
-          "output_per_million": 15.00002,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 64000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "litellm": {
-            "price_input": 2.99999,
-            "price_output": 15.00002,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gemini-3-1-flash-lite",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gemini-3-1-flash-lite",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 0.31248,
-          "output_per_million": 1.87502,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.31248,
-            "price_output": 1.87502,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gemini-3-1-pro",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gemini-3-1-pro",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 2.49998,
-          "output_per_million": 15.00002,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 2.49998,
-            "price_output": 15.00002,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gemini-3-flash",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gemini-3-flash",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 0.62503,
-          "output_per_million": 3.74997,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.62503,
-            "price_output": 3.74997,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gemini-3-pro",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gemini-3-pro",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 2.49998,
-          "output_per_million": 15.00002,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 2.49998,
-            "price_output": 15.00002,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gpt-5-1-codex-max",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gpt-5-1-codex-max",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 1.24999,
-          "output_per_million": 9.99999,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 272000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "litellm": {
-            "price_input": 1.24999,
-            "price_output": 9.99999,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gpt-5-1-codex-mini",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gpt-5-1-codex-mini",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 0.24997,
-          "output_per_million": 1.99997,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 272000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.24997,
-            "price_output": 1.99997,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gpt-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gpt-5-2",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 1.75,
-          "output_per_million": 14.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 272000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "litellm": {
-            "price_input": 1.75,
-            "price_output": 14.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gpt-5-2-codex",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gpt-5-2-codex",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 1.75,
-          "output_per_million": 14.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 272000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "litellm": {
-            "price_input": 1.75,
-            "price_output": 14.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gpt-5-3-codex",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gpt-5-3-codex",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 1.75,
-          "output_per_million": 14.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 272000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "litellm": {
-            "price_input": 1.75,
-            "price_output": 14.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gpt-5-4",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gpt-5-4",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 2.49998,
-          "output_per_million": 15.00002,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 272000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "litellm": {
-            "price_input": 2.49998,
-            "price_output": 15.00002,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gpt-5-4-mini",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gpt-5-4-mini",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 0.74998,
-          "output_per_million": 4.50002,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 272000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.74998,
-            "price_output": 4.50002,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "databricks/databricks-gpt-5-4-nano",
-      "model_type": "text",
-      "after": {
-        "provider": "databricks",
-        "model_id": "databricks/databricks-gpt-5-4-nano",
-        "display_name": "databricks",
-        "pricing": {
-          "input_per_million": 0.19999,
-          "output_per_million": 1.24999,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 272000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.19999,
-            "price_output": 1.24999,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-19T06:22:32.874005Z"
-          }
-        },
-        "affiliate_links": {}
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
       }
     },
     {
@@ -522,16 +44,16 @@
       "model_id": "deepseek/deepseek-v4-pro",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.66,
-        "output_per_million": 1.98,
-        "cache_read_per_million": 0.022,
+        "input_per_million": 1.32,
+        "output_per_million": 3.96,
+        "cache_read_per_million": 0.044,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 1.32,
-        "output_per_million": 3.96,
-        "cache_read_per_million": 0.044,
+        "input_per_million": 1.44,
+        "output_per_million": 2.88,
+        "cache_read_per_million": 0.1215,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       }
@@ -541,11 +63,11 @@
       "model_id": "deepseek/deepseek-v4-pro",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.022,
+        "cache_read_per_million": 0.044,
         "cache_creation_per_million": 0.0
       },
       "after": {
-        "cache_read_per_million": 0.044,
+        "cache_read_per_million": 0.1215,
         "cache_creation_per_million": 0.0
       }
     },
@@ -554,18 +76,18 @@
       "model_id": "deepseek/deepseek-v4-pro-0813",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.66,
-        "output_per_million": 1.98,
-        "cache_read_per_million": 0.022,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 1.32,
         "output_per_million": 3.96,
         "cache_read_per_million": 0.044,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.66,
+        "output_per_million": 1.98,
+        "cache_read_per_million": 0.022,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -573,139 +95,43 @@
       "model_id": "deepseek/deepseek-v4-pro-0813",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.022,
-        "cache_creation_per_million": null
-      },
-      "after": {
         "cache_read_per_million": 0.044,
         "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.022,
+        "cache_creation_per_million": null
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "gemini-3.6-flash",
+      "model_id": "qwen/qwen3.5-35b-a3b",
       "model_type": "text",
       "before": {
-        "input_per_million": 1.5,
-        "output_per_million": 7.5,
-        "cache_read_per_million": 0.15,
+        "input_per_million": 0.225,
+        "output_per_million": 1.8,
+        "cache_read_per_million": 0.225,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.75,
-        "output_per_million": 3.75,
-        "cache_read_per_million": 0.075,
+        "input_per_million": 0.25,
+        "output_per_million": 1.25,
+        "cache_read_per_million": 0.25,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "gemini-3.6-flash",
+      "model_id": "qwen/qwen3.5-35b-a3b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.15,
+        "cache_read_per_million": 0.225,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.075,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "gemini/gemini-3.6-flash",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 1.5,
-        "output_per_million": 7.5,
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.75,
-        "output_per_million": 3.75,
-        "cache_read_per_million": 0.075,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "gemini/gemini-3.6-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.075,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3.6-27b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.289,
-        "output_per_million": 2.4,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.3,
-        "output_per_million": 2.0,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "qwen/qwen3.6-27b",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "vertex_ai/gemini-3.6-flash",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 1.5,
-        "output_per_million": 7.5,
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.75,
-        "output_per_million": 3.75,
-        "cache_read_per_million": 0.075,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "vertex_ai/gemini-3.6-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.075,
+        "cache_read_per_million": 0.25,
         "cache_creation_per_million": null
       }
     }

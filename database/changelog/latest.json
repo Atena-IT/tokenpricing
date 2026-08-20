@@ -1,42 +1,189 @@
 {
-  "generated_at": "2026-08-20T12:22:39.220190+00:00",
+  "generated_at": "2026-08-20T18:22:19.235515+00:00",
   "summary": {
-    "model_additions": 0,
+    "model_additions": 3,
     "model_removals": 0,
-    "pricing_changes": 1,
-    "cache_price_changes": 1
+    "pricing_changes": 2,
+    "cache_price_changes": 3
   },
   "changes": [
     {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-pro",
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-v3.1-terminus",
       "model_type": "text",
       "before": {
-        "input_per_million": 1.44,
-        "output_per_million": 2.88,
-        "cache_read_per_million": 0.1215,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.135,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "deepseek/deepseek-v4-flash",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.088606,
+        "output_per_million": 0.177212,
+        "cache_read_per_million": 0.017721,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 1.6,
-        "output_per_million": 3.2,
-        "cache_read_per_million": 0.135,
+        "input_per_million": 0.0784,
+        "output_per_million": 0.1568,
+        "cache_read_per_million": 0.01568,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-pro",
+      "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.1215,
+        "cache_read_per_million": 0.017721,
         "cache_creation_per_million": 0.0
       },
       "after": {
-        "cache_read_per_million": 0.135,
+        "cache_read_per_million": 0.01568,
         "cache_creation_per_million": 0.0
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "mistralai/ministral-8b",
+      "model_type": "text",
+      "after": {
+        "provider": "mistralai",
+        "model_id": "mistralai/ministral-8b",
+        "display_name": "Mistral: Ministral 8B",
+        "pricing": {
+          "input_per_million": 0.11,
+          "output_per_million": 0.11,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.11,
+            "price_output": 0.11,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-08-20T18:22:19.014427Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "cache_read_per_million": 0.16,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.5605,
+        "output_per_million": 2.36,
+        "cache_read_per_million": 0.0944,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.16,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.0944,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "tencent/hy-mt2-1.8b",
+      "model_type": "text",
+      "after": {
+        "provider": "tencent",
+        "model_id": "tencent/hy-mt2-1.8b",
+        "display_name": "Tencent: Hy-MT2-1.8B",
+        "pricing": {
+          "input_per_million": 0.044,
+          "output_per_million": 0.177,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 8192,
+        "max_output_tokens": 4096,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.044,
+            "price_output": 0.177,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-08-20T18:22:19.014427Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "tencent/hy-mt2-30b-a3b",
+      "model_type": "text",
+      "after": {
+        "provider": "tencent",
+        "model_id": "tencent/hy-mt2-30b-a3b",
+        "display_name": "Tencent: Hy-MT2-30B-A3B",
+        "pricing": {
+          "input_per_million": 0.074,
+          "output_per_million": 0.295,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 8192,
+        "max_output_tokens": 4096,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.074,
+            "price_output": 0.295,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-08-20T18:22:19.014427Z"
+          }
+        },
+        "affiliate_links": {}
       }
     }
   ]

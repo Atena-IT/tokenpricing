@@ -1,42 +1,29 @@
 {
-  "generated_at": "2026-08-20T18:22:19.235515+00:00",
+  "generated_at": "2026-08-21T00:25:09.899988+00:00",
   "summary": {
-    "model_additions": 3,
+    "model_additions": 2,
     "model_removals": 0,
-    "pricing_changes": 2,
-    "cache_price_changes": 3
+    "pricing_changes": 5,
+    "cache_price_changes": 4
   },
   "changes": [
-    {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v3.1-terminus",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.135,
-        "cache_creation_per_million": null
-      }
-    },
     {
       "type": "pricing_changed",
       "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.088606,
-        "output_per_million": 0.177212,
-        "cache_read_per_million": 0.017721,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.0784,
         "output_per_million": 0.1568,
         "cache_read_per_million": 0.01568,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.0826,
+        "output_per_million": 0.1652,
+        "cache_read_per_million": 0.01652,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
       }
     },
     {
@@ -44,43 +31,75 @@
       "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.017721,
+        "cache_read_per_million": 0.01568,
         "cache_creation_per_million": 0.0
       },
       "after": {
-        "cache_read_per_million": 0.01568,
+        "cache_read_per_million": 0.01652,
         "cache_creation_per_million": 0.0
       }
     },
     {
+      "type": "pricing_changed",
+      "model_id": "google/gemma-4-31b-it",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.34,
+        "cache_read_per_million": 0.05,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.1,
+        "output_per_million": 0.34,
+        "cache_read_per_million": 0.1,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "google/gemma-4-31b-it",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.05,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.1,
+        "cache_creation_per_million": null
+      }
+    },
+    {
       "type": "model_added",
-      "model_id": "mistralai/ministral-8b",
+      "model_id": "mancer/weaver",
       "model_type": "text",
       "after": {
-        "provider": "mistralai",
-        "model_id": "mistralai/ministral-8b",
-        "display_name": "Mistral: Ministral 8B",
+        "provider": "mancer",
+        "model_id": "mancer/weaver",
+        "display_name": "Mancer: Weaver (alpha)",
         "pricing": {
-          "input_per_million": 0.11,
-          "output_per_million": 0.11,
+          "input_per_million": 0.5,
+          "output_per_million": 0.75,
           "cache_read_per_million": null,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 128000,
-        "max_output_tokens": 0,
+        "context_window": 8000,
+        "max_output_tokens": 6000,
         "model_type": "text",
         "supports_vision": false,
         "supports_function_calling": false,
         "supports_streaming": true,
-        "category": "budget",
+        "category": "standard",
         "sources": {
           "openrouter": {
-            "price_input": 0.11,
-            "price_output": 0.11,
+            "price_input": 0.5,
+            "price_output": 0.75,
             "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-08-20T18:22:19.014427Z"
+            "last_updated": "2026-08-21T00:25:09.728697Z"
           }
         },
         "affiliate_links": {}
@@ -88,19 +107,38 @@
     },
     {
       "type": "pricing_changed",
-      "model_id": "moonshotai/kimi-k2.6",
+      "model_id": "meta/muse-glimmer-30b",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.95,
-        "output_per_million": 4.0,
-        "cache_read_per_million": 0.16,
+        "input_per_million": 0.35,
+        "output_per_million": 1.5,
+        "cache_read_per_million": 0.04,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.1,
+        "cache_read_per_million": 0.04,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_type": "text",
+      "before": {
         "input_per_million": 0.5605,
         "output_per_million": 2.36,
         "cache_read_per_million": 0.0944,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "cache_read_per_million": 0.16,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -110,77 +148,75 @@
       "model_id": "moonshotai/kimi-k2.6",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.16,
+        "cache_read_per_million": 0.0944,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0944,
+        "cache_read_per_million": 0.16,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.71,
+        "output_per_million": 3.5,
+        "cache_read_per_million": 0.15,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.67,
+        "output_per_million": 3.4,
+        "cache_read_per_million": 0.17,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.15,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.17,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "model_added",
-      "model_id": "tencent/hy-mt2-1.8b",
+      "model_id": "stealth/ox-alpha",
       "model_type": "text",
       "after": {
-        "provider": "tencent",
-        "model_id": "tencent/hy-mt2-1.8b",
-        "display_name": "Tencent: Hy-MT2-1.8B",
+        "provider": "stealth",
+        "model_id": "stealth/ox-alpha",
+        "display_name": "Ox Alpha",
         "pricing": {
-          "input_per_million": 0.044,
-          "output_per_million": 0.177,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
           "cache_read_per_million": null,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 8192,
-        "max_output_tokens": 4096,
+        "context_window": 1048576,
+        "max_output_tokens": 131072,
         "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
+        "supports_vision": true,
+        "supports_function_calling": true,
         "supports_streaming": true,
         "category": "standard",
         "sources": {
           "openrouter": {
-            "price_input": 0.044,
-            "price_output": 0.177,
+            "price_input": 0.0,
+            "price_output": 0.0,
             "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-08-20T18:22:19.014427Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "tencent/hy-mt2-30b-a3b",
-      "model_type": "text",
-      "after": {
-        "provider": "tencent",
-        "model_id": "tencent/hy-mt2-30b-a3b",
-        "display_name": "Tencent: Hy-MT2-30B-A3B",
-        "pricing": {
-          "input_per_million": 0.074,
-          "output_per_million": 0.295,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 8192,
-        "max_output_tokens": 4096,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.074,
-            "price_output": 0.295,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-08-20T18:22:19.014427Z"
+            "last_updated": "2026-08-21T00:25:09.728697Z"
           }
         },
         "affiliate_links": {}

@@ -1,74 +1,157 @@
 {
-  "generated_at": "2026-08-24T12:22:26.839479+00:00",
+  "generated_at": "2026-08-24T18:22:11.752862+00:00",
   "summary": {
-    "model_additions": 0,
+    "model_additions": 1,
     "model_removals": 3,
-    "pricing_changes": 1,
-    "cache_price_changes": 2
+    "pricing_changes": 5,
+    "cache_price_changes": 5
   },
   "changes": [
     {
-      "type": "cache_price_changed",
-      "model_id": "moonshotai/kimi-k2.7-code",
+      "type": "pricing_changed",
+      "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.17,
+        "input_per_million": 0.0574,
+        "output_per_million": 0.1148,
+        "cache_read_per_million": 0.01148,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.056,
+        "output_per_million": 0.112,
+        "cache_read_per_million": 0.0112,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-v4-flash",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.01148,
+        "cache_creation_per_million": 0.0
+      },
+      "after": {
+        "cache_read_per_million": 0.0112,
+        "cache_creation_per_million": 0.0
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "deepseek/deepseek-v4-flash-0731",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.14,
+        "output_per_million": 0.28,
+        "cache_read_per_million": 0.028,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.0658,
+        "output_per_million": 0.1316,
+        "cache_read_per_million": 0.01316,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-v4-flash-0731",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.028,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.19,
+        "cache_read_per_million": 0.01316,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "~deepseek/deepseek-v4-flash-latest",
+      "model_id": "deepseek/deepseek-v4-pro",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.035,
-        "output_per_million": 0.13,
-        "cache_read_per_million": 0.01,
+        "input_per_million": 0.526176,
+        "output_per_million": 1.052352,
+        "cache_read_per_million": 0.043848,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.522,
+        "output_per_million": 1.044,
+        "cache_read_per_million": 0.0435,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-v4-pro",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.043848,
+        "cache_creation_per_million": 0.0
+      },
+      "after": {
+        "cache_read_per_million": 0.0435,
+        "cache_creation_per_million": 0.0
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "minimax/minimax-m2.7",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.24,
+        "output_per_million": 0.96,
+        "cache_read_per_million": 0.048,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.04,
-        "output_per_million": 0.08,
-        "cache_read_per_million": 0.008,
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "cache_read_per_million": 0.06,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "~deepseek/deepseek-v4-flash-latest",
+      "model_id": "minimax/minimax-m2.7",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.01,
+        "cache_read_per_million": 0.048,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.008,
+        "cache_read_per_million": 0.06,
         "cache_creation_per_million": null
       }
     },
     {
-      "type": "model_removed",
-      "model_id": "inclusionai/ling-2.6-1t",
+      "type": "model_added",
+      "model_id": "mistralai/devstral-2512",
       "model_type": "text",
-      "before": {
-        "provider": "inclusionai",
-        "model_id": "inclusionai/ling-2.6-1t",
-        "display_name": "inclusionAI: Ling-2.6-1T",
+      "after": {
+        "provider": "mistralai",
+        "model_id": "mistralai/devstral-2512",
+        "display_name": "Mistral: Devstral 2 2512",
         "pricing": {
-          "input_per_million": 0.075,
-          "output_per_million": 0.625,
-          "cache_read_per_million": 0.015,
+          "input_per_million": 0.44,
+          "output_per_million": 2.2,
+          "cache_read_per_million": 0.044,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
         "context_window": 262144,
-        "max_output_tokens": 32768,
+        "max_output_tokens": 0,
         "model_type": "text",
         "supports_vision": false,
         "supports_function_calling": true,
@@ -76,33 +159,65 @@
         "category": "standard",
         "sources": {
           "openrouter": {
-            "price_input": 0.075,
-            "price_output": 0.625,
-            "price_cache_read": 0.015,
+            "price_input": 0.44,
+            "price_output": 2.2,
+            "price_cache_read": 0.044,
             "price_cache_creation": null,
-            "last_updated": "2026-08-24T06:25:09.359040Z"
+            "last_updated": "2026-08-24T18:22:11.530439Z"
           }
         },
         "affiliate_links": {}
       }
     },
     {
-      "type": "model_removed",
-      "model_id": "inclusionai/ling-2.6-flash",
+      "type": "pricing_changed",
+      "model_id": "moonshotai/kimi-k2.5",
       "model_type": "text",
       "before": {
-        "provider": "inclusionai",
-        "model_id": "inclusionai/ling-2.6-flash",
-        "display_name": "inclusionAI: Ling-2.6-flash",
+        "input_per_million": 0.45,
+        "output_per_million": 2.25,
+        "cache_read_per_million": 0.07,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.6,
+        "output_per_million": 3.0,
+        "cache_read_per_million": 0.1,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.07,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.1,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "model_type": "text",
+      "before": {
+        "provider": "nvidia",
+        "model_id": "nvidia/nemotron-3-nano-30b-a3b:free",
+        "display_name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
         "pricing": {
-          "input_per_million": 0.01,
-          "output_per_million": 0.03,
-          "cache_read_per_million": 0.002,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 262144,
-        "max_output_tokens": 32768,
+        "context_window": 256000,
+        "max_output_tokens": 0,
         "model_type": "text",
         "supports_vision": false,
         "supports_function_calling": true,
@@ -110,11 +225,11 @@
         "category": "budget",
         "sources": {
           "openrouter": {
-            "price_input": 0.01,
-            "price_output": 0.03,
-            "price_cache_read": 0.002,
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-08-24T06:25:09.359040Z"
+            "last_updated": "2026-08-24T12:22:26.637564Z"
           }
         },
         "affiliate_links": {}
@@ -122,33 +237,67 @@
     },
     {
       "type": "model_removed",
-      "model_id": "inclusionai/ring-2.6-1t",
+      "model_id": "nvidia/nemotron-nano-12b-v2-vl:free",
       "model_type": "text",
       "before": {
-        "provider": "inclusionai",
-        "model_id": "inclusionai/ring-2.6-1t",
-        "display_name": "inclusionAI: Ring-2.6-1T",
+        "provider": "nvidia",
+        "model_id": "nvidia/nemotron-nano-12b-v2-vl:free",
+        "display_name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
         "pricing": {
-          "input_per_million": 0.075,
-          "output_per_million": 0.625,
-          "cache_read_per_million": 0.015,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 262144,
-        "max_output_tokens": 65536,
+        "context_window": 128000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-08-24T12:22:26.637564Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "nvidia/nemotron-nano-9b-v2:free",
+      "model_type": "text",
+      "before": {
+        "provider": "nvidia",
+        "model_id": "nvidia/nemotron-nano-9b-v2:free",
+        "display_name": "NVIDIA: Nemotron Nano 9B V2 (free)",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 0,
         "model_type": "text",
         "supports_vision": false,
         "supports_function_calling": true,
         "supports_streaming": true,
-        "category": "standard",
+        "category": "budget",
         "sources": {
           "openrouter": {
-            "price_input": 0.075,
-            "price_output": 0.625,
-            "price_cache_read": 0.015,
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-08-24T06:25:09.359040Z"
+            "last_updated": "2026-08-24T12:22:26.637564Z"
           }
         },
         "affiliate_links": {}

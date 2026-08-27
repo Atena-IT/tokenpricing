@@ -1,9 +1,67 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-08-27T15:54:49.757701+00:00",
+  "fetched_at": "2026-08-27T21:21:56.159028+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 417,
   "data": [
+    {
+      "id": "inclusionai/ling-3.0-flash-fin:free",
+      "canonical_slug": "inclusionai/ling-3.0-flash-fin-20260827",
+      "hugging_face_id": null,
+      "name": "Ling 3.0 Flash Fin (free)",
+      "created": 1787846290,
+      "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 32768,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inclusionai/ling-3.0-flash-fin-20260827/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true
+      }
+    },
     {
       "id": "qwen/qwen3.8-flash",
       "canonical_slug": "qwen/qwen3.8-flash-20260826",
@@ -2397,9 +2455,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000012",
-        "input_cache_read": "0.000000012"
+        "prompt": "0.00000005",
+        "completion": "0.0000001",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -6324,9 +6382,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -13819,9 +13877,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000007798",
-        "completion": "0.00000015596",
-        "input_cache_read": "0.000000015596"
+        "prompt": "0.00000007644",
+        "completion": "0.00000015288",
+        "input_cache_read": "0.000000015288"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -36741,56 +36799,6 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/anthracite-org/magnum-v4-72b/endpoints"
-      }
-    },
-    {
-      "id": "mistralai/ministral-8b",
-      "canonical_slug": "mistralai/ministral-8b",
-      "hugging_face_id": null,
-      "name": "Mistral: Ministral 8B",
-      "created": 1729123200,
-      "description": "Ministral 8B is an 8B parameter model featuring a unique interleaved sliding-window attention pattern for faster, memory-efficient inference. Designed for edge use cases, it supports up to 128k context length...",
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000011",
-        "completion": "0.00000011"
-      },
-      "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 102400,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.3
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": "2024-09-30",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/mistralai/ministral-8b/endpoints"
       }
     },
     {

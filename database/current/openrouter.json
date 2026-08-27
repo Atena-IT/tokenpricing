@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-08-27T01:58:28.372231+00:00",
+  "fetched_at": "2026-08-27T09:18:52.512584+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 417,
   "data": [
@@ -26,7 +26,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000016",
+        "prompt": "0.00000015",
         "completion": "0.00000047",
         "input_cache_read": "0.000000016",
         "input_cache_write": "0.0000002"
@@ -2326,7 +2326,7 @@
       },
       "pricing": {
         "prompt": "0.00000003",
-        "completion": "0.000000075",
+        "completion": "0.0000001",
         "input_cache_read": "0.000000007"
       },
       "top_provider": {
@@ -12819,8 +12819,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.000001",
+        "prompt": "0.0000001",
+        "completion": "0.0000009",
         "input_cache_read": "0.00000005"
       },
       "top_provider": {
@@ -18699,13 +18699,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000225",
-        "completion": "0.0000018",
-        "input_cache_read": "0.000000225"
+        "prompt": "0.00000025",
+        "completion": "0.00000125",
+        "input_cache_read": "0.00000025"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -21248,9 +21248,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000045",
-        "completion": "0.00000225",
-        "input_cache_read": "0.00000007"
+        "prompt": "0.0000006",
+        "completion": "0.000003",
+        "input_cache_read": "0.0000001"
       },
       "top_provider": {
         "context_length": 262144,
@@ -21289,7 +21289,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-08-31",
       "links": {
         "details": "/api/v1/models/moonshotai/kimi-k2.5-0127/endpoints"
       },
@@ -35368,13 +35368,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000008",
-        "completion": "0.000001",
-        "input_cache_read": "0.0000004"
+        "prompt": "0.00000025",
+        "completion": "0.00000075"
       },
       "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 115200,
+        "context_length": 32000,
+        "max_completion_tokens": 28800,
         "is_moderated": false
       },
       "per_request_limits": null,

@@ -1,9 +1,70 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-08-28T03:22:13.896868+00:00",
+  "fetched_at": "2026-08-28T09:22:45.421694+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 380,
+  "model_count": 387,
   "data": [
+    {
+      "id": "tencent/hy4-preview",
+      "canonical_slug": "tencent/hy4-preview-20260827",
+      "hugging_face_id": null,
+      "name": "Tencent: Hy4 preview",
+      "created": 1787897375,
+      "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000000834",
+        "completion": "0.000002501",
+        "input_cache_read": "0.000000042"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 64000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/tencent/hy4-preview-20260827/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
     {
       "id": "inclusionai/ling-3.0-flash-fin:free",
       "canonical_slug": "inclusionai/ling-3.0-flash-fin-20260827",
@@ -626,7 +687,7 @@
     {
       "id": "z-ai/glm-5.3",
       "canonical_slug": "z-ai/glm-5.3-20260816",
-      "hugging_face_id": null,
+      "hugging_face_id": "zai-org/GLM-5.3",
       "name": "Z.ai: GLM 5.3",
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
@@ -2536,9 +2597,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000012",
-        "input_cache_read": "0.000000012"
+        "prompt": "0.00000007",
+        "completion": "0.00000014",
+        "input_cache_read": "0.000000014"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11481,6 +11542,84 @@
       }
     },
     {
+      "id": "mistralai/mistral-medium-3-5:batch",
+      "canonical_slug": "mistralai/mistral-medium-3.5-20260430",
+      "hugging_face_id": null,
+      "name": "Mistral: Mistral Medium 3.5 (batch)",
+      "created": 1777570439,
+      "description": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000075",
+        "completion": "0.00000375"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 209715,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/mistralai/mistral-medium-3.5-20260430/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 30.4,
+          "coding_index": 46.9,
+          "agentic_index": 19.2
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "supported_efforts": [
+          "high",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
       "canonical_slug": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428",
       "hugging_face_id": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16",
@@ -12412,12 +12551,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000032",
-        "completion": "0.0000032"
+        "prompt": "0.0000006",
+        "completion": "0.0000036",
+        "input_cache_read": "0.00000012"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 81920,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -16238,6 +16378,85 @@
         "tool_choice",
         "tools",
         "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/mistralai/mistral-small-2603/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 19.7,
+          "coding_index": 26.6,
+          "agentic_index": 4.6
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "supported_efforts": [
+          "high",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
+      "id": "mistralai/mistral-small-2603:batch",
+      "canonical_slug": "mistralai/mistral-small-2603",
+      "hugging_face_id": "mistralai/Mistral-Small-4-119B-2603",
+      "name": "Mistral: Mistral Small 4 (batch)",
+      "created": 1773695685,
+      "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 209715,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
         "top_p"
       ],
       "default_parameters": {
@@ -22278,6 +22497,99 @@
       }
     },
     {
+      "id": "mistralai/ministral-8b-2512:batch",
+      "canonical_slug": "mistralai/ministral-8b-2512",
+      "hugging_face_id": "mistralai/Ministral-3-8B-Instruct-2512",
+      "name": "Mistral: Ministral 3 8B 2512 (batch)",
+      "created": 1764681654,
+      "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.00000015",
+        "input_cache_read": "0.000000015"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 209715,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.3,
+        "top_p": null,
+        "frequency_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/mistralai/ministral-8b-2512/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1076,
+            "win_rate": 46.2,
+            "rank": 91
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1077,
+            "win_rate": 42.9,
+            "rank": 95
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1026,
+            "win_rate": 38.7,
+            "rank": 103
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1085,
+            "win_rate": 42.9,
+            "rank": 97
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 9,
+          "coding_index": 9.7,
+          "agentic_index": 1.2
+        }
+      }
+    },
+    {
       "id": "mistralai/ministral-3b-2512",
       "canonical_slug": "mistralai/ministral-3b-2512",
       "hugging_face_id": "mistralai/Ministral-3-3B-Instruct-2512",
@@ -22493,6 +22805,128 @@
       }
     },
     {
+      "id": "mistralai/mistral-large-2512:batch",
+      "canonical_slug": "mistralai/mistral-large-2512",
+      "hugging_face_id": "",
+      "name": "Mistral: Mistral Large 3 2512 (batch)",
+      "created": 1764624472,
+      "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000005",
+        "completion": "0.0000015",
+        "input_cache_read": "0.00000005"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 209715,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.0645,
+        "top_p": null,
+        "frequency_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/mistralai/mistral-large-2512/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1143,
+            "win_rate": 46.9,
+            "rank": 69
+          },
+          {
+            "arena": "models",
+            "category": "asciiart",
+            "elo": 1095,
+            "win_rate": 40.3,
+            "rank": 56
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1166,
+            "win_rate": 47.6,
+            "rank": 71
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1157,
+            "win_rate": 45.7,
+            "rank": 70
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1116,
+            "win_rate": 41.5,
+            "rank": 84
+          },
+          {
+            "arena": "models",
+            "category": "svg",
+            "elo": 1032,
+            "win_rate": 38,
+            "rank": 73
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1128,
+            "win_rate": 43,
+            "rank": 76
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1182,
+            "win_rate": 49.5,
+            "rank": 68
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 15.9,
+          "coding_index": 20.1,
+          "agentic_index": 5.5
+        }
+      }
+    },
+    {
       "id": "deepseek/deepseek-v3.2",
       "canonical_slug": "deepseek/deepseek-v3.2-20251201",
       "hugging_face_id": "deepseek-ai/DeepSeek-V3.2",
@@ -22512,13 +22946,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000026",
-        "completion": "0.00000038",
-        "input_cache_read": "0.00000013"
+        "prompt": "0.000000269",
+        "completion": "0.0000004",
+        "input_cache_read": "0.0000001345"
       },
       "top_provider": {
         "context_length": 163840,
-        "max_completion_tokens": 147456,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -26786,6 +27220,126 @@
       }
     },
     {
+      "id": "mistralai/mistral-medium-3.1:batch",
+      "canonical_slug": "mistralai/mistral-medium-3.1",
+      "hugging_face_id": "",
+      "name": "Mistral: Mistral Medium 3.1 (batch)",
+      "created": 1755095639,
+      "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000004",
+        "completion": "0.000002",
+        "input_cache_read": "0.00000004"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 104857,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.3
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": "2025-06-30",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/mistralai/mistral-medium-3.1/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1125,
+            "win_rate": 44.6,
+            "rank": 78
+          },
+          {
+            "arena": "models",
+            "category": "asciiart",
+            "elo": 1024,
+            "win_rate": 30.8,
+            "rank": 60
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1145,
+            "win_rate": 45.1,
+            "rank": 78
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1165,
+            "win_rate": 47.2,
+            "rank": 67
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1110,
+            "win_rate": 40.7,
+            "rank": 86
+          },
+          {
+            "arena": "models",
+            "category": "svg",
+            "elo": 1032,
+            "win_rate": 38.2,
+            "rank": 74
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1126,
+            "win_rate": 43.6,
+            "rank": 79
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1152,
+            "win_rate": 46,
+            "rank": 78
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 14.7,
+          "coding_index": 20.5,
+          "agentic_index": 6.1
+        }
+      }
+    },
+    {
       "id": "z-ai/glm-4.5v",
       "canonical_slug": "z-ai/glm-4.5v",
       "hugging_face_id": "zai-org/GLM-4.5V",
@@ -26839,7 +27393,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
-      "expiration_date": "2026-12-31",
+      "expiration_date": null,
       "links": {
         "details": "/api/v1/models/z-ai/glm-4.5v/endpoints"
       },
@@ -27706,6 +28260,107 @@
       "canonical_slug": "mistralai/codestral-2508",
       "hugging_face_id": "",
       "name": "Mistral: Codestral 2508",
+      "created": 1754079630,
+      "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
+      "context_length": 256000,
+      "architecture": {
+        "modality": "text+file->text",
+        "input_modalities": [
+          "text",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000009",
+        "input_cache_read": "0.00000003"
+      },
+      "top_provider": {
+        "context_length": 256000,
+        "max_completion_tokens": 204800,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "prediction",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.3
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": "2025-03-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/mistralai/codestral-2508/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1031,
+            "win_rate": 38.5,
+            "rank": 105
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1037,
+            "win_rate": 41.1,
+            "rank": 98
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1004,
+            "win_rate": 36.3,
+            "rank": 108
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1043,
+            "win_rate": 46.7,
+            "rank": 95
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1033,
+            "win_rate": 37.8,
+            "rank": 109
+          },
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1064,
+            "win_rate": 45.4,
+            "rank": 92
+          }
+        ]
+      }
+    },
+    {
+      "id": "mistralai/codestral-2508:batch",
+      "canonical_slug": "mistralai/codestral-2508",
+      "hugging_face_id": "",
+      "name": "Mistral: Codestral 2508 (batch)",
       "created": 1754079630,
       "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
       "context_length": 256000,

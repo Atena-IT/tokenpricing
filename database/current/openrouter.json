@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-08-31T01:02:02.108626+00:00",
+  "fetched_at": "2026-08-31T06:46:00.759510+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 396,
   "data": [
@@ -441,9 +441,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000022",
-        "completion": "0.00000066",
-        "input_cache_read": "0.000000007",
+        "prompt": "0.00000044",
+        "completion": "0.00000132",
+        "input_cache_read": "0.000000014",
         "overrides": [
           {
             "utc_days": [
@@ -1615,9 +1615,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -5185,9 +5185,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000285",
-        "completion": "0.00001425",
-        "input_cache_read": "0.000000285"
+        "prompt": "0.000003",
+        "completion": "0.000015",
+        "input_cache_read": "0.0000003"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -8500,7 +8500,7 @@
       "top_provider": {
         "context_length": 1000000,
         "max_completion_tokens": 128000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -13852,9 +13852,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000089866",
-        "completion": "0.000000179732",
-        "input_cache_read": "0.0000000179732"
+        "prompt": "0.000000088606",
+        "completion": "0.000000177212",
+        "input_cache_read": "0.0000000177212"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -22044,7 +22044,6 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -22059,7 +22058,6 @@
         "tools",
         "top_a",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {

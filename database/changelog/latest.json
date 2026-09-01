@@ -1,140 +1,189 @@
 {
-  "generated_at": "2026-09-01T12:33:28.836288+00:00",
+  "generated_at": "2026-09-01T18:28:48.621042+00:00",
   "summary": {
-    "model_additions": 0,
-    "model_removals": 1,
-    "pricing_changes": 4,
+    "model_additions": 2,
+    "model_removals": 2,
+    "pricing_changes": 3,
     "cache_price_changes": 3
   },
   "changes": [
     {
+      "type": "model_added",
+      "model_id": "anthropic/claude-fable-5.1",
+      "model_type": "text",
+      "after": {
+        "provider": "anthropic",
+        "model_id": "anthropic/claude-fable-5.1",
+        "display_name": "Anthropic: Claude Fable 5.1",
+        "pricing": {
+          "input_per_million": 10.0,
+          "output_per_million": 50.0,
+          "cache_read_per_million": 0.25,
+          "cache_creation_per_million": 12.5,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 10.0,
+            "price_output": 50.0,
+            "price_cache_read": 0.25,
+            "price_cache_creation": 12.5,
+            "last_updated": "2026-09-01T18:28:48.422470Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
       "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-flash-vision-exp",
+      "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.44,
-        "output_per_million": 1.32,
-        "cache_read_per_million": 0.014,
+        "input_per_million": 0.08092,
+        "output_per_million": 0.16184,
+        "cache_read_per_million": 0.016184,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.22,
-        "output_per_million": 0.66,
-        "cache_read_per_million": 0.007,
+        "input_per_million": 0.07476,
+        "output_per_million": 0.14952,
+        "cache_read_per_million": 0.014952,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-flash-vision-exp",
+      "model_id": "deepseek/deepseek-v4-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.014,
+        "cache_read_per_million": 0.016184,
         "cache_creation_per_million": 0.0
       },
       "after": {
-        "cache_read_per_million": 0.007,
+        "cache_read_per_million": 0.014952,
         "cache_creation_per_million": 0.0
       }
     },
     {
+      "type": "model_added",
+      "model_id": "inception/mercury-2.5-preview",
+      "model_type": "text",
+      "after": {
+        "provider": "inception",
+        "model_id": "inception/mercury-2.5-preview",
+        "display_name": "Inception: Mercury 2.5 Preview",
+        "pricing": {
+          "input_per_million": 0.04,
+          "output_per_million": 0.15,
+          "cache_read_per_million": 0.004,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 260000,
+        "max_output_tokens": 65536,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.04,
+            "price_output": 0.15,
+            "price_cache_read": 0.004,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-01T18:28:48.422470Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
       "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_id": "tencent/hy3",
       "model_type": "text",
       "before": {
-        "input_per_million": 1.1154,
-        "output_per_million": 3.3462,
-        "cache_read_per_million": 0.03718,
+        "input_per_million": 0.132,
+        "output_per_million": 0.528,
+        "cache_read_per_million": 0.033,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.66,
-        "output_per_million": 1.98,
-        "cache_read_per_million": 0.022,
+        "input_per_million": 0.0825,
+        "output_per_million": 0.33,
+        "cache_read_per_million": 0.020625,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_id": "tencent/hy3",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.03718,
+        "cache_read_per_million": 0.033,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.022,
+        "cache_read_per_million": 0.020625,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "gryphe/mythomax-l2-13b",
+      "model_id": "~deepseek/deepseek-v4-flash-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.35,
-        "output_per_million": 0.6,
-        "cache_read_per_million": null,
+        "input_per_million": 0.05,
+        "output_per_million": 0.16,
+        "cache_read_per_million": 0.013,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.06,
-        "output_per_million": 0.06,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3-235b-a22b-2507",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.09,
-        "output_per_million": 0.55,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.0875,
-        "output_per_million": 0.35,
-        "cache_read_per_million": 0.0175,
+        "input_per_million": 0.04998,
+        "output_per_million": 0.09996,
+        "cache_read_per_million": 0.009996,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "qwen/qwen3-235b-a22b-2507",
+      "model_id": "~deepseek/deepseek-v4-flash-latest",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": null,
+        "cache_read_per_million": 0.013,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0175,
+        "cache_read_per_million": 0.009996,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "model_removed",
-      "model_id": "anthropic/claude-opus-4.7-fast",
+      "model_id": "anthropic/claude-opus-4.8-fast",
       "model_type": "text",
       "before": {
         "provider": "anthropic",
-        "model_id": "anthropic/claude-opus-4.7-fast",
-        "display_name": "Anthropic: Claude Opus 4.7 (Fast)",
+        "model_id": "anthropic/claude-opus-4.8-fast",
+        "display_name": "Anthropic: Claude Opus 4.8 (Fast)",
         "pricing": {
-          "input_per_million": 30.0,
-          "output_per_million": 150.0,
-          "cache_read_per_million": 3.0,
-          "cache_creation_per_million": 37.5,
+          "input_per_million": 10.0,
+          "output_per_million": 50.0,
+          "cache_read_per_million": 1.0,
+          "cache_creation_per_million": 12.5,
           "currency": "USD"
         },
         "context_window": 1000000,
@@ -146,11 +195,45 @@
         "category": "flagship",
         "sources": {
           "openrouter": {
-            "price_input": 30.0,
-            "price_output": 150.0,
-            "price_cache_read": 3.0,
-            "price_cache_creation": 37.5,
-            "last_updated": "2026-09-01T06:38:58.442485Z"
+            "price_input": 10.0,
+            "price_output": 50.0,
+            "price_cache_read": 1.0,
+            "price_cache_creation": 12.5,
+            "last_updated": "2026-09-01T12:33:28.553291Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "anthropic/claude-opus-5-fast",
+      "model_type": "text",
+      "before": {
+        "provider": "anthropic",
+        "model_id": "anthropic/claude-opus-5-fast",
+        "display_name": "Claude Opus 5 (Fast)",
+        "pricing": {
+          "input_per_million": 10.0,
+          "output_per_million": 50.0,
+          "cache_read_per_million": 1.0,
+          "cache_creation_per_million": 12.5,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "openrouter": {
+            "price_input": 10.0,
+            "price_output": 50.0,
+            "price_cache_read": 1.0,
+            "price_cache_creation": 12.5,
+            "last_updated": "2026-09-01T12:33:28.553291Z"
           }
         },
         "affiliate_links": {}

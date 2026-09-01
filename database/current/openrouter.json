@@ -1,9 +1,135 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-01T12:33:28.553291+00:00",
+  "fetched_at": "2026-09-01T18:28:48.422470+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 419,
   "data": [
+    {
+      "id": "anthropic/claude-fable-5.1",
+      "canonical_slug": "anthropic/claude-fable-5.1-20260831",
+      "hugging_face_id": null,
+      "name": "Anthropic: Claude Fable 5.1",
+      "created": 1788285838,
+      "description": "Claude Fable 5.1 improves on Claude Fable 5 across the board, with the biggest gains in agentic coding, long-running agentic workflows, and knowledge work: long code refactors, front-end and visual...",
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00001",
+        "completion": "0.00005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000025",
+        "input_cache_write": "0.0000125",
+        "input_cache_write_1h": "0.00002"
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "tools",
+        "verbosity"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/anthropic/claude-fable-5.1-20260831/endpoints"
+      },
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
+      "id": "inception/mercury-2.5-preview",
+      "canonical_slug": "inception/mercury-2.5-preview-20260831",
+      "hugging_face_id": "",
+      "name": "Inception: Mercury 2.5 Preview",
+      "created": 1788209864,
+      "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving...",
+      "context_length": 260000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000004",
+        "completion": "0.00000015",
+        "input_cache_read": "0.000000004"
+      },
+      "top_provider": {
+        "context_length": 260000,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inception/mercury-2.5-preview-20260831/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "high",
+          "medium",
+          "low",
+          "none"
+        ],
+        "default_effort": "medium"
+      }
+    },
     {
       "id": "ibm-granite/granite-4.2-8b",
       "canonical_slug": "ibm-granite/granite-4.2-8b-20260831",
@@ -614,6 +740,7 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "logprobs",
         "max_tokens",
         "presence_penalty",
@@ -623,6 +750,7 @@
         "response_format",
         "seed",
         "stop",
+        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
@@ -777,6 +905,7 @@
         "logprobs",
         "max_tokens",
         "min_p",
+        "parallel_tool_calls",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
@@ -895,6 +1024,7 @@
         "logprobs",
         "max_tokens",
         "min_p",
+        "parallel_tool_calls",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
@@ -2939,13 +3069,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000016",
-        "input_cache_read": "0.000000013"
+        "prompt": "0.00000004998",
+        "completion": "0.00000009996",
+        "input_cache_read": "0.000000009996"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 393216,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -3582,73 +3712,6 @@
         "mandatory": false,
         "default_enabled": true,
         "supports_max_tokens": true
-      }
-    },
-    {
-      "id": "anthropic/claude-opus-5-fast",
-      "canonical_slug": "anthropic/claude-opus-5-fast-20260723",
-      "hugging_face_id": null,
-      "name": "Claude Opus 5 (Fast)",
-      "created": 1784912546,
-      "description": "Fast-mode variant of [Opus 5](/anthropic/claude-opus-5) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 5.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Claude",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00001",
-        "completion": "0.00005",
-        "web_search": "0.01",
-        "input_cache_read": "0.000001",
-        "input_cache_write": "0.0000125",
-        "input_cache_write_1h": "0.00002"
-      },
-      "top_provider": {
-        "context_length": 1000000,
-        "max_completion_tokens": 128000,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "reasoning_effort",
-        "response_format",
-        "stop",
-        "structured_outputs",
-        "tool_choice",
-        "tools",
-        "verbosity"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/anthropic/claude-opus-5-fast-20260723/endpoints"
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true,
-        "supported_efforts": [
-          "max",
-          "xhigh",
-          "high",
-          "medium",
-          "low"
-        ],
-        "default_effort": "high"
       }
     },
     {
@@ -7307,9 +7370,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -10826,73 +10889,6 @@
           "low"
         ],
         "default_effort": "medium"
-      }
-    },
-    {
-      "id": "anthropic/claude-opus-4.8-fast",
-      "canonical_slug": "anthropic/claude-4.8-opus-fast-20260528",
-      "hugging_face_id": null,
-      "name": "Anthropic: Claude Opus 4.8 (Fast)",
-      "created": 1779913703,
-      "description": "Fast-mode variant of [Opus 4.8](/anthropic/claude-opus-4.8) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 4.8. Learn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode Note: As of September...",
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Claude",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00001",
-        "completion": "0.00005",
-        "web_search": "0.01",
-        "input_cache_read": "0.000001",
-        "input_cache_write": "0.0000125",
-        "input_cache_write_1h": "0.00002"
-      },
-      "top_provider": {
-        "context_length": 1000000,
-        "max_completion_tokens": 128000,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "reasoning_effort",
-        "response_format",
-        "stop",
-        "structured_outputs",
-        "tool_choice",
-        "tools",
-        "verbosity"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/anthropic/claude-4.8-opus-fast-20260528/endpoints"
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "supported_efforts": [
-          "max",
-          "xhigh",
-          "high",
-          "medium",
-          "low"
-        ],
-        "default_effort": "high"
       }
     },
     {
@@ -14610,9 +14606,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000008092",
-        "completion": "0.00000016184",
-        "input_cache_read": "0.000000016184"
+        "prompt": "0.00000007476",
+        "completion": "0.00000014952",
+        "input_cache_read": "0.000000014952"
       },
       "top_provider": {
         "context_length": 1024000,

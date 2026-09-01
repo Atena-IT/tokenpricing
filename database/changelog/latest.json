@@ -1,48 +1,29 @@
 {
-  "generated_at": "2026-09-01T06:38:58.650914+00:00",
+  "generated_at": "2026-09-01T12:33:28.836288+00:00",
   "summary": {
     "model_additions": 0,
-    "model_removals": 5,
-    "pricing_changes": 6,
+    "model_removals": 1,
+    "pricing_changes": 4,
     "cache_price_changes": 3
   },
   "changes": [
     {
       "type": "pricing_changed",
-      "model_id": "anthracite-org/magnum-v4-72b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 3.0,
-        "output_per_million": 5.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 2.5,
-        "output_per_million": 5.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
       "model_id": "deepseek/deepseek-v4-flash-vision-exp",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.22,
-        "output_per_million": 0.66,
-        "cache_read_per_million": 0.007,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.44,
         "output_per_million": 1.32,
         "cache_read_per_million": 0.014,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.22,
+        "output_per_million": 0.66,
+        "cache_read_per_million": 0.007,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
       }
     },
     {
@@ -50,11 +31,11 @@
       "model_id": "deepseek/deepseek-v4-flash-vision-exp",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.007,
+        "cache_read_per_million": 0.014,
         "cache_creation_per_million": 0.0
       },
       "after": {
-        "cache_read_per_million": 0.014,
+        "cache_read_per_million": 0.007,
         "cache_creation_per_million": 0.0
       }
     },
@@ -63,16 +44,16 @@
       "model_id": "deepseek/deepseek-v4-pro-0813",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.66,
-        "output_per_million": 1.98,
-        "cache_read_per_million": 0.022,
+        "input_per_million": 1.1154,
+        "output_per_million": 3.3462,
+        "cache_read_per_million": 0.03718,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 1.1154,
-        "output_per_million": 3.3462,
-        "cache_read_per_million": 0.03718,
+        "input_per_million": 0.66,
+        "output_per_million": 1.98,
+        "cache_read_per_million": 0.022,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -82,11 +63,11 @@
       "model_id": "deepseek/deepseek-v4-pro-0813",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.022,
+        "cache_read_per_million": 0.03718,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.03718,
+        "cache_read_per_million": 0.022,
         "cache_creation_per_million": null
       }
     },
@@ -95,34 +76,15 @@
       "model_id": "gryphe/mythomax-l2-13b",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.4,
-        "output_per_million": 0.6,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.35,
         "output_per_million": 0.6,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "mancer/weaver",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.5,
-        "output_per_million": 0.75,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.4,
-        "output_per_million": 0.75,
+        "input_per_million": 0.06,
+        "output_per_million": 0.06,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
@@ -130,201 +92,65 @@
     },
     {
       "type": "pricing_changed",
-      "model_id": "meta-llama/llama-4-scout",
+      "model_id": "qwen/qwen3-235b-a22b-2507",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.11,
-        "output_per_million": 0.34,
-        "cache_read_per_million": 0.055,
+        "input_per_million": 0.09,
+        "output_per_million": 0.55,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.3,
-        "cache_read_per_million": null,
+        "input_per_million": 0.0875,
+        "output_per_million": 0.35,
+        "cache_read_per_million": 0.0175,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "meta-llama/llama-4-scout",
+      "model_id": "qwen/qwen3-235b-a22b-2507",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.055,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": null,
+        "cache_read_per_million": 0.0175,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "model_removed",
-      "model_id": "mistralai/codestral-2508:batch",
+      "model_id": "anthropic/claude-opus-4.7-fast",
       "model_type": "text",
       "before": {
-        "provider": "mistralai",
-        "model_id": "mistralai/codestral-2508:batch",
-        "display_name": "Mistral: Codestral 2508 (batch)",
+        "provider": "anthropic",
+        "model_id": "anthropic/claude-opus-4.7-fast",
+        "display_name": "Anthropic: Claude Opus 4.7 (Fast)",
         "pricing": {
-          "input_per_million": 0.3,
-          "output_per_million": 0.9,
-          "cache_read_per_million": 0.03,
-          "cache_creation_per_million": null,
+          "input_per_million": 30.0,
+          "output_per_million": 150.0,
+          "cache_read_per_million": 3.0,
+          "cache_creation_per_million": 37.5,
           "currency": "USD"
         },
-        "context_window": 256000,
-        "max_output_tokens": 204800,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.3,
-            "price_output": 0.9,
-            "price_cache_read": 0.03,
-            "price_cache_creation": null,
-            "last_updated": "2026-09-01T01:08:00.333331Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "mistralai/ministral-8b-2512:batch",
-      "model_type": "text",
-      "before": {
-        "provider": "mistralai",
-        "model_id": "mistralai/ministral-8b-2512:batch",
-        "display_name": "Mistral: Ministral 3 8B 2512 (batch)",
-        "pricing": {
-          "input_per_million": 0.15,
-          "output_per_million": 0.15,
-          "cache_read_per_million": 0.015,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 262144,
-        "max_output_tokens": 209715,
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
         "model_type": "text",
         "supports_vision": true,
         "supports_function_calling": true,
         "supports_streaming": true,
-        "category": "budget",
+        "category": "flagship",
         "sources": {
           "openrouter": {
-            "price_input": 0.15,
-            "price_output": 0.15,
-            "price_cache_read": 0.015,
-            "price_cache_creation": null,
-            "last_updated": "2026-09-01T01:08:00.333331Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "mistralai/mistral-large-2512:batch",
-      "model_type": "text",
-      "before": {
-        "provider": "mistralai",
-        "model_id": "mistralai/mistral-large-2512:batch",
-        "display_name": "Mistral: Mistral Large 3 2512 (batch)",
-        "pricing": {
-          "input_per_million": 0.5,
-          "output_per_million": 1.5,
-          "cache_read_per_million": 0.05,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 262144,
-        "max_output_tokens": 209715,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.5,
-            "price_output": 1.5,
-            "price_cache_read": 0.05,
-            "price_cache_creation": null,
-            "last_updated": "2026-09-01T01:08:00.333331Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "mistralai/mistral-medium-3.1:batch",
-      "model_type": "text",
-      "before": {
-        "provider": "mistralai",
-        "model_id": "mistralai/mistral-medium-3.1:batch",
-        "display_name": "Mistral: Mistral Medium 3.1 (batch)",
-        "pricing": {
-          "input_per_million": 0.4,
-          "output_per_million": 2.0,
-          "cache_read_per_million": 0.04,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 131072,
-        "max_output_tokens": 104857,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.4,
-            "price_output": 2.0,
-            "price_cache_read": 0.04,
-            "price_cache_creation": null,
-            "last_updated": "2026-09-01T01:08:00.333331Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "mistralai/mistral-small-2603:batch",
-      "model_type": "text",
-      "before": {
-        "provider": "mistralai",
-        "model_id": "mistralai/mistral-small-2603:batch",
-        "display_name": "Mistral: Mistral Small 4 (batch)",
-        "pricing": {
-          "input_per_million": 0.15,
-          "output_per_million": 0.6,
-          "cache_read_per_million": 0.015,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 262144,
-        "max_output_tokens": 209715,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.15,
-            "price_output": 0.6,
-            "price_cache_read": 0.015,
-            "price_cache_creation": null,
-            "last_updated": "2026-09-01T01:08:00.333331Z"
+            "price_input": 30.0,
+            "price_output": 150.0,
+            "price_cache_read": 3.0,
+            "price_cache_creation": 37.5,
+            "last_updated": "2026-09-01T06:38:58.442485Z"
           }
         },
         "affiliate_links": {}

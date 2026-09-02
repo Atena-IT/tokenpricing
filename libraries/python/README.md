@@ -111,6 +111,46 @@ get_pricing_sync("openai/gpt-4", currency="ERU")
 # ValueError: Unsupported currency: ERU. Did you mean 'EUR'?
 ```
 
+## SQLite backend (experimental, opt-in)
+
+By default the SDK fetches the full `prices.json` (~2.9 MB) over HTTP and
+caches it in memory for 6 hours.  An experimental SQLite backend is available
+for environments where faster cold-start loads and indexed queries are
+desirable.
+
+**Enable it** by setting the environment variable before running your program:
+
+```bash
+export TOKENPRICING_USE_SQLITE=1
+```
+
+When active, the SDK downloads **`prices-current.db`** — the _slim_ database
+from the rolling GitHub Release.  The slim database contains all v1 tables
+(`meta`, `providers`, `models`, `model_sources`, `models_fts`) but omits the
+`price_history` table, which the SDK never queries.  This makes the first
+download materially smaller than the full `prices.db`.
+
+The file is cached on disk at `~/.cache/tokenpricing/prices-current.db` with
+the same 6-hour TTL.  Lookups and searches are served via indexed SQL and
+FTS5 instead of scanning the whole JSON array.  On **any failure** (network
+error, schema mismatch, sqlite error) the SDK silently falls back to the
+existing JSON path — the public API and return types are identical either way.
+
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `TOKENPRICING_USE_SQLITE` | unset (OFF) | Set to `1` / `true` to enable |
+| `TOKENPRICING_DB_URL` | slim `prices-current.db` from `database-latest` | Override the download URL (e.g. to use the full `prices.db`) |
+| `TOKENPRICING_DB_CACHE_DIR` | `~/.cache/tokenpricing` | Override the on-disk cache directory |
+
+**Speedup rationale:** a single-model lookup reads ~tens of KB instead of
+the full 2.9 MB blob; provider/category/vision filters are answered by B-tree
+indexes; name searches use an FTS5 virtual table.  No new runtime dependency
+is added — only the stdlib `sqlite3` module (already in Python) and `httpx`
+(already a dependency) are used.
+
+Note: the binary DB is never bundled in the wheel; it is downloaded on first
+use.  This feature is off by default while it stabilizes.
+
 ## CLI
 
 Install via UV or pip, then use the `tokenpricing` command.

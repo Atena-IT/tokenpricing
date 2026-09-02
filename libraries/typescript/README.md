@@ -104,6 +104,44 @@ interface PricingInfo {
 }
 ```
 
+## SQLite Backend (optional, Node.js only)
+
+By default, the SDK fetches the full ~2.9 MB JSON dataset over HTTP on first use. For faster cold starts and indexed lookups, you can opt in to a SQLite read path that downloads and caches the slim `prices-current.db` (~a few MB) published with every database sync.
+
+### Enabling
+
+1. Install the optional peer dependency:
+
+   ```bash
+   npm install better-sqlite3
+   ```
+
+2. Set the environment variable before your process starts:
+
+   ```bash
+   TOKENPRICING_USE_SQLITE=1 node your-app.js
+   ```
+
+   Accepted truthy values: `1`, `true`, `yes` (case-insensitive). Any other value (including unset) uses the default JSON path.
+
+### How it works
+
+- On first call the SDK downloads `prices-current.db` from the rolling GitHub Release at `database-latest` and caches it in `<os.tmpdir()>/tokenpricing/prices-current.db`.
+- The cache file is reused for 6 hours (same TTL as the JSON path). After 6 hours the file is re-downloaded on the next request.
+- The database is validated: schema version must equal `1` (`PRAGMA user_version`) and the `models_fts` FTS table must be present. Any validation failure falls back to JSON transparently with a `console.warn`.
+
+### Environment variable overrides
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `TOKENPRICING_USE_SQLITE` | unset (disabled) | Set to `1`, `true`, or `yes` to enable |
+| `TOKENPRICING_DB_URL` | GitHub Release URL for `prices-current.db` | Override the download URL (e.g. to use `prices.db` with full history) |
+| `TOKENPRICING_DB_CACHE_DIR` | `<os.tmpdir()>/tokenpricing` | Override the local cache directory |
+
+### Fallback behaviour
+
+Any failure in the SQLite path (download error, schema mismatch, missing `better-sqlite3`, etc.) is caught and logged as a warning, and the SDK falls back to the HTTP-JSON path automatically. The SQLite backend never causes a hard failure.
+
 ## Data Source
 
 Pricing data is sourced from the canonical tokenpricing dataset generated in this repository from OpenRouter and LiteLLM.

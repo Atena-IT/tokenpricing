@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-03T12:34:53.260588+00:00",
+  "fetched_at": "2026-09-03T18:28:32.659825+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 424,
+  "model_count": 425,
   "data": [
     {
       "id": "meta/muse-spark-1.3-contributor",
@@ -738,6 +738,67 @@
       }
     },
     {
+      "id": "inclusionai/ling-3.0-flash-fin",
+      "canonical_slug": "inclusionai/ling-3.0-flash-fin-20260827",
+      "hugging_face_id": null,
+      "name": "Ling 3.0 Flash Fin",
+      "created": 1787846290,
+      "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000006",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000012"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inclusionai/ling-3.0-flash-fin-20260827/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true
+      }
+    },
+    {
       "id": "inclusionai/ling-3.0-flash-fin:free",
       "canonical_slug": "inclusionai/ling-3.0-flash-fin-20260827",
       "hugging_face_id": null,
@@ -1435,9 +1496,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000112",
-        "completion": "0.00000352",
-        "input_cache_read": "0.000000184"
+        "prompt": "0.000001148",
+        "completion": "0.000003608",
+        "input_cache_read": "0.0000001886"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -1638,10 +1699,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000425",
-        "completion": "0.00000255",
-        "input_cache_read": "0.000000085",
-        "input_cache_write": "0.00000053125"
+        "prompt": "0.00000042",
+        "completion": "0.000003",
+        "input_cache_read": "0.000000085"
       },
       "top_provider": {
         "context_length": 1000000,
@@ -2374,9 +2434,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000011154",
-        "completion": "0.0000033462",
-        "input_cache_read": "0.00000003718"
+        "prompt": "0.00000066",
+        "completion": "0.00000198",
+        "input_cache_read": "0.000000022"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -7864,9 +7924,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -13501,9 +13561,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000255",
-        "completion": "0.00001275",
-        "input_cache_read": "0.00000025599999"
+        "prompt": "0.0000025",
+        "completion": "0.000014",
+        "input_cache_read": "0.00000029"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -14795,9 +14855,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000104226",
-        "completion": "0.00000208452",
-        "input_cache_read": "0.000000086855"
+        "prompt": "0.000001034256",
+        "completion": "0.000002068512",
+        "input_cache_read": "0.000000086188"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -14953,9 +15013,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000088606",
-        "completion": "0.000000177212",
-        "input_cache_read": "0.0000000177212"
+        "prompt": "0.00000008092",
+        "completion": "0.00000016184",
+        "input_cache_read": "0.000000016184"
       },
       "top_provider": {
         "context_length": 1024000,

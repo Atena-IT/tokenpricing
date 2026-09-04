@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-04T06:36:47.452123+00:00",
+  "generated_at": "2026-09-04T12:33:36.807113+00:00",
   "summary": {
-    "model_additions": 1,
+    "model_additions": 0,
     "model_removals": 0,
     "pricing_changes": 1,
     "cache_price_changes": 1
@@ -12,16 +12,16 @@
       "model_id": "deepseek/deepseek-v4-flash-vision-exp",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.22,
-        "output_per_million": 0.66,
-        "cache_read_per_million": 0.007,
+        "input_per_million": 0.44,
+        "output_per_million": 1.32,
+        "cache_read_per_million": 0.014,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.44,
-        "output_per_million": 1.32,
-        "cache_read_per_million": 0.014,
+        "input_per_million": 0.22,
+        "output_per_million": 0.66,
+        "cache_read_per_million": 0.007,
         "cache_creation_per_million": 0.0,
         "currency": "USD"
       }
@@ -31,46 +31,12 @@
       "model_id": "deepseek/deepseek-v4-flash-vision-exp",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.007,
+        "cache_read_per_million": 0.014,
         "cache_creation_per_million": 0.0
       },
       "after": {
-        "cache_read_per_million": 0.014,
+        "cache_read_per_million": 0.007,
         "cache_creation_per_million": 0.0
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "x-ai/grok-4.3:batch",
-      "model_type": "text",
-      "after": {
-        "provider": "x-ai",
-        "model_id": "x-ai/grok-4.3:batch",
-        "display_name": "SpaceXAI: Grok 4.3 (batch)",
-        "pricing": {
-          "input_per_million": 1.0,
-          "output_per_million": 2.0,
-          "cache_read_per_million": 0.16,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 900000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 1.0,
-            "price_output": 2.0,
-            "price_cache_read": 0.16,
-            "price_cache_creation": null,
-            "last_updated": "2026-09-04T06:36:47.245903Z"
-          }
-        },
-        "affiliate_links": {}
       }
     }
   ]

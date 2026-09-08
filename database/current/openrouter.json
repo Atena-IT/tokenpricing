@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-08T00:57:33.315128+00:00",
+  "fetched_at": "2026-09-08T06:36:40.352634+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 428,
   "data": [
@@ -209,7 +209,7 @@
       "top_provider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -1830,9 +1830,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000022",
-        "completion": "0.00000066",
-        "input_cache_read": "0.000000007",
+        "prompt": "0.00000044",
+        "completion": "0.00000132",
+        "input_cache_read": "0.000000014",
         "overrides": [
           {
             "utc_days": [
@@ -4122,13 +4122,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000028",
-        "input_cache_read": "0.000000028"
+        "prompt": "0.000000065",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000016"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -32623,7 +32623,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000055",
+        "prompt": "0.0000004",
         "completion": "0.0000022"
       },
       "top_provider": {
@@ -34088,12 +34088,12 @@
         "instruct_type": "qwen3"
       },
       "pricing": {
-        "prompt": "0.00000012",
-        "completion": "0.00000024"
+        "prompt": "0.0000002275",
+        "completion": "0.00000091"
       },
       "top_provider": {
-        "context_length": 40960,
-        "max_completion_tokens": 16384,
+        "context_length": 131072,
+        "max_completion_tokens": 8192,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -39615,7 +39615,7 @@
       "top_provider": {
         "context_length": 16385,
         "max_completion_tokens": 4096,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [

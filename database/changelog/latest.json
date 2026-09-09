@@ -1,137 +1,719 @@
 {
-  "generated_at": "2026-09-09T00:56:59.213958+00:00",
+  "generated_at": "2026-09-09T06:37:40.119419+00:00",
   "summary": {
-    "model_additions": 1,
-    "model_removals": 1,
-    "pricing_changes": 7,
-    "cache_price_changes": 7
+    "model_additions": 35,
+    "model_removals": 0,
+    "pricing_changes": 5,
+    "cache_price_changes": 2
   },
   "changes": [
     {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
+      "type": "model_added",
+      "model_id": "azure_ai/gpt-6-astra",
       "model_type": "text",
-      "before": {
-        "input_per_million": 0.08554,
-        "output_per_million": 0.17108,
-        "cache_read_per_million": 0.017108,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      },
       "after": {
-        "input_per_million": 0.088606,
-        "output_per_million": 0.177212,
-        "cache_read_per_million": 0.017721,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.017108,
-        "cache_creation_per_million": 0.0
-      },
-      "after": {
-        "cache_read_per_million": 0.017721,
-        "cache_creation_per_million": 0.0
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-pro",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.949692,
-        "output_per_million": 1.899384,
-        "cache_read_per_million": 0.079141,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.95526,
-        "output_per_million": 1.91052,
-        "cache_read_per_million": 0.079605,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-pro",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.079141,
-        "cache_creation_per_million": 0.0
-      },
-      "after": {
-        "cache_read_per_million": 0.079605,
-        "cache_creation_per_million": 0.0
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "ibm-granite/granite-4.2-8b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.15,
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.06,
-        "output_per_million": 0.25,
-        "cache_read_per_million": 0.015,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "ibm-granite/granite-4.2-8b",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.015,
-        "cache_creation_per_million": null
+        "provider": "azure_ai",
+        "model_id": "azure_ai/gpt-6-astra",
+        "display_name": "azure_ai",
+        "pricing": {
+          "input_per_million": 10.0,
+          "output_per_million": 50.0,
+          "cache_read_per_million": 1.0,
+          "cache_creation_per_million": 12.5,
+          "currency": "USD"
+        },
+        "context_window": 922000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 10.0,
+            "price_output": 50.0,
+            "price_cache_read": 1.0,
+            "price_cache_creation": 12.5,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
       }
     },
     {
       "type": "model_added",
-      "model_id": "inception/mercury-2.5",
+      "model_id": "bedrock/us-gov-east-1/anthropic.claude-fable-5-1",
       "model_type": "text",
       "after": {
-        "provider": "inception",
-        "model_id": "inception/mercury-2.5",
-        "display_name": "Inception: Mercury 2.5",
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-east-1/anthropic.claude-fable-5-1",
+        "display_name": "bedrock",
         "pricing": {
-          "input_per_million": 0.04,
-          "output_per_million": 0.15,
-          "cache_read_per_million": 0.004,
+          "input_per_million": 12.0,
+          "output_per_million": 60.0,
+          "cache_read_per_million": 0.3,
+          "cache_creation_per_million": 15.0,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 12.0,
+            "price_output": 60.0,
+            "price_cache_read": 0.3,
+            "price_cache_creation": 15.0,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock/us-gov-east-1/anthropic.claude-opus-5",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-east-1/anthropic.claude-opus-5",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 6.0,
+          "output_per_million": 30.0,
+          "cache_read_per_million": 0.6,
+          "cache_creation_per_million": 7.5,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 6.0,
+            "price_output": 30.0,
+            "price_cache_read": 0.6,
+            "price_cache_creation": 7.5,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock/us-gov-east-1/nvidia.nemotron-nano-9b-v2",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-east-1/nvidia.nemotron-nano-9b-v2",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 0.072,
+          "output_per_million": 0.276,
+          "cache_read_per_million": null,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 260000,
-        "max_output_tokens": 65536,
+        "context_window": 128000,
+        "max_output_tokens": 8192,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.072,
+            "price_output": 0.276,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock/us-gov-west-1/amazon.nova-2-multimodal-embeddings-v1:0",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-west-1/amazon.nova-2-multimodal-embeddings-v1:0",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 0.162,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 8172,
+        "max_output_tokens": 8172,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.162,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock/us-gov-west-1/amazon.nova-lite-v1:0",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-west-1/amazon.nova-lite-v1:0",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 0.072,
+          "output_per_million": 0.288,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 300000,
+        "max_output_tokens": 10000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.072,
+            "price_output": 0.288,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock/us-gov-west-1/amazon.nova-micro-v1:0",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-west-1/amazon.nova-micro-v1:0",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 0.042,
+          "output_per_million": 0.168,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 10000,
         "model_type": "text",
         "supports_vision": false,
         "supports_function_calling": true,
         "supports_streaming": true,
         "category": "standard",
         "sources": {
-          "openrouter": {
-            "price_input": 0.04,
-            "price_output": 0.15,
-            "price_cache_read": 0.004,
+          "litellm": {
+            "price_input": 0.042,
+            "price_output": 0.168,
+            "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-09-09T00:56:58.984244Z"
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock/us-gov-west-1/anthropic.claude-fable-5-1",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-west-1/anthropic.claude-fable-5-1",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 12.0,
+          "output_per_million": 60.0,
+          "cache_read_per_million": 0.3,
+          "cache_creation_per_million": 15.0,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 12.0,
+            "price_output": 60.0,
+            "price_cache_read": 0.3,
+            "price_cache_creation": 15.0,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock/us-gov-west-1/anthropic.claude-opus-5",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-west-1/anthropic.claude-opus-5",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 6.0,
+          "output_per_million": 30.0,
+          "cache_read_per_million": 0.6,
+          "cache_creation_per_million": 7.5,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 6.0,
+            "price_output": 30.0,
+            "price_cache_read": 0.6,
+            "price_cache_creation": 7.5,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock/us-gov-west-1/nvidia.nemotron-nano-9b-v2",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "bedrock/us-gov-west-1/nvidia.nemotron-nano-9b-v2",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 0.072,
+          "output_per_million": 0.276,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 8192,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.072,
+            "price_output": 0.276,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-east-1/openai.gpt-oss-120b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-east-1/openai.gpt-oss-120b",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 0.18,
+          "output_per_million": 0.72,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.18,
+            "price_output": 0.72,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-east-1/openai.gpt-oss-20b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-east-1/openai.gpt-oss-20b",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 0.084,
+          "output_per_million": 0.36,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.084,
+            "price_output": 0.36,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-east-1/xai.grok-4.6",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-east-1/xai.grok-4.6",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 2.64,
+          "output_per_million": 7.92,
+          "cache_read_per_million": 0.66,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 500000,
+        "max_output_tokens": 500000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 2.64,
+            "price_output": 7.92,
+            "price_cache_read": 0.66,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-west-1/google.gemma-4-26b-a4b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-west-1/google.gemma-4-26b-a4b",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 0.156,
+          "output_per_million": 0.48,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 256000,
+        "max_output_tokens": 256000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.156,
+            "price_output": 0.48,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-west-1/google.gemma-4-31b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-west-1/google.gemma-4-31b",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 0.168,
+          "output_per_million": 0.48,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 256000,
+        "max_output_tokens": 256000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.168,
+            "price_output": 0.48,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-west-1/google.gemma-4-e2b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-west-1/google.gemma-4-e2b",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 0.048,
+          "output_per_million": 0.096,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.048,
+            "price_output": 0.096,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-west-1/openai.gpt-oss-120b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-west-1/openai.gpt-oss-120b",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 0.18,
+          "output_per_million": 0.72,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.18,
+            "price_output": 0.72,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-west-1/openai.gpt-oss-20b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-west-1/openai.gpt-oss-20b",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 0.084,
+          "output_per_million": 0.36,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.084,
+            "price_output": 0.36,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "bedrock_mantle/us-gov-west-1/xai.grok-4.6",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_mantle",
+        "model_id": "bedrock_mantle/us-gov-west-1/xai.grok-4.6",
+        "display_name": "bedrock_mantle",
+        "pricing": {
+          "input_per_million": 2.64,
+          "output_per_million": 7.92,
+          "cache_read_per_million": 0.66,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 500000,
+        "max_output_tokens": 500000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 2.64,
+            "price_output": 7.92,
+            "price_cache_read": 0.66,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.057948,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.018438,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "eu.twelvelabs.marengo-embed-2-7-v1:0",
+      "model_type": "embeddings",
+      "before": {
+        "input_per_million": 70.0,
+        "output_per_million": 0.0,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "eu.twelvelabs.marengo-embed-3-0-v1:0",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "eu.twelvelabs.marengo-embed-3-0-v1:0",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 500,
+        "max_output_tokens": 500,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
           }
         },
         "affiliate_links": {}
@@ -139,98 +721,569 @@
     },
     {
       "type": "pricing_changed",
-      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
+      "model_id": "qwen/qwen3-235b-a22b-2507",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.1,
-        "output_per_million": 1.1,
-        "cache_read_per_million": 0.07,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.09,
-        "output_per_million": 1.1,
+        "output_per_million": 0.55,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.22,
+        "output_per_million": 0.88,
         "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
-      "type": "cache_price_changed",
-      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
-      "model_type": "text",
+      "type": "pricing_changed",
+      "model_id": "twelvelabs.marengo-embed-2-7-v1:0",
+      "model_type": "embeddings",
       "before": {
-        "cache_read_per_million": 0.07,
-        "cache_creation_per_million": null
-      },
-      "after": {
+        "input_per_million": 70.0,
+        "output_per_million": 0.0,
         "cache_read_per_million": null,
-        "cache_creation_per_million": null
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "twelvelabs.marengo-embed-3-0-v1:0",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "bedrock",
+        "model_id": "twelvelabs.marengo-embed-3-0-v1:0",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 500,
+        "max_output_tokens": 500,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.anthropic.claude-3-haiku-20240307-v1:0",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.anthropic.claude-3-haiku-20240307-v1:0",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 0.3,
+          "output_per_million": 1.5,
+          "cache_read_per_million": 0.03,
+          "cache_creation_per_million": 0.375,
+          "currency": "USD"
+        },
+        "context_window": 200000,
+        "max_output_tokens": 4096,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.3,
+            "price_output": 1.5,
+            "price_cache_read": 0.03,
+            "price_cache_creation": 0.375,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.anthropic.claude-fable-5-1",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.anthropic.claude-fable-5-1",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 12.0,
+          "output_per_million": 60.0,
+          "cache_read_per_million": 0.3,
+          "cache_creation_per_million": 15.0,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 12.0,
+            "price_output": 60.0,
+            "price_cache_read": 0.3,
+            "price_cache_creation": 15.0,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.anthropic.claude-opus-5",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.anthropic.claude-opus-5",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 6.0,
+          "output_per_million": 30.0,
+          "cache_read_per_million": 0.6,
+          "cache_creation_per_million": 7.5,
+          "currency": "USD"
+        },
+        "context_window": 1000000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 6.0,
+            "price_output": 30.0,
+            "price_cache_read": 0.6,
+            "price_cache_creation": 7.5,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.nvidia.nemotron-nano-12b-v2",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.nvidia.nemotron-nano-12b-v2",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 0.24,
+          "output_per_million": 0.72,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 8192,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.24,
+            "price_output": 0.72,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.nvidia.nemotron-nano-3-30b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.nvidia.nemotron-nano-3-30b",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 0.072,
+          "output_per_million": 0.288,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 8192,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.072,
+            "price_output": 0.288,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.nvidia.nemotron-nano-9b-v2",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.nvidia.nemotron-nano-9b-v2",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 0.072,
+          "output_per_million": 0.276,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 8192,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.072,
+            "price_output": 0.276,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.nvidia.nemotron-super-3-120b",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.nvidia.nemotron-super-3-120b",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 0.18,
+          "output_per_million": 0.78,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 256000,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.18,
+            "price_output": 0.78,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.openai.gpt-oss-120b-1:0",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.openai.gpt-oss-120b-1:0",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 0.18,
+          "output_per_million": 0.72,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.18,
+            "price_output": 0.72,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.openai.gpt-oss-20b-1:0",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.openai.gpt-oss-20b-1:0",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 0.084,
+          "output_per_million": 0.36,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 128000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.084,
+            "price_output": 0.36,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "us-gov.xai.grok-4.6",
+      "model_type": "text",
+      "after": {
+        "provider": "bedrock_converse",
+        "model_id": "us-gov.xai.grok-4.6",
+        "display_name": "bedrock_converse",
+        "pricing": {
+          "input_per_million": 2.64,
+          "output_per_million": 7.92,
+          "cache_read_per_million": 0.66,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 500000,
+        "max_output_tokens": 500000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 2.64,
+            "price_output": 7.92,
+            "price_cache_read": 0.66,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "tencent/hy3",
-      "model_type": "text",
+      "model_id": "us.twelvelabs.marengo-embed-2-7-v1:0",
+      "model_type": "embeddings",
       "before": {
-        "input_per_million": 0.0825,
-        "output_per_million": 0.33,
-        "cache_read_per_million": 0.020625,
+        "input_per_million": 70.0,
+        "output_per_million": 0.0,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.132,
-        "output_per_million": 0.528,
-        "cache_read_per_million": 0.033,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "tencent/hy3",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.020625,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.033,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-4.6",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.55,
-        "output_per_million": 2.2,
-        "cache_read_per_million": 0.11,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.43,
-        "output_per_million": 1.75,
-        "cache_read_per_million": 0.08,
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
-      "type": "cache_price_changed",
-      "model_id": "z-ai/glm-4.6",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.11,
-        "cache_creation_per_million": null
-      },
+      "type": "model_added",
+      "model_id": "us.twelvelabs.marengo-embed-3-0-v1:0",
+      "model_type": "embeddings",
       "after": {
-        "cache_read_per_million": 0.08,
-        "cache_creation_per_million": null
+        "provider": "bedrock",
+        "model_id": "us.twelvelabs.marengo-embed-3-0-v1:0",
+        "display_name": "bedrock",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 500,
+        "max_output_tokens": 500,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "vertex_ai/lyria-002",
+      "model_type": "speech",
+      "after": {
+        "provider": "vertex_ai",
+        "model_id": "vertex_ai/lyria-002",
+        "display_name": "vertex_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "speech",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "vertex_ai/lyria-3-clip-preview",
+      "model_type": "speech",
+      "after": {
+        "provider": "vertex_ai",
+        "model_id": "vertex_ai/lyria-3-clip-preview",
+        "display_name": "vertex_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 8192,
+        "model_type": "speech",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "vertex_ai/lyria-3-pro-preview",
+      "model_type": "speech",
+      "after": {
+        "provider": "vertex_ai",
+        "model_id": "vertex_ai/lyria-3-pro-preview",
+        "display_name": "vertex_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 8192,
+        "model_type": "speech",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-09-09T06:37:39.984234Z"
+          }
+        },
+        "affiliate_links": {}
       }
     },
     {
@@ -238,18 +1291,18 @@
       "model_id": "~moonshotai/kimi-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 2.5,
-        "output_per_million": 14.0,
-        "cache_read_per_million": 0.29,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 2.55,
         "output_per_million": 12.75,
         "cache_read_per_million": 0.256,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 2.4,
+        "output_per_million": 12.0,
+        "cache_read_per_million": 0.24,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -257,46 +1310,12 @@
       "model_id": "~moonshotai/kimi-latest",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.29,
+        "cache_read_per_million": 0.256,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.256,
+        "cache_read_per_million": 0.24,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "inception/mercury-2.5-preview",
-      "model_type": "text",
-      "before": {
-        "provider": "inception",
-        "model_id": "inception/mercury-2.5-preview",
-        "display_name": "Inception: Mercury 2.5 Preview",
-        "pricing": {
-          "input_per_million": 0.2,
-          "output_per_million": 0.75,
-          "cache_read_per_million": 0.02,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 260000,
-        "max_output_tokens": 65536,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.2,
-            "price_output": 0.75,
-            "price_cache_read": 0.02,
-            "price_cache_creation": null,
-            "last_updated": "2026-09-08T18:28:23.381403Z"
-          }
-        },
-        "affiliate_links": {}
       }
     }
   ]

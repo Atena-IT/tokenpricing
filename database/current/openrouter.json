@@ -1,9 +1,349 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-11T12:33:09.444828+00:00",
+  "fetched_at": "2026-09-11T18:26:56.353407+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 439,
+  "model_count": 443,
   "data": [
+    {
+      "id": "~openai/gpt-astra-latest",
+      "canonical_slug": "~openai/gpt-astra-latest",
+      "alias_target": {
+        "name": "OpenAI: GPT-6 Astra",
+        "slug": "openai/gpt-6-astra"
+      },
+      "hugging_face_id": null,
+      "name": "OpenAI GPT Astra Latest",
+      "created": 1789130932,
+      "description": "This model always redirects to the latest model in the OpenAI GPT Astra family.",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00001",
+        "completion": "0.00005",
+        "web_search": "0.01",
+        "input_cache_read": "0.000001",
+        "input_cache_write": "0.0000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.00002",
+            "completion": "0.000075",
+            "input_cache_read": "0.000002",
+            "input_cache_write": "0.000025"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/~openai/gpt-astra-latest/endpoints"
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      }
+    },
+    {
+      "id": "~openai/gpt-sol-latest",
+      "canonical_slug": "~openai/gpt-sol-latest",
+      "alias_target": {
+        "name": "OpenAI: GPT-5.6 Sol",
+        "slug": "openai/gpt-5.6-sol"
+      },
+      "hugging_face_id": null,
+      "name": "OpenAI GPT Sol Latest",
+      "created": 1789130928,
+      "description": "This model always redirects to the latest model in the OpenAI GPT Sol family.",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": "2026-02-16",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/~openai/gpt-sol-latest/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low",
+          "none"
+        ],
+        "default_effort": "medium"
+      }
+    },
+    {
+      "id": "~openai/gpt-terra-latest",
+      "canonical_slug": "~openai/gpt-terra-latest",
+      "alias_target": {
+        "name": "OpenAI: GPT-5.6 Terra",
+        "slug": "openai/gpt-5.6-terra"
+      },
+      "hugging_face_id": null,
+      "name": "OpenAI GPT Terra Latest",
+      "created": 1789130925,
+      "description": "This model always redirects to the latest model in the OpenAI GPT Terra family.",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.000012",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000018",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": "2026-02-16",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/~openai/gpt-terra-latest/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low",
+          "none"
+        ],
+        "default_effort": "medium"
+      }
+    },
+    {
+      "id": "~openai/gpt-luna-latest",
+      "canonical_slug": "~openai/gpt-luna-latest",
+      "alias_target": {
+        "name": "OpenAI: GPT-5.6 Luna",
+        "slug": "openai/gpt-5.6-luna"
+      },
+      "hugging_face_id": null,
+      "name": "OpenAI GPT Luna Latest",
+      "created": 1789130922,
+      "description": "This model always redirects to the latest model in the OpenAI GPT Luna family.",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000002",
+        "completion": "0.0000012",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000002",
+        "input_cache_write": "0.00000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.0000004",
+            "completion": "0.0000018",
+            "input_cache_read": "0.00000004",
+            "input_cache_write": "0.0000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": "2026-02-16",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/~openai/gpt-luna-latest/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low",
+          "none"
+        ],
+        "default_effort": "medium"
+      }
+    },
     {
       "id": "sakana/fugu-ultra-v2",
       "canonical_slug": "sakana/fugu-ultra-v2-20260911",
@@ -144,6 +484,77 @@
           "high"
         ],
         "default_effort": "high"
+      }
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash-vl",
+      "canonical_slug": "inclusionai/ling-3.0-flash-vl-20260910",
+      "hugging_face_id": "inclusionAI/Ling-3.0-flash-VL",
+      "name": "inclusionAI: Ling 3.0 Flash VL",
+      "created": 1789056114,
+      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000006",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000012"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 32768,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inclusionai/ling-3.0-flash-vl-20260910/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 24.8,
+          "coding_index": 57,
+          "agentic_index": 30
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true
       }
     },
     {
@@ -2778,9 +3189,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000097",
-        "completion": "0.0000033077",
-        "input_cache_read": "0.000000194"
+        "prompt": "0.0000008727",
+        "completion": "0.00000336",
+        "input_cache_read": "0.0000001639"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -3952,13 +4363,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000066"
+        "prompt": "0.00000057948",
+        "completion": "0.00000173844",
+        "input_cache_read": "0.000000019316"
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "context_length": 1024000,
+        "max_completion_tokens": 384000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -9354,9 +9765,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -10295,13 +10706,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000966",
-        "completion": "0.000003036",
-        "input_cache_read": "0.0000001932"
+        "prompt": "0.0000006",
+        "completion": "0.000002",
+        "input_cache_read": "0.00000015"
       },
       "top_provider": {
-        "context_length": 1000000,
-        "max_completion_tokens": 131072,
+        "context_length": 202752,
+        "max_completion_tokens": 182476,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12463,7 +12874,7 @@
       "top_provider": {
         "context_length": 1000000,
         "max_completion_tokens": 128000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -15068,93 +15479,6 @@
       }
     },
     {
-      "id": "~openai/gpt-latest",
-      "canonical_slug": "~openai/gpt-latest",
-      "alias_target": {
-        "name": "OpenAI: GPT-5.6 Sol",
-        "slug": "openai/gpt-5.6-sol"
-      },
-      "hugging_face_id": null,
-      "name": "OpenAI GPT Latest",
-      "created": 1777318334,
-      "description": "This model always redirects to the latest model in the OpenAI GPT family.",
-      "context_length": 1050000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "file",
-          "image",
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Router",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.000002",
-        "completion": "0.00001",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000002",
-        "input_cache_write": "0.0000025",
-        "overrides": [
-          {
-            "min_prompt_tokens": 272000,
-            "prompt": "0.000004",
-            "completion": "0.000015",
-            "input_cache_read": "0.0000004",
-            "input_cache_write": "0.000005"
-          }
-        ]
-      },
-      "top_provider": {
-        "context_length": 1050000,
-        "max_completion_tokens": 128000,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_completion_tokens",
-        "max_tokens",
-        "reasoning",
-        "reasoning_effort",
-        "response_format",
-        "seed",
-        "structured_outputs",
-        "tool_choice",
-        "tools"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": "2026-02-16",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/~openai/gpt-latest/endpoints"
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true,
-        "supported_efforts": [
-          "max",
-          "xhigh",
-          "high",
-          "medium",
-          "low",
-          "none"
-        ],
-        "default_effort": "medium"
-      }
-    },
-    {
       "id": "qwen/qwen3.5-plus-20260420",
       "canonical_slug": "qwen/qwen3.5-plus-20260420",
       "hugging_face_id": null,
@@ -16156,9 +16480,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000947778",
+        "completion": "0.000001895556",
+        "input_cache_read": "0.0000000789815"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -16314,9 +16638,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000088606",
-        "completion": "0.000000177212",
-        "input_cache_read": "0.0000000177212"
+        "prompt": "0.00000008568",
+        "completion": "0.00000017136",
+        "input_cache_read": "0.000000017136"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -22691,13 +23015,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.00000027",
+        "completion": "0.00000108",
+        "input_cache_read": "0.000000027"
       },
       "top_provider": {
-        "context_length": 204800,
-        "max_completion_tokens": 131072,
+        "context_length": 200000,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,

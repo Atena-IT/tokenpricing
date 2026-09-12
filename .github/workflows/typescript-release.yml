@@ -33,7 +33,7 @@ jobs:
       tag: ${{ steps.bump.outputs.tag }}
       level: ${{ steps.bump.outputs.level }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # full history + tags for the conventional-commit scan
 
@@ -113,7 +113,7 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Install pnpm
         uses: pnpm/action-setup@v6
@@ -151,7 +151,7 @@ jobs:
     needs: [version, publish-npm]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 

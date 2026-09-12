@@ -3,6 +3,7 @@ import { useMemo, useState, type ChangeEvent } from "react";
 
 import type { ModelRow } from "../lib/data";
 import { formatInteger, formatPrice } from "../lib/utils";
+import { FileEstimate } from "./file-estimate";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Combobox, type ComboboxOption } from "./ui/combobox";
@@ -111,6 +112,7 @@ export function CalculatorView({
             <TokenField label="Cache read tokens" value={usage.cacheRead} onChange={setField("cacheRead")} />
             <TokenField label="Cache write tokens" value={usage.cacheWrite} onChange={setField("cacheWrite")} />
           </div>
+          <FileEstimate onEstimate={(tokens) => setUsage((current) => ({ ...current, input: String(tokens) }))} />
         </CardContent>
       </Card>
 

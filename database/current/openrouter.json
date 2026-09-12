@@ -1,9 +1,111 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-12T00:54:29.763041+00:00",
+  "fetched_at": "2026-09-12T06:33:06.134290+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 443,
+  "model_count": 445,
   "data": [
+    {
+      "id": "inference-net/schematron-v2-turbo",
+      "canonical_slug": "inference-net/schematron-v2-turbo-20260902",
+      "hugging_face_id": "inference-net/schematron-v2-granite-4.0-h-micro",
+      "name": "Inference.net: Schematron V2 Turbo",
+      "created": 1789176949,
+      "description": "Schematron V2 Turbo is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes throughput for high-volume extraction workloads. Extraction instructions must be supplied through a JSON schema in response_format rather...",
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000003",
+        "completion": "0.00000015"
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": 8192,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inference-net/schematron-v2-turbo-20260902/endpoints"
+      }
+    },
+    {
+      "id": "inference-net/schematron-v2-small",
+      "canonical_slug": "inference-net/schematron-v2-small-20260902",
+      "hugging_face_id": "inference-net/schematron-v2-llama-3.2-3b",
+      "name": "Inference.net: Schematron V2 Small",
+      "created": 1789176933,
+      "description": "Schematron V2 Small is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes extraction quality for complex schemas and long pages. Extraction instructions must be supplied through a JSON schema...",
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000005",
+        "completion": "0.00000023"
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": 4096,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inference-net/schematron-v2-small-20260902/endpoints"
+      }
+    },
     {
       "id": "~openai/gpt-astra-latest",
       "canonical_slug": "~openai/gpt-astra-latest",
@@ -5413,13 +5515,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000016",
-        "input_cache_read": "0.000000013"
+        "prompt": "0.00000004",
+        "completion": "0.00000008",
+        "input_cache_read": "0.000000008"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 393216,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5485,9 +5587,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000065",
-        "completion": "0.00000018",
-        "input_cache_read": "0.000000016"
+        "prompt": "0.00000004",
+        "completion": "0.00000008",
+        "input_cache_read": "0.000000008"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -7725,9 +7827,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000015351525",
-        "completion": "0.00000770013",
-        "input_cache_read": "0.000000175446"
+        "prompt": "0.00000230272875",
+        "completion": "0.000011550195",
+        "input_cache_read": "0.000000263169"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -12874,7 +12976,7 @@
       "top_provider": {
         "context_length": 1000000,
         "max_completion_tokens": 128000,
-        "is_moderated": true
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -15273,9 +15375,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000015351525",
-        "completion": "0.00000770013",
-        "input_cache_read": "0.000000175446"
+        "prompt": "0.00000230272875",
+        "completion": "0.000011550195",
+        "input_cache_read": "0.000000263169"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -16480,9 +16582,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000849816",
-        "completion": "0.000001699632",
-        "input_cache_read": "0.000000070818"
+        "prompt": "0.000000819366",
+        "completion": "0.000001638732",
+        "input_cache_read": "0.0000000682805"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -16638,9 +16740,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006734",
-        "completion": "0.00000013468",
-        "input_cache_read": "0.000000013468"
+        "prompt": "0.00000006678",
+        "completion": "0.00000013356",
+        "input_cache_read": "0.000000013356"
       },
       "top_provider": {
         "context_length": 1024000,

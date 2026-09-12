@@ -1,12 +1,27 @@
-name: Canonical Database Sync
+name: Publish Database Release
 
+# Builds the derived SQLite databases from the committed canonical JSON and
+# publishes them to the rolling `database-latest` GitHub Release, giving
+# consumers stable download URLs:
+#   https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices.db
+#   https://github.com/Atena-IT/tokenpricing/releases/download/database-latest/prices-current.db
+#
+# Two assets are published:
+#   prices.db          — full database including price_history (dashboard / history charts)
+#   prices-current.db  — slim database without price_history (SDK default, smaller download)
+#
+# Triggers:
+#   - workflow_dispatch: manual, on-demand publish
+#   - push of a `database-release-*` tag: lets the release be (re)published from
+#     any ref, including before this workflow lands on the default branch
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "13 */6 * * *"
+  push:
+    tags:
+      - "database-release-*"
 
 jobs:
-  sync:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,41 +36,9 @@ jobs:
       - name: Install dependencies
         working-directory: services/sync
         run: uv sync
-      - name: Refresh canonical database
-        working-directory: services/sync
-        run: uv run tokenpricing-sync sync
-      - name: Prune old history snapshots
-        run: |
-          mapfile -t history_files < <(ls -1t database/history/prices-*.json 2>/dev/null || true)
-          if [ "${#history_files[@]}" -gt 42 ]; then
-            printf '%s\0' "${history_files[@]:42}" | xargs -0 rm -f --
-          fi
-      - name: Build prices.db
+      - name: Build prices.db from committed canonical JSON
         working-directory: services/sync
         run: uv run tokenpricing-sync build-db
-      - name: Commit refreshed data
-        # Only scheduled runs persist refreshed data to git. Manual dispatches
-        # refresh the release/artifact for testing without mutating the branch.
-        if: github.event_name == 'schedule'
-        run: |
-          if git diff --quiet; then
-            echo "No database changes"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add database/current database/history database/changelog
-          git commit -m "chore: refresh canonical pricing database"
-          git push
-      - name: Upload databases as workflow artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: prices-db
-          path: |
-            database/current/prices.db
-            database/current/prices-current.db
-          if-no-files-found: error
-          retention-days: 7
       - name: Publish databases to the rolling database-latest release
         uses: softprops/action-gh-release@v2
         with:

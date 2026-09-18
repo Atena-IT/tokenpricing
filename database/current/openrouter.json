@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-18T00:56:30.217289+00:00",
+  "fetched_at": "2026-09-18T06:36:53.821703+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 445,
   "data": [
@@ -74,90 +74,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
-        "overrides": [
-          {
-            "utc_days": [
-              "saturday",
-              "sunday"
-            ],
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 0,
-            "utc_end": 100,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 100,
-            "utc_end": 400,
-            "prompt": "0.00000132",
-            "completion": "0.00000396",
-            "input_cache_read": "0.000000044"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 400,
-            "utc_end": 600,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 600,
-            "utc_end": 1000,
-            "prompt": "0.00000132",
-            "completion": "0.00000396",
-            "input_cache_read": "0.000000044"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 1000,
-            "utc_end": 0,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          }
-        ]
+        "prompt": "0.0000007",
+        "completion": "0.00000296",
+        "input_cache_read": "0.000000033"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -1028,9 +947,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
         "overrides": [
           {
             "utc_days": [
@@ -4910,9 +4829,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -6040,13 +5959,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.0000001",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.0000000558",
+        "completion": "0.0000001767",
+        "input_cache_read": "0.0000000088"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 393216,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -6278,6 +6197,138 @@
         "tools",
         "top_k",
         "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": [],
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/deepseek/deepseek-v4-flash-20260731/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1237,
+            "win_rate": 48.6,
+            "rank": 36
+          },
+          {
+            "arena": "models",
+            "category": "asciiart",
+            "elo": 1111,
+            "win_rate": 33.3,
+            "rank": 58
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1245,
+            "win_rate": 46.5,
+            "rank": 40
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1197,
+            "win_rate": 41.1,
+            "rank": 54
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1232,
+            "win_rate": 44.6,
+            "rank": 38
+          },
+          {
+            "arena": "models",
+            "category": "svg",
+            "elo": 1211,
+            "win_rate": 45.1,
+            "rank": 24
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1252,
+            "win_rate": 47,
+            "rank": 35
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1251,
+            "win_rate": 46.8,
+            "rank": 38
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 34.5,
+          "coding_index": 69.1,
+          "agentic_index": 41.7
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731:free",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260731",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "name": "DeepSeek: DeepSeek V4 Flash 0731 (free)",
+      "created": 1785478908,
+      "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "DeepSeek",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 393216,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
         "top_p"
       ],
       "default_parameters": {},
@@ -8264,9 +8315,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000021",
-        "completion": "0.00001095",
-        "input_cache_read": "0.00000023"
+        "prompt": "0.000002",
+        "completion": "0.0000112",
+        "input_cache_read": "0.000000232"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11245,13 +11296,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000014",
-        "completion": "0.0000044",
-        "input_cache_read": "0.00000014"
+        "prompt": "0.0000004875",
+        "completion": "0.00000156",
+        "input_cache_read": "0.000000091"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 163840,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -16000,9 +16051,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000021",
-        "completion": "0.00001095",
-        "input_cache_read": "0.00000023"
+        "prompt": "0.000002",
+        "completion": "0.0000112",
+        "input_cache_read": "0.000000232"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -24432,6 +24483,7 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "logprobs",
         "max_completion_tokens",
         "max_tokens",
@@ -27256,128 +27308,6 @@
       }
     },
     {
-      "id": "mistralai/mistral-large-2512",
-      "canonical_slug": "mistralai/mistral-large-2512",
-      "hugging_face_id": "",
-      "name": "Mistral: Mistral Large 3 2512",
-      "created": 1764624472,
-      "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.0000015",
-        "input_cache_read": "0.00000005"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 209715,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.0645,
-        "top_p": null,
-        "frequency_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/mistralai/mistral-large-2512/endpoints"
-      },
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1128,
-            "win_rate": 46.9,
-            "rank": 76
-          },
-          {
-            "arena": "models",
-            "category": "asciiart",
-            "elo": 1086,
-            "win_rate": 40.3,
-            "rank": 62
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1157,
-            "win_rate": 47.6,
-            "rank": 74
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1151,
-            "win_rate": 45.7,
-            "rank": 75
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 1103,
-            "win_rate": 41.5,
-            "rank": 87
-          },
-          {
-            "arena": "models",
-            "category": "svg",
-            "elo": 1015,
-            "win_rate": 38,
-            "rank": 79
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1117,
-            "win_rate": 43,
-            "rank": 81
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1175,
-            "win_rate": 49.5,
-            "rank": 72
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": 9.7,
-          "coding_index": 20.1,
-          "agentic_index": 2.4
-        }
-      }
-    },
-    {
       "id": "mistralai/mistral-large-2512:batch",
       "canonical_slug": "mistralai/mistral-large-2512",
       "hugging_face_id": "",
@@ -30026,13 +29956,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.000002",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.00000043",
+        "completion": "0.00000175",
+        "input_cache_read": "0.00000008"
       },
       "top_provider": {
-        "context_length": 202752,
-        "max_completion_tokens": 131072,
+        "context_length": 198000,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,

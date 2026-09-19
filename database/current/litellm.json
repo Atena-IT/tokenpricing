@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-09-19T00:54:41.528600+00:00",
+  "fetched_at": "2026-09-19T06:33:46.849533+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 4316,
+  "model_count": 4318,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -48910,7 +48910,8 @@
       "mode": "audio_transcription",
       "source": "https://cloud.google.com/speech-to-text/pricing",
       "supported_endpoints": [
-        "/v1/audio/transcriptions"
+        "/v1/audio/transcriptions",
+        "/v1/realtime"
       ]
     },
     "vertex_ai/claude-3-5-haiku": {
@@ -63489,6 +63490,34 @@
       ],
       "supported_output_modalities": [
         "video"
+      ]
+    },
+    "xai/grok-voice-transcribe-1.0": {
+      "input_cost_per_second": 2.778e-05,
+      "litellm_provider": "xai",
+      "metadata": {
+        "calculation": "$0.10/3600 seconds = $0.00002778 per second",
+        "original_pricing_per_hour": 0.1
+      },
+      "mode": "audio_transcription",
+      "output_cost_per_second": 0.0,
+      "source": "https://docs.x.ai/developers/pricing",
+      "supported_endpoints": [
+        "/v1/audio/transcriptions"
+      ]
+    },
+    "xai/grok-voice-transcribe-2.0": {
+      "input_cost_per_second": 2.778e-05,
+      "litellm_provider": "xai",
+      "metadata": {
+        "calculation": "$0.10/3600 seconds = $0.00002778 per second",
+        "original_pricing_per_hour": 0.1
+      },
+      "mode": "audio_transcription",
+      "output_cost_per_second": 0.0,
+      "source": "https://docs.x.ai/developers/pricing",
+      "supported_endpoints": [
+        "/v1/audio/transcriptions"
       ]
     },
     "low/1024-x-1024/grok-imagine-image-2.0": {

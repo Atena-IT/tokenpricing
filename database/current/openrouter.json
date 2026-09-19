@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-19T00:54:41.447300+00:00",
+  "fetched_at": "2026-09-19T06:33:46.779645+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 446,
+  "model_count": 447,
   "data": [
     {
       "id": "prism-ml/ternary-bonsai-2-27b",
@@ -73,6 +73,71 @@
           "medium"
         ],
         "default_effort": "xhigh"
+      }
+    },
+    {
+      "id": "z-ai/glm-5.3-flashx",
+      "canonical_slug": "z-ai/glm-5.3-flashx-20260918",
+      "hugging_face_id": "",
+      "name": "Z.ai: GLM 5.3 FlashX",
+      "created": 1789744020,
+      "description": "GLM-5.3-FlashX is the high-speed variant of Z.ai's GLM-5.3-Flash, a native multimodal model delivering inference speeds of up to 200 tokens/s. Built on the same hybrid sparse and linear attention architecture...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000037",
+        "completion": "0.00000125",
+        "input_cache_read": "0.000000075"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 131072,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 1,
+        "top_p": 0.95
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/z-ai/glm-5.3-flashx-20260918/endpoints"
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low"
+        ],
+        "default_effort": "max"
       }
     },
     {
@@ -5975,13 +6040,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000005104",
-        "completion": "0.00000015312",
-        "input_cache_read": "0.000000001624"
+        "prompt": "0.00000004752",
+        "completion": "0.00000014256",
+        "input_cache_read": "0.000000001512"
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "context_length": 1024000,
+        "max_completion_tokens": 384000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -6047,9 +6112,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000012",
-        "input_cache_read": "0.000000012"
+        "prompt": "0.000000065",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000016"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -8324,9 +8389,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000195",
-        "completion": "0.00001092",
-        "input_cache_read": "0.0000002262"
+        "prompt": "0.000001875",
+        "completion": "0.0000105",
+        "input_cache_read": "0.0000002175"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -16060,9 +16125,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000195",
-        "completion": "0.00001092",
-        "input_cache_read": "0.0000002262"
+        "prompt": "0.000001875",
+        "completion": "0.0000105",
+        "input_cache_read": "0.0000002175"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -17267,9 +17332,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066555",
-        "completion": "0.0000013311",
-        "input_cache_read": "0.0000000554625"
+        "prompt": "0.000000564282",
+        "completion": "0.000001128564",
+        "input_cache_read": "0.0000000470235"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -17425,9 +17490,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004844",
-        "completion": "0.00000009688",
-        "input_cache_read": "0.000000009688"
+        "prompt": "0.00000004732",
+        "completion": "0.00000009464",
+        "input_cache_read": "0.000000009464"
       },
       "top_provider": {
         "context_length": 1024000,

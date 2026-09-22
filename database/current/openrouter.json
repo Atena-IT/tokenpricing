@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-22T00:56:47.120037+00:00",
+  "fetched_at": "2026-09-22T06:38:00.578182+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 443,
+  "model_count": 445,
   "data": [
     {
       "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
@@ -490,9 +490,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000558624",
-        "completion": "0.000001675872",
-        "input_cache_read": "0.0000000186208"
+        "prompt": "0.000000638616",
+        "completion": "0.000001915848",
+        "input_cache_read": "0.0000000212872"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -1363,9 +1363,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
         "overrides": [
           {
             "utc_days": [
@@ -1564,6 +1564,70 @@
       }
     },
     {
+      "id": "nex-agi/nex-n2.5-mini",
+      "canonical_slug": "nex-agi/nex-n2.5-mini-20260908",
+      "hugging_face_id": "nex-agi/Nex-N2.5-mini",
+      "name": "Nex AGI: Nex-N2.5-Mini",
+      "created": 1788890061,
+      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Qwen3",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000000025",
+        "completion": "0.0000001",
+        "input_cache_read": "0.0000000025"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "structured_outputs",
+        "temperature",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "top_k": 40
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/nex-agi/nex-n2.5-mini-20260908/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "supported_efforts": [
+          "high",
+          "medium",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
       "id": "nex-agi/nex-n2.5-mini:free",
       "canonical_slug": "nex-agi/nex-n2.5-mini-20260908",
       "hugging_face_id": "nex-agi/Nex-N2.5-mini",
@@ -1615,9 +1679,75 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-09-25",
       "links": {
         "details": "/api/v1/models/nex-agi/nex-n2.5-mini-20260908/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "supported_efforts": [
+          "high",
+          "medium",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
+      "id": "nex-agi/nex-n2.5-pro",
+      "canonical_slug": "nex-agi/nex-n2.5-pro-20260907",
+      "hugging_face_id": "nex-agi/Nex-N2.5-Pro",
+      "name": "Nex AGI: Nex-N2.5-Pro",
+      "created": 1788890050,
+      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Qwen3",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000000075",
+        "completion": "0.00000025",
+        "input_cache_read": "0.000000015"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "top_k": 40
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/nex-agi/nex-n2.5-pro-20260907/endpoints"
       },
       "reasoning": {
         "mandatory": false,
@@ -1681,7 +1811,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-09-25",
       "links": {
         "details": "/api/v1/models/nex-agi/nex-n2.5-pro-20260907/endpoints"
       },
@@ -3282,11 +3412,11 @@
       "pricing": {
         "prompt": "0.000000075",
         "completion": "0.00000025",
-        "input_cache_read": "0.00000002"
+        "input_cache_read": "0.000000015"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 102400,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -3997,13 +4127,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000007839",
-        "completion": "0.0000026532",
-        "input_cache_read": "0.00000015678"
+        "prompt": "0.0000006545",
+        "completion": "0.000002057",
+        "input_cache_read": "0.000000107525"
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 235929,
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -4116,9 +4246,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000784",
-        "completion": "0.000002464",
-        "input_cache_read": "0.0000001456"
+        "prompt": "0.00000084",
+        "completion": "0.00000264",
+        "input_cache_read": "0.000000156"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -5180,9 +5310,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -6322,7 +6452,7 @@
       "pricing": {
         "prompt": "0.00000003",
         "completion": "0.000001",
-        "input_cache_read": "0.000000012"
+        "input_cache_read": "0.000000008"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -30857,8 +30987,8 @@
         "completion": "0.0000012"
       },
       "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 32768,
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,

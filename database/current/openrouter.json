@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-23T00:55:05.440214+00:00",
+  "fetched_at": "2026-09-23T06:38:35.329355+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 454,
   "data": [
@@ -106,6 +106,7 @@
       "per_request_limits": null,
       "supported_parameters": [
         "include_reasoning",
+        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -270,6 +271,7 @@
       "per_request_limits": null,
       "supported_parameters": [
         "include_reasoning",
+        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -450,6 +452,7 @@
       "per_request_limits": null,
       "supported_parameters": [
         "include_reasoning",
+        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -614,6 +617,7 @@
       "per_request_limits": null,
       "supported_parameters": [
         "include_reasoning",
+        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -1586,9 +1590,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.00000004",
+        "completion": "0.00000064",
+        "input_cache_read": "0.000000016"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -1868,6 +1872,7 @@
       "per_request_limits": null,
       "supported_parameters": [
         "include_reasoning",
+        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -2041,6 +2046,7 @@
       "per_request_limits": null,
       "supported_parameters": [
         "include_reasoning",
+        "max_completion_tokens",
         "max_tokens",
         "reasoning",
         "reasoning_effort",
@@ -2380,9 +2386,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.00000004",
+        "completion": "0.00000064",
+        "input_cache_read": "0.000000016"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -4233,6 +4239,7 @@
       },
       "per_request_limits": null,
       "supported_parameters": [
+        "frequency_penalty",
         "include_reasoning",
         "max_completion_tokens",
         "max_tokens",
@@ -4243,7 +4250,9 @@
         "structured_outputs",
         "temperature",
         "tool_choice",
-        "tools"
+        "tools",
+        "top_k",
+        "top_p"
       ],
       "default_parameters": {},
       "supported_voices": null,
@@ -6254,9 +6263,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -6633,7 +6642,8 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs"
+        "top_logprobs",
+        "top_p"
       ],
       "default_parameters": {
         "temperature": 0.1,
@@ -16558,8 +16568,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000135",
-        "completion": "0.00001433",
+        "prompt": "0.0000014989",
+        "completion": "0.000010758",
         "input_cache_read": "0.0000003"
       },
       "top_provider": {

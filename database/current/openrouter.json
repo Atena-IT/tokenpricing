@@ -1,9 +1,78 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-24T00:56:25.790150+00:00",
+  "fetched_at": "2026-09-24T06:38:30.309063+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 459,
+  "model_count": 458,
   "data": [
+    {
+      "id": "fireworks/ember-1",
+      "canonical_slug": "fireworks/ember-1-20260923",
+      "hugging_face_id": null,
+      "name": "Fireworks: Ember-1",
+      "created": 1790208461,
+      "description": "Ember-1 is a specialized reasoning model from Fireworks Research, built on [Kimi K3](https://openrouter.ai/moonshotai/kimi-k3). It is designed to make every token go further: it produces shorter reasoning traces, using roughly 40%...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000003",
+        "completion": "0.000015",
+        "input_cache_read": "0.0000003"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/fireworks/ember-1-20260923/endpoints"
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low"
+        ],
+        "default_effort": "max"
+      }
+    },
     {
       "id": "z-ai/glm-5.3-prime",
       "canonical_slug": "z-ai/glm-5.3-prime-20260921",
@@ -1897,7 +1966,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000003865",
+        "prompt": "0.00000039",
         "completion": "0.0000029",
         "input_cache_read": "0.00000025"
       },
@@ -1974,9 +2043,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000099",
-        "completion": "0.0000006",
-        "input_cache_read": "0.00000006"
+        "prompt": "0.00000004",
+        "completion": "0.000001",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -2901,70 +2970,6 @@
       }
     },
     {
-      "id": "nex-agi/nex-n2.5-mini",
-      "canonical_slug": "nex-agi/nex-n2.5-mini-20260908",
-      "hugging_face_id": "nex-agi/Nex-N2.5-mini",
-      "name": "Nex AGI: Nex-N2.5-Mini",
-      "created": 1788890061,
-      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Qwen3",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.000000025",
-        "completion": "0.0000001",
-        "input_cache_read": "0.0000000025"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 235929,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "logprobs",
-        "max_tokens",
-        "reasoning",
-        "reasoning_effort",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_logprobs",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.7,
-        "top_p": 0.95,
-        "top_k": 40
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/nex-agi/nex-n2.5-mini-20260908/endpoints"
-      },
-      "reasoning": {
-        "mandatory": false,
-        "supported_efforts": [
-          "high",
-          "medium",
-          "none"
-        ],
-        "default_effort": "high"
-      }
-    },
-    {
       "id": "nex-agi/nex-n2.5-mini:free",
       "canonical_slug": "nex-agi/nex-n2.5-mini-20260908",
       "hugging_face_id": "nex-agi/Nex-N2.5-mini",
@@ -3019,72 +3024,6 @@
       "expiration_date": "2026-09-25",
       "links": {
         "details": "/api/v1/models/nex-agi/nex-n2.5-mini-20260908/endpoints"
-      },
-      "reasoning": {
-        "mandatory": false,
-        "supported_efforts": [
-          "high",
-          "medium",
-          "none"
-        ],
-        "default_effort": "high"
-      }
-    },
-    {
-      "id": "nex-agi/nex-n2.5-pro",
-      "canonical_slug": "nex-agi/nex-n2.5-pro-20260907",
-      "hugging_face_id": "nex-agi/Nex-N2.5-Pro",
-      "name": "Nex AGI: Nex-N2.5-Pro",
-      "created": 1788890050,
-      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Qwen3",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000015"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 235929,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "logprobs",
-        "max_tokens",
-        "reasoning",
-        "reasoning_effort",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_logprobs",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.7,
-        "top_p": 0.95,
-        "top_k": 40
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/nex-agi/nex-n2.5-pro-20260907/endpoints"
       },
       "reasoning": {
         "mandatory": false,
@@ -4781,13 +4720,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.000000045",
+        "completion": "0.00000014",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5367,7 +5306,7 @@
       "name": "Tencent: Hy-MT2-30B-A3B",
       "created": 1787231561,
       "description": "Hy-MT2-30B-A3B is Tencent's flagship translation model in the Hy-MT2 family. It supports 33 language pairs and five Chinese dialect and minority-language pairs, with workflows for structured, delimiter-based, contextual, glossary-based, and...",
-      "context_length": 8192,
+      "context_length": 32768,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -5390,12 +5329,19 @@
       },
       "per_request_limits": null,
       "supported_parameters": [
+        "frequency_penalty",
+        "logprobs",
         "max_completion_tokens",
         "max_tokens",
+        "presence_penalty",
         "response_format",
+        "seed",
         "stop",
         "structured_outputs",
-        "temperature"
+        "temperature",
+        "top_k",
+        "top_logprobs",
+        "top_p"
       ],
       "default_parameters": {},
       "supported_voices": null,
@@ -7528,9 +7474,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000038",
-        "completion": "0.00000055",
-        "input_cache_read": "0.0000000228"
+        "prompt": "0.00000003",
+        "completion": "0.00000032",
+        "input_cache_read": "0.000000016"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -7600,8 +7546,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.00000064",
+        "prompt": "0.00000003",
+        "completion": "0.00000032",
         "input_cache_read": "0.000000016"
       },
       "top_provider": {
@@ -16843,9 +16789,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000091",
-        "completion": "0.0000069875",
-        "input_cache_read": "0.000000195"
+        "prompt": "0.0000014",
+        "completion": "0.00001075",
+        "input_cache_read": "0.0000003"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -34331,12 +34277,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004815",
-        "completion": "0.00000019305"
+        "prompt": "0.0000001",
+        "completion": "0.0000003"
       },
       "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 32000,
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,

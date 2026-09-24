@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-24T12:34:50.000037+00:00",
+  "fetched_at": "2026-09-24T18:28:59.159563+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 458,
   "data": [
@@ -1966,13 +1966,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000039",
-        "completion": "0.0000029",
-        "input_cache_read": "0.00000025"
+        "prompt": "0.0000003894",
+        "completion": "0.0000011682",
+        "input_cache_read": "0.00000001239"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -2773,13 +2773,94 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000042",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000003",
+        "overrides": [
+          {
+            "utc_days": [
+              "saturday",
+              "sunday"
+            ],
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 0,
+            "utc_end": 100,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 100,
+            "utc_end": 400,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 400,
+            "utc_end": 600,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 600,
+            "utc_end": 1000,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 1000,
+            "utc_end": 0,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          }
+        ]
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5368,9 +5449,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000005625",
-        "completion": "0.0000025",
-        "input_cache_read": "0.000000125"
+        "prompt": "0.0000005614",
+        "completion": "0.0000017644",
+        "input_cache_read": "0.00000010426"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -5487,13 +5568,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000084",
-        "completion": "0.00000264",
-        "input_cache_read": "0.000000156"
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "context_length": 1048575,
+        "max_completion_tokens": 943717,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -11476,9 +11557,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -16796,8 +16877,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000014",
-        "completion": "0.00001075",
+        "prompt": "0.00000135",
+        "completion": "0.0000115",
         "input_cache_read": "0.0000003"
       },
       "top_provider": {
@@ -18003,9 +18084,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000009396",
-        "completion": "0.0000018792",
-        "input_cache_read": "0.0000000783"
+        "prompt": "0.000000892272",
+        "completion": "0.000001784544",
+        "input_cache_read": "0.000000074356"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -18161,9 +18242,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000088606",
-        "completion": "0.000000177212",
-        "input_cache_read": "0.0000000177212"
+        "prompt": "0.0000000763",
+        "completion": "0.0000001526",
+        "input_cache_read": "0.00000001526"
       },
       "top_provider": {
         "context_length": 1024000,

@@ -1,0 +1,63 @@
+name: Artificial Analysis Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily, off-peak. The whole capture is two requests now that the leaderboard
+    # payload supersedes the per-provider pages, so a daily cadence is nearly free.
+    - cron: "17 4 * * *"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      # The sync alerts on failure by opening or commenting on an issue itself;
+      # see services/aa-sync/src/tokenpricing_aa/alerting.py.
+      issues: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: latest
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        working-directory: services/aa-sync
+        run: uv sync
+      - name: Refresh Artificial Analysis dataset
+        working-directory: services/aa-sync
+        env:
+          # Consumed by alerting.deliver_via_github_issue. Each of the three
+          # failure modes (payload-not-found, request-blocked, schema-drift)
+          # opens its own named issue, or comments on the open one that matches.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run tokenpricing-aa-sync sync
+      - name: Upload raw capture
+        # ~12MB of source HTML, kept out of git but retained so that a failed
+        # parse can be diagnosed against its exact input.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aa-raw-capture
+          path: .capture/artificial-analysis/
+          retention-days: 30
+          if-no-files-found: ignore
+      - name: Prune old history snapshots
+        run: |
+          mapfile -t history_files < <(ls -1t database/history/artificial-analysis-*.json 2>/dev/null || true)
+          if [ "${#history_files[@]}" -gt 26 ]; then
+            printf '%s\0' "${history_files[@]:26}" | xargs -0 rm -f --
+          fi
+      - name: Commit refreshed data
+        run: |
+          if git diff --quiet; then
+            echo "No Artificial Analysis changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add database/current database/history
+          git commit -m "chore: refresh Artificial Analysis dataset"
+          git push

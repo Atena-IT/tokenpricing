@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-26T00:56:09.441480+00:00",
+  "fetched_at": "2026-09-26T06:35:07.094365+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 459,
+  "model_count": 458,
   "data": [
     {
       "id": "typesafe/jev-router",
@@ -4733,13 +4733,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000045",
-        "completion": "0.00000014",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.00000004",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000015"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 128000,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -4873,13 +4873,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000045",
-        "completion": "0.00000014",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.00000004",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000015"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 128000,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5381,9 +5381,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000005586",
-        "completion": "0.0000017556",
-        "input_cache_read": "0.00000010374"
+        "prompt": "0.0000004746",
+        "completion": "0.0000014916",
+        "input_cache_read": "0.00000008814"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -7494,7 +7494,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000022",
+        "prompt": "0.000000021",
         "completion": "0.00000032",
         "input_cache_read": "0.000000016"
       },
@@ -7566,7 +7566,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000022",
+        "prompt": "0.000000021",
         "completion": "0.00000032",
         "input_cache_read": "0.000000016"
       },
@@ -10442,7 +10442,7 @@
       "top_provider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": true
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -17826,9 +17826,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000429084",
-        "completion": "0.000000858168",
-        "input_cache_read": "0.000000035757"
+        "prompt": "0.000000418818",
+        "completion": "0.000000837636",
+        "input_cache_read": "0.0000000349015"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -41942,57 +41942,6 @@
           "coding_index": 21.5,
           "agentic_index": null
         }
-      }
-    },
-    {
-      "id": "anthropic/claude-3-haiku",
-      "canonical_slug": "anthropic/claude-3-haiku",
-      "hugging_face_id": null,
-      "name": "Anthropic: Claude 3 Haiku",
-      "created": 1710288000,
-      "description": "Claude 3 Haiku is Anthropic's fastest and most compact model for\nnear-instant responsiveness. Quick and accurate targeted performance.\n\nSee the launch announcement and benchmark results [here](https://www.anthropic.com/news/claude-3-haiku)\n\n#multimodal",
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Claude",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.00000125",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000003",
-        "input_cache_write": "0.0000003",
-        "input_cache_write_1h": "0.0000005"
-      },
-      "top_provider": {
-        "context_length": 200000,
-        "max_completion_tokens": 4096,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "stop",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2023-08-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/anthropic/claude-3-haiku/endpoints"
       }
     },
     {

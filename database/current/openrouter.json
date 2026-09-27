@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-09-27T01:05:18.059741+00:00",
+  "fetched_at": "2026-09-27T06:36:59.412858+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 458,
   "data": [
@@ -2146,9 +2146,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000024552",
-        "completion": "0.00000073656",
-        "input_cache_read": "0.000000007812"
+        "prompt": "0.0000002442",
+        "completion": "0.0000007326",
+        "input_cache_read": "0.00000000777"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -4804,13 +4804,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.0000005",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.000000045",
+        "completion": "0.00000014",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -4944,13 +4944,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.0000005",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.000000045",
+        "completion": "0.00000014",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5290,13 +5290,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000022",
-        "completion": "0.00000066",
-        "input_cache_read": "0.000000007"
+        "prompt": "0.0000002156",
+        "completion": "0.0000006468",
+        "input_cache_read": "0.00000000686"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 262144,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5452,9 +5452,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000238",
-        "completion": "0.000000748",
-        "input_cache_read": "0.0000000391"
+        "prompt": "0.0000002737",
+        "completion": "0.0000008602",
+        "input_cache_read": "0.000000044965"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -5571,9 +5571,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000238",
-        "completion": "0.000000748",
-        "input_cache_read": "0.0000000391"
+        "prompt": "0.0000002737",
+        "completion": "0.0000008602",
+        "input_cache_read": "0.000000044965"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -6649,9 +6649,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000024634",
+        "prompt": "0.00000024502",
         "completion": "0.0000035",
-        "input_cache_read": "0.00000024584"
+        "input_cache_read": "0.00000024452"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -36673,12 +36673,12 @@
         "instruct_type": "qwen3"
       },
       "pricing": {
-        "prompt": "0.00000013",
-        "completion": "0.00000052"
+        "prompt": "0.00000012",
+        "completion": "0.0000005"
       },
       "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 8192,
+        "context_length": 40960,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -36708,7 +36708,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
-      "expiration_date": "2026-10-09",
+      "expiration_date": null,
       "links": {
         "details": "/api/v1/models/qwen/qwen3-30b-a3b-04-28/endpoints"
       },

@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-02T12:36:35.216555+00:00",
+  "fetched_at": "2026-10-02T18:30:33.454960+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 4453,
   "data": {
@@ -32820,6 +32820,7 @@
       ]
     },
     "gpt-4o-mini-tts-2025-03-20": {
+      "deprecation_date": "2027-01-06",
       "input_cost_per_token": 6e-07,
       "litellm_provider": "openai",
       "mode": "audio_speech",
@@ -33519,7 +33520,8 @@
       "output_cost_per_token_flex": 5e-06,
       "source": "https://developers.openai.com/api/docs/pricing",
       "supports_xhigh_reasoning_effort": false,
-      "supports_minimal_reasoning_effort": false
+      "supports_minimal_reasoning_effort": false,
+      "deprecation_date": "2027-04-01"
     },
     "gpt-5.1-codex-mini": {
       "cache_read_input_token_cost": 2.5e-08,
@@ -35316,7 +35318,8 @@
       "default_reasoning_effort": "none",
       "source": "https://developers.openai.com/api/docs/pricing",
       "supports_xhigh_reasoning_effort": true,
-      "supports_minimal_reasoning_effort": false
+      "supports_minimal_reasoning_effort": false,
+      "deprecation_date": "2027-04-01"
     },
     "gpt-5.4-nano-2026-03-17": {
       "cache_read_input_token_cost": 2e-08,
@@ -35615,7 +35618,8 @@
       "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false,
-      "supports_minimal_reasoning_effort": true
+      "supports_minimal_reasoning_effort": true,
+      "deprecation_date": "2027-04-01"
     },
     "gpt-5.3-chat-latest": {
       "cache_read_input_token_cost": 1.75e-07,
@@ -46917,6 +46921,7 @@
       "supports_vision": true
     },
     "tts-1": {
+      "deprecation_date": "2027-01-06",
       "input_cost_per_character": 1.5e-05,
       "litellm_provider": "openai",
       "mode": "audio_speech",
@@ -46926,6 +46931,7 @@
       ]
     },
     "tts-1-hd": {
+      "deprecation_date": "2027-01-06",
       "input_cost_per_character": 3e-05,
       "litellm_provider": "openai",
       "mode": "audio_speech",
@@ -56808,6 +56814,7 @@
       ]
     },
     "gpt-4o-mini-tts-2025-12-15": {
+      "deprecation_date": "2027-01-06",
       "input_cost_per_token": 6e-07,
       "litellm_provider": "openai",
       "mode": "audio_speech",

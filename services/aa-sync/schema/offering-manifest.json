@@ -1,0 +1,502 @@
+{
+  "record_count": 1082,
+  "fields": {
+    "features.contextWindowTokens": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 1.0,
+      "minimum": 4096.0,
+      "maximum": 2000000.0
+    },
+    "features.functionCalling": {
+      "types": [
+        "bool"
+      ],
+      "populated_ratio": 1.0
+    },
+    "features.jsonMode": {
+      "types": [
+        "bool"
+      ],
+      "populated_ratio": 1.0
+    },
+    "features.openaiCompatible": {
+      "types": [
+        "bool"
+      ],
+      "populated_ratio": 1.0
+    },
+    "footnotes": {
+      "types": [
+        "null",
+        "string"
+      ],
+      "populated_ratio": 0.025
+    },
+    "host.color": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "host.functionCallingUrl": {
+      "types": [
+        "null",
+        "string"
+      ],
+      "populated_ratio": 0.8549
+    },
+    "host.jsonModeUrl": {
+      "types": [
+        "null",
+        "string"
+      ],
+      "populated_ratio": 0.8614
+    },
+    "host.logo": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "host.name": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "host.slug": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "hostApiId": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "id": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "label": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "model.aime25": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.4584,
+      "minimum": 0.0,
+      "maximum": 0.99
+    },
+    "model.apexAgents": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.1433,
+      "minimum": 0.00737463126843658,
+      "maximum": 0.470501474926254
+    },
+    "model.automationBench": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.1405,
+      "minimum": 0.013565301670673362,
+      "maximum": 0.6274556199710792
+    },
+    "model.briefcase.elo": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.2301,
+      "minimum": 0.0,
+      "maximum": 1714.59
+    },
+    "model.creator.logo": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "model.creator.name": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "model.critpt": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.9473,
+      "minimum": 0.0,
+      "maximum": 0.322857142857143
+    },
+    "model.deprecated": {
+      "types": [
+        "bool"
+      ],
+      "populated_ratio": 1.0
+    },
+    "model.gdpvalNormalized": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.5407,
+      "minimum": 0.0,
+      "maximum": 0.674385
+    },
+    "model.gpqa": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.9871,
+      "minimum": 0.176767676767677,
+      "maximum": 0.94949494949495
+    },
+    "model.harveyLab": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.1691,
+      "minimum": 0.138949196699957,
+      "maximum": 0.946446663771892
+    },
+    "model.hle": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.9834,
+      "minimum": 0.0176,
+      "maximum": 0.554680259499537
+    },
+    "model.ifbench": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.8651,
+      "minimum": 0.199319727891156,
+      "maximum": 0.833333333333333
+    },
+    "model.intelligenceIndex": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.9945,
+      "minimum": 1.0,
+      "maximum": 63.0532452071291
+    },
+    "model.intelligenceIndexIsEstimated": {
+      "types": [
+        "bool"
+      ],
+      "populated_ratio": 1.0
+    },
+    "model.isOpenWeights": {
+      "types": [
+        "bool"
+      ],
+      "populated_ratio": 1.0
+    },
+    "model.itbenchSre": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.171,
+      "minimum": 0.00564971751412429,
+      "maximum": 0.562146892655367
+    },
+    "model.lcr": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.9584,
+      "minimum": 0.0,
+      "maximum": 0.833333333333333
+    },
+    "model.livecodebench": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.4954,
+      "minimum": 0.00211640211640212,
+      "maximum": 0.917460317460317
+    },
+    "model.mmmuPro": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.4621,
+      "minimum": 0.145086705202312,
+      "maximum": 0.854913294797688
+    },
+    "model.omniscience": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.9436,
+      "minimum": -84.4166666666667,
+      "maximum": 43.3
+    },
+    "model.omniscienceAccuracy": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.9436,
+      "minimum": 0.0375,
+      "maximum": 0.6535
+    },
+    "model.omniscienceNonHallucination": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.9436,
+      "minimum": 0.0155008719240457,
+      "maximum": 0.8833808844507846
+    },
+    "model.reasoningModel": {
+      "types": [
+        "bool"
+      ],
+      "populated_ratio": 1.0
+    },
+    "model.scicode": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.9843,
+      "minimum": 0.0,
+      "maximum": 0.601851851851852
+    },
+    "model.sizeClass": {
+      "types": [
+        "null",
+        "string"
+      ],
+      "populated_ratio": 0.9982
+    },
+    "model.slug": {
+      "types": [
+        "string"
+      ],
+      "populated_ratio": 1.0
+    },
+    "model.tau2": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.8549,
+      "minimum": 0.0,
+      "maximum": 0.991228070175439
+    },
+    "model.tauBanking": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.488,
+      "minimum": 0.00206185567010309,
+      "maximum": 0.51340206185567
+    },
+    "model.terminalbenchHard": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.8484,
+      "minimum": 0.0,
+      "maximum": 0.659090909090909
+    },
+    "model.terminalbenchV21": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.5397,
+      "minimum": 0.0,
+      "maximum": 0.895131086142322
+    },
+    "performance.medianEndToEndResponseTimeSeconds": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 0.9212771973034348,
+      "maximum": 379.1163103460784
+    },
+    "performance.medianOutputTokensPerSecond": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 6.77081935192625,
+      "maximum": 1741.60717168212
+    },
+    "performance.medianReasoningTimeSeconds": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.3484,
+      "minimum": 1.1483645867559864,
+      "maximum": 326.1974048004891
+    },
+    "performance.medianTimeToFirstAnswerTokenSeconds": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 0.28731636949999,
+      "maximum": 327.9239994859891
+    },
+    "performance.medianTimeToFirstTokenSeconds": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 0.225839045500038,
+      "maximum": 214.8594473925
+    },
+    "performance.percentile05OutputTokensPerSecond": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 3.34139166170614,
+      "maximum": 1242.0925775297
+    },
+    "performance.percentile05TimeToFirstTokenSeconds": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 0.19727731295003,
+      "maximum": 109.5900858161
+    },
+    "performance.percentile95OutputTokensPerSecond": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 11.6353995454393,
+      "maximum": 3007.91430849967
+    },
+    "performance.percentile95TimeToFirstTokenSeconds": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 0.380386290249964,
+      "maximum": 443.404310084
+    },
+    "performance.quartile25OutputTokensPerSecond": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 4.81885556971971,
+      "maximum": 1586.92870223862
+    },
+    "performance.quartile25TimeToFirstTokenSeconds": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 0.215531554749987,
+      "maximum": 146.352216131
+    },
+    "performance.quartile75OutputTokensPerSecond": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 10.644349004231,
+      "maximum": 1939.13279548338
+    },
+    "performance.quartile75TimeToFirstTokenSeconds": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.8189,
+      "minimum": 0.250766401500073,
+      "maximum": 258.4857551165
+    },
+    "pricing.cacheHitPrice": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.4704,
+      "minimum": 0.002,
+      "maximum": 8.25
+    },
+    "pricing.cacheWritePrice": {
+      "types": [
+        "null",
+        "number"
+      ],
+      "populated_ratio": 0.1192,
+      "minimum": 0.0,
+      "maximum": 18.75
+    },
+    "pricing.costPerTask": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 0.439,
+      "minimum": 0.0,
+      "maximum": 10.155232380864094
+    },
+    "pricing.price1mInputTokens": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 1.0,
+      "minimum": 0.0,
+      "maximum": 150.0
+    },
+    "pricing.price1mOutputTokens": {
+      "types": [
+        "number"
+      ],
+      "populated_ratio": 1.0,
+      "minimum": 0.0,
+      "maximum": 600.0
+    },
+    "pricing.priceClass": {
+      "types": [
+        "null",
+        "string"
+      ],
+      "populated_ratio": 0.9741
+    }
+  }
+}

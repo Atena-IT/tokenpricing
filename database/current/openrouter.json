@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-07T01:03:52.779412+00:00",
+  "fetched_at": "2026-10-07T06:39:59.672164+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 466,
+  "model_count": 465,
   "data": [
     {
       "id": "google/gemini-nano-banana-2.1",
@@ -2912,7 +2912,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000003",
+        "prompt": "0.0000002999",
         "completion": "0.0000042",
         "input_cache_read": "0.0000003"
       },
@@ -2989,13 +2989,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000039",
-        "completion": "0.0000003",
-        "input_cache_read": "0.000000012"
+        "prompt": "0.00000005",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000002"
       },
       "top_provider": {
-        "context_length": 1040000,
-        "max_completion_tokens": 393216,
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -3717,13 +3717,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000039",
-        "completion": "0.0000003",
-        "input_cache_read": "0.000000012"
+        "prompt": "0.00000005",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000002"
       },
       "top_provider": {
-        "context_length": 1040000,
-        "max_completion_tokens": 393216,
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5694,13 +5694,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000214",
-        "completion": "0.0000005",
-        "input_cache_read": "0.0000000214"
+        "prompt": "0.00000002354",
+        "completion": "0.0000006875",
+        "input_cache_read": "0.00000002354"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -6349,8 +6349,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.0000044",
+        "prompt": "0.00000003",
+        "completion": "0.000012",
         "input_cache_read": "0.00000003"
       },
       "top_provider": {
@@ -7485,9 +7485,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -10448,9 +10448,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000069",
+        "prompt": "0.00000062",
         "completion": "0.000015",
-        "input_cache_read": "0.00000034"
+        "input_cache_read": "0.00000043"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -10996,68 +10996,6 @@
           "minimal"
         ],
         "default_effort": "medium"
-      }
-    },
-    {
-      "id": "kwaipilot/kat-coder-pro-v2.5",
-      "canonical_slug": "kwaipilot/kat-coder-pro-v2.5-20260710",
-      "hugging_face_id": null,
-      "name": "Kwaipilot: KAT-Coder-Pro V2.5",
-      "created": 1783714589,
-      "description": "KAT-Coder-Pro V2.5 is a flagship-level Agentic Coding model that can directly hand over an entire issue or an entire business workflow to it, allowing it to autonomously locate and make...",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000074",
-        "completion": "0.00000296",
-        "input_cache_read": "0.00000015"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 235929,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/kwaipilot/kat-coder-pro-v2.5-20260710/endpoints"
       }
     },
     {
@@ -13442,9 +13380,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000152",
+        "prompt": "0.00000003",
         "completion": "0.000012",
-        "input_cache_read": "0.00000015"
+        "input_cache_read": "0.00000003"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -17631,7 +17569,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000068",
+        "prompt": "0.00000061",
         "completion": "0.000013",
         "input_cache_read": "0.00000045"
       },
@@ -19674,9 +19612,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000095",
-        "completion": "0.000004",
-        "input_cache_read": "0.00000016"
+        "prompt": "0.000000465",
+        "completion": "0.00000245",
+        "input_cache_read": "0.0000000975"
       },
       "top_provider": {
         "context_length": 262144,
@@ -20280,9 +20218,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,

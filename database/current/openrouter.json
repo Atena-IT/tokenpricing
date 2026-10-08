@@ -1,9 +1,80 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-08T12:38:06.016377+00:00",
+  "fetched_at": "2026-10-08T18:31:05.371642+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 467,
   "data": [
+    {
+      "id": "stepfun/step-5-preview",
+      "canonical_slug": "stepfun/step-5-preview-20261008",
+      "hugging_face_id": null,
+      "name": "StepFun: Step 5 Preview",
+      "created": 1791462849,
+      "description": "Step 5 Preview is StepFun's flagship model for agentic work, built on a sparse Mixture-of-Experts architecture (27B active / 600B total parameters). It performs strongly in software engineering and professional...",
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.0000027",
+        "input_cache_read": "0.00000005"
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 64000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/stepfun/step-5-preview-20261008/endpoints"
+      },
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      }
+    },
     {
       "id": "anthropic/claude-haiku-5.5",
       "canonical_slug": "anthropic/claude-haiku-5.5-20261007",
@@ -243,7 +314,7 @@
       "name": "Mistral: Mistral Large 4",
       "created": 1791294122,
       "description": "Mistral Large 4 is a frontier multimodal (text and image input) model from Mistral AI built for reasoning, coding, and agentic workloads. It offers a 512K-token context window with up...",
-      "context_length": 524288,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text+image->text",
         "input_modalities": [
@@ -262,7 +333,7 @@
         "input_cache_read": "0.00000007"
       },
       "top_provider": {
-        "context_length": 524288,
+        "context_length": 1048576,
         "max_completion_tokens": 262144,
         "is_moderated": false
       },
@@ -3154,9 +3225,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000108",
+        "prompt": "0.0000001271",
         "completion": "0.000008",
-        "input_cache_read": "0.000000081"
+        "input_cache_read": "0.0000000953"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -3231,8 +3302,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000356",
-        "completion": "0.000001",
+        "prompt": "0.0000000283",
+        "completion": "0.0000012",
         "input_cache_read": "0.00000001"
       },
       "top_provider": {
@@ -3959,9 +4030,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000356",
-        "completion": "0.000001",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -4612,10 +4683,10 @@
       }
     },
     {
-      "id": "inclusionai/ling-3.0-flash-sante:free",
+      "id": "inclusionai/ling-3.0-flash-sante",
       "canonical_slug": "inclusionai/ling-3.0-flash-sante-20260904",
       "hugging_face_id": null,
-      "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
+      "name": "inclusionAI: Ling 3.0 Flash Sante",
       "created": 1788545946,
       "description": "Ling 3.0 Flash Sante is a health and medicine-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for...",
       "context_length": 262144,
@@ -4631,8 +4702,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0",
-        "completion": "0"
+        "prompt": "0.000000042",
+        "completion": "0.0000001232",
+        "input_cache_read": "0.0000000084"
       },
       "top_provider": {
         "context_length": 262144,
@@ -5775,9 +5847,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -5937,7 +6009,7 @@
       },
       "pricing": {
         "prompt": "0.000000032",
-        "completion": "0.00000333595",
+        "completion": "0.00000352495",
         "input_cache_read": "0.00000002"
       },
       "top_provider": {
@@ -6591,9 +6663,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000036",
+        "prompt": "0.00000006",
         "completion": "0.000012",
-        "input_cache_read": "0.0000000335"
+        "input_cache_read": "0.0000000558"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -6710,8 +6782,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000049",
-        "completion": "0.00000339",
+        "prompt": "0.0000001",
+        "completion": "0.0000042",
         "input_cache_read": "0.000000048"
       },
       "top_provider": {
@@ -8737,9 +8809,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000000632",
-        "completion": "0.000000313086",
-        "input_cache_read": "0.00000000632"
+        "prompt": "0.00000000368",
+        "completion": "0.000000549104",
+        "input_cache_read": "0.00000000368"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -8809,9 +8881,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000079",
+        "prompt": "0.0000000046",
         "completion": "0.00000128",
-        "input_cache_read": "0.0000000079"
+        "input_cache_read": "0.0000000046"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -10689,9 +10761,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000062",
-        "completion": "0.0000123",
-        "input_cache_read": "0.00000043"
+        "prompt": "0.00000099",
+        "completion": "0.000014",
+        "input_cache_read": "0.00000066"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -12680,9 +12752,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -17819,7 +17891,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000045",
+        "prompt": "0.00000083",
         "completion": "0.000013",
         "input_cache_read": "0.00000045"
       },
@@ -18336,8 +18408,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000045",
-        "completion": "0.0000027"
+        "prompt": "0.0000003",
+        "completion": "0.000002",
+        "input_cache_read": "0.00000003"
       },
       "top_provider": {
         "context_length": 262144,
@@ -19036,9 +19109,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000287274",
+        "completion": "0.000000574548",
+        "input_cache_read": "0.0000000239395"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -19194,9 +19267,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000099",
+        "prompt": "0.0000000131",
         "completion": "0.00000128",
-        "input_cache_read": "0.0000000099"
+        "input_cache_read": "0.0000000131"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -19859,9 +19932,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000465",
+        "prompt": "0.0000004375",
         "completion": "0.00000245",
-        "input_cache_read": "0.0000000975"
+        "input_cache_read": "0.0000001211"
       },
       "top_provider": {
         "context_length": 262144,
@@ -22404,12 +22477,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000085",
-        "completion": "0.0000004"
+        "prompt": "0.00000008",
+        "completion": "0.00000045"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 16384,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -27135,19 +27208,13 @@
       },
       "per_request_limits": null,
       "supported_parameters": [
-        "frequency_penalty",
         "include_reasoning",
         "max_tokens",
-        "presence_penalty",
         "reasoning",
-        "repetition_penalty",
         "response_format",
-        "seed",
-        "stop",
         "temperature",
         "tool_choice",
         "tools",
-        "top_k",
         "top_p"
       ],
       "default_parameters": {
@@ -27761,7 +27828,6 @@
         "logit_bias",
         "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -32623,7 +32689,6 @@
         "max_tokens",
         "presence_penalty",
         "reasoning",
-        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
@@ -33230,12 +33295,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000015"
+        "prompt": "0.00000009",
+        "completion": "0.0000011"
       },
       "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 32768,
+        "context_length": 262144,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -33261,7 +33326,7 @@
       "default_parameters": {},
       "supported_voices": null,
       "knowledge_cutoff": "2025-09-30",
-      "expiration_date": "2026-10-08",
+      "expiration_date": null,
       "links": {
         "details": "/api/v1/models/qwen/qwen3-next-80b-a3b-instruct-2509/endpoints"
       },
@@ -35697,7 +35762,6 @@
         "logprobs",
         "max_tokens",
         "presence_penalty",
-        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
@@ -35767,12 +35831,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004815",
-        "completion": "0.00000019305"
+        "prompt": "0.0000001",
+        "completion": "0.0000003"
       },
       "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 32000,
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -36074,11 +36138,9 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logprobs",
         "max_tokens",
         "presence_penalty",
         "reasoning",
-        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
@@ -36086,7 +36148,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -36854,60 +36915,6 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/morph/morph-v3-fast/endpoints"
-      }
-    },
-    {
-      "id": "baidu/ernie-4.5-vl-424b-a47b",
-      "canonical_slug": "baidu/ernie-4.5-vl-424b-a47b",
-      "hugging_face_id": "baidu/ERNIE-4.5-VL-424B-A47B-PT",
-      "name": "Baidu: ERNIE 4.5 VL 424B A47B ",
-      "created": 1751300903,
-      "description": "ERNIE-4.5-VL-424B-A47B is a multimodal Mixture-of-Experts (MoE) model from Baidu’s ERNIE 4.5 series, featuring 424B total parameters with 47B active per token. It is trained jointly on text and image data...",
-      "context_length": 123000,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "image",
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000042",
-        "completion": "0.00000125"
-      },
-      "top_provider": {
-        "context_length": 123000,
-        "max_completion_tokens": 16000,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2025-03-31",
-      "expiration_date": "2026-10-08",
-      "links": {
-        "details": "/api/v1/models/baidu/ernie-4.5-vl-424b-a47b/endpoints"
-      },
-      "reasoning": {
-        "mandatory": false
       }
     },
     {
@@ -38421,6 +38428,7 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
+        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -38433,7 +38441,9 @@
         "temperature",
         "tool_choice",
         "tools",
+        "top_a",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -42484,8 +42494,6 @@
         "stop",
         "structured_outputs",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_k",
         "top_p"
       ],

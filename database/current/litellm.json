@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-09T12:35:04.812050+00:00",
+  "fetched_at": "2026-10-09T18:29:31.731795+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 4507,
+  "model_count": 4508,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -47417,13 +47417,13 @@
       "supports_reasoning": true
     },
     "together_ai/Qwen/Qwen3.7-Max": {
-      "cache_read_input_token_cost": 3e-07,
-      "input_cost_per_token": 1.5e-06,
+      "cache_read_input_token_cost": 5e-07,
+      "input_cost_per_token": 2.5e-06,
       "litellm_provider": "together_ai",
       "max_input_tokens": 1000000,
       "max_tokens": 1000000,
       "mode": "chat",
-      "output_cost_per_token": 4.5e-06,
+      "output_cost_per_token": 7.5e-06,
       "source": "https://api.together.ai/v1/models",
       "supports_prompt_caching": true
     },
@@ -58806,7 +58806,7 @@
       "output_cost_per_token": 2.2e-05,
       "output_cost_per_token_above_272k_tokens": 3.3e-05,
       "litellm_provider": "bedrock_mantle",
-      "max_input_tokens": 1050000,
+      "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "responses",
@@ -58886,11 +58886,11 @@
       "output_cost_per_token": 2.2e-05,
       "output_cost_per_token_above_272k_tokens": 3.3e-05,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
-      "source": "https://aws.amazon.com/bedrock/pricing/",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-sol.html",
       "supported_modalities": [
         "text",
         "image"
@@ -58922,11 +58922,11 @@
       "output_cost_per_token": 2e-05,
       "output_cost_per_token_above_272k_tokens": 3e-05,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
-      "source": "https://aws.amazon.com/bedrock/pricing/",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-sol.html",
       "supported_modalities": [
         "text",
         "image"
@@ -58958,11 +58958,11 @@
       "output_cost_per_token": 1.32e-05,
       "output_cost_per_token_above_272k_tokens": 1.98e-05,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
-      "source": "https://aws.amazon.com/bedrock/pricing/",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-terra.html",
       "supported_modalities": [
         "text",
         "image"
@@ -58994,11 +58994,11 @@
       "output_cost_per_token": 1.2e-05,
       "output_cost_per_token_above_272k_tokens": 1.8e-05,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
-      "source": "https://aws.amazon.com/bedrock/pricing/",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-terra.html",
       "supported_modalities": [
         "text",
         "image"
@@ -59030,11 +59030,11 @@
       "output_cost_per_token": 1.32e-06,
       "output_cost_per_token_above_272k_tokens": 1.98e-06,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
-      "source": "https://aws.amazon.com/bedrock/pricing/",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-luna.html",
       "supported_modalities": [
         "text",
         "image"
@@ -59063,7 +59063,7 @@
       "output_cost_per_token": 1.65e-05,
       "output_cost_per_token_above_272k_tokens": 2.475e-05,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
@@ -59094,7 +59094,7 @@
       "output_cost_per_token": 1.5e-05,
       "output_cost_per_token_above_272k_tokens": 2.25e-05,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
@@ -59125,7 +59125,7 @@
       "output_cost_per_token": 3.3e-05,
       "output_cost_per_token_above_272k_tokens": 4.95e-05,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
@@ -59156,7 +59156,7 @@
       "output_cost_per_token": 3e-05,
       "output_cost_per_token_above_272k_tokens": 4.5e-05,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
@@ -59190,11 +59190,11 @@
       "output_cost_per_token": 1.2e-06,
       "output_cost_per_token_above_272k_tokens": 1.8e-06,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 1050000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
-      "source": "https://aws.amazon.com/bedrock/pricing/",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-luna.html",
       "supported_modalities": [
         "text",
         "image"
@@ -65739,7 +65739,7 @@
     },
     "azure_ai/kimi-k2.7-code": {
       "cache_read_input_token_cost": 1.9e-07,
-      "deprecation_date": "2027-04-16",
+      "deprecation_date": "2026-10-03",
       "input_cost_per_token": 9.5e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 262144,
@@ -82078,6 +82078,16 @@
       "supports_video_input": true
     },
     "global.twelvelabs.pegasus-1-5-v1:0": {
+      "input_cost_per_video_per_second": 0.00049,
+      "litellm_provider": "bedrock",
+      "max_output_tokens": 98304,
+      "max_tokens": 98304,
+      "mode": "chat",
+      "output_cost_per_token": 7.5e-06,
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrockFoundationModels/current/index.json",
+      "supports_video_input": true
+    },
+    "twelvelabs.pegasus-1-5-v1:0": {
       "input_cost_per_video_per_second": 0.00049,
       "litellm_provider": "bedrock",
       "max_output_tokens": 98304,

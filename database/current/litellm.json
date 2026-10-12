@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-12T12:52:53.694714+00:00",
+  "fetched_at": "2026-10-12T18:31:20.356143+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 4042,
+  "model_count": 4043,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -69185,6 +69185,15 @@
       "supports_function_calling": true,
       "supports_response_schema": true,
       "supports_tool_choice": true
+    },
+    "fireworks_ai/accounts/fireworks/routers/rune": {
+      "cache_read_input_token_cost": 8.4e-09,
+      "input_cost_per_token": 4.2e-08,
+      "litellm_provider": "fireworks_ai",
+      "max_input_tokens": 262144,
+      "mode": "evaluation",
+      "output_cost_per_token": 0.0,
+      "source": "https://docs.fireworks.ai"
     },
     "fireworks_ai/accounts/fireworks/models/ember-1": {
       "cache_read_input_token_cost": 3e-07,

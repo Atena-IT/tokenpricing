@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-14T06:37:49.758012+00:00",
+  "fetched_at": "2026-10-14T12:33:56.414181+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 4084,
   "data": {
@@ -16049,7 +16049,8 @@
       "output_cost_per_token": 0.0,
       "source": "https://developers.cloudflare.com/workers-ai/models/clef-omni/",
       "supports_audio_input": true,
-      "supports_video_input": true
+      "supports_video_input": true,
+      "supports_vision": true
     },
     "cloudflare/@cf/cloudflare/clef-omni": {
       "input_cost_per_token": 1.5e-07,
@@ -16059,7 +16060,8 @@
       "output_cost_per_token": 0.0,
       "source": "https://developers.cloudflare.com/workers-ai/models/clef-omni/",
       "supports_audio_input": true,
-      "supports_video_input": true
+      "supports_video_input": true,
+      "supports_vision": true
     },
     "cloudflare/clef": {
       "input_cost_per_token": 2.4e-07,
@@ -16067,7 +16069,8 @@
       "max_input_tokens": 65536,
       "mode": "evaluation",
       "output_cost_per_token": 0.0,
-      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "supports_vision": true
     },
     "cloudflare/clef-flash": {
       "input_cost_per_token": 9e-08,
@@ -16075,7 +16078,8 @@
       "max_input_tokens": 65536,
       "mode": "evaluation",
       "output_cost_per_token": 0.0,
-      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "supports_vision": true
     },
     "cloudflare/@cf/cloudflare/clef": {
       "input_cost_per_token": 2.4e-07,
@@ -16083,7 +16087,8 @@
       "max_input_tokens": 65536,
       "mode": "evaluation",
       "output_cost_per_token": 0.0,
-      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "supports_vision": true
     },
     "cloudflare/@cf/cloudflare/clef-flash": {
       "input_cost_per_token": 9e-08,
@@ -16091,7 +16096,8 @@
       "max_input_tokens": 65536,
       "mode": "evaluation",
       "output_cost_per_token": 0.0,
-      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "supports_vision": true
     },
     "cloudflare/@cf/meta/llama-2-7b-chat-fp16": {
       "input_cost_per_token": 1.923e-06,

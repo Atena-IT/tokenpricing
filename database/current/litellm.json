@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-14T18:29:21.689752+00:00",
+  "fetched_at": "2026-10-15T00:51:58.734858+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 4116,
   "data": {
@@ -57001,6 +57001,7 @@
       ]
     },
     "gemini-2.0-flash-exp-image-generation": {
+      "deprecation_date": "2025-11-14",
       "input_cost_per_token": 0.0,
       "litellm_provider": "gemini",
       "max_input_tokens": 32768,
@@ -57021,6 +57022,7 @@
       "supports_vision": true
     },
     "gemini/gemini-2.0-flash-exp-image-generation": {
+      "deprecation_date": "2025-11-14",
       "input_cost_per_token": 0.0,
       "litellm_provider": "gemini",
       "max_input_tokens": 32768,
@@ -72630,10 +72632,12 @@
     "gemini-nano-banana-2.1": {
       "cache_read_input_token_cost": 1.5e-07,
       "cache_read_input_token_cost_batches": 7.5e-08,
+      "cache_read_input_token_cost_flex": 7.5e-08,
       "cache_read_input_token_cost_priority": 2.7e-07,
       "input_cost_per_image": 0.00168,
       "input_cost_per_token": 1.5e-06,
       "input_cost_per_token_batches": 7.5e-07,
+      "input_cost_per_token_flex": 7.5e-07,
       "input_cost_per_token_priority": 2.7e-06,
       "litellm_provider": "vertex_ai-language-models",
       "max_input_tokens": 131072,
@@ -72644,6 +72648,7 @@
       "output_cost_per_image_token": 3e-05,
       "output_cost_per_token": 7.5e-06,
       "output_cost_per_token_batches": 3.75e-06,
+      "output_cost_per_token_flex": 3.75e-06,
       "output_cost_per_token_priority": 1.35e-05,
       "search_context_cost_per_query": {
         "search_context_size_low": 0.014,
@@ -72680,10 +72685,12 @@
     "vertex_ai/gemini-nano-banana-2.1": {
       "cache_read_input_token_cost": 1.5e-07,
       "cache_read_input_token_cost_batches": 7.5e-08,
+      "cache_read_input_token_cost_flex": 7.5e-08,
       "cache_read_input_token_cost_priority": 2.7e-07,
       "input_cost_per_image": 0.00168,
       "input_cost_per_token": 1.5e-06,
       "input_cost_per_token_batches": 7.5e-07,
+      "input_cost_per_token_flex": 7.5e-07,
       "input_cost_per_token_priority": 2.7e-06,
       "litellm_provider": "vertex_ai-language-models",
       "max_input_tokens": 131072,
@@ -72694,6 +72701,7 @@
       "output_cost_per_image_token": 3e-05,
       "output_cost_per_token": 7.5e-06,
       "output_cost_per_token_batches": 3.75e-06,
+      "output_cost_per_token_flex": 3.75e-06,
       "output_cost_per_token_priority": 1.35e-05,
       "search_context_cost_per_query": {
         "search_context_size_low": 0.014,

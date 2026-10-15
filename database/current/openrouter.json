@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-15T00:51:58.657007+00:00",
+  "fetched_at": "2026-10-15T06:37:53.836762+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 462,
   "data": [
@@ -613,11 +613,11 @@
     {
       "id": "stepfun/step-5-preview",
       "canonical_slug": "stepfun/step-5-preview-20261008",
-      "hugging_face_id": null,
+      "hugging_face_id": "stepfun-ai/Step-5-Preview",
       "name": "StepFun: Step 5 Preview",
       "created": 1791462849,
       "description": "Step 5 Preview is StepFun's flagship model for agentic work, built on a sparse Mixture-of-Experts architecture (27B active / 600B total parameters). It performs strongly in software engineering and professional...",
-      "context_length": 1000000,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text+image+video->text",
         "input_modalities": [
@@ -645,15 +645,22 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "logprobs",
         "max_tokens",
+        "min_p",
+        "presence_penalty",
         "reasoning",
         "reasoning_effort",
+        "repetition_penalty",
         "response_format",
+        "seed",
         "stop",
         "structured_outputs",
         "temperature",
+        "tool_choice",
         "tools",
+        "top_k",
         "top_logprobs",
         "top_p"
       ],
@@ -4215,7 +4222,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000001584",
+        "prompt": "0.00000001368",
         "completion": "0.000000891",
         "input_cache_read": "0.0000000054"
       },
@@ -4941,7 +4948,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000001584",
+        "prompt": "0.00000001368",
         "completion": "0.000000891",
         "input_cache_read": "0.0000000054"
       },
@@ -6930,13 +6937,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.000000036",
+        "completion": "0.0000009",
+        "input_cache_read": "0.00000001125"
       },
       "top_provider": {
-        "context_length": 1048575,
-        "max_completion_tokens": 943717,
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -7445,9 +7452,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000608",
+        "prompt": "0.00000006",
         "completion": "0.0000044",
-        "input_cache_read": "0.0000000565"
+        "input_cache_read": "0.0000000558"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -8580,9 +8587,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -11555,7 +11562,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000048",
+        "prompt": "0.00000045",
         "completion": "0.000015",
         "input_cache_read": "0.00000028"
       },
@@ -14487,9 +14494,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.0000044",
-        "input_cache_read": "0.000000039"
+        "prompt": "0.000000037",
+        "completion": "0.000007",
+        "input_cache_read": "0.000000036"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -18571,8 +18578,8 @@
       "id": "~google/gemini-pro-latest",
       "canonical_slug": "~google/gemini-pro-latest",
       "alias_target": {
-        "name": "Google: Gemini 3.1 Pro Preview",
-        "slug": "google/gemini-3.1-pro-preview"
+        "name": "Google: Gemini 4 Argon",
+        "slug": "google/gemini-4-argon"
       },
       "hugging_face_id": null,
       "name": "Google: Gemini Pro Latest",
@@ -18596,24 +18603,14 @@
       },
       "pricing": {
         "prompt": "0.000002",
-        "completion": "0.000012",
+        "completion": "0.00001",
         "image": "0.000002",
         "audio": "0.000002",
-        "input_audio_cache": "0.0000002",
+        "input_audio_cache": "0.0000001",
         "web_search": "0.014",
-        "internal_reasoning": "0.000012",
-        "input_cache_read": "0.0000002",
-        "input_cache_write": "0.000000375",
-        "overrides": [
-          {
-            "min_prompt_tokens": 200000,
-            "prompt": "0.000004",
-            "completion": "0.000018",
-            "audio": "0.000004",
-            "input_audio_cache": "0.0000004",
-            "input_cache_read": "0.0000004"
-          }
-        ]
+        "internal_reasoning": "0.00001",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000001875"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -18685,8 +18682,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.000014",
+        "prompt": "0.00000031",
+        "completion": "0.000024",
         "input_cache_read": "0.0000003"
       },
       "top_provider": {
@@ -21280,9 +21277,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,
@@ -34935,12 +34932,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000037",
-        "completion": "0.00000017"
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000075"
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": 117964,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -42149,12 +42147,12 @@
         "instruct_type": "llama3"
       },
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000033"
+        "prompt": "0.0000000509",
+        "completion": "0.000000335"
       },
       "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 117964,
+        "context_length": 80000,
+        "max_completion_tokens": 72000,
         "is_moderated": false
       },
       "per_request_limits": null,

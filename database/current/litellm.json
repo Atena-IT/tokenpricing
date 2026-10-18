@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-17T18:24:31.145266+00:00",
+  "fetched_at": "2026-10-18T00:58:20.906035+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 4203,
+  "model_count": 4212,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -2328,6 +2328,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2367,6 +2368,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2406,6 +2408,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2445,6 +2448,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2484,6 +2488,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2523,6 +2528,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2599,6 +2605,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2638,6 +2645,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2677,6 +2685,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2716,6 +2725,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2755,6 +2765,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -2794,6 +2805,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -3021,7 +3033,7 @@
       "cache_creation_input_token_cost_above_200k_tokens": 7.5e-06,
       "cache_read_input_token_cost_above_200k_tokens": 6e-07,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 200000,
       "max_output_tokens": 64000,
       "max_tokens": 64000,
       "mode": "chat",
@@ -3306,7 +3318,7 @@
       "cache_creation_input_token_cost_above_200k_tokens": 7.5e-06,
       "cache_read_input_token_cost_above_200k_tokens": 6e-07,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 200000,
       "max_output_tokens": 64000,
       "max_tokens": 64000,
       "mode": "chat",
@@ -10921,7 +10933,6 @@
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
-        "/v1/chat/completions",
         "/v1/batch",
         "/v1/responses"
       ],
@@ -10990,7 +11001,6 @@
       "output_cost_per_token_batches": 4e-05,
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
-        "/v1/chat/completions",
         "/v1/batch",
         "/v1/responses"
       ],
@@ -11022,7 +11032,6 @@
       "output_cost_per_token_batches": 4e-05,
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
-        "/v1/chat/completions",
         "/v1/batch",
         "/v1/responses"
       ],
@@ -12894,6 +12903,7 @@
       "supports_prompt_caching": true
     },
     "azure_ai/ministral-3b": {
+      "deprecation_date": "2026-12-09",
       "input_cost_per_token": 4e-08,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 128000,
@@ -12957,6 +12967,7 @@
       "supports_vision": true
     },
     "azure_ai/mistral-medium-2505": {
+      "deprecation_date": "2026-12-09",
       "input_cost_per_token": 4e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 131072,
@@ -12994,6 +13005,7 @@
       "supports_tool_choice": true
     },
     "azure_ai/mistral-small-2503": {
+      "deprecation_date": "2026-12-09",
       "input_cost_per_token": 1e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 128000,
@@ -21152,6 +21164,7 @@
       "input_cost_per_token": 1.4e-07,
       "input_dbu_cost_per_token": 2e-06,
       "litellm_provider": "databricks",
+      "token_count_framing": 97,
       "max_input_tokens": 1000000,
       "max_output_tokens": 393216,
       "max_tokens": 393216,
@@ -21173,6 +21186,11 @@
       "supports_reasoning": true,
       "supports_tool_choice": true,
       "supports_vision": false
+    },
+    "databricks/system.ai.deepseek-v4-flash-0731": {
+      "litellm_provider": "databricks",
+      "mode": "chat",
+      "token_count_framing": 97
     },
     "databricks/databricks-deepseek-v4-pro-0813": {
       "cache_creation_input_token_cost": 1.31999e-06,
@@ -22142,6 +22160,7 @@
       "input_cost_per_token": 2.99999e-06,
       "input_dbu_cost_per_token": 4.2857e-05,
       "litellm_provider": "databricks",
+      "token_count_framing": 100,
       "max_input_tokens": 1000000,
       "max_output_tokens": 1048576,
       "max_tokens": 1048576,
@@ -22164,6 +22183,11 @@
       "supports_reasoning": true,
       "supports_tool_choice": true,
       "supports_vision": true
+    },
+    "databricks/system.ai.kimi-k3": {
+      "litellm_provider": "databricks",
+      "mode": "chat",
+      "token_count_framing": 100
     },
     "databricks/databricks-llama-4-maverick": {
       "cache_creation_input_token_cost": 5.0001e-07,
@@ -24703,7 +24727,7 @@
       "cache_creation_input_token_cost_above_200k_tokens": 7.5e-06,
       "cache_read_input_token_cost_above_200k_tokens": 6e-07,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 200000,
       "max_output_tokens": 64000,
       "max_tokens": 64000,
       "mode": "chat",
@@ -24766,6 +24790,7 @@
       "source": "https://aws.amazon.com/bedrock/pricing/"
     },
     "eu.meta.llama3-2-1b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 1.3e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -24773,10 +24798,12 @@
       "max_tokens": 4096,
       "mode": "chat",
       "output_cost_per_token": 1.3e-07,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-1b-instruct.md",
       "supports_function_calling": true,
       "supports_tool_choice": false
     },
     "eu.meta.llama3-2-3b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 1.9e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -24784,6 +24811,7 @@
       "max_tokens": 4096,
       "mode": "chat",
       "output_cost_per_token": 1.9e-07,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-3b-instruct.md",
       "supports_function_calling": true,
       "supports_tool_choice": false
     },
@@ -29727,6 +29755,7 @@
     },
     "vertex_ai/gemini-3.8-flash": {
       "prompt_cache_min_tokens": 4096,
+      "deprecation_date": "2027-09-02",
       "cache_read_input_token_cost": 7.5e-08,
       "cache_read_input_token_cost_batches": 3.75e-08,
       "cache_read_input_token_cost_flex": 3.75e-08,
@@ -29834,6 +29863,7 @@
       "supports_native_streaming": true
     },
     "vertex_ai/gemini-3.8-live": {
+      "deprecation_date": "2027-09-25",
       "input_cost_per_audio_token": 3e-06,
       "input_cost_per_image_token": 1e-06,
       "input_cost_per_token": 7.5e-07,
@@ -32004,6 +32034,7 @@
     },
     "gemini-3.8-flash": {
       "prompt_cache_min_tokens": 4096,
+      "deprecation_date": "2027-09-02",
       "cache_read_input_token_cost": 7.5e-08,
       "cache_read_input_token_cost_batches": 3.75e-08,
       "cache_read_input_token_cost_flex": 3.75e-08,
@@ -33926,7 +33957,7 @@
       "cache_creation_input_token_cost_above_200k_tokens": 7.5e-06,
       "cache_read_input_token_cost_above_200k_tokens": 6e-07,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 200000,
       "max_output_tokens": 64000,
       "max_tokens": 64000,
       "mode": "chat",
@@ -40558,6 +40589,7 @@
       "source": "https://aws.amazon.com/bedrock/pricing/"
     },
     "meta.llama3-1-405b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 2.4e-06,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -40600,6 +40632,7 @@
       "supports_tool_choice": false
     },
     "meta.llama3-2-11b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 1.6e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -40613,6 +40646,7 @@
       "supports_vision": true
     },
     "meta.llama3-2-1b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 1e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -40620,10 +40654,12 @@
       "max_tokens": 4096,
       "mode": "chat",
       "output_cost_per_token": 1e-07,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-1b-instruct.md",
       "supports_function_calling": true,
       "supports_tool_choice": false
     },
     "meta.llama3-2-3b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 1.5e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -40631,10 +40667,12 @@
       "max_tokens": 4096,
       "mode": "chat",
       "output_cost_per_token": 1.5e-07,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-3b-instruct.md",
       "supports_function_calling": true,
       "supports_tool_choice": false
     },
     "meta.llama3-2-90b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 7.2e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -45469,6 +45507,38 @@
       "output_cost_per_token": 0.0,
       "source": "https://docs.perplexity.ai/docs/getting-started/pricing"
     },
+    "perplexity/pplx-decider-v1.2": {
+      "input_cost_per_token": 2e-08,
+      "litellm_provider": "perplexity",
+      "max_input_tokens": 262144,
+      "mode": "evaluation",
+      "output_cost_per_token": 0.0,
+      "source": "https://docs.perplexity.ai/docs/decisions/quickstart"
+    },
+    "perplexity/pplx-decider-latest": {
+      "input_cost_per_token": 2e-08,
+      "litellm_provider": "perplexity",
+      "max_input_tokens": 262144,
+      "mode": "evaluation",
+      "output_cost_per_token": 0.0,
+      "source": "https://docs.perplexity.ai/docs/decisions/quickstart"
+    },
+    "perplexity/pplx-decider-flash-v1.2": {
+      "input_cost_per_token": 1e-08,
+      "litellm_provider": "perplexity",
+      "max_input_tokens": 262144,
+      "mode": "evaluation",
+      "output_cost_per_token": 0.0,
+      "source": "https://docs.perplexity.ai/docs/decisions/quickstart"
+    },
+    "perplexity/pplx-decider-flash-latest": {
+      "input_cost_per_token": 1e-08,
+      "litellm_provider": "perplexity",
+      "max_input_tokens": 262144,
+      "mode": "evaluation",
+      "output_cost_per_token": 0.0,
+      "source": "https://docs.perplexity.ai/docs/decisions/quickstart"
+    },
     "perplexity/sonar": {
       "input_cost_per_token": 1e-06,
       "litellm_provider": "perplexity",
@@ -48477,6 +48547,7 @@
       "supports_max_reasoning_effort": true,
       "supports_mid_conversation_system": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": false,
       "supports_output_config": true,
       "supports_parallel_tool_use_config": true,
       "supports_pdf_input": true,
@@ -48511,6 +48582,7 @@
       "supports_max_reasoning_effort": true,
       "supports_mid_conversation_system": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": false,
       "supports_output_config": true,
       "supports_parallel_tool_use_config": true,
       "supports_pdf_input": true,
@@ -48912,7 +48984,7 @@
       "cache_creation_input_token_cost_above_200k_tokens": 7.5e-06,
       "cache_read_input_token_cost_above_200k_tokens": 6e-07,
       "litellm_provider": "bedrock_converse",
-      "max_input_tokens": 1000000,
+      "max_input_tokens": 200000,
       "max_output_tokens": 64000,
       "max_tokens": 64000,
       "mode": "chat",
@@ -48991,6 +49063,7 @@
       "supports_vision": false
     },
     "us.meta.llama3-1-405b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 2.4e-06,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -49033,6 +49106,7 @@
       "supports_tool_choice": false
     },
     "us.meta.llama3-2-11b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 1.6e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -49046,6 +49120,7 @@
       "supports_vision": true
     },
     "us.meta.llama3-2-1b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 1e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -49053,10 +49128,12 @@
       "max_tokens": 4096,
       "mode": "chat",
       "output_cost_per_token": 1e-07,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-1b-instruct.md",
       "supports_function_calling": true,
       "supports_tool_choice": false
     },
     "us.meta.llama3-2-3b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 1.5e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -49064,10 +49141,12 @@
       "max_tokens": 4096,
       "mode": "chat",
       "output_cost_per_token": 1.5e-07,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-3b-instruct.md",
       "supports_function_calling": true,
       "supports_tool_choice": false
     },
     "us.meta.llama3-2-90b-instruct-v1:0": {
+      "deprecation_date": "2026-07-07",
       "input_cost_per_token": 7.2e-07,
       "litellm_provider": "bedrock",
       "max_input_tokens": 128000,
@@ -67294,6 +67373,7 @@
       "supports_max_reasoning_effort": true,
       "supports_mid_conversation_system": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": false,
       "supports_output_config": true,
       "supports_parallel_tool_use_config": true,
       "supports_pdf_input": true,
@@ -67327,6 +67407,7 @@
       "supports_max_reasoning_effort": true,
       "supports_mid_conversation_system": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": false,
       "supports_output_config": true,
       "supports_parallel_tool_use_config": true,
       "supports_pdf_input": true,
@@ -67564,6 +67645,7 @@
       "supports_max_reasoning_effort": true,
       "supports_mid_conversation_system": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": false,
       "supports_output_config": true,
       "supports_parallel_tool_use_config": true,
       "supports_pdf_input": true,
@@ -67597,6 +67679,7 @@
       "supports_max_reasoning_effort": true,
       "supports_mid_conversation_system": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": false,
       "supports_output_config": true,
       "supports_parallel_tool_use_config": true,
       "supports_pdf_input": true,
@@ -71655,6 +71738,8 @@
       "input_cost_per_token_flex": 1.65e-06,
       "input_cost_per_token_priority": 5.775e-06,
       "litellm_provider": "bedrock_converse",
+      "token_count_framing": 64,
+      "token_count_tokenizer": "kimi_k3",
       "max_input_tokens": 1000000,
       "max_output_tokens": 131072,
       "max_tokens": 131072,
@@ -71685,6 +71770,8 @@
       "input_cost_per_token_flex": 1.5e-06,
       "input_cost_per_token_priority": 5.25e-06,
       "litellm_provider": "bedrock_converse",
+      "token_count_framing": 64,
+      "token_count_tokenizer": "kimi_k3",
       "max_input_tokens": 1000000,
       "max_output_tokens": 131072,
       "max_tokens": 131072,
@@ -71715,6 +71802,8 @@
       "input_cost_per_token_flex": 1.65e-06,
       "input_cost_per_token_priority": 5.775e-06,
       "litellm_provider": "bedrock_converse",
+      "token_count_framing": 64,
+      "token_count_tokenizer": "kimi_k3",
       "max_input_tokens": 1000000,
       "max_output_tokens": 131072,
       "max_tokens": 131072,
@@ -72951,6 +73040,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -73083,6 +73173,7 @@
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true,
       "supports_native_structured_output": false,
+      "supports_bedrock_native_structured_output": true,
       "supports_max_reasoning_effort": true,
       "supports_output_config": true,
       "bedrock_output_config_effort_ceiling": "xhigh",
@@ -73215,6 +73306,10 @@
       "cache_read_input_token_cost": 1e-07,
       "input_cost_per_token": 2e-06,
       "litellm_provider": "bedrock_converse",
+      "token_count_model": {
+        "model": "anthropic.claude-opus-5-5",
+        "region": "us-east-1"
+      },
       "supports_tool_search": true,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
@@ -73288,6 +73383,10 @@
       "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrockFoundationModels/current/index.json"
     },
     "au.anthropic.claude-sonnet-5-5": {
+      "token_count_model": {
+        "model": "au.anthropic.claude-opus-5-5",
+        "region": "ap-southeast-4"
+      },
       "bedrock_converse_supports_strict_tools": false,
       "cache_creation_input_token_cost": 2.75e-06,
       "cache_creation_input_token_cost_above_1hr": 4.4e-06,
@@ -73488,6 +73587,10 @@
       "cache_read_input_token_cost": 1e-07,
       "input_cost_per_token": 2e-06,
       "litellm_provider": "bedrock_converse",
+      "token_count_model": {
+        "model": "global.anthropic.claude-opus-5-5",
+        "region": "us-east-1"
+      },
       "supports_tool_search": true,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
@@ -73697,6 +73800,10 @@
       "cache_read_input_token_cost": 1.1e-07,
       "input_cost_per_token": 2.2e-06,
       "litellm_provider": "bedrock_converse",
+      "token_count_model": {
+        "model": "us.anthropic.claude-opus-5-5",
+        "region": "us-east-1"
+      },
       "supports_tool_search": true,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
@@ -74513,6 +74620,8 @@
       "input_cost_per_token_flex": 1.65e-06,
       "input_cost_per_token_priority": 5.775e-06,
       "litellm_provider": "bedrock_converse",
+      "token_count_framing": 64,
+      "token_count_tokenizer": "kimi_k3",
       "max_input_tokens": 1000000,
       "max_output_tokens": 131072,
       "max_tokens": 131072,
@@ -74686,6 +74795,10 @@
       "cache_read_input_token_cost": 1e-08,
       "input_cost_per_token": 1e-07,
       "litellm_provider": "bedrock_converse",
+      "token_count_model": {
+        "model": "anthropic.claude-opus-5-5",
+        "region": "us-east-1"
+      },
       "supports_tool_search": true,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
@@ -74764,6 +74877,10 @@
       "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrockFoundationModels/current/index.json"
     },
     "au.anthropic.claude-haiku-5-5": {
+      "token_count_model": {
+        "model": "au.anthropic.claude-opus-5-5",
+        "region": "ap-southeast-4"
+      },
       "input_cost_per_token_above_100k_tokens": 5.5e-07,
       "output_cost_per_token_above_100k_tokens": 2.75e-06,
       "cache_creation_input_token_cost_above_100k_tokens": 6.875e-07,
@@ -74994,6 +75111,10 @@
       "cache_read_input_token_cost": 1e-08,
       "input_cost_per_token": 1e-07,
       "litellm_provider": "bedrock_converse",
+      "token_count_model": {
+        "model": "global.anthropic.claude-opus-5-5",
+        "region": "us-east-1"
+      },
       "supports_tool_search": true,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
@@ -75141,6 +75262,10 @@
       "cache_read_input_token_cost": 1.1e-08,
       "input_cost_per_token": 1.1e-07,
       "litellm_provider": "bedrock_converse",
+      "token_count_model": {
+        "model": "us.anthropic.claude-opus-5-5",
+        "region": "us-east-1"
+      },
       "supports_tool_search": true,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
@@ -75573,6 +75698,7 @@
       "web_search_billing_unit": "per_query"
     },
     "vertex_ai/gemini-4-argon": {
+      "deprecation_date": "2027-10-13",
       "cache_read_input_token_cost": 1e-07,
       "cache_read_input_token_cost_batches": 5e-08,
       "cache_read_input_token_cost_flex": 5e-08,
@@ -75713,6 +75839,42 @@
       "supports_parallel_function_calling": true,
       "supports_reasoning": true,
       "supports_vision": true
+    },
+    "openinfer/@oi/GLM-5.3-Flash": {
+      "max_tokens": 393216,
+      "max_input_tokens": 393216,
+      "max_output_tokens": 393216,
+      "input_cost_per_token": 1.95e-07,
+      "output_cost_per_token": 1.56e-06,
+      "litellm_provider": "openinfer",
+      "mode": "chat",
+      "supports_function_calling": true,
+      "supports_reasoning": true,
+      "source": "https://api.openinfer.ai/v1/models"
+    },
+    "openinfer/@oi/Qwen3.5-27B": {
+      "max_tokens": 32768,
+      "max_input_tokens": 32768,
+      "max_output_tokens": 32768,
+      "input_cost_per_token": 1.95e-07,
+      "output_cost_per_token": 1.56e-06,
+      "litellm_provider": "openinfer",
+      "mode": "chat",
+      "supports_function_calling": true,
+      "supports_reasoning": true,
+      "source": "https://api.openinfer.ai/v1/models"
+    },
+    "openinfer/@oi/Qwen3.5-9B": {
+      "max_tokens": 100000,
+      "max_input_tokens": 100000,
+      "max_output_tokens": 100000,
+      "input_cost_per_token": 5e-06,
+      "output_cost_per_token": 1.5e-07,
+      "litellm_provider": "openinfer",
+      "mode": "chat",
+      "supports_function_calling": true,
+      "supports_reasoning": true,
+      "source": "https://api.openinfer.ai/v1/models"
     },
     "xai/grok-voice-3.0": {
       "input_cost_per_second": 0.001333333333333,

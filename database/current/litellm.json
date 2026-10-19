@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-19T06:49:13.507153+00:00",
+  "fetched_at": "2026-10-19T12:35:53.660582+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 4221,
+  "model_count": 4222,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -76318,6 +76318,24 @@
       "supports_response_schema": true,
       "supports_tool_choice": true,
       "supports_vision": true
+    },
+    "meta/muse-image-1.0": {
+      "litellm_provider": "meta",
+      "mode": "image_generation",
+      "output_cost_per_image": 0.01,
+      "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "supported_endpoints": [
+        "/v1/images/generations",
+        "/v1/images/edits",
+        "/v1/responses"
+      ],
+      "supported_modalities": [
+        "text",
+        "image"
+      ],
+      "supported_output_modalities": [
+        "image"
+      ]
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-20T06:37:13.285353+00:00",
+  "fetched_at": "2026-10-20T12:34:26.055283+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 4225,
   "data": {
@@ -27692,6 +27692,7 @@
     "fireworks_ai/accounts/fireworks/models/gpt-oss-120b": {
       "cache_read_input_token_cost": 1.5e-08,
       "cache_read_input_token_cost_priority": 1.8e-08,
+      "deprecation_date": "2026-11-07",
       "input_cost_per_token": 1.5e-07,
       "input_cost_per_token_priority": 1.8e-07,
       "litellm_provider": "fireworks_ai",
@@ -27701,7 +27702,7 @@
       "mode": "chat",
       "output_cost_per_token": 6e-07,
       "output_cost_per_token_priority": 7.2e-07,
-      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "source": "https://api.fireworks.ai/v1/serverless/models?format=nested",
       "supports_function_calling": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
@@ -28092,6 +28093,7 @@
     "fireworks_ai/gpt-oss-120b": {
       "cache_read_input_token_cost": 1.5e-08,
       "cache_read_input_token_cost_priority": 1.8e-08,
+      "deprecation_date": "2026-11-07",
       "input_cost_per_token": 1.5e-07,
       "input_cost_per_token_priority": 1.8e-07,
       "litellm_provider": "fireworks_ai",
@@ -28101,7 +28103,7 @@
       "mode": "chat",
       "output_cost_per_token": 6e-07,
       "output_cost_per_token_priority": 7.2e-07,
-      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "source": "https://api.fireworks.ai/v1/serverless/models?format=nested",
       "supports_function_calling": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
@@ -64002,6 +64004,7 @@
     "fireworks_ai/nemotron-lightning-3p5-30b-a3b": {
       "cache_read_input_token_cost": 1e-08,
       "cache_read_input_token_cost_priority": 1.25e-08,
+      "deprecation_date": "2026-11-07",
       "input_cost_per_token": 5e-08,
       "input_cost_per_token_priority": 6.25e-08,
       "litellm_provider": "fireworks_ai",
@@ -64011,7 +64014,7 @@
       "mode": "chat",
       "output_cost_per_token": 2e-07,
       "output_cost_per_token_priority": 2.5e-07,
-      "source": "https://docs.fireworks.ai/serverless/pricing",
+      "source": "https://api.fireworks.ai/v1/serverless/models?format=nested",
       "supports_function_calling": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
@@ -64021,6 +64024,7 @@
     "fireworks_ai/nemotron-3-ultra-nvfp4": {
       "cache_read_input_token_cost": 1.2e-07,
       "cache_read_input_token_cost_priority": 1.5e-07,
+      "deprecation_date": "2026-11-07",
       "input_cost_per_token": 6e-07,
       "input_cost_per_token_priority": 7.5e-07,
       "litellm_provider": "fireworks_ai",
@@ -64030,7 +64034,7 @@
       "mode": "chat",
       "output_cost_per_token": 2.4e-06,
       "output_cost_per_token_priority": 3e-06,
-      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "source": "https://api.fireworks.ai/v1/serverless/models?format=nested",
       "supports_function_calling": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
@@ -64071,6 +64075,7 @@
     "fireworks_ai/accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b": {
       "cache_read_input_token_cost": 1e-08,
       "cache_read_input_token_cost_priority": 1.25e-08,
+      "deprecation_date": "2026-11-07",
       "input_cost_per_token": 5e-08,
       "input_cost_per_token_priority": 6.25e-08,
       "litellm_provider": "fireworks_ai",
@@ -64080,7 +64085,7 @@
       "mode": "chat",
       "output_cost_per_token": 2e-07,
       "output_cost_per_token_priority": 2.5e-07,
-      "source": "https://docs.fireworks.ai/serverless/pricing",
+      "source": "https://api.fireworks.ai/v1/serverless/models?format=nested",
       "supports_function_calling": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
@@ -64090,6 +64095,7 @@
     "fireworks_ai/accounts/fireworks/models/nemotron-3-ultra-nvfp4": {
       "cache_read_input_token_cost": 1.2e-07,
       "cache_read_input_token_cost_priority": 1.5e-07,
+      "deprecation_date": "2026-11-07",
       "input_cost_per_token": 6e-07,
       "input_cost_per_token_priority": 7.5e-07,
       "litellm_provider": "fireworks_ai",
@@ -64099,7 +64105,7 @@
       "mode": "chat",
       "output_cost_per_token": 2.4e-06,
       "output_cost_per_token_priority": 3e-06,
-      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "source": "https://api.fireworks.ai/v1/serverless/models?format=nested",
       "supports_function_calling": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
@@ -67243,6 +67249,7 @@
     "fireworks_ai/accounts/fireworks/models/inkling": {
       "cache_read_input_token_cost": 1.7e-07,
       "cache_read_input_token_cost_priority": 1.7e-07,
+      "deprecation_date": "2026-11-07",
       "input_cost_per_token": 1e-06,
       "input_cost_per_token_priority": 1e-06,
       "litellm_provider": "fireworks_ai",

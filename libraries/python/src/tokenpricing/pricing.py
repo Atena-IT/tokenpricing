@@ -1,12 +1,23 @@
 """Fetch and manage canonical pricing data from tokenpricing.
 
 Data source: https://github.com/Atena-IT/tokenpricing
+
+Backend selection
+-----------------
+By default the HTTP-JSON path is used.  Set ``TOKENPRICING_USE_SQLITE=1``
+to opt into the experimental SQLite backend (see ``sqlite_backend.py``).
+The SQLite backend silently falls back to JSON on any failure.
 """
+
+import logging
+import os
 
 import httpx
 from async_lru import alru_cache
 
 from tokenpricing.modeling import PricingData
+
+logger = logging.getLogger(__name__)
 
 # Canonical pricing data URL - updated every 6 hours
 CANONICAL_DATASET_URL = "https://raw.githubusercontent.com/Atena-IT/tokenpricing/main/database/current/prices.json"
@@ -15,19 +26,41 @@ CANONICAL_DATASET_URL = "https://raw.githubusercontent.com/Atena-IT/tokenpricing
 CACHE_TTL_SECONDS = 6 * 60 * 60
 
 
+def _sqlite_enabled() -> bool:
+    """Return True when the SQLite backend opt-in env var is set."""
+    val = os.environ.get("TOKENPRICING_USE_SQLITE", "").strip().lower()
+    return val not in ("", "0", "false", "no")
+
+
 async def fetch_pricing_data() -> PricingData:
     """Fetch pricing data from the tokenpricing canonical database.
 
-    This function makes an async HTTP request to the canonical pricing data endpoint
-    and parses it into a PricingData object.
+    When ``TOKENPRICING_USE_SQLITE=1`` is set, attempts to load from the cached
+    SQLite DB first; falls back to the HTTP-JSON path on any failure.
 
     Returns:
         PricingData: Parsed pricing data from the canonical database
 
     Raises:
-        httpx.HTTPError: If the HTTP request fails
+        httpx.HTTPError: If the HTTP request fails (JSON path)
         pydantic.ValidationError: If the response data is invalid
     """
+    if _sqlite_enabled():
+        try:
+            import asyncio
+
+            from tokenpricing.sqlite_backend import get_all_pricing_data
+
+            data = await asyncio.to_thread(get_all_pricing_data)
+            logger.debug("Loaded pricing data from SQLite backend")
+            return data
+        except Exception as exc:
+            logger.warning(
+                "SQLite backend failed (%s: %s), falling back to JSON",
+                type(exc).__name__,
+                exc,
+            )
+
     async with httpx.AsyncClient() as client:
         response = await client.get(CANONICAL_DATASET_URL)
         response.raise_for_status()

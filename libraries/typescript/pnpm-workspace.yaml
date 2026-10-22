@@ -1,2 +1,5 @@
 allowBuilds:
   esbuild: true
+  # better-sqlite3 ships a native addon and needs its install script
+  # (prebuild-install / node-gyp) to run for the optional SQLite backend.
+  better-sqlite3: true

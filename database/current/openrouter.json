@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-22T12:34:34.774398+00:00",
+  "fetched_at": "2026-10-22T18:27:37.716806+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 468,
   "data": [
@@ -58,10 +58,10 @@
       }
     },
     {
-      "id": "minimax/minimax-m3.1-flash:free",
+      "id": "minimax/minimax-m3.1-flash",
       "canonical_slug": "minimax/minimax-m3.1-flash-20261019",
       "hugging_face_id": null,
-      "name": "MiniMax: MiniMax M3.1 Flash (free)",
+      "name": "MiniMax: MiniMax M3.1 Flash",
       "created": 1792379569,
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "context_length": 1000000,
@@ -79,8 +79,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0",
-        "completion": "0"
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015"
       },
       "top_provider": {
         "context_length": 1000000,
@@ -3126,7 +3127,7 @@
       },
       "top_provider": {
         "context_length": null,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -4847,6 +4848,7 @@
         "logprobs",
         "max_tokens",
         "min_p",
+        "parallel_tool_calls",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -5364,9 +5366,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000225",
+        "prompt": "0.0000001307",
         "completion": "0.000008",
-        "input_cache_read": "0.00000023"
+        "input_cache_read": "0.00000013"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -6188,6 +6190,7 @@
         "logprobs",
         "max_tokens",
         "min_p",
+        "parallel_tool_calls",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
@@ -7967,9 +7970,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -7997,9 +8000,11 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
+        "logprobs",
         "max_completion_tokens",
         "max_tokens",
         "min_p",
+        "parallel_tool_calls",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
@@ -8012,6 +8017,7 @@
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -8834,13 +8840,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000079",
-        "completion": "0.0000014",
-        "input_cache_read": "0.000000078"
+        "prompt": "0.0000007",
+        "completion": "0.0000022",
+        "input_cache_read": "0.00000013"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 262144,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -10884,9 +10890,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000475",
-        "completion": "0.0000001568",
-        "input_cache_read": "0.000000028"
+        "prompt": "0.0000000422",
+        "completion": "0.0000001729",
+        "input_cache_read": "0.0000000275"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -10957,9 +10963,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.00000132",
-        "input_cache_read": "0.000000014"
+        "prompt": "0.00000004444",
+        "completion": "0.00000013332",
+        "input_cache_read": "0.000000001414"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -12527,7 +12533,6 @@
         "reasoning",
         "reasoning_effort",
         "repetition_penalty",
-        "seed",
         "stop",
         "temperature",
         "tool_choice",
@@ -14882,9 +14887,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -21354,9 +21359,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000442656",
+        "completion": "0.000000885312",
+        "input_cache_read": "0.000000036888"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -23504,7 +23509,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-10-26",
       "links": {
         "details": "/api/v1/models/arcee-ai/trinity-large-thinking/endpoints"
       },

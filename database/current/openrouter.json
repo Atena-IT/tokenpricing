@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-23T00:55:42.202731+00:00",
+  "fetched_at": "2026-10-23T06:37:51.368175+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 468,
   "data": [
@@ -60,11 +60,11 @@
     {
       "id": "minimax/minimax-m3.1-flash",
       "canonical_slug": "minimax/minimax-m3.1-flash-20261019",
-      "hugging_face_id": null,
+      "hugging_face_id": "MiniMaxAI/MiniMax-M3.1-Flash",
       "name": "MiniMax: MiniMax M3.1 Flash",
       "created": 1792379569,
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
-      "context_length": 1000000,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text+image+video->text",
         "input_modalities": [
@@ -84,20 +84,31 @@
         "input_cache_read": "0.000000015"
       },
       "top_provider": {
-        "context_length": 1000000,
+        "context_length": 1048576,
         "max_completion_tokens": 524288,
         "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
+        "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
+        "logprobs",
         "max_tokens",
+        "min_p",
+        "presence_penalty",
         "reasoning",
         "reasoning_effort",
+        "repetition_penalty",
         "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
+        "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -148,9 +159,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
         "overrides": [
           {
             "utc_days": [
@@ -5443,9 +5454,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000225",
+        "prompt": "0.0000002247",
         "completion": "0.000008",
-        "input_cache_read": "0.00000023"
+        "input_cache_read": "0.00000022"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -9257,13 +9268,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.00000135",
-        "input_cache_read": "0.000000018"
+        "prompt": "0.0000002",
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000009"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -9984,9 +9995,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -23025,9 +23036,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,
@@ -25205,13 +25216,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000008",
-        "completion": "0.00000013",
-        "input_cache_read": "0.00000004"
+        "prompt": "0.00000017",
+        "completion": "0.00000025"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,

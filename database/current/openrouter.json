@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-24T12:29:16.050166+00:00",
+  "fetched_at": "2026-10-24T18:25:09.011619+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 469,
+  "model_count": 466,
   "data": [
     {
       "id": "moonshotai/kimi-k3.1-pro",
@@ -8197,9 +8197,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -8291,8 +8291,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000492",
-        "completion": "0.0000000788",
+        "prompt": "0.0000000507",
+        "completion": "0.0000000702",
         "input_cache_read": "0.00000003"
       },
       "top_provider": {
@@ -8430,13 +8430,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000492",
-        "completion": "0.0000000788",
+        "prompt": "0.00000015",
+        "completion": "0.0000005",
         "input_cache_read": "0.00000003"
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "context_length": 1048575,
+        "max_completion_tokens": 943717,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -9067,9 +9067,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000079",
-        "completion": "0.0000014",
-        "input_cache_read": "0.000000078"
+        "prompt": "0.0000000908",
+        "completion": "0.00000161",
+        "input_cache_read": "0.0000000897"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11153,8 +11153,8 @@
       },
       "pricing": {
         "prompt": "0.0000000422",
-        "completion": "0.0000001694",
-        "input_cache_read": "0.000000028"
+        "completion": "0.0000001763",
+        "input_cache_read": "0.000000027"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -15207,9 +15207,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -20586,7 +20586,7 @@
       },
       "pricing": {
         "prompt": "0.00000019",
-        "completion": "0.0000077001",
+        "completion": "0.00000894",
         "input_cache_read": "0.00000019"
       },
       "top_provider": {
@@ -21730,9 +21730,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000266742",
-        "completion": "0.000000533484",
-        "input_cache_read": "0.0000000222285"
+        "prompt": "0.0000002088",
+        "completion": "0.0000004176",
+        "input_cache_read": "0.0000000174"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -45075,57 +45075,6 @@
       }
     },
     {
-      "id": "openai/gpt-3.5-turbo-instruct",
-      "canonical_slug": "openai/gpt-3.5-turbo-instruct",
-      "hugging_face_id": null,
-      "name": "OpenAI: GPT-3.5 Turbo Instruct",
-      "created": 1695859200,
-      "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
-      "context_length": 4095,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "GPT",
-        "instruct_type": "chatml"
-      },
-      "pricing": {
-        "prompt": "0.0000015",
-        "completion": "0.000002"
-      },
-      "top_provider": {
-        "context_length": 4095,
-        "max_completion_tokens": 3685,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2021-09-30",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/openai/gpt-3.5-turbo-instruct/endpoints"
-      }
-    },
-    {
       "id": "openai/gpt-3.5-turbo-16k",
       "canonical_slug": "openai/gpt-3.5-turbo-16k",
       "hugging_face_id": null,
@@ -45341,129 +45290,6 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/gryphe/mythomax-l2-13b/endpoints"
-      }
-    },
-    {
-      "id": "openai/gpt-3.5-turbo",
-      "canonical_slug": "openai/gpt-3.5-turbo",
-      "hugging_face_id": null,
-      "name": "OpenAI: GPT-3.5 Turbo",
-      "created": 1685232000,
-      "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
-      "context_length": 16385,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "GPT",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.0000015"
-      },
-      "top_provider": {
-        "context_length": 16385,
-        "max_completion_tokens": 4096,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_logprobs",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2021-09-30",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/openai/gpt-3.5-turbo/endpoints"
-      },
-      "benchmarks": {
-        "design_arena": [],
-        "artificial_analysis": {
-          "intelligence_index": 5.5,
-          "coding_index": 10.7,
-          "agentic_index": null
-        }
-      }
-    },
-    {
-      "id": "openai/gpt-3.5-turbo:batch",
-      "canonical_slug": "openai/gpt-3.5-turbo",
-      "hugging_face_id": null,
-      "name": "OpenAI: GPT-3.5 Turbo (batch)",
-      "created": 1685232000,
-      "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
-      "context_length": 16385,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "GPT",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.00000075",
-        "web_search": "0.01"
-      },
-      "top_provider": {
-        "context_length": 16385,
-        "max_completion_tokens": 4096,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_logprobs",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2021-09-30",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/openai/gpt-3.5-turbo/endpoints"
-      },
-      "benchmarks": {
-        "design_arena": [],
-        "artificial_analysis": {
-          "intelligence_index": 5.5,
-          "coding_index": 10.7,
-          "agentic_index": null
-        }
       }
     },
     {

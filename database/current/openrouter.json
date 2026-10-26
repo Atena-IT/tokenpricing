@@ -1,9 +1,159 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-26T13:57:42.290109+00:00",
+  "fetched_at": "2026-10-26T18:36:43.225144+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 466,
+  "model_count": 468,
   "data": [
+    {
+      "id": "openai/gpt-6.1-terra",
+      "canonical_slug": "openai/gpt-6.1-terra-20261026",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6.1 Terra",
+      "created": 1793038409,
+      "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, built for fast, capable computer use at a lower price than GPT-6.1 Sol. It reads what is on screen, takes...",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000005",
+        "input_cache_write": "0.00000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000002",
+            "completion": "0.0000075",
+            "input_cache_read": "0.0000001",
+            "input_cache_write": "0.0000025"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-6.1-terra-20261026/endpoints"
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      }
+    },
+    {
+      "id": "openai/gpt-6.1-terra:batch",
+      "canonical_slug": "openai/gpt-6.1-terra-20261026",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6.1 Terra (batch)",
+      "created": 1793038409,
+      "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, built for fast, capable computer use at a lower price than GPT-6.1 Sol. It reads what is on screen, takes...",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000005",
+        "completion": "0.0000025",
+        "web_search": "0.01",
+        "input_cache_read": "0.000000025",
+        "input_cache_write": "0.000000625",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000001",
+            "completion": "0.00000375",
+            "input_cache_read": "0.00000005",
+            "input_cache_write": "0.00000125"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-6.1-terra-20261026/endpoints"
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      }
+    },
     {
       "id": "moonshotai/kimi-k3.1-pro",
       "canonical_slug": "moonshotai/kimi-k3.1-pro-20261023",
@@ -5613,9 +5763,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000165",
-        "completion": "0.000000495",
-        "input_cache_read": "0.00000000525"
+        "prompt": "0.0000001188",
+        "completion": "0.000008",
+        "input_cache_read": "0.00000012"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -8253,9 +8403,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -11290,7 +11440,7 @@
       },
       "pricing": {
         "prompt": "0.0000000422",
-        "completion": "0.0000001637",
+        "completion": "0.0000001694",
         "input_cache_read": "0.000000028"
       },
       "top_provider": {
@@ -13314,9 +13464,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000202",
+        "prompt": "0.000000169",
         "completion": "0.00002",
-        "input_cache_read": "0.000000192"
+        "input_cache_read": "0.000000159"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -15365,9 +15515,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -20764,9 +20914,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001919",
-        "completion": "0.0000076972",
-        "input_cache_read": "0.00000019"
+        "prompt": "0.0000001605",
+        "completion": "0.0000101583",
+        "input_cache_read": "0.00000016"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -21908,9 +22058,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000079257",
-        "completion": "0.00000158514",
-        "input_cache_read": "0.0000000660475"
+        "prompt": "0.000000745242",
+        "completion": "0.000001490484",
+        "input_cache_read": "0.0000000621035"
       },
       "top_provider": {
         "context_length": 1024000,

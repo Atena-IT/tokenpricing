@@ -1,9 +1,173 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-27T00:55:38.737818+00:00",
+  "fetched_at": "2026-10-27T06:39:07.946107+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 462,
+  "model_count": 464,
   "data": [
+    {
+      "id": "openai/gpt-6.1-terra-pro",
+      "canonical_slug": "openai/gpt-6.1-terra-pro-20261026",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6.1 Terra Pro",
+      "created": 1793038556,
+      "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000005",
+        "input_cache_write": "0.00000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000002",
+            "completion": "0.0000075",
+            "input_cache_read": "0.0000001",
+            "input_cache_write": "0.0000025"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-6.1-terra-pro-20261026/endpoints"
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      }
+    },
+    {
+      "id": "openai/gpt-6.1-terra-pro:batch",
+      "canonical_slug": "openai/gpt-6.1-terra-pro-20261026",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6.1 Terra Pro (batch)",
+      "created": 1793038556,
+      "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000005",
+        "completion": "0.0000025",
+        "web_search": "0.01",
+        "input_cache_read": "0.000000025",
+        "input_cache_write": "0.000000625",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000001",
+            "completion": "0.00000375",
+            "input_cache_read": "0.00000005",
+            "input_cache_write": "0.00000125"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-6.1-terra-pro-20261026/endpoints"
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      }
+    },
     {
       "id": "openai/gpt-6.1-terra",
       "canonical_slug": "openai/gpt-6.1-terra-20261026",
@@ -453,9 +617,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
         "overrides": [
           {
             "utc_days": [
@@ -5160,7 +5324,7 @@
       "hugging_face_id": null,
       "name": "NVIDIA: Switchyard",
       "created": 1790025947,
-      "description": "Switchyard is an open-source model router that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most popular...",
+      "description": "Switchyard is an open-source model routing system that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most...",
       "context_length": 1000000,
       "architecture": {
         "modality": "text->text",
@@ -5812,9 +5976,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000002448",
+        "prompt": "0.0000002266",
         "completion": "0.000008",
-        "input_cache_read": "0.00000024"
+        "input_cache_read": "0.00000023"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -5890,13 +6054,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.00000002",
+        "completion": "0.000001",
+        "input_cache_read": "0.000000015"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 393216,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -8538,8 +8702,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000413",
-        "completion": "0.0000000758",
+        "prompt": "0.0000000513",
+        "completion": "0.0000000701",
         "input_cache_read": "0.00000003"
       },
       "top_provider": {
@@ -9195,13 +9359,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000699",
-        "completion": "0.0000014",
-        "input_cache_read": "0.0000000689"
+        "prompt": "0.0000000703",
+        "completion": "0.0000043843",
+        "input_cache_read": "0.0000000703"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -9314,7 +9478,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000699",
+        "prompt": "0.0000000769",
         "completion": "0.0000014",
         "input_cache_read": "0.0000000689"
       },
@@ -9633,13 +9797,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000039",
-        "completion": "0.00000125",
-        "input_cache_read": "0.0000000039"
+        "prompt": "0.0000002",
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000009"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -10360,9 +10524,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -11553,13 +11717,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.00000132",
-        "input_cache_read": "0.000000014"
+        "prompt": "0.000000119",
+        "completion": "0.000000238",
+        "input_cache_read": "0.0000000238"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -13505,9 +13669,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000189",
-        "completion": "0.00002",
-        "input_cache_read": "0.000000179"
+        "prompt": "0.000000179",
+        "completion": "0.0000115",
+        "input_cache_read": "0.000000169"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -20955,9 +21119,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000189",
-        "completion": "0.00002",
-        "input_cache_read": "0.000000179"
+        "prompt": "0.00000017",
+        "completion": "0.0000097224",
+        "input_cache_read": "0.00000017"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -22468,13 +22632,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000003045",
-        "completion": "0.000000609",
-        "input_cache_read": "0.0000000028"
+        "prompt": "0.00000048",
+        "completion": "0.0000018",
+        "input_cache_read": "0.000000096"
       },
       "top_provider": {
-        "context_length": 1050000,
-        "max_completion_tokens": 945000,
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -23565,9 +23729,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,
@@ -41126,13 +41290,12 @@
         "instruct_type": "gemma"
       },
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.00000005",
-        "input_cache_read": "0.00000002"
+        "prompt": "0.00000005",
+        "completion": "0.0000001"
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": 117964,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,

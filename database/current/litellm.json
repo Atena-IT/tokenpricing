@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-10-28T12:25:21.783452+00:00",
+  "fetched_at": "2026-10-28T18:21:40.321308+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 4346,
+  "model_count": 4358,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -4044,6 +4044,7 @@
       "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
     },
     "azure_ai/gpt-oss-120b": {
+      "deprecation_date": "2027-09-15",
       "input_cost_per_token": 1.5e-07,
       "output_cost_per_token": 6e-07,
       "litellm_provider": "azure_ai",
@@ -4219,6 +4220,54 @@
         "search_context_size_medium": 0.01
       },
       "source": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models",
+      "supported_endpoints": [
+        "/v1/chat/completions",
+        "/v1/responses"
+      ],
+      "supported_modalities": [
+        "text",
+        "image"
+      ],
+      "supported_output_modalities": [
+        "text"
+      ],
+      "supports_computer_use": true,
+      "supports_function_calling": true,
+      "supports_max_reasoning_effort": true,
+      "supports_minimal_reasoning_effort": false,
+      "supports_native_streaming": true,
+      "supports_none_reasoning_effort": false,
+      "supports_parallel_function_calling": true,
+      "supports_pdf_input": true,
+      "supports_prompt_cache_breakpoint": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_system_messages": true,
+      "supports_tool_choice": true,
+      "supports_vision": true,
+      "supports_web_search": true,
+      "supports_xhigh_reasoning_effort": true
+    },
+    "azure_ai/gpt-6.1-terra": {
+      "cache_creation_input_token_cost": 1.25e-06,
+      "cache_creation_input_token_cost_above_272k_tokens": 2.5e-06,
+      "cache_read_input_token_cost": 5e-08,
+      "cache_read_input_token_cost_above_272k_tokens": 1e-07,
+      "input_cost_per_token": 1e-06,
+      "input_cost_per_token_above_272k_tokens": 2e-06,
+      "litellm_provider": "azure_ai",
+      "max_input_tokens": 922000,
+      "max_output_tokens": 128000,
+      "mode": "chat",
+      "output_cost_per_token": 5e-06,
+      "output_cost_per_token_above_272k_tokens": 7.5e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
+      "source": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/gpt-6-1-terra-now-generally-available-in-microsoft-foundry-build-agents-that-see/4567769",
       "supported_endpoints": [
         "/v1/chat/completions",
         "/v1/responses"
@@ -4909,6 +4958,11 @@
       "max_output_tokens": 16384,
       "mode": "chat",
       "output_cost_per_token": 6.6e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
@@ -4927,6 +4981,11 @@
       "max_output_tokens": 16384,
       "mode": "chat",
       "output_cost_per_token": 6.6e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
@@ -5014,6 +5073,11 @@
       "output_cost_per_token": 1.1e-05,
       "output_cost_per_token_batches": 5.5e-06,
       "output_cost_per_token_priority": 2.2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -5053,6 +5117,11 @@
       "output_cost_per_token": 2.2e-06,
       "output_cost_per_token_batches": 1.1e-06,
       "output_cost_per_token_priority": 3.96e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -5118,6 +5187,11 @@
       "input_cost_per_token_priority": 2.75e-06,
       "output_cost_per_token_batches": 5.5e-06,
       "output_cost_per_token_priority": 2.2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5.1-codex": {
@@ -5193,6 +5267,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.4e-07,
       "output_cost_per_token_batches": 2.2e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -5349,6 +5428,11 @@
       "max_output_tokens": 16384,
       "mode": "chat",
       "output_cost_per_token": 6e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
       "supports_response_schema": true,
@@ -5433,6 +5517,11 @@
       "input_cost_per_token_priority": 2.5e-06,
       "output_cost_per_token_batches": 5e-06,
       "output_cost_per_token_priority": 2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/global/gpt-5.1-codex": {
@@ -5685,6 +5774,11 @@
       "output_cost_per_token": 8e-06,
       "output_cost_per_token_batches": 4e-06,
       "output_cost_per_token_priority": 1.4e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -5722,6 +5816,11 @@
       "output_cost_per_token": 8e-06,
       "output_cost_per_token_batches": 4e-06,
       "output_cost_per_token_priority": 1.4e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -5759,6 +5858,11 @@
       "output_cost_per_token": 1.6e-06,
       "output_cost_per_token_batches": 8e-07,
       "output_cost_per_token_priority": 2.8e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -5796,6 +5900,11 @@
       "output_cost_per_token": 1.6e-06,
       "output_cost_per_token_batches": 8e-07,
       "output_cost_per_token_priority": 2.8e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -6208,6 +6317,11 @@
       "max_output_tokens": 16384,
       "mode": "chat",
       "output_cost_per_token": 6e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
       "supports_prompt_caching": true,
@@ -6226,6 +6340,11 @@
       "mode": "chat",
       "output_cost_per_token": 6e-07,
       "output_cost_per_token_batches": 3e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
@@ -6715,6 +6834,11 @@
       "default_reasoning_effort": "none",
       "input_cost_per_token_batches": 6.25e-07,
       "output_cost_per_token_batches": 5e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_minimal_reasoning_effort": true,
       "cache_read_input_token_cost_batches": 6.25e-08
@@ -6802,6 +6926,11 @@
       "output_cost_per_token": 1e-05,
       "output_cost_per_token_batches": 5e-06,
       "output_cost_per_token_priority": 2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -6840,6 +6969,11 @@
       "output_cost_per_token": 1e-05,
       "output_cost_per_token_batches": 5e-06,
       "output_cost_per_token_priority": 2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -6911,6 +7045,11 @@
       "output_cost_per_token": 2e-06,
       "output_cost_per_token_batches": 1e-06,
       "output_cost_per_token_priority": 3.6e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -6949,6 +7088,11 @@
       "output_cost_per_token": 2e-06,
       "output_cost_per_token_batches": 1e-06,
       "output_cost_per_token_priority": 3.6e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -6986,6 +7130,11 @@
       "mode": "chat",
       "output_cost_per_token": 4e-07,
       "output_cost_per_token_batches": 2e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -7021,6 +7170,11 @@
       "mode": "chat",
       "output_cost_per_token": 4e-07,
       "output_cost_per_token_batches": 2e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -7056,6 +7210,11 @@
       "mode": "responses",
       "output_cost_per_token": 0.00012,
       "output_cost_per_token_batches": 6e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/responses"
@@ -7117,6 +7276,11 @@
       "input_cost_per_token_priority": 2.5e-06,
       "output_cost_per_token_batches": 5e-06,
       "output_cost_per_token_priority": 2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/gpt-5-chat": {
@@ -7464,6 +7628,11 @@
       "output_cost_per_token": 1.4e-05,
       "output_cost_per_token_batches": 7e-06,
       "output_cost_per_token_priority": 2.8e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -7503,6 +7672,11 @@
       "output_cost_per_token": 1.4e-05,
       "output_cost_per_token_batches": 7e-06,
       "output_cost_per_token_priority": 2.8e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -7572,6 +7746,11 @@
       "mode": "responses",
       "output_cost_per_token": 1.4e-05,
       "output_cost_per_token_priority": 2.8e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/responses"
@@ -7604,9 +7783,9 @@
       "output_cost_per_token": 0.000168,
       "output_cost_per_token_batches": 8.4e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -7642,9 +7821,9 @@
       "output_cost_per_token": 0.000168,
       "output_cost_per_token_batches": 8.4e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8001,9 +8180,9 @@
       "output_cost_per_token_batches": 9e-05,
       "output_cost_per_token_flex": 9e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8048,9 +8227,9 @@
       "output_cost_per_token_batches": 9e-05,
       "output_cost_per_token_flex": 9e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8100,9 +8279,9 @@
       "output_cost_per_token_priority": 4e-05,
       "output_cost_per_token_above_272k_tokens_priority": 6e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -8162,9 +8341,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 6e-05,
       "output_cost_per_token_flex": 1e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8225,9 +8404,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 6e-05,
       "output_cost_per_token_flex": 1e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8288,9 +8467,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.6e-05,
       "output_cost_per_token_flex": 6e-06,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8351,9 +8530,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.6e-05,
       "output_cost_per_token_flex": 6e-06,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8414,9 +8593,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.6e-06,
       "output_cost_per_token_flex": 6e-07,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8477,9 +8656,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.6e-06,
       "output_cost_per_token_flex": 6e-07,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -8524,9 +8703,9 @@
       "output_cost_per_token": 5e-05,
       "output_cost_per_token_above_272k_tokens": 7.5e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8572,9 +8751,9 @@
       "output_cost_per_token": 5e-05,
       "output_cost_per_token_above_272k_tokens": 7.5e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -8620,9 +8799,9 @@
       "output_cost_per_token": 5e-07,
       "output_cost_per_token_above_272k_tokens": 7.5e-07,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
       "supported_endpoints": [
@@ -8668,9 +8847,9 @@
       "output_cost_per_token": 5e-07,
       "output_cost_per_token_above_272k_tokens": 7.5e-07,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
       "supported_endpoints": [
@@ -8724,9 +8903,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3e-05,
       "output_cost_per_token_priority": 2e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
       "supported_endpoints": [
@@ -8780,9 +8959,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3e-05,
       "output_cost_per_token_priority": 2e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
       "supported_endpoints": [
@@ -8813,6 +8992,53 @@
       "supports_web_search": true,
       "supports_xhigh_reasoning_effort": true
     },
+    "azure/gpt-6.1-terra": {
+      "cache_creation_input_token_cost": 1.25e-06,
+      "cache_creation_input_token_cost_above_272k_tokens": 2.5e-06,
+      "cache_read_input_token_cost": 5e-08,
+      "cache_read_input_token_cost_above_272k_tokens": 1e-07,
+      "input_cost_per_token": 1e-06,
+      "input_cost_per_token_above_272k_tokens": 2e-06,
+      "litellm_provider": "azure",
+      "max_input_tokens": 922000,
+      "max_output_tokens": 128000,
+      "mode": "chat",
+      "output_cost_per_token": 5e-06,
+      "output_cost_per_token_above_272k_tokens": 7.5e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
+      "source": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/gpt-6-1-terra-now-generally-available-in-microsoft-foundry-build-agents-that-see/4567769",
+      "supported_endpoints": [
+        "/v1/chat/completions",
+        "/v1/responses"
+      ],
+      "supported_modalities": [
+        "text",
+        "image"
+      ],
+      "supported_output_modalities": [
+        "text"
+      ],
+      "supports_computer_use": true,
+      "supports_function_calling": true,
+      "supports_max_reasoning_effort": true,
+      "supports_minimal_reasoning_effort": false,
+      "supports_native_streaming": true,
+      "supports_none_reasoning_effort": false,
+      "supports_parallel_function_calling": true,
+      "supports_pdf_input": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_system_messages": true,
+      "supports_tool_choice": true,
+      "supports_vision": true,
+      "supports_web_search": true,
+      "supports_xhigh_reasoning_effort": true
+    },
     "azure/gpt-6.1-sol": {
       "cache_creation_input_token_cost": 2.5e-06,
       "cache_creation_input_token_cost_above_272k_tokens": 5e-06,
@@ -8828,9 +9054,9 @@
       "output_cost_per_token": 1e-05,
       "output_cost_per_token_above_272k_tokens": 1.5e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models",
       "supported_endpoints": [
@@ -8876,11 +9102,58 @@
       "output_cost_per_token": 1e-05,
       "output_cost_per_token_above_272k_tokens": 1.5e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models",
+      "supported_endpoints": [
+        "/v1/chat/completions",
+        "/v1/responses"
+      ],
+      "supported_modalities": [
+        "text",
+        "image"
+      ],
+      "supported_output_modalities": [
+        "text"
+      ],
+      "supports_computer_use": true,
+      "supports_function_calling": true,
+      "supports_max_reasoning_effort": true,
+      "supports_minimal_reasoning_effort": false,
+      "supports_native_streaming": true,
+      "supports_none_reasoning_effort": false,
+      "supports_parallel_function_calling": true,
+      "supports_pdf_input": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_system_messages": true,
+      "supports_tool_choice": true,
+      "supports_vision": true,
+      "supports_web_search": true,
+      "supports_xhigh_reasoning_effort": true
+    },
+    "azure/us/gpt-6.1-terra": {
+      "cache_creation_input_token_cost": 1.375e-06,
+      "cache_creation_input_token_cost_above_272k_tokens": 2.75e-06,
+      "cache_read_input_token_cost": 5.5e-08,
+      "cache_read_input_token_cost_above_272k_tokens": 1.1e-07,
+      "input_cost_per_token": 1.1e-06,
+      "input_cost_per_token_above_272k_tokens": 2.2e-06,
+      "litellm_provider": "azure",
+      "max_input_tokens": 922000,
+      "max_output_tokens": 128000,
+      "mode": "chat",
+      "output_cost_per_token": 5.5e-06,
+      "output_cost_per_token_above_272k_tokens": 8.25e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
+      "source": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/gpt-6-1-terra-now-generally-available-in-microsoft-foundry-build-agents-that-see/4567769",
       "supported_endpoints": [
         "/v1/chat/completions",
         "/v1/responses"
@@ -8924,11 +9197,58 @@
       "output_cost_per_token": 1.1e-05,
       "output_cost_per_token_above_272k_tokens": 1.65e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models",
+      "supported_endpoints": [
+        "/v1/chat/completions",
+        "/v1/responses"
+      ],
+      "supported_modalities": [
+        "text",
+        "image"
+      ],
+      "supported_output_modalities": [
+        "text"
+      ],
+      "supports_computer_use": true,
+      "supports_function_calling": true,
+      "supports_max_reasoning_effort": true,
+      "supports_minimal_reasoning_effort": false,
+      "supports_native_streaming": true,
+      "supports_none_reasoning_effort": false,
+      "supports_parallel_function_calling": true,
+      "supports_pdf_input": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_system_messages": true,
+      "supports_tool_choice": true,
+      "supports_vision": true,
+      "supports_web_search": true,
+      "supports_xhigh_reasoning_effort": true
+    },
+    "azure/eu/gpt-6.1-terra": {
+      "cache_creation_input_token_cost": 1.5e-06,
+      "cache_creation_input_token_cost_above_272k_tokens": 3e-06,
+      "cache_read_input_token_cost": 6e-08,
+      "cache_read_input_token_cost_above_272k_tokens": 1.2e-07,
+      "input_cost_per_token": 1.2e-06,
+      "input_cost_per_token_above_272k_tokens": 2.4e-06,
+      "litellm_provider": "azure",
+      "max_input_tokens": 922000,
+      "max_output_tokens": 128000,
+      "mode": "chat",
+      "output_cost_per_token": 6e-06,
+      "output_cost_per_token_above_272k_tokens": 9e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
+      "source": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/gpt-6-1-terra-now-generally-available-in-microsoft-foundry-build-agents-that-see/4567769",
       "supported_endpoints": [
         "/v1/chat/completions",
         "/v1/responses"
@@ -8972,11 +9292,58 @@
       "output_cost_per_token": 1.2e-05,
       "output_cost_per_token_above_272k_tokens": 1.8e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models",
+      "supported_endpoints": [
+        "/v1/chat/completions",
+        "/v1/responses"
+      ],
+      "supported_modalities": [
+        "text",
+        "image"
+      ],
+      "supported_output_modalities": [
+        "text"
+      ],
+      "supports_computer_use": true,
+      "supports_function_calling": true,
+      "supports_max_reasoning_effort": true,
+      "supports_minimal_reasoning_effort": false,
+      "supports_native_streaming": true,
+      "supports_none_reasoning_effort": false,
+      "supports_parallel_function_calling": true,
+      "supports_pdf_input": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_system_messages": true,
+      "supports_tool_choice": true,
+      "supports_vision": true,
+      "supports_web_search": true,
+      "supports_xhigh_reasoning_effort": true
+    },
+    "azure/apac/gpt-6.1-terra": {
+      "cache_creation_input_token_cost": 1.5e-06,
+      "cache_creation_input_token_cost_above_272k_tokens": 3e-06,
+      "cache_read_input_token_cost": 6e-08,
+      "cache_read_input_token_cost_above_272k_tokens": 1.2e-07,
+      "input_cost_per_token": 1.2e-06,
+      "input_cost_per_token_above_272k_tokens": 2.4e-06,
+      "litellm_provider": "azure",
+      "max_input_tokens": 922000,
+      "max_output_tokens": 128000,
+      "mode": "chat",
+      "output_cost_per_token": 6e-06,
+      "output_cost_per_token_above_272k_tokens": 9e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
+      "source": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/gpt-6-1-terra-now-generally-available-in-microsoft-foundry-build-agents-that-see/4567769",
       "supported_endpoints": [
         "/v1/chat/completions",
         "/v1/responses"
@@ -9020,9 +9387,9 @@
       "output_cost_per_token": 1.2e-05,
       "output_cost_per_token_above_272k_tokens": 1.8e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models",
       "supported_endpoints": [
@@ -9147,9 +9514,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 6.6e-05,
       "output_cost_per_token_priority": 4.4e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -9201,9 +9568,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 6.6e-05,
       "output_cost_per_token_priority": 4.4e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9256,9 +9623,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.96e-05,
       "output_cost_per_token_priority": 2.64e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9311,9 +9678,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.96e-06,
       "output_cost_per_token_priority": 2.64e-06,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9358,9 +9725,9 @@
       "output_cost_per_token": 5.5e-05,
       "output_cost_per_token_above_272k_tokens": 8.25e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9406,9 +9773,9 @@
       "output_cost_per_token": 5.5e-07,
       "output_cost_per_token_above_272k_tokens": 8.25e-07,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
       "supported_endpoints": [
@@ -9462,9 +9829,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.3e-05,
       "output_cost_per_token_priority": 2.2e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
       "supported_endpoints": [
@@ -9553,9 +9920,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 6.6e-05,
       "output_cost_per_token_priority": 4.4e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -9607,9 +9974,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 6.6e-05,
       "output_cost_per_token_priority": 4.4e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9662,9 +10029,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.96e-05,
       "output_cost_per_token_priority": 2.64e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9717,9 +10084,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 3.96e-06,
       "output_cost_per_token_priority": 2.64e-06,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9777,9 +10144,9 @@
       "output_cost_per_token_above_272k_tokens_priority": 9e-05,
       "output_cost_per_token_batches": 1.5e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9831,9 +10198,9 @@
       "output_cost_per_token_above_272k_tokens_batches": 2.475e-05,
       "output_cost_per_token_batches": 1.65e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9885,9 +10252,9 @@
       "output_cost_per_token_above_272k_tokens_batches": 2.475e-05,
       "output_cost_per_token_batches": 1.65e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -9938,9 +10305,9 @@
       "output_cost_per_token_priority": 7.5e-05,
       "output_cost_per_token_above_272k_tokens_priority": 9e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -9998,9 +10365,9 @@
       "output_cost_per_token_priority": 7.5e-05,
       "output_cost_per_token_above_272k_tokens_priority": 9e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10051,9 +10418,9 @@
       "max_output_tokens": 128000,
       "mode": "chat",
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10103,9 +10470,9 @@
       "max_output_tokens": 128000,
       "mode": "chat",
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10156,9 +10523,9 @@
       "max_output_tokens": 128000,
       "mode": "chat",
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10208,9 +10575,9 @@
       "max_output_tokens": 128000,
       "mode": "chat",
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10256,9 +10623,9 @@
       "output_cost_per_token": 0.00018,
       "output_cost_per_token_above_272k_tokens": 0.00027,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/batch",
@@ -10299,9 +10666,9 @@
       "output_cost_per_token": 0.00018,
       "output_cost_per_token_above_272k_tokens": 0.00027,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/batch",
@@ -10339,9 +10706,9 @@
       "mode": "chat",
       "output_cost_per_token": 4.5e-06,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10389,9 +10756,9 @@
       "mode": "chat",
       "output_cost_per_token": 4.5e-06,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10440,9 +10807,9 @@
       "mode": "chat",
       "output_cost_per_token": 1.25e-06,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10487,9 +10854,9 @@
       "mode": "chat",
       "output_cost_per_token": 1.25e-06,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -10951,6 +11318,11 @@
       "max_output_tokens": 100000,
       "mode": "chat",
       "output_cost_per_token": 8e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "supported_endpoints": [
         "/v1/chat/completions",
         "/v1/batch",
@@ -10982,6 +11354,11 @@
       "mode": "chat",
       "output_cost_per_token": 8e-06,
       "output_cost_per_token_batches": 4e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -11013,9 +11390,9 @@
       "mode": "responses",
       "output_cost_per_token": 4e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
@@ -11082,6 +11459,11 @@
       "mode": "responses",
       "output_cost_per_token": 8e-05,
       "output_cost_per_token_batches": 4e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/batch",
@@ -11112,6 +11494,11 @@
       "mode": "responses",
       "output_cost_per_token": 8e-05,
       "output_cost_per_token_batches": 4e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/batch",
@@ -11141,6 +11528,11 @@
       "max_output_tokens": 100000,
       "mode": "chat",
       "output_cost_per_token": 4.4e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "supported_endpoints": [
         "/v1/chat/completions",
         "/v1/batch",
@@ -11172,6 +11564,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.4e-06,
       "output_cost_per_token_batches": 2.2e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
@@ -11285,6 +11682,11 @@
       "output_cost_per_token": 8.8e-06,
       "output_cost_per_token_batches": 4.4e-06,
       "output_cost_per_token_priority": 1.54e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -11322,6 +11724,11 @@
       "output_cost_per_token": 1.76e-06,
       "output_cost_per_token_batches": 8.8e-07,
       "output_cost_per_token_priority": 3.08e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -11445,6 +11852,11 @@
       "max_output_tokens": 16384,
       "mode": "chat",
       "output_cost_per_token": 6.6e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
@@ -11463,6 +11875,11 @@
       "max_output_tokens": 16384,
       "mode": "chat",
       "output_cost_per_token": 6.6e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
@@ -11550,6 +11967,11 @@
       "output_cost_per_token": 1.1e-05,
       "output_cost_per_token_batches": 5.5e-06,
       "output_cost_per_token_priority": 2.2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -11589,6 +12011,11 @@
       "output_cost_per_token": 2.2e-06,
       "output_cost_per_token_batches": 1.1e-06,
       "output_cost_per_token_priority": 3.96e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -11625,6 +12052,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.4e-07,
       "output_cost_per_token_batches": 2.2e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -11690,6 +12122,11 @@
       "input_cost_per_token_priority": 2.75e-06,
       "output_cost_per_token_batches": 5.5e-06,
       "output_cost_per_token_priority": 2.2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5.1-codex": {
@@ -11817,6 +12254,11 @@
       "mode": "chat",
       "output_cost_per_token": 8.8e-06,
       "output_cost_per_token_batches": 4.4e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -11849,6 +12291,11 @@
       "mode": "chat",
       "output_cost_per_token": 8.8e-06,
       "output_cost_per_token_batches": 4.4e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -11915,6 +12362,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.84e-06,
       "output_cost_per_token_batches": 2.42e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
@@ -11935,6 +12387,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.84e-06,
       "output_cost_per_token_batches": 2.42e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
@@ -11952,6 +12409,7 @@
       "output_cost_per_second": 0.0001
     },
     "azure_ai/Cohere-embed-v3-english": {
+      "deprecation_date": "2027-02-15",
       "input_cost_per_token": 1e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 512,
@@ -11962,6 +12420,7 @@
       "supports_embedding_image_input": true
     },
     "azure_ai/Cohere-embed-v3-multilingual": {
+      "deprecation_date": "2027-02-15",
       "input_cost_per_token": 1e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 512,
@@ -11972,6 +12431,7 @@
       "supports_embedding_image_input": true
     },
     "azure_ai/Codestral-2501": {
+      "deprecation_date": "2027-02-15",
       "input_cost_per_token": 3e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 256000,
@@ -11991,6 +12451,7 @@
       "supports_native_streaming": true
     },
     "azure_ai/FLUX-1.1-pro": {
+      "deprecation_date": "2027-01-05",
       "litellm_provider": "azure_ai",
       "max_input_tokens": 5000,
       "mode": "image_generation",
@@ -12001,6 +12462,7 @@
       ]
     },
     "azure_ai/FLUX.1-Kontext-pro": {
+      "deprecation_date": "2027-01-05",
       "litellm_provider": "azure_ai",
       "max_input_tokens": 5000,
       "mode": "image_generation",
@@ -12011,6 +12473,7 @@
       ]
     },
     "azure_ai/flux.2-pro": {
+      "deprecation_date": "2027-01-20",
       "litellm_provider": "azure_ai",
       "max_input_tokens": 32000,
       "mode": "image_generation",
@@ -12021,6 +12484,7 @@
       ]
     },
     "azure_ai/FLUX.2-flex": {
+      "deprecation_date": "2027-01-20",
       "input_cost_per_pixel": 5e-08,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 32000,
@@ -12385,6 +12849,7 @@
       "supports_tool_choice": true
     },
     "azure_ai/Llama-3.3-70B-Instruct": {
+      "deprecation_date": "2027-01-31",
       "input_cost_per_token": 7.1e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 128000,
@@ -12396,6 +12861,7 @@
       "supports_tool_choice": true
     },
     "azure_ai/Llama-4-Maverick-17B-128E-Instruct-FP8": {
+      "deprecation_date": "2026-11-19",
       "input_cost_per_token": 2.5e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 1000000,
@@ -12408,6 +12874,7 @@
       "supports_vision": true
     },
     "azure_ai/Llama-4-Scout-17B-16E-Instruct": {
+      "deprecation_date": "2027-01-31",
       "input_cost_per_token": 2e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 10000000,
@@ -12641,6 +13108,7 @@
       ]
     },
     "azure_ai/cohere-command-a": {
+      "deprecation_date": "2027-02-15",
       "input_cost_per_token": 2.5e-06,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 131072,
@@ -12713,6 +13181,7 @@
       "source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/retired-models"
     },
     "azure_ai/cohere-rerank-v4.0-pro": {
+      "deprecation_date": "2027-09-13",
       "input_cost_per_query": 0.0025,
       "input_cost_per_token": 0.0,
       "litellm_provider": "azure_ai",
@@ -12723,6 +13192,7 @@
       "source": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-cohere-rerank-4-0-in-microsoft-foundry/4477076"
     },
     "azure_ai/cohere-rerank-v4.0-fast": {
+      "deprecation_date": "2027-09-13",
       "input_cost_per_query": 0.002,
       "input_cost_per_token": 0.0,
       "litellm_provider": "azure_ai",
@@ -12733,6 +13203,7 @@
       "source": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-cohere-rerank-4-0-in-microsoft-foundry/4477076"
     },
     "azure_ai/deepseek-v3.2": {
+      "deprecation_date": "2027-11-01",
       "input_cost_per_token": 5.8e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 128000,
@@ -12747,6 +13218,7 @@
       "supports_tool_choice": true
     },
     "azure_ai/deepseek-v3.2-speciale": {
+      "deprecation_date": "2027-11-01",
       "input_cost_per_token": 5.8e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 128000,
@@ -12817,6 +13289,7 @@
       "supports_tool_choice": true
     },
     "azure_ai/embed-v-4-0": {
+      "deprecation_date": "2027-06-01",
       "input_cost_per_token": 1.2e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 128000,
@@ -12835,6 +13308,7 @@
       "input_cost_per_image_token": 4.7e-07
     },
     "azure_ai/grok-4": {
+      "deprecation_date": "2027-01-31",
       "input_cost_per_token": 3e-06,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 262000,
@@ -12923,6 +13397,7 @@
       "supports_web_search": true
     },
     "azure_ai/grok-4-1-fast-non-reasoning": {
+      "deprecation_date": "2027-05-19",
       "input_cost_per_token": 2e-07,
       "output_cost_per_token": 5e-07,
       "litellm_provider": "azure_ai",
@@ -12936,6 +13411,7 @@
       "supports_web_search": true
     },
     "azure_ai/grok-4-1-fast-reasoning": {
+      "deprecation_date": "2027-05-19",
       "input_cost_per_token": 2e-07,
       "output_cost_per_token": 5e-07,
       "litellm_provider": "azure_ai",
@@ -12950,6 +13426,7 @@
       "supports_web_search": true
     },
     "azure_ai/grok-code-fast-1": {
+      "deprecation_date": "2027-01-31",
       "input_cost_per_token": 2e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 256000,
@@ -13117,7 +13594,7 @@
       "supports_tool_choice": true
     },
     "azure_ai/mistral-small-2503": {
-      "deprecation_date": "2026-12-09",
+      "deprecation_date": "2027-02-15",
       "input_cost_per_token": 1e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 128000,
@@ -14636,11 +15113,12 @@
       "cache_creation_input_token_cost": 4.5e-06,
       "cache_creation_input_token_cost_above_1hr": 7.2e-06,
       "cache_read_input_token_cost": 3.6e-07,
+      "deprecation_date": "2027-04-08",
       "input_cost_per_token": 3.6e-06,
       "litellm_provider": "bedrock",
       "supports_tool_search": true,
       "max_input_tokens": 200000,
-      "max_output_tokens": 8192,
+      "max_output_tokens": 64000,
       "mode": "chat",
       "output_cost_per_token": 1.8e-05,
       "supports_assistant_prefill": true,
@@ -14655,6 +15133,7 @@
       "supports_native_structured_output": true,
       "supports_parallel_tool_use_config": true,
       "prompt_cache_min_tokens": 1024,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-4-5.md",
       "token_count_model": {
         "model": "anthropic.claude-sonnet-4-5-20250929-v1:0",
         "litellm_provider": "bedrock"
@@ -14664,11 +15143,12 @@
       "cache_creation_input_token_cost": 4.5e-06,
       "cache_creation_input_token_cost_above_1hr": 7.2e-06,
       "cache_read_input_token_cost": 3.6e-07,
+      "deprecation_date": "2027-04-08",
       "input_cost_per_token": 3.6e-06,
       "litellm_provider": "bedrock",
       "supports_tool_search": true,
       "max_input_tokens": 200000,
-      "max_output_tokens": 8192,
+      "max_output_tokens": 64000,
       "mode": "chat",
       "output_cost_per_token": 1.8e-05,
       "supports_assistant_prefill": true,
@@ -14682,7 +15162,8 @@
       "supports_vision": true,
       "supports_native_structured_output": true,
       "supports_parallel_tool_use_config": true,
-      "prompt_cache_min_tokens": 1024
+      "prompt_cache_min_tokens": 1024,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-4-5.md"
     },
     "bedrock/us-gov-east-1/meta.llama3-70b-instruct-v1:0": {
       "input_cost_per_token": 2.65e-06,
@@ -14804,11 +15285,12 @@
       "cache_creation_input_token_cost": 4.5e-06,
       "cache_creation_input_token_cost_above_1hr": 7.2e-06,
       "cache_read_input_token_cost": 3.6e-07,
+      "deprecation_date": "2027-04-08",
       "input_cost_per_token": 3.6e-06,
       "litellm_provider": "bedrock",
       "supports_tool_search": true,
       "max_input_tokens": 200000,
-      "max_output_tokens": 8192,
+      "max_output_tokens": 64000,
       "mode": "chat",
       "output_cost_per_token": 1.8e-05,
       "supports_assistant_prefill": true,
@@ -14823,6 +15305,7 @@
       "supports_native_structured_output": true,
       "supports_parallel_tool_use_config": true,
       "prompt_cache_min_tokens": 1024,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-4-5.md",
       "token_count_model": {
         "model": "anthropic.claude-sonnet-4-5-20250929-v1:0",
         "litellm_provider": "bedrock"
@@ -14832,11 +15315,12 @@
       "cache_creation_input_token_cost": 4.5e-06,
       "cache_creation_input_token_cost_above_1hr": 7.2e-06,
       "cache_read_input_token_cost": 3.6e-07,
+      "deprecation_date": "2027-04-08",
       "input_cost_per_token": 3.6e-06,
       "litellm_provider": "bedrock",
       "supports_tool_search": true,
       "max_input_tokens": 200000,
-      "max_output_tokens": 8192,
+      "max_output_tokens": 64000,
       "mode": "chat",
       "output_cost_per_token": 1.8e-05,
       "supports_assistant_prefill": true,
@@ -14850,7 +15334,8 @@
       "supports_vision": true,
       "supports_native_structured_output": true,
       "supports_parallel_tool_use_config": true,
-      "prompt_cache_min_tokens": 1024
+      "prompt_cache_min_tokens": 1024,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-4-5.md"
     },
     "bedrock/us-gov-west-1/meta.llama3-70b-instruct-v1:0": {
       "input_cost_per_token": 2.65e-06,
@@ -15214,6 +15699,7 @@
       "supports_tool_choice": true
     },
     "cerebras/llama-3.3-70b": {
+      "deprecation_date": "2026-02-16",
       "input_cost_per_token": 8.5e-07,
       "litellm_provider": "cerebras",
       "max_input_tokens": 128000,
@@ -15224,6 +15710,7 @@
       "supports_tool_choice": true
     },
     "cerebras/llama3.1-70b": {
+      "deprecation_date": "2025-01-17",
       "input_cost_per_token": 6e-07,
       "litellm_provider": "cerebras",
       "max_input_tokens": 128000,
@@ -15234,6 +15721,7 @@
       "supports_tool_choice": true
     },
     "cerebras/llama3.1-8b": {
+      "deprecation_date": "2026-05-27",
       "input_cost_per_token": 1e-07,
       "litellm_provider": "cerebras",
       "max_input_tokens": 128000,
@@ -15258,6 +15746,7 @@
       "supports_tool_choice": true
     },
     "cerebras/qwen-3-32b": {
+      "deprecation_date": "2026-02-16",
       "input_cost_per_token": 4e-07,
       "litellm_provider": "cerebras",
       "max_input_tokens": 128000,
@@ -15569,6 +16058,7 @@
       "output_cost_per_token_above_200k_tokens": 2.25e-05,
       "cache_creation_input_token_cost_above_200k_tokens": 7.5e-06,
       "cache_read_input_token_cost_above_200k_tokens": 6e-07,
+      "deprecation_date": "2027-04-08",
       "litellm_provider": "bedrock",
       "supports_tool_search": true,
       "max_input_tokens": 200000,
@@ -15587,7 +16077,8 @@
       "supports_parallel_tool_use_config": true,
       "prompt_cache_min_tokens": 1024,
       "input_cost_per_token_batches": 1.5e-06,
-      "output_cost_per_token_batches": 7.5e-06
+      "output_cost_per_token_batches": 7.5e-06,
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-4-5.md"
     },
     "claude-opus-4-5-20251101": {
       "supports_web_search": true,
@@ -21658,10 +22149,10 @@
       "supports_vision": true
     },
     "databricks/databricks-gpt-5-6-terra": {
-      "cache_creation_input_token_cost": 3.12501e-06,
-      "cache_read_input_token_cost": 2.4997e-07,
-      "input_cost_per_token": 2.49998e-06,
-      "input_dbu_cost_per_token": 3.5714e-05,
+      "cache_creation_input_token_cost": 2.49998e-06,
+      "cache_read_input_token_cost": 1.9999e-07,
+      "input_cost_per_token": 1.99997e-06,
+      "input_dbu_cost_per_token": 2.8571e-05,
       "litellm_provider": "databricks",
       "max_input_tokens": 922000,
       "max_output_tokens": 128000,
@@ -21669,8 +22160,8 @@
         "notes": "Costs per token are the published Global DBU rates times $0.070 per DBU. The '*_dbu_cost_per_token' fields are provided for reference; cost calculation reads the dollar '*_cost_per_token' fields."
       },
       "mode": "chat",
-      "output_cost_per_token": 1.500002e-05,
-      "output_dbu_cost_per_token": 0.000214286,
+      "output_cost_per_token": 1.200003e-05,
+      "output_dbu_cost_per_token": 0.000171429,
       "source": "https://www.databricks.com/product/pricing/proprietary-foundation-model-serving",
       "supported_modalities": [
         "text",
@@ -21686,10 +22177,10 @@
       "supports_vision": true
     },
     "databricks/databricks-gpt-5-6-luna": {
-      "cache_creation_input_token_cost": 1.24999e-06,
-      "cache_read_input_token_cost": 1.0003e-07,
-      "input_cost_per_token": 1.00002e-06,
-      "input_dbu_cost_per_token": 1.4286e-05,
+      "cache_creation_input_token_cost": 2.4997e-07,
+      "cache_read_input_token_cost": 2.002e-08,
+      "input_cost_per_token": 1.9999e-07,
+      "input_dbu_cost_per_token": 2.857e-06,
       "litellm_provider": "databricks",
       "max_input_tokens": 922000,
       "max_output_tokens": 128000,
@@ -21697,8 +22188,8 @@
         "notes": "Costs per token are the published Global DBU rates times $0.070 per DBU. The '*_dbu_cost_per_token' fields are provided for reference; cost calculation reads the dollar '*_cost_per_token' fields."
       },
       "mode": "chat",
-      "output_cost_per_token": 5.99998e-06,
-      "output_dbu_cost_per_token": 8.5714e-05,
+      "output_cost_per_token": 1.20001e-06,
+      "output_dbu_cost_per_token": 1.7143e-05,
       "source": "https://www.databricks.com/product/pricing/proprietary-foundation-model-serving",
       "supported_modalities": [
         "text",
@@ -27007,6 +27498,18 @@
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
+      "supports_vision": false
+    },
+    "fireworks_ai/accounts/fireworks/routers/spot-deepseek-v4-flash": {
+      "cache_read_input_token_cost": 2.1e-08,
+      "input_cost_per_token": 1.05e-07,
+      "litellm_provider": "fireworks_ai",
+      "max_input_tokens": 1048576,
+      "mode": "chat",
+      "output_cost_per_token": 2.1e-07,
+      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
       "supports_vision": false
     },
     "fireworks_ai/accounts/fireworks/models/deepseek-v4-pro-0813": {
@@ -34704,6 +35207,7 @@
       "source": "https://developers.openai.com/api/docs/pricing"
     },
     "gpt-4o-mini-tts": {
+      "deprecation_date": "2027-01-06",
       "input_cost_per_token": 6e-07,
       "litellm_provider": "openai",
       "mode": "audio_speech",
@@ -35321,6 +35825,7 @@
       "cache_read_input_token_cost_batches": 6.25e-08,
       "cache_read_input_token_cost_flex": 6.25e-08,
       "cache_read_input_token_cost_priority": 2.5e-07,
+      "deprecation_date": "2026-12-11",
       "input_cost_per_token": 1.25e-06,
       "input_cost_per_token_batches": 6.25e-07,
       "input_cost_per_token_flex": 6.25e-07,
@@ -35577,6 +36082,7 @@
       "cache_read_input_token_cost_batches": 6.25e-08,
       "cache_read_input_token_cost_flex": 6.25e-08,
       "cache_read_input_token_cost_priority": 2.5e-07,
+      "deprecation_date": "2027-04-01",
       "input_cost_per_token": 1.25e-06,
       "input_cost_per_token_priority": 2.5e-06,
       "litellm_provider": "openai",
@@ -35876,15 +36382,15 @@
     "gpt-6-astra": {
       "cache_creation_input_token_cost": 1.25e-05,
       "cache_creation_input_token_cost_above_12hr": 2.5e-05,
+      "cache_creation_input_token_cost_above_12hr_ultrafast": 0.00015,
+      "cache_creation_input_token_cost_above_12hr_batches": 1.25e-05,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens": 5e-05,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_batches": 2.5e-05,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_flex": 2.5e-05,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_priority": 0.0001,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_ultrafast": 0.0003,
-      "cache_creation_input_token_cost_above_12hr_batches": 1.25e-05,
       "cache_creation_input_token_cost_above_12hr_flex": 1.25e-05,
       "cache_creation_input_token_cost_above_12hr_priority": 5e-05,
-      "cache_creation_input_token_cost_above_12hr_ultrafast": 0.00015,
       "cache_creation_input_token_cost_above_272k_tokens": 2.5e-05,
       "cache_creation_input_token_cost_above_272k_tokens_flex": 1.25e-05,
       "cache_creation_input_token_cost_above_272k_tokens_priority": 5e-05,
@@ -36054,11 +36560,11 @@
     "gpt-6-luna": {
       "cache_creation_input_token_cost": 1.25e-07,
       "cache_creation_input_token_cost_above_12hr": 2.5e-07,
+      "cache_creation_input_token_cost_above_12hr_batches": 1.25e-07,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens": 5e-07,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_batches": 2.5e-07,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_flex": 2.5e-07,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_priority": 1e-06,
-      "cache_creation_input_token_cost_above_12hr_batches": 1.25e-07,
       "cache_creation_input_token_cost_above_12hr_flex": 1.25e-07,
       "cache_creation_input_token_cost_above_12hr_priority": 5e-07,
       "cache_creation_input_token_cost_decisions": 1.25e-07,
@@ -37301,6 +37807,7 @@
       "cache_read_input_token_cost": 2e-08,
       "cache_read_input_token_cost_batches": 1e-08,
       "cache_read_input_token_cost_flex": 1e-08,
+      "deprecation_date": "2027-04-01",
       "input_cost_per_token": 2e-07,
       "input_cost_per_token_flex": 1e-07,
       "input_cost_per_token_batches": 1e-07,
@@ -37348,6 +37855,7 @@
       "supports_minimal_reasoning_effort": false
     },
     "gpt-5-pro": {
+      "deprecation_date": "2026-12-11",
       "input_cost_per_token": 1.5e-05,
       "input_cost_per_token_batches": 7.5e-06,
       "litellm_provider": "openai",
@@ -37627,6 +38135,7 @@
       "cache_read_input_token_cost_batches": 1.25e-08,
       "cache_read_input_token_cost_flex": 1.25e-08,
       "cache_read_input_token_cost_priority": 4.5e-08,
+      "deprecation_date": "2026-12-11",
       "input_cost_per_token": 2.5e-07,
       "input_cost_per_token_batches": 1.25e-07,
       "input_cost_per_token_flex": 1.25e-07,
@@ -37727,6 +38236,7 @@
       "cache_read_input_token_cost": 5e-09,
       "cache_read_input_token_cost_batches": 2.5e-09,
       "cache_read_input_token_cost_flex": 2.5e-09,
+      "deprecation_date": "2026-12-11",
       "input_cost_per_token": 5e-08,
       "input_cost_per_token_batches": 2.5e-08,
       "input_cost_per_token_flex": 2.5e-08,
@@ -38436,6 +38946,7 @@
       },
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
+      "supports_prompt_caching": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
@@ -38456,6 +38967,7 @@
       },
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
+      "supports_prompt_caching": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
@@ -38475,6 +38987,7 @@
         "search_context_size_medium": 0.005
       },
       "supports_function_calling": true,
+      "supports_prompt_caching": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
@@ -41773,13 +42286,13 @@
       "mode": "embedding"
     },
     "mistral/mistral-large-4": {
-      "cache_read_input_token_cost": 6.8e-08,
-      "input_cost_per_token": 6.8e-07,
+      "cache_read_input_token_cost": 1.4e-07,
+      "input_cost_per_token": 1.36e-06,
       "litellm_provider": "mistral",
       "max_input_tokens": 1048576,
       "max_output_tokens": 1048576,
       "mode": "chat",
-      "output_cost_per_token": 2.09e-06,
+      "output_cost_per_token": 4.18e-06,
       "reasoning_effort_levels": [
         "none",
         "high"
@@ -41794,13 +42307,13 @@
       "supports_vision": true
     },
     "mistral/mistral-large-4-0": {
-      "cache_read_input_token_cost": 6.8e-08,
-      "input_cost_per_token": 6.8e-07,
+      "cache_read_input_token_cost": 1.4e-07,
+      "input_cost_per_token": 1.36e-06,
       "litellm_provider": "mistral",
       "max_input_tokens": 1048576,
       "max_output_tokens": 1048576,
       "mode": "chat",
-      "output_cost_per_token": 2.09e-06,
+      "output_cost_per_token": 4.18e-06,
       "reasoning_effort_levels": [
         "none",
         "high"
@@ -42147,6 +42660,7 @@
     },
     "moonshot/kimi-k2.5": {
       "cache_read_input_token_cost": 1e-07,
+      "deprecation_date": "2026-08-31",
       "input_cost_per_token": 6e-07,
       "litellm_provider": "moonshot",
       "max_input_tokens": 262144,
@@ -42177,7 +42691,31 @@
       "supports_video_input": true,
       "supports_vision": true
     },
+    "moonshot/kimi-k3.1-pro": {
+      "cache_creation_input_token_cost": 2e-06,
+      "cache_creation_input_token_cost_above_1hr": 4e-06,
+      "cache_read_input_token_cost": 2e-07,
+      "input_cost_per_token": 2e-06,
+      "litellm_provider": "moonshot",
+      "max_input_tokens": 1048576,
+      "max_output_tokens": 1048576,
+      "mode": "chat",
+      "output_cost_per_token": 1e-05,
+      "reasoning_effort_levels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_vision": true
+    },
     "moonshot/kimi-k3": {
+      "cache_creation_input_token_cost": 3e-06,
+      "cache_creation_input_token_cost_above_1hr": 6e-06,
       "cache_read_input_token_cost": 3e-07,
       "input_cost_per_token": 3e-06,
       "litellm_provider": "moonshot",
@@ -42192,6 +42730,7 @@
       ],
       "source": "https://platform.kimi.ai/docs/pricing/chat-k3",
       "supports_function_calling": true,
+      "supports_prompt_caching": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
@@ -42199,6 +42738,7 @@
       "supports_vision": true
     },
     "moonshot/moonshot-v1-128k": {
+      "deprecation_date": "2026-08-31",
       "input_cost_per_token": 2e-06,
       "litellm_provider": "moonshot",
       "max_input_tokens": 131072,
@@ -42211,6 +42751,7 @@
       "supports_tool_choice": true
     },
     "moonshot/moonshot-v1-128k-vision-preview": {
+      "deprecation_date": "2026-08-31",
       "input_cost_per_token": 2e-06,
       "litellm_provider": "moonshot",
       "max_input_tokens": 131072,
@@ -42224,6 +42765,7 @@
       "supports_vision": true
     },
     "moonshot/moonshot-v1-32k": {
+      "deprecation_date": "2026-08-31",
       "input_cost_per_token": 1e-06,
       "litellm_provider": "moonshot",
       "max_input_tokens": 32768,
@@ -42236,6 +42778,7 @@
       "supports_tool_choice": true
     },
     "moonshot/moonshot-v1-32k-vision-preview": {
+      "deprecation_date": "2026-08-31",
       "input_cost_per_token": 1e-06,
       "litellm_provider": "moonshot",
       "max_input_tokens": 32768,
@@ -42249,6 +42792,7 @@
       "supports_vision": true
     },
     "moonshot/moonshot-v1-8k": {
+      "deprecation_date": "2026-08-31",
       "input_cost_per_token": 2e-07,
       "litellm_provider": "moonshot",
       "max_input_tokens": 8192,
@@ -42261,6 +42805,7 @@
       "supports_tool_choice": true
     },
     "moonshot/moonshot-v1-8k-vision-preview": {
+      "deprecation_date": "2026-08-31",
       "input_cost_per_token": 2e-07,
       "litellm_provider": "moonshot",
       "max_input_tokens": 8192,
@@ -42274,6 +42819,7 @@
       "supports_vision": true
     },
     "moonshot/moonshot-v1-auto": {
+      "deprecation_date": "2026-08-31",
       "input_cost_per_token": 2e-06,
       "litellm_provider": "moonshot",
       "max_input_tokens": 131072,
@@ -43466,6 +44012,7 @@
       "cache_read_input_token_cost": 5e-07,
       "cache_read_input_token_cost_flex": 2.5e-07,
       "cache_read_input_token_cost_priority": 8.75e-07,
+      "deprecation_date": "2026-12-11",
       "input_cost_per_token": 2e-06,
       "input_cost_per_token_batches": 1e-06,
       "input_cost_per_token_flex": 1e-06,
@@ -43656,6 +44203,7 @@
       "supports_vision": false
     },
     "o3-pro": {
+      "deprecation_date": "2026-12-11",
       "input_cost_per_token": 2e-05,
       "input_cost_per_token_batches": 1e-05,
       "litellm_provider": "openai",
@@ -47516,13 +48064,13 @@
       "supports_reasoning": true
     },
     "together_ai/Qwen/Qwen3.7-Max": {
-      "cache_read_input_token_cost": 3e-07,
-      "input_cost_per_token": 1.5e-06,
+      "cache_read_input_token_cost": 5e-07,
+      "input_cost_per_token": 2.5e-06,
       "litellm_provider": "together_ai",
       "max_input_tokens": 1000000,
       "max_output_tokens": 1000000,
       "mode": "chat",
-      "output_cost_per_token": 4.5e-06,
+      "output_cost_per_token": 7.5e-06,
       "source": "https://www.together.ai/pricing",
       "supports_prompt_caching": true
     },
@@ -48032,6 +48580,7 @@
       "cache_creation_input_token_cost_above_200k_tokens": 9e-06,
       "cache_creation_input_token_cost_above_1hr_above_200k_tokens": 1.44e-05,
       "cache_read_input_token_cost_above_200k_tokens": 7.2e-07,
+      "deprecation_date": "2027-04-08",
       "litellm_provider": "bedrock_converse",
       "supports_tool_search": true,
       "max_input_tokens": 200000,
@@ -48050,7 +48599,7 @@
       "supports_native_structured_output": true,
       "supports_parallel_tool_use_config": true,
       "prompt_cache_min_tokens": 1024,
-      "source": "https://aws.amazon.com/bedrock/pricing/",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-4-5.md",
       "token_count_model": {
         "model": "anthropic.claude-sonnet-4-5-20250929-v1:0",
         "litellm_provider": "bedrock"
@@ -53135,15 +53684,21 @@
     "xai/grok-4.7": {
       "cache_read_input_token_cost": 5e-07,
       "cache_read_input_token_cost_above_200k_tokens": 1e-06,
+      "cache_read_input_token_cost_above_200k_tokens_batches": 8e-07,
+      "cache_read_input_token_cost_batches": 4e-07,
       "input_cost_per_image_token": 2e-06,
       "input_cost_per_token": 2e-06,
       "input_cost_per_token_above_200k_tokens": 4e-06,
+      "input_cost_per_token_above_200k_tokens_batches": 3.2e-06,
+      "input_cost_per_token_batches": 1.6e-06,
       "litellm_provider": "xai",
       "max_input_tokens": 500000,
       "max_output_tokens": 500000,
       "mode": "chat",
       "output_cost_per_token": 6e-06,
       "output_cost_per_token_above_200k_tokens": 1.2e-05,
+      "output_cost_per_token_above_200k_tokens_batches": 9.6e-06,
+      "output_cost_per_token_batches": 4.8e-06,
       "source": "https://api.x.ai/v1/language-models",
       "supports_function_calling": true,
       "supports_prompt_caching": true,
@@ -57224,6 +57779,7 @@
       ]
     },
     "gpt-4o-mini-transcribe-2025-12-15": {
+      "deprecation_date": "2027-02-26",
       "input_cost_per_audio_token": 1.25e-06,
       "input_cost_per_second": 5e-05,
       "input_cost_per_token": 1.25e-06,
@@ -62185,6 +62741,18 @@
       "supports_tool_choice": true,
       "supports_vision": true
     },
+    "fireworks_ai/accounts/fireworks/routers/deepseek-v4p1-flash-spot": {
+      "cache_read_input_token_cost": 4.2e-09,
+      "input_cost_per_token": 2.1e-07,
+      "litellm_provider": "fireworks_ai",
+      "max_input_tokens": 1048576,
+      "mode": "chat",
+      "output_cost_per_token": 8.4e-07,
+      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
+      "supports_vision": true
+    },
     "fireworks_ai/accounts/fireworks/routers/deepseek-v4p1-flash-us": {
       "cache_read_input_token_cost": 9e-09,
       "cache_read_input_token_cost_priority": 1.125e-08,
@@ -62243,6 +62811,18 @@
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
+      "supports_vision": true
+    },
+    "fireworks_ai/accounts/fireworks/routers/kimi-k3-spot": {
+      "cache_read_input_token_cost": 2.1e-07,
+      "input_cost_per_token": 2.1e-06,
+      "litellm_provider": "fireworks_ai",
+      "max_input_tokens": 1048576,
+      "mode": "chat",
+      "output_cost_per_token": 1.05e-05,
+      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
       "supports_vision": true
     },
     "fireworks_ai/deepseek-v4-flash-0731": {
@@ -64914,6 +65494,7 @@
       ]
     },
     "xai/grok-imagine-image-pro": {
+      "deprecation_date": "2026-05-15",
       "input_cost_per_image": 0.05,
       "litellm_provider": "xai",
       "mode": "image_generation",
@@ -65443,6 +66024,18 @@
       "supports_tool_choice": true,
       "supports_vision": false
     },
+    "fireworks_ai/accounts/fireworks/routers/glm-5p3-spot": {
+      "cache_read_input_token_cost": 1.82e-07,
+      "input_cost_per_token": 9.8e-07,
+      "litellm_provider": "fireworks_ai",
+      "max_input_tokens": 1048576,
+      "mode": "chat",
+      "output_cost_per_token": 3.08e-06,
+      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
+      "supports_vision": false
+    },
     "fireworks_ai/accounts/fireworks/routers/glm-5p3-us": {
       "cache_read_input_token_cost": 3.9e-07,
       "cache_read_input_token_cost_priority": 4.875e-07,
@@ -65751,6 +66344,7 @@
       ]
     },
     "scaleway/glm-5.2": {
+      "deprecation_date": "2026-11-16",
       "input_cost_per_token": 1.8e-06,
       "litellm_provider": "scaleway",
       "max_input_tokens": 256000,
@@ -68317,6 +68911,11 @@
       "output_cost_per_token": 8.8e-06,
       "output_cost_per_token_batches": 4.4e-06,
       "output_cost_per_token_priority": 1.54e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-4.1-mini": {
@@ -68331,6 +68930,11 @@
       "output_cost_per_token": 1.76e-06,
       "output_cost_per_token_batches": 8.8e-07,
       "output_cost_per_token_priority": 3.08e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-4.1-nano": {
@@ -68369,6 +68973,11 @@
       "output_cost_per_token": 1.1e-05,
       "output_cost_per_token_batches": 5.5e-06,
       "output_cost_per_token_priority": 2.2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5-codex": {
@@ -68393,6 +69002,11 @@
       "output_cost_per_token": 2.2e-06,
       "output_cost_per_token_batches": 1.1e-06,
       "output_cost_per_token_priority": 3.96e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5-nano": {
@@ -68405,6 +69019,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.4e-07,
       "output_cost_per_token_batches": 2.2e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5-pro": {
@@ -68415,6 +69034,11 @@
       "mode": "responses",
       "output_cost_per_token": 0.000132,
       "output_cost_per_token_batches": 6.6e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5.1-codex-max": {
@@ -68439,6 +69063,11 @@
       "output_cost_per_token": 1.54e-05,
       "output_cost_per_token_batches": 7.7e-06,
       "output_cost_per_token_priority": 3.08e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5.2-codex": {
@@ -68457,6 +69086,11 @@
       "mode": "responses",
       "output_cost_per_token": 0.0001848,
       "output_cost_per_token_batches": 9.24e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5.3-codex": {
@@ -68469,6 +69103,11 @@
       "mode": "responses",
       "output_cost_per_token": 1.54e-05,
       "output_cost_per_token_priority": 3.08e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5.4-mini": {
@@ -68484,6 +69123,11 @@
       "output_cost_per_token": 4.95e-06,
       "output_cost_per_token_batches": 2.475e-06,
       "output_cost_per_token_priority": 9.9e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5.4-nano": {
@@ -68496,6 +69140,11 @@
       "mode": "chat",
       "output_cost_per_token": 1.375e-06,
       "output_cost_per_token_batches": 6.875e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-5.4-pro": {
@@ -68510,6 +69159,11 @@
       "output_cost_per_token_above_272k_tokens": 0.000297,
       "output_cost_per_token_above_272k_tokens_batches": 0.0001485,
       "output_cost_per_token_batches": 9.9e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/gpt-6-astra": {
@@ -68526,6 +69180,11 @@
       "mode": "chat",
       "output_cost_per_token": 6e-05,
       "output_cost_per_token_above_272k_tokens": 9e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
       "supported_endpoints": [
         "/v1/chat/completions",
@@ -68570,9 +69229,9 @@
       "output_cost_per_token": 6e-07,
       "output_cost_per_token_above_272k_tokens": 9e-07,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
       "supported_endpoints": [
@@ -68618,9 +69277,9 @@
       "output_cost_per_token": 1.2e-05,
       "output_cost_per_token_above_272k_tokens": 1.8e-05,
       "search_context_cost_per_query": {
-        "search_context_size_high": 0.01,
-        "search_context_size_low": 0.01,
-        "search_context_size_medium": 0.01
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
       },
       "source": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
       "supported_endpoints": [
@@ -68672,6 +69331,11 @@
       "mode": "chat",
       "output_cost_per_token": 8.8e-06,
       "output_cost_per_token_batches": 4.4e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/o3-2025-04-16": {
@@ -68685,6 +69349,11 @@
       "mode": "chat",
       "output_cost_per_token": 8.8e-06,
       "output_cost_per_token_batches": 4.4e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/o3-deep-research": {
@@ -68707,6 +69376,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.84e-06,
       "output_cost_per_token_batches": 2.42e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/o4-mini-2025-04-16": {
@@ -68720,6 +69394,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.84e-06,
       "output_cost_per_token_batches": 2.42e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/eu/text-embedding-3-large": {
@@ -68813,6 +69492,11 @@
       "output_cost_per_token": 8.8e-06,
       "output_cost_per_token_batches": 4.4e-06,
       "output_cost_per_token_priority": 1.54e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-4.1-mini": {
@@ -68827,6 +69511,11 @@
       "output_cost_per_token": 1.76e-06,
       "output_cost_per_token_batches": 8.8e-07,
       "output_cost_per_token_priority": 3.08e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-4.1-nano": {
@@ -68865,6 +69554,11 @@
       "output_cost_per_token": 1.1e-05,
       "output_cost_per_token_batches": 5.5e-06,
       "output_cost_per_token_priority": 2.2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5-codex": {
@@ -68889,6 +69583,11 @@
       "output_cost_per_token": 2.2e-06,
       "output_cost_per_token_batches": 1.1e-06,
       "output_cost_per_token_priority": 3.96e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5-nano": {
@@ -68901,6 +69600,11 @@
       "mode": "chat",
       "output_cost_per_token": 4.4e-07,
       "output_cost_per_token_batches": 2.2e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5-pro": {
@@ -68911,6 +69615,11 @@
       "mode": "responses",
       "output_cost_per_token": 0.000132,
       "output_cost_per_token_batches": 6.6e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5.1-codex-max": {
@@ -68935,6 +69644,11 @@
       "output_cost_per_token": 1.54e-05,
       "output_cost_per_token_batches": 7.7e-06,
       "output_cost_per_token_priority": 3.08e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5.2-codex": {
@@ -68953,6 +69667,11 @@
       "mode": "responses",
       "output_cost_per_token": 0.0001848,
       "output_cost_per_token_batches": 9.24e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5.3-codex": {
@@ -68965,6 +69684,11 @@
       "mode": "responses",
       "output_cost_per_token": 1.54e-05,
       "output_cost_per_token_priority": 3.08e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5.4-mini": {
@@ -68980,6 +69704,11 @@
       "output_cost_per_token": 4.95e-06,
       "output_cost_per_token_batches": 2.475e-06,
       "output_cost_per_token_priority": 9.9e-06,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5.4-nano": {
@@ -68992,6 +69721,11 @@
       "mode": "chat",
       "output_cost_per_token": 1.375e-06,
       "output_cost_per_token_batches": 6.875e-07,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/gpt-5.4-pro": {
@@ -69006,6 +69740,11 @@
       "output_cost_per_token_above_272k_tokens": 0.000297,
       "output_cost_per_token_above_272k_tokens_batches": 0.0001485,
       "output_cost_per_token_batches": 9.9e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_high": 0.014,
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014
+      },
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
     },
     "azure/us/o1-mini": {
@@ -69052,7 +69791,7 @@
       "cache_creation_input_audio_token_cost": 4e-07,
       "cache_read_input_audio_token_cost": 4e-07,
       "cache_read_input_token_cost": 4e-07,
-      "deprecation_date": "2026-10-31",
+      "deprecation_date": "2027-01-20",
       "input_cost_per_audio_token": 3.2e-05,
       "input_cost_per_image_token": 5e-06,
       "input_cost_per_token": 4e-06,
@@ -71397,6 +72136,7 @@
     "xai/grok-code-fast-1": {
       "cache_read_input_token_cost": 2e-07,
       "cache_read_input_token_cost_above_200k_tokens": 4e-07,
+      "deprecation_date": "2026-05-15",
       "input_cost_per_image_token": 1e-06,
       "input_cost_per_token": 1e-06,
       "input_cost_per_token_above_200k_tokens": 2e-06,
@@ -72295,7 +73035,7 @@
       "supports_mid_conversation_system": true,
       "cache_creation_input_token_cost": 2.5e-06,
       "cache_creation_input_token_cost_above_1hr": 4e-06,
-      "cache_read_input_token_cost": 2e-07,
+      "cache_read_input_token_cost": 1e-07,
       "deprecation_date": "2027-09-29",
       "input_cost_per_token": 2e-06,
       "litellm_provider": "azure_ai",
@@ -72906,15 +73646,15 @@
     "gpt-6.1-sol": {
       "cache_creation_input_token_cost": 2.5e-06,
       "cache_creation_input_token_cost_above_12hr": 5e-06,
+      "cache_creation_input_token_cost_above_12hr_ultrafast": 3e-05,
+      "cache_creation_input_token_cost_above_12hr_batches": 2.5e-06,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens": 1e-05,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_batches": 5e-06,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_flex": 5e-06,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_priority": 2e-05,
       "cache_creation_input_token_cost_above_12hr_above_272k_tokens_ultrafast": 6e-05,
-      "cache_creation_input_token_cost_above_12hr_batches": 2.5e-06,
       "cache_creation_input_token_cost_above_12hr_flex": 2.5e-06,
       "cache_creation_input_token_cost_above_12hr_priority": 1e-05,
-      "cache_creation_input_token_cost_above_12hr_ultrafast": 3e-05,
       "cache_creation_input_token_cost_above_272k_tokens": 5e-06,
       "cache_creation_input_token_cost_above_272k_tokens_batches": 2.5e-06,
       "cache_creation_input_token_cost_above_272k_tokens_flex": 2.5e-06,
@@ -74915,14 +75655,14 @@
       "supports_vision": true
     },
     "wandb/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B": {
-      "cache_read_input_token_cost": 2e-08,
-      "input_cost_per_token": 1.5e-07,
+      "cache_read_input_token_cost": 5e-08,
+      "input_cost_per_token": 2.5e-07,
       "litellm_provider": "wandb",
       "max_input_tokens": 1049000,
       "max_output_tokens": 943718,
       "mode": "chat",
-      "output_cost_per_token": 7.5e-07,
-      "source": "https://openrouter.ai/api/v1/models/nvidia/nemotron-3.5-super-vl/endpoints",
+      "output_cost_per_token": 1.5e-06,
+      "source": "https://www.coreweave.com/products/coreweave-forge/serverless-inference",
       "supports_function_calling": true,
       "supports_prompt_caching": true,
       "supports_reasoning": true,
@@ -75018,6 +75758,18 @@
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
+      "supports_vision": true
+    },
+    "fireworks_ai/accounts/fireworks/routers/deepseek-v4p1-flash-1017-spot": {
+      "cache_read_input_token_cost": 4.2e-09,
+      "input_cost_per_token": 2.1e-07,
+      "litellm_provider": "fireworks_ai",
+      "max_input_tokens": 1048576,
+      "mode": "chat",
+      "output_cost_per_token": 8.4e-07,
+      "source": "https://api.fireworks.ai/v1/serverless/models",
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
       "supports_vision": true
     },
     "github_copilot/claude-sonnet-4.6": {
@@ -76674,13 +77426,13 @@
       "supports_vision": true
     },
     "refuseless/glm-5.3-abliterated": {
-      "cache_read_input_token_cost": 2.5e-07,
-      "input_cost_per_token": 1.25e-06,
+      "cache_read_input_token_cost": 1.5e-07,
+      "input_cost_per_token": 1e-06,
       "litellm_provider": "refuseless",
       "max_input_tokens": 1048576,
       "max_output_tokens": 131072,
       "mode": "chat",
-      "output_cost_per_token": 2.25e-06,
+      "output_cost_per_token": 2e-06,
       "source": "https://refuseless.com/pricing",
       "supports_function_calling": true,
       "supports_prompt_caching": true,
@@ -76695,13 +77447,13 @@
       ]
     },
     "refuseless/glm-5.3-flash-abliterated": {
-      "cache_read_input_token_cost": 1.5e-07,
-      "input_cost_per_token": 2.5e-07,
+      "cache_read_input_token_cost": 4e-08,
+      "input_cost_per_token": 1.2e-07,
       "litellm_provider": "refuseless",
       "max_input_tokens": 1048576,
       "max_output_tokens": 131072,
       "mode": "chat",
-      "output_cost_per_token": 8e-07,
+      "output_cost_per_token": 5e-07,
       "source": "https://refuseless.com/pricing",
       "supports_function_calling": true,
       "supports_prompt_caching": true,
@@ -76716,13 +77468,13 @@
       ]
     },
     "refuseless/deepseek-v4.1-flash-abliterated": {
-      "cache_read_input_token_cost": 4.5e-08,
-      "input_cost_per_token": 2.2e-07,
+      "cache_read_input_token_cost": 3.5e-08,
+      "input_cost_per_token": 1.4e-07,
       "litellm_provider": "refuseless",
       "max_input_tokens": 1048576,
       "max_output_tokens": 130000,
       "mode": "chat",
-      "output_cost_per_token": 7.5e-07,
+      "output_cost_per_token": 5e-07,
       "source": "https://refuseless.com/pricing",
       "supports_function_calling": true,
       "supports_prompt_caching": true,
@@ -76777,6 +77529,15 @@
         "high",
         "max"
       ]
+    },
+    "fireworks_ai/accounts/fireworks/models/rune": {
+      "cache_read_input_token_cost": 8.4e-09,
+      "input_cost_per_token": 4.2e-08,
+      "litellm_provider": "fireworks_ai",
+      "max_input_tokens": 262144,
+      "mode": "decisions",
+      "output_cost_per_token": 0.0,
+      "source": "https://api.fireworks.ai/v1/serverless/models?format=nested"
     },
     "bedrock_mantle/openai.gpt-6.1-terra": {
       "cache_creation_input_token_cost": 1.375e-06,

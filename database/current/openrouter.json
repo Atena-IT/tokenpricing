@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-10-31T12:19:08.910007+00:00",
+  "fetched_at": "2026-10-31T18:16:34.527020+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 456,
+  "model_count": 452,
   "data": [
     {
       "id": "particle-ai/particle-1",
@@ -652,9 +652,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -9197,9 +9197,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -11232,94 +11232,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
-        "overrides": [
-          {
-            "utc_days": [
-              "saturday",
-              "sunday"
-            ],
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 0,
-            "utc_end": 100,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 100,
-            "utc_end": 400,
-            "prompt": "0.00000132",
-            "completion": "0.00000396",
-            "input_cache_read": "0.000000044"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 400,
-            "utc_end": 600,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 600,
-            "utc_end": 1000,
-            "prompt": "0.00000132",
-            "completion": "0.00000396",
-            "input_cache_read": "0.000000044"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 1000,
-            "utc_end": 0,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          }
-        ]
+        "prompt": "0.000000115",
+        "completion": "0.000004",
+        "input_cache_read": "0.00000011"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 393216,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -13388,117 +13307,6 @@
           "agentic_index": 19.3
         }
       },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true
-      }
-    },
-    {
-      "id": "poolside/laguna-s-2.1",
-      "canonical_slug": "poolside/laguna-s-2.1-20260720",
-      "hugging_face_id": "poolside/Laguna-S-2.1",
-      "name": "Poolside: Laguna S 2.1",
-      "created": 1784652683,
-      "description": "Laguna S 2.1 is the latest coding agent model from [Poolside](<https://poolside.ai/>). Laguna S 2.1 is a 118B total parameter model with 8B active parameters, scoring 70.2% on Terminal-Bench 2.1 and...",
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.00000018",
-        "input_cache_read": "0.000000009"
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 131072,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "temperature",
-        "tool_choice",
-        "tools"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-10-31",
-      "links": {
-        "details": "/api/v1/models/poolside/laguna-s-2.1-20260720/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true
-      }
-    },
-    {
-      "id": "poolside/laguna-s-2.1:free",
-      "canonical_slug": "poolside/laguna-s-2.1-20260720",
-      "hugging_face_id": "poolside/Laguna-S-2.1",
-      "name": "Poolside: Laguna S 2.1 (free)",
-      "created": 1784652683,
-      "description": "Laguna S 2.1 is the latest coding agent model from [Poolside](<https://poolside.ai/>). Laguna S 2.1 is a 118B total parameter model with 8B active parameters, scoring 70.2% on Terminal-Bench 2.1 and...",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 32768,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "temperature",
-        "tool_choice",
-        "tools"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-10-31",
-      "links": {
-        "details": "/api/v1/models/poolside/laguna-s-2.1-20260720/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
       "reasoning": {
         "mandatory": false,
         "default_enabled": true
@@ -16657,9 +16465,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -16779,117 +16587,6 @@
           "none"
         ],
         "default_effort": "high"
-      }
-    },
-    {
-      "id": "poolside/laguna-xs-2.1",
-      "canonical_slug": "poolside/laguna-xs-2.1-20260625",
-      "hugging_face_id": "poolside/Laguna-XS-2.1",
-      "name": "Poolside: Laguna XS 2.1",
-      "created": 1783002429,
-      "description": "Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poolside](https://poolside.ai/) and a step forward from their Laguna XS.2 model (released in April 2026). It combines...",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000012",
-        "input_cache_read": "0.00000003"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 32768,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "temperature",
-        "tool_choice",
-        "tools"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-10-31",
-      "links": {
-        "details": "/api/v1/models/poolside/laguna-xs-2.1-20260625/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true
-      }
-    },
-    {
-      "id": "poolside/laguna-xs-2.1:free",
-      "canonical_slug": "poolside/laguna-xs-2.1-20260625",
-      "hugging_face_id": "poolside/Laguna-XS-2.1",
-      "name": "Poolside: Laguna XS 2.1 (free)",
-      "created": 1783002429,
-      "description": "Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poolside](https://poolside.ai/) and a step forward from their Laguna XS.2 model (released in April 2026). It combines...",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 32768,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "temperature",
-        "tool_choice",
-        "tools"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-10-31",
-      "links": {
-        "details": "/api/v1/models/poolside/laguna-xs-2.1-20260625/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true
       }
     },
     {
@@ -31583,12 +31280,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000054",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000099"
+        "prompt": "0.0000006",
+        "completion": "0.0000022",
+        "input_cache_read": "0.00000011"
       },
       "top_provider": {
-        "context_length": 204800,
+        "context_length": 202752,
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
@@ -31623,7 +31320,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-12-31",
       "links": {
         "details": "/api/v1/models/z-ai/glm-4.7-20251222/endpoints"
       },

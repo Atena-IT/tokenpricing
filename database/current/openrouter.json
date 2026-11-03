@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-03T12:21:32.070176+00:00",
+  "fetched_at": "2026-11-03T18:17:26.361373+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 451,
+  "model_count": 453,
   "data": [
     {
       "id": "z-ai/glm-5.3-flashx-legal",
@@ -745,9 +745,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -6345,6 +6345,157 @@
       }
     },
     {
+      "id": "x-ai/grok-4.7:batch",
+      "canonical_slug": "x-ai/grok-4.7-20260916",
+      "hugging_face_id": null,
+      "name": "SpaceXAI: Grok 4.7 (batch)",
+      "created": 1790007541,
+      "description": "Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and...",
+      "context_length": 500000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000016",
+        "completion": "0.0000048",
+        "web_search": "0.005",
+        "input_cache_read": "0.0000004",
+        "overrides": [
+          {
+            "min_prompt_tokens": 200000,
+            "prompt": "0.0000032",
+            "completion": "0.0000096",
+            "input_cache_read": "0.0000008"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 500000,
+        "max_completion_tokens": 450000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.7,
+        "top_p": 0.95
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/x-ai/grok-4.7-20260916/endpoints"
+      },
+      "endpoints": [],
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "agents",
+            "category": "blender3d",
+            "elo": 1163,
+            "win_rate": 60,
+            "rank": 9
+          },
+          {
+            "arena": "agents",
+            "category": "mobileapps",
+            "elo": 1267,
+            "win_rate": 57.5,
+            "rank": 5
+          },
+          {
+            "arena": "agents",
+            "category": "pdf",
+            "elo": 1149,
+            "win_rate": 44,
+            "rank": 19
+          },
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1263,
+            "win_rate": 47.5,
+            "rank": 27
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1272,
+            "win_rate": 47.9,
+            "rank": 31
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1242,
+            "win_rate": 46.5,
+            "rank": 39
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1316,
+            "win_rate": 51.6,
+            "rank": 14
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1266,
+            "win_rate": 48,
+            "rank": 34
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1249,
+            "win_rate": 45.9,
+            "rank": 44
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 35,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
       "id": "qwen/qwen3.8-omni-flash",
       "canonical_slug": "qwen/qwen3.8-omni-flash-20260918",
       "hugging_face_id": null,
@@ -7065,7 +7216,7 @@
       "top_provider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": true
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -9368,9 +9519,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -11541,6 +11692,217 @@
         "/api/v1/messages",
         "/api/v1/responses"
       ],
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "agents",
+            "category": "agenticgamedev",
+            "elo": 1158,
+            "win_rate": 47,
+            "rank": 9
+          },
+          {
+            "arena": "agents",
+            "category": "androidnative",
+            "elo": 1294,
+            "win_rate": 62,
+            "rank": 1
+          },
+          {
+            "arena": "agents",
+            "category": "blender3d",
+            "elo": 1147,
+            "win_rate": 48.6,
+            "rank": 10
+          },
+          {
+            "arena": "agents",
+            "category": "fullstack",
+            "elo": 1264,
+            "win_rate": 54.9,
+            "rank": 7
+          },
+          {
+            "arena": "agents",
+            "category": "godotgamedev",
+            "elo": 1276,
+            "win_rate": 53,
+            "rank": 4
+          },
+          {
+            "arena": "agents",
+            "category": "htmlslides",
+            "elo": 1146,
+            "win_rate": 60.1,
+            "rank": 6
+          },
+          {
+            "arena": "agents",
+            "category": "mobileapps",
+            "elo": 1232,
+            "win_rate": 55.3,
+            "rank": 11
+          },
+          {
+            "arena": "agents",
+            "category": "pdf",
+            "elo": 1260,
+            "win_rate": 60.3,
+            "rank": 6
+          },
+          {
+            "arena": "agents",
+            "category": "python-pptxslides",
+            "elo": 1197,
+            "win_rate": 52.9,
+            "rank": 11
+          },
+          {
+            "arena": "agents",
+            "category": "webapps",
+            "elo": 1235,
+            "win_rate": 55.7,
+            "rank": 13
+          },
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1273,
+            "win_rate": 52.4,
+            "rank": 23
+          },
+          {
+            "arena": "models",
+            "category": "asciiart",
+            "elo": 1272,
+            "win_rate": 57.1,
+            "rank": 12
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1290,
+            "win_rate": 52.5,
+            "rank": 20
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1283,
+            "win_rate": 51.4,
+            "rank": 20
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1295,
+            "win_rate": 54,
+            "rank": 20
+          },
+          {
+            "arena": "models",
+            "category": "svg",
+            "elo": 1234,
+            "win_rate": 48.7,
+            "rank": 18
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1290,
+            "win_rate": 53.1,
+            "rank": 24
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1287,
+            "win_rate": 52.2,
+            "rank": 22
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": null,
+          "coding_index": 76.8,
+          "agentic_index": 53
+        }
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
+      "id": "x-ai/grok-4.6:batch",
+      "canonical_slug": "x-ai/grok-4.6-20260810",
+      "hugging_face_id": null,
+      "name": "SpaceXAI: Grok 4.6 (batch)",
+      "created": 1786548957,
+      "description": "Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).",
+      "context_length": 500000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000016",
+        "completion": "0.0000048",
+        "web_search": "0.005",
+        "input_cache_read": "0.0000004",
+        "overrides": [
+          {
+            "min_prompt_tokens": 200000,
+            "prompt": "0.0000032",
+            "completion": "0.0000096",
+            "input_cache_read": "0.0000008"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 500000,
+        "max_completion_tokens": 450000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/x-ai/grok-4.6-20260810/endpoints"
+      },
+      "endpoints": [],
       "benchmarks": {
         "design_arena": [
           {
@@ -14492,9 +14854,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000192",
+        "prompt": "0.000000211",
         "completion": "0.000015",
-        "input_cache_read": "0.000000182"
+        "input_cache_read": "0.000000201"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -16654,9 +17016,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -22218,9 +22580,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001824",
-        "completion": "0.0000105572",
-        "input_cache_read": "0.00000018"
+        "prompt": "0.0000002004",
+        "completion": "0.000008532",
+        "input_cache_read": "0.0000002"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -24883,9 +25245,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.000000181",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.000000077",
+        "completion": "0.000000231",
+        "input_cache_read": "0.000000038"
       },
       "top_provider": {
         "context_length": 262144,
@@ -26058,7 +26420,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-11-05",
       "links": {
         "details": "/api/v1/models/minimax/minimax-m2.7-20260318/endpoints"
       },
@@ -30775,7 +31137,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-11-05",
       "links": {
         "details": "/api/v1/models/minimax/minimax-m2-her-20260123/endpoints"
       },
@@ -31404,7 +31766,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-11-05",
       "links": {
         "details": "/api/v1/models/minimax/minimax-m2.1/endpoints"
       },
@@ -34844,7 +35206,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-11-05",
       "links": {
         "details": "/api/v1/models/minimax/minimax-m2/endpoints"
       },
@@ -38124,9 +38486,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000029",
-        "completion": "0.000000108",
-        "input_cache_read": "0.000000026"
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000075"
       },
       "top_provider": {
         "context_length": 131072,
@@ -39659,12 +40021,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.00000055"
+        "prompt": "0.00000014",
+        "completion": "0.0000008",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 16384,
+        "context_length": 131072,
+        "max_completion_tokens": 117964,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -43483,7 +43846,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": "2024-03-31",
-      "expiration_date": null,
+      "expiration_date": "2026-11-05",
       "links": {
         "details": "/api/v1/models/minimax/minimax-01/endpoints"
       },
@@ -44821,19 +45184,9 @@
       },
       "per_request_limits": null,
       "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
         "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
         "stop",
-        "structured_outputs",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_k",
         "top_p"
       ],

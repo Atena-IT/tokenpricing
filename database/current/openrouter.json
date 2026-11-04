@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-04T12:21:53.649900+00:00",
+  "fetched_at": "2026-11-04T18:17:58.433494+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 455,
+  "model_count": 453,
   "data": [
     {
       "id": "tencent/hy4",
@@ -650,7 +650,7 @@
     {
       "id": "moonshotai/kimi-k3.1-pro",
       "canonical_slug": "moonshotai/kimi-k3.1-pro-20261023",
-      "hugging_face_id": null,
+      "hugging_face_id": "moonshotai/Kimi-K3.1-Pro",
       "name": "MoonshotAI: Kimi K3.1 Pro",
       "created": 1792778188,
       "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
@@ -682,17 +682,22 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "logprobs",
         "max_tokens",
+        "min_p",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
+        "repetition_penalty",
         "response_format",
+        "seed",
         "stop",
         "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
+        "top_k",
         "top_logprobs",
         "top_p"
       ],
@@ -897,9 +902,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -7035,9 +7040,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000032",
-        "completion": "0.000000288",
-        "input_cache_read": "0.000000005"
+        "prompt": "0.000000022",
+        "completion": "0.0000004",
+        "input_cache_read": "0.000000004"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -9755,9 +9760,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -10688,9 +10693,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000008",
-        "completion": "0.0000036",
-        "input_cache_read": "0.000000076"
+        "prompt": "0.0000000699",
+        "completion": "0.0000014",
+        "input_cache_read": "0.0000000689"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -13137,7 +13142,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000059",
+        "prompt": "0.0000000553",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -13216,7 +13221,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000059",
+        "prompt": "0.0000000553",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -13401,92 +13406,6 @@
       "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/thinkingmachines/inkling-small-20260730/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [],
-        "artificial_analysis": {
-          "intelligence_index": 12.9,
-          "coding_index": 52.9,
-          "agentic_index": 23.5
-        }
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true,
-        "supported_efforts": [
-          "max",
-          "high",
-          "medium",
-          "low",
-          "minimal",
-          "none"
-        ],
-        "default_effort": "high"
-      }
-    },
-    {
-      "id": "thinkingmachines/inkling-small:free",
-      "canonical_slug": "thinkingmachines/inkling-small-20260730",
-      "hugging_face_id": "thinkingmachines/Inkling-Small",
-      "name": "Thinking Machines: Inkling Small (free)",
-      "created": 1785443117,
-      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image+audio->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "audio"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 262144,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "reasoning_effort",
-        "seed",
-        "stop",
-        "temperature",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-04",
       "links": {
         "details": "/api/v1/models/thinkingmachines/inkling-small-20260730/endpoints"
       },
@@ -14948,156 +14867,6 @@
       }
     },
     {
-      "id": "thinkingmachines/inkling:free",
-      "canonical_slug": "thinkingmachines/inkling-20260715",
-      "hugging_face_id": "thinkingmachines/Inkling",
-      "name": "Thinking Machines: Inkling (free)",
-      "created": 1784325956,
-      "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image+audio->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "audio"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 262144,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "reasoning_effort",
-        "seed",
-        "stop",
-        "temperature",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-04",
-      "links": {
-        "details": "/api/v1/models/thinkingmachines/inkling-20260715/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "agents",
-            "category": "webapps",
-            "elo": 1182,
-            "win_rate": 48.6,
-            "rank": 27
-          },
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1155,
-            "win_rate": 39.7,
-            "rank": 68
-          },
-          {
-            "arena": "models",
-            "category": "asciiart",
-            "elo": 1092,
-            "win_rate": 34.1,
-            "rank": 65
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1204,
-            "win_rate": 42.2,
-            "rank": 63
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1158,
-            "win_rate": 37.7,
-            "rank": 80
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 1166,
-            "win_rate": 37.9,
-            "rank": 72
-          },
-          {
-            "arena": "models",
-            "category": "svg",
-            "elo": 1109,
-            "win_rate": 34.7,
-            "rank": 63
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1197,
-            "win_rate": 40.5,
-            "rank": 61
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1223,
-            "win_rate": 44.6,
-            "rank": 58
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": 12.5,
-          "coding_index": 52.1,
-          "agentic_index": 22.5
-        }
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true,
-        "supported_efforts": [
-          "max",
-          "high",
-          "medium",
-          "low",
-          "minimal",
-          "none"
-        ],
-        "default_effort": "high"
-      }
-    },
-    {
       "id": "moonshotai/kimi-k3",
       "canonical_slug": "moonshotai/kimi-k3-20260715",
       "hugging_face_id": "moonshotai/Kimi-K3",
@@ -15119,9 +14888,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000002",
+        "prompt": "0.000000192",
         "completion": "0.000016",
-        "input_cache_read": "0.00000019"
+        "input_cache_read": "0.000000182"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -17302,9 +17071,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -22896,8 +22665,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000017",
-        "completion": "0.0000097224",
+        "prompt": "0.0000001719",
+        "completion": "0.0000105539",
         "input_cache_read": "0.00000017"
       },
       "top_provider": {
@@ -25566,9 +25335,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000088",
-        "completion": "0.000000265",
-        "input_cache_read": "0.000000044"
+        "prompt": "0.000000092",
+        "completion": "0.000000275",
+        "input_cache_read": "0.000000046"
       },
       "top_provider": {
         "context_length": 262144,
@@ -38874,9 +38643,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000018",
-        "completion": "0.000000067",
-        "input_cache_read": "0.000000016"
+        "prompt": "0.000000026",
+        "completion": "0.000000098",
+        "input_cache_read": "0.000000024"
       },
       "top_provider": {
         "context_length": 131072,
@@ -39129,13 +38898,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000003",
-        "completion": "0.00000013",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.000000018",
+        "completion": "0.00000009",
+        "input_cache_read": "0.000000009"
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": 117964,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -40415,13 +40184,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.0000008",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.00000009",
+        "completion": "0.00000055"
       },
       "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 117964,
+        "context_length": 262144,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,

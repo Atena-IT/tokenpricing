@@ -1,9 +1,80 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-03T18:17:26.361373+00:00",
+  "fetched_at": "2026-11-04T00:34:45.976013+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 453,
+  "model_count": 454,
   "data": [
+    {
+      "id": "stealth/crouton-alpha",
+      "canonical_slug": "stealth/crouton-alpha",
+      "hugging_face_id": null,
+      "name": "Crouton Alpha",
+      "created": 1793669930,
+      "description": "Crouton Alpha is a lightweight model built for scalable coding, agentic, and multimodal workflows. It's ideal for executing agentic sub-tasks, tool use, and document analysis in high-volume, repeated work. Developers...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "file",
+          "audio"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/stealth/crouton-alpha/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low",
+          "minimal"
+        ],
+        "default_effort": "max"
+      }
+    },
     {
       "id": "z-ai/glm-5.3-flashx-legal",
       "canonical_slug": "z-ai/glm-5.3-flashx-legal-20261102",
@@ -314,7 +385,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6.1-terra-pro-20261026/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": true,
         "default_enabled": true,
@@ -400,7 +473,7 @@
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
-          "intelligence_index": 51,
+          "intelligence_index": 51.3,
           "coding_index": null,
           "agentic_index": null
         }
@@ -481,11 +554,13 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6.1-terra-20261026/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
-          "intelligence_index": 51,
+          "intelligence_index": 51.3,
           "coding_index": null,
           "agentic_index": null
         }
@@ -547,9 +622,11 @@
         "response_format",
         "stop",
         "structured_outputs",
+        "temperature",
         "tool_choice",
         "tools",
-        "top_logprobs"
+        "top_logprobs",
+        "top_p"
       ],
       "default_parameters": {
         "top_p": 0.95
@@ -647,7 +724,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 46,
+          "intelligence_index": 46.5,
           "coding_index": null,
           "agentic_index": null
         }
@@ -809,7 +886,7 @@
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
-          "intelligence_index": 28.9,
+          "intelligence_index": 29.1,
           "coding_index": null,
           "agentic_index": null
         }
@@ -1042,7 +1119,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 28.5,
+          "intelligence_index": 28.6,
           "coding_index": null,
           "agentic_index": null
         }
@@ -1708,7 +1785,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 24.7,
+          "intelligence_index": 24.9,
           "coding_index": null,
           "agentic_index": null
         }
@@ -1751,8 +1828,8 @@
         "input_cache_read": "0.00000002"
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 235929,
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -2151,7 +2228,8 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs"
+        "top_logprobs",
+        "top_p"
       ],
       "default_parameters": {
         "temperature": 0.1,
@@ -2405,7 +2483,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-4-argon-20261013/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -2728,7 +2808,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 43.3,
+          "intelligence_index": 43.6,
           "coding_index": null,
           "agentic_index": null
         }
@@ -2968,7 +3048,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 36.2,
+          "intelligence_index": 36.5,
           "coding_index": null,
           "agentic_index": null
         }
@@ -3050,7 +3130,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-haiku-5.5-20261007/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -3111,7 +3193,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 36.2,
+          "intelligence_index": 36.5,
           "coding_index": null,
           "agentic_index": null
         }
@@ -3322,7 +3404,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 26,
+          "intelligence_index": 26.1,
           "coding_index": null,
           "agentic_index": null
         }
@@ -3564,7 +3646,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6.1-sol-pro-20260929/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": true,
         "default_enabled": true,
@@ -3728,7 +3812,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 54.5,
+          "intelligence_index": 54.6,
           "coding_index": null,
           "agentic_index": null
         }
@@ -3808,7 +3892,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6.1-sol-20260929/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -3890,7 +3976,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 54.5,
+          "intelligence_index": 54.6,
           "coding_index": null,
           "agentic_index": null
         }
@@ -4050,7 +4136,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 54.2,
+          "intelligence_index": 54.5,
           "coding_index": null,
           "agentic_index": null
         }
@@ -4121,7 +4207,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-sonnet-5.5-20260928/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -4203,7 +4291,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 54.2,
+          "intelligence_index": 54.5,
           "coding_index": null,
           "agentic_index": null
         }
@@ -4989,7 +5077,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6-luna-pro-20260922/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -5083,7 +5173,7 @@
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
-          "intelligence_index": 27.8,
+          "intelligence_index": 27.9,
           "coding_index": null,
           "agentic_index": null
         }
@@ -5171,11 +5261,13 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6-luna-20260922/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
-          "intelligence_index": 27.8,
+          "intelligence_index": 27.9,
           "coding_index": null,
           "agentic_index": null
         }
@@ -5353,7 +5445,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6-sol-pro-20260922/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -5444,6 +5538,14 @@
         "/api/v1/messages",
         "/api/v1/responses"
       ],
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 44.1,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -5527,7 +5629,17 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6-sol-20260922/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 44.1,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -5705,7 +5817,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 58.4,
+          "intelligence_index": 59.1,
           "coding_index": null,
           "agentic_index": null
         }
@@ -5776,7 +5888,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-opus-5.5-20260921/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -5879,7 +5993,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 58.4,
+          "intelligence_index": 59.1,
           "coding_index": null,
           "agentic_index": null
         }
@@ -6327,7 +6441,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 35,
+          "intelligence_index": 35.5,
           "coding_index": null,
           "agentic_index": null
         }
@@ -6410,7 +6524,9 @@
       "links": {
         "details": "/api/v1/models/x-ai/grok-4.7-20260916/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -6478,7 +6594,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 35,
+          "intelligence_index": 35.5,
           "coding_index": null,
           "agentic_index": null
         }
@@ -6823,9 +6939,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000035",
-        "completion": "0.000000315",
-        "input_cache_read": "0.000000006"
+        "prompt": "0.0000000333",
+        "completion": "0.000000475",
+        "input_cache_read": "0.00000000475"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -7724,7 +7840,9 @@
       "links": {
         "details": "/api/v1/models/deepseek/deepseek-v4.1-flash-20260910/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -8098,7 +8216,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6-astra-20260903/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -8264,7 +8384,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-6-astra-pro-20260903/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": true,
         "default_enabled": true,
@@ -8345,7 +8467,7 @@
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
-          "intelligence_index": 33.6,
+          "intelligence_index": 33.7,
           "coding_index": 76.2,
           "agentic_index": 56
         }
@@ -8621,7 +8743,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 36.4,
+          "intelligence_index": 36.6,
           "coding_index": 75.8,
           "agentic_index": 55.5
         }
@@ -8829,7 +8951,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 30.5,
+          "intelligence_index": 30.8,
           "coding_index": 76.3,
           "agentic_index": 40.2
         }
@@ -8904,7 +9026,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-3.8-flash-20260902/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -9028,7 +9152,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 30.5,
+          "intelligence_index": 30.8,
           "coding_index": 76.3,
           "agentic_index": 40.2
         }
@@ -9214,7 +9338,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 49.7,
+          "intelligence_index": 50,
           "coding_index": 80.7,
           "agentic_index": 57.2
         }
@@ -9285,7 +9409,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-fable-5.1-20260831/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -9395,7 +9521,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 49.7,
+          "intelligence_index": 50,
           "coding_index": 80.7,
           "agentic_index": 57.2
         }
@@ -9433,7 +9559,7 @@
       },
       "pricing": {
         "prompt": "0.00000006",
-        "completion": "0.00000015",
+        "completion": "0.00000025",
         "input_cache_read": "0.000000015"
       },
       "top_provider": {
@@ -9519,9 +9645,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000007506",
-        "completion": "0.0000022509",
-        "input_cache_read": "0.0000000378",
+        "prompt": "0.000000834",
+        "completion": "0.000002501",
+        "input_cache_read": "0.000000042",
         "overrides": [
           {
             "utc_start": 0,
@@ -9959,7 +10085,9 @@
       "links": {
         "details": "/api/v1/models/z-ai/glm-5.3-flash-20260826/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -10656,7 +10784,9 @@
       "links": {
         "details": "/api/v1/models/z-ai/glm-5.3-20260816/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -11169,7 +11299,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-3.7-flash-20260813/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -11902,7 +12034,9 @@
       "links": {
         "details": "/api/v1/models/x-ai/grok-4.6-20260810/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -12177,7 +12311,8 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs"
+        "top_logprobs",
+        "top_p"
       ],
       "default_parameters": {
         "temperature": 0.1,
@@ -13626,7 +13761,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-opus-5-20260723/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -14132,7 +14269,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-3.6-flash-20260721/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -14432,7 +14571,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-3.5-flash-lite-20260721/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -14854,9 +14995,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000211",
-        "completion": "0.000015",
-        "input_cache_read": "0.000000201"
+        "prompt": "0.000000276",
+        "completion": "0.0000096",
+        "input_cache_read": "0.00000013"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -15121,7 +15262,9 @@
       "links": {
         "details": "/api/v1/models/moonshotai/kimi-k3-20260715/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -15641,7 +15784,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.6-luna-pro-20260709/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -15821,7 +15966,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.6-luna-20260709/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -16001,7 +16148,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.6-terra-pro-20260709/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -16095,7 +16244,7 @@
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
-          "intelligence_index": null,
+          "intelligence_index": 32.2,
           "coding_index": 76.7,
           "agentic_index": 43.2
         }
@@ -16181,11 +16330,13 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.6-terra-20260709/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
-          "intelligence_index": null,
+          "intelligence_index": 32.2,
           "coding_index": 76.7,
           "agentic_index": 43.2
         }
@@ -16363,7 +16514,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.6-sol-pro-20260709/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -16545,7 +16698,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.6-sol-20260709/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -17016,9 +17171,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000825",
-        "completion": "0.00000033",
-        "input_cache_read": "0.000000020625",
+        "prompt": "0.000000132",
+        "completion": "0.000000528",
+        "input_cache_read": "0.000000033",
         "overrides": [
           {
             "utc_start": 0,
@@ -17418,7 +17573,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-sonnet-5-20260630/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -18715,7 +18872,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-5-fable-20260609/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -19477,7 +19636,9 @@
       "links": {
         "details": "/api/v1/models/qwen/qwen3.7-plus-20260602/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -19758,7 +19919,7 @@
           }
         ],
         "artificial_analysis": {
-          "intelligence_index": 18.7,
+          "intelligence_index": 18.9,
           "coding_index": 58.6,
           "agentic_index": 29.5
         }
@@ -20220,7 +20381,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.8-opus-20260528/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -21045,7 +21208,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-3.5-flash-20260519/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -21455,7 +21620,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-3.1-flash-lite-20260507/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": false,
         "default_enabled": true,
@@ -21866,7 +22033,9 @@
       "links": {
         "details": "/api/v1/models/x-ai/grok-4.3-20260430/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -22201,7 +22370,9 @@
       "links": {
         "details": "/api/v1/models/mistralai/mistral-medium-3.5-20260430/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -22580,9 +22751,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000002004",
-        "completion": "0.000008532",
-        "input_cache_read": "0.0000002"
+        "prompt": "0.0000001729",
+        "completion": "0.0000105572",
+        "input_cache_read": "0.00000017"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -23269,7 +23440,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.5-pro-20260423/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": true,
         "supported_efforts": [
@@ -23590,7 +23763,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.5-20260423/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -24954,7 +25129,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.7-opus-20260416/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -25245,9 +25422,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000077",
-        "completion": "0.000000231",
-        "input_cache_read": "0.000000038"
+        "prompt": "0.00000007",
+        "completion": "0.00000021",
+        "input_cache_read": "0.000000035"
       },
       "top_provider": {
         "context_length": 262144,
@@ -26645,7 +26822,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.4-nano-20260317/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -26813,7 +26992,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.4-mini-20260317/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -27454,7 +27635,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.4-pro-20260305/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": true,
         "supported_efforts": [
@@ -27719,7 +27902,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.4-20260305/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -29286,7 +29471,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-3.1-pro-preview-20260219/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -29713,7 +29900,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.6-sonnet-20260217/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -30649,7 +30838,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.6-opus-20260205/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -32240,7 +32431,9 @@
       "links": {
         "details": "/api/v1/models/google/gemini-3-flash-preview-20251217/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -32604,7 +32797,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.2-pro-20251211/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": true,
         "supported_efforts": [
@@ -32847,7 +33042,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.2-20251211/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -34072,7 +34269,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.5-opus-20251124/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -34471,7 +34670,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5.1-20251113/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -35568,7 +35769,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.5-haiku-20251001/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -36153,7 +36356,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5-pro-2025-10-06/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": true,
         "supported_efforts": [
@@ -36562,7 +36767,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.5-sonnet-20250929/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -37326,12 +37533,15 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "logprobs",
         "max_tokens",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
         "response_format",
+        "seed",
+        "stop",
         "structured_outputs",
         "temperature",
         "top_k",
@@ -37871,7 +38081,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5-2025-08-07/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -38149,7 +38361,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5-mini-2025-08-07/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -38408,7 +38622,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-5-nano-2025-08-07/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -38657,7 +38873,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-oss-120b/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -38881,7 +39099,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-oss-20b/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -39105,7 +39325,9 @@
       "links": {
         "details": "/api/v1/models/anthropic/claude-4.1-opus-20250805/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -40021,13 +40243,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.0000008",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.00000009",
+        "completion": "0.00000055"
       },
       "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 117964,
+        "context_length": 262144,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -41700,7 +41921,9 @@
       "links": {
         "details": "/api/v1/models/openai/o3-2025-04-16/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -41794,7 +42017,9 @@
       "links": {
         "details": "/api/v1/models/openai/o4-mini-2025-04-16/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -41999,7 +42224,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-4.1-2025-04-14/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -42206,7 +42433,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-4.1-mini-2025-04-14/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -42417,7 +42646,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-4.1-nano-2025-04-14/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -43683,7 +43914,9 @@
       "links": {
         "details": "/api/v1/models/openai/o3-mini-2025-01-31/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "reasoning": {
         "mandatory": true
       }
@@ -44103,13 +44336,12 @@
         "instruct_type": "llama3"
       },
       "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.00000052",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.0000001",
+        "completion": "0.00000032"
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": 128000,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -45534,7 +45766,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-4o-mini/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {
@@ -45838,7 +46072,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-4o/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [
           {
@@ -46000,7 +46236,9 @@
       "links": {
         "details": "/api/v1/models/openai/gpt-4-turbo/endpoints"
       },
-      "endpoints": [],
+      "endpoints": [
+        "/api/v1/batches"
+      ],
       "benchmarks": {
         "design_arena": [],
         "artificial_analysis": {

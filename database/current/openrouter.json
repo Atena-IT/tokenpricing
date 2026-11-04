@@ -1,9 +1,77 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-04T00:34:45.976013+00:00",
+  "fetched_at": "2026-11-04T06:25:11.138845+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 454,
+  "model_count": 455,
   "data": [
+    {
+      "id": "tencent/hy4",
+      "canonical_slug": "tencent/hy4-20261104",
+      "hugging_face_id": "tencent/Hy4",
+      "name": "Tencent: Hy4",
+      "created": 1793766031,
+      "description": "The official release of Hy4 delivers comprehensive and substantial improvements over Hy4 Preview, with particularly strong gains in agentic capabilities and performance across a wide range of long-horizon, real-world productivity...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000000417",
+        "completion": "0.0000012505",
+        "input_cache_read": "0.000000021"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/tencent/hy4-20261104/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
     {
       "id": "stealth/crouton-alpha",
       "canonical_slug": "stealth/crouton-alpha",
@@ -822,9 +890,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -924,9 +992,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
         "overrides": [
           {
             "utc_days": [
@@ -1426,7 +1494,7 @@
       "default_parameters": {},
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-11-08",
       "links": {
         "details": "/api/v1/models/inception/mercury-3-20261019/endpoints"
       },
@@ -7723,7 +7791,7 @@
       "pricing": {
         "prompt": "0.000000045",
         "completion": "0.0000005",
-        "input_cache_read": "0.000000012"
+        "input_cache_read": "0.000000018"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -7900,7 +7968,7 @@
       "default_parameters": {},
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-11-08",
       "links": {
         "details": "/api/v1/models/inception/mercury-2.5-20260908/endpoints"
       },
@@ -9745,9 +9813,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000313",
-        "completion": "0.0000000846",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000269",
+        "completion": "0.0000000996",
+        "input_cache_read": "0.0000000269"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -9896,9 +9964,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000313",
-        "completion": "0.0000000846",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000269",
+        "completion": "0.0000000996",
+        "input_cache_read": "0.0000000269"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11687,7 +11755,7 @@
       },
       "pricing": {
         "prompt": "0.000000115",
-        "completion": "0.000004",
+        "completion": "0.0000046",
         "input_cache_read": "0.00000011"
       },
       "top_provider": {
@@ -14995,9 +15063,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000276",
-        "completion": "0.0000096",
-        "input_cache_read": "0.00000013"
+        "prompt": "0.0000002",
+        "completion": "0.000016",
+        "input_cache_read": "0.00000019"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -22751,9 +22819,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001729",
-        "completion": "0.0000105572",
-        "input_cache_read": "0.00000017"
+        "prompt": "0.00000019",
+        "completion": "0.00000894",
+        "input_cache_read": "0.00000019"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -25422,9 +25490,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000007",
-        "completion": "0.00000021",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.000000085",
+        "completion": "0.000000256",
+        "input_cache_read": "0.000000043"
       },
       "top_provider": {
         "context_length": 262144,
@@ -28070,7 +28138,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-11-08",
       "links": {
         "details": "/api/v1/models/inception/mercury-2-20260304/endpoints"
       },
@@ -38702,9 +38770,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000075"
+        "prompt": "0.000000029",
+        "completion": "0.000000108",
+        "input_cache_read": "0.000000026"
       },
       "top_provider": {
         "context_length": 131072,
@@ -40243,12 +40311,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.00000055"
+        "prompt": "0.00000014",
+        "completion": "0.0000008",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 16384,
+        "context_length": 131072,
+        "max_completion_tokens": 117964,
         "is_moderated": false
       },
       "per_request_limits": null,

@@ -1,9 +1,84 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-05T00:36:10.120020+00:00",
+  "fetched_at": "2026-11-05T06:25:01.491252+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 454,
+  "model_count": 455,
   "data": [
+    {
+      "id": "inclusionai/ling-3.0-tiny",
+      "canonical_slug": "inclusionai/ling-3.0-tiny-20260806",
+      "hugging_face_id": "inclusionAI/Ling-3.0-tiny",
+      "name": "inclusionAI: Ling 3.0 Tiny",
+      "created": 1793858375,
+      "description": "Ling 3.0 Tiny is a mixture-of-experts model from InclusionAI, with 1.3B active parameters out of 7.9B total. It is designed for responsive agents, instruction following, and multi-turn conversations, with switchable...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000000015",
+        "completion": "0.000000045",
+        "input_cache_read": "0.000000003"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 250000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "response_format",
+        "seed",
+        "stop",
+        "temperature",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": 20
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inclusionai/ling-3.0-tiny-20260806/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": null,
+          "coding_index": 26.5,
+          "agentic_index": 4.4
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true
+      }
+    },
     {
       "id": "ricursiveai/ripple-65b-preview",
       "canonical_slug": "ricursiveai/ripple-65b-preview-20261104",
@@ -968,9 +1043,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -1070,9 +1145,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
         "overrides": [
           {
             "utc_days": [
@@ -7045,9 +7120,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001035",
+        "prompt": "0.0000000963",
         "completion": "0.000008",
-        "input_cache_read": "0.0000001"
+        "input_cache_read": "0.0000000963"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -7273,7 +7348,7 @@
       },
       "top_provider": {
         "context_length": 128000,
-        "max_completion_tokens": 4096,
+        "max_completion_tokens": 8192,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -7991,13 +8066,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000015",
-        "input_cache_read": "0.000000004"
+        "prompt": "0.000000112",
+        "completion": "0.000000336",
+        "input_cache_read": "0.00000000336"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 384000,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -8005,7 +8080,6 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -8020,7 +8094,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -11745,7 +11818,7 @@
         "input_cache_read": "0.00000025"
       },
       "top_provider": {
-        "context_length": 1000000,
+        "context_length": 1048576,
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
@@ -11753,10 +11826,8 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
@@ -11904,9 +11975,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000115",
-        "completion": "0.0000046",
-        "input_cache_read": "0.00000011"
+        "prompt": "0.000000107",
+        "completion": "0.000004278",
+        "input_cache_read": "0.0000001023"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -22831,9 +22902,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001529",
+        "prompt": "0.0000001824",
         "completion": "0.0000105572",
-        "input_cache_read": "0.00000015"
+        "input_cache_read": "0.00000018"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -25501,9 +25572,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000033",
-        "completion": "0.000000099",
-        "input_cache_read": "0.000000016"
+        "prompt": "0.000000022",
+        "completion": "0.000000067",
+        "input_cache_read": "0.000000011"
       },
       "top_provider": {
         "context_length": 262144,
@@ -35636,7 +35707,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-12-01",
       "links": {
         "details": "/api/v1/models/openai/gpt-5-image-mini/endpoints"
       },
@@ -37973,7 +38044,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
-      "expiration_date": null,
+      "expiration_date": "2026-12-31",
       "links": {
         "details": "/api/v1/models/z-ai/glm-4.5v/endpoints"
       },
@@ -38809,9 +38880,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000027",
-        "completion": "0.000000101",
-        "input_cache_read": "0.000000025"
+        "prompt": "0.000000011",
+        "completion": "0.00000004",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 131072,
@@ -39064,13 +39135,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000018",
-        "completion": "0.00000009",
-        "input_cache_read": "0.000000009"
+        "prompt": "0.00000003",
+        "completion": "0.00000013",
+        "input_cache_read": "0.00000003"
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": 32768,
+        "max_completion_tokens": 117964,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -40350,12 +40421,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.00000055"
+        "prompt": "0.00000014",
+        "completion": "0.0000008",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 16384,
+        "context_length": 131072,
+        "max_completion_tokens": 117964,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -47224,7 +47296,7 @@
       "hugging_face_id": null,
       "name": "Auto Router",
       "created": 1699401600,
-      "description": "The Auto Router automatically selects the best model for your prompt, powered by the wisdom of the market. It routes you based on what the OpenRouter community collectively spends on...",
+      "description": "Auto is OpenRouter’s general-purpose router, now powered by [Jev Router](https://openrouter.ai/typesafe/jev-router). It replaces market-spend rankings with request-aware selection of both the model and reasoning effort, weighing task difficulty, measured benchmark results,...",
       "context_length": 2000000,
       "architecture": {
         "modality": "text+image+file+audio+video->text+image",

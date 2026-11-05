@@ -1,267 +1,29 @@
 {
-  "generated_at": "2026-11-05T06:25:01.769510+00:00",
+  "generated_at": "2026-11-05T12:22:23.721666+00:00",
   "summary": {
-    "model_additions": 9,
+    "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 10,
-    "cache_price_changes": 10
+    "pricing_changes": 7,
+    "cache_price_changes": 6
   },
   "changes": [
-    {
-      "type": "model_added",
-      "model_id": "bedrock/us-gov-east-1/anthropic.claude-3-haiku-20240307-v1:0",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/us-gov-east-1/anthropic.claude-3-haiku-20240307-v1:0",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 0.3,
-          "output_per_million": 1.5,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 195904,
-        "max_output_tokens": 4096,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.3,
-            "price_output": 1.5,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-05T06:25:01.548595Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/us-gov-east-1/moonshotai.kimi-k3",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "bedrock/us-gov-east-1/moonshotai.kimi-k3",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 3.96,
-          "output_per_million": 19.8,
-          "cache_read_per_million": 0.396,
-          "cache_creation_per_million": 4.95,
-          "currency": "USD"
-        },
-        "context_window": 868928,
-        "max_output_tokens": 131072,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 3.96,
-            "price_output": 19.8,
-            "price_cache_read": 0.396,
-            "price_cache_creation": 4.95,
-            "last_updated": "2026-11-05T06:25:01.548595Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/us-gov-west-1/anthropic.claude-3-haiku-20240307-v1:0",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/us-gov-west-1/anthropic.claude-3-haiku-20240307-v1:0",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 0.3,
-          "output_per_million": 1.5,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 195904,
-        "max_output_tokens": 4096,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.3,
-            "price_output": 1.5,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-05T06:25:01.548595Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/us-gov-west-1/moonshotai.kimi-k3",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "bedrock/us-gov-west-1/moonshotai.kimi-k3",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 3.96,
-          "output_per_million": 19.8,
-          "cache_read_per_million": 0.396,
-          "cache_creation_per_million": 4.95,
-          "currency": "USD"
-        },
-        "context_window": 868928,
-        "max_output_tokens": 131072,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 3.96,
-            "price_output": 19.8,
-            "price_cache_read": 0.396,
-            "price_cache_creation": 4.95,
-            "last_updated": "2026-11-05T06:25:01.548595Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock_mantle/us-gov-east-1/xai.grok-4.7",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_mantle",
-        "model_id": "bedrock_mantle/us-gov-east-1/xai.grok-4.7",
-        "display_name": "bedrock_mantle",
-        "pricing": {
-          "input_per_million": 2.64,
-          "output_per_million": 7.92,
-          "cache_read_per_million": 0.66,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 524288,
-        "max_output_tokens": 524288,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.64,
-            "price_output": 7.92,
-            "price_cache_read": 0.66,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-05T06:25:01.548595Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock_mantle/us-gov-west-1/xai.grok-4.7",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_mantle",
-        "model_id": "bedrock_mantle/us-gov-west-1/xai.grok-4.7",
-        "display_name": "bedrock_mantle",
-        "pricing": {
-          "input_per_million": 2.64,
-          "output_per_million": 7.92,
-          "cache_read_per_million": 0.66,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 524288,
-        "max_output_tokens": 524288,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.64,
-            "price_output": 7.92,
-            "price_cache_read": 0.66,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-05T06:25:01.548595Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock_mantle/xai.grok-4.7",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_mantle",
-        "model_id": "bedrock_mantle/xai.grok-4.7",
-        "display_name": "bedrock_mantle",
-        "pricing": {
-          "input_per_million": 2.2,
-          "output_per_million": 6.6,
-          "cache_read_per_million": 0.55,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 524288,
-        "max_output_tokens": 524288,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.2,
-            "price_output": 6.6,
-            "price_cache_read": 0.55,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-05T06:25:01.548595Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
     {
       "type": "pricing_changed",
       "model_id": "deepseek/deepseek-v4-pro-0813",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.115,
-        "output_per_million": 4.6,
-        "cache_read_per_million": 0.11,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.107,
         "output_per_million": 4.278,
         "cache_read_per_million": 0.1023,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.103,
+        "output_per_million": 4.11,
+        "cache_read_per_million": 0.098,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -269,11 +31,11 @@
       "model_id": "deepseek/deepseek-v4-pro-0813",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.11,
+        "cache_read_per_million": 0.1023,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.1023,
+        "cache_read_per_million": 0.098,
         "cache_creation_per_million": null
       }
     },
@@ -282,18 +44,18 @@
       "model_id": "deepseek/deepseek-v4.1-flash-1017",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.6,
-        "cache_read_per_million": 0.003,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.3,
         "output_per_million": 1.2,
         "cache_read_per_million": 0.006,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "cache_read_per_million": 0.003,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -301,43 +63,11 @@
       "model_id": "deepseek/deepseek-v4.1-flash-1017",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.003,
-        "cache_creation_per_million": null
-      },
-      "after": {
         "cache_read_per_million": 0.006,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4.1-flash:batch",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.05,
-        "output_per_million": 0.15,
-        "cache_read_per_million": 0.004,
-        "cache_creation_per_million": null,
-        "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.112,
-        "output_per_million": 0.336,
-        "cache_read_per_million": 0.00336,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4.1-flash:batch",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.004,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.00336,
+        "cache_read_per_million": 0.003,
         "cache_creation_per_million": null
       }
     },
@@ -346,18 +76,18 @@
       "model_id": "google/gemma-4-26b-a4b-it",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.033,
-        "output_per_million": 0.099,
-        "cache_read_per_million": 0.016,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.022,
         "output_per_million": 0.067,
         "cache_read_per_million": 0.011,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.034,
+        "output_per_million": 0.103,
+        "cache_read_per_million": 0.017,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -365,95 +95,29 @@
       "model_id": "google/gemma-4-26b-a4b-it",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.016,
+        "cache_read_per_million": 0.011,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.011,
+        "cache_read_per_million": 0.017,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "inclusionai/ling-3.0-tiny",
-      "model_type": "text",
-      "after": {
-        "provider": "inclusionai",
-        "model_id": "inclusionai/ling-3.0-tiny",
-        "display_name": "inclusionAI: Ling 3.0 Tiny",
-        "pricing": {
-          "input_per_million": 0.015,
-          "output_per_million": 0.045,
-          "cache_read_per_million": 0.003,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 262144,
-        "max_output_tokens": 250000,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.015,
-            "price_output": 0.045,
-            "price_cache_read": 0.003,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-05T06:25:01.491252Z"
-          }
-        },
-        "affiliate_links": {}
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "minimax/minimax-m3.1-flash",
+      "model_id": "openai/gpt-oss-120b",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.075,
-        "output_per_million": 0.3,
-        "cache_read_per_million": 0.0075,
+        "input_per_million": 0.011,
+        "output_per_million": 0.04,
+        "cache_read_per_million": 0.01,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
         "input_per_million": 0.15,
         "output_per_million": 0.6,
-        "cache_read_per_million": 0.015,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "minimax/minimax-m3.1-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.0075,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.015,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "openai/gpt-oss-120b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.027,
-        "output_per_million": 0.101,
-        "cache_read_per_million": 0.025,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.011,
-        "output_per_million": 0.04,
-        "cache_read_per_million": 0.01,
+        "cache_read_per_million": 0.075,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -463,110 +127,44 @@
       "model_id": "openai/gpt-oss-120b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.025,
-        "cache_creation_per_million": null
-      },
-      "after": {
         "cache_read_per_million": 0.01,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "openai/gpt-oss-20b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.018,
-        "output_per_million": 0.09,
-        "cache_read_per_million": 0.009,
-        "cache_creation_per_million": null,
-        "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.03,
-        "output_per_million": 0.13,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "openai/gpt-oss-20b",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.009,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.03,
+        "cache_read_per_million": 0.075,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "qwen/qwen3-235b-a22b-2507",
+      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
       "model_type": "text",
       "before": {
+        "input_per_million": 0.1,
+        "output_per_million": 1.1,
+        "cache_read_per_million": 0.07,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
         "input_per_million": 0.09,
-        "output_per_million": 0.55,
+        "output_per_million": 1.1,
         "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.14,
-        "output_per_million": 0.8,
-        "cache_read_per_million": 0.05,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "qwen/qwen3-235b-a22b-2507",
+      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": null,
+        "cache_read_per_million": 0.07,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.05,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "together_ai/ricursive-ai/Ripple-65B-Preview",
-      "model_type": "text",
-      "after": {
-        "provider": "together_ai",
-        "model_id": "together_ai/ricursive-ai/Ripple-65B-Preview",
-        "display_name": "together_ai",
-        "pricing": {
-          "input_per_million": 0.2,
-          "output_per_million": 0.6,
-          "cache_read_per_million": 0.02,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 131072,
-        "max_output_tokens": 131072,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.2,
-            "price_output": 0.6,
-            "price_cache_read": 0.02,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-05T06:25:01.548595Z"
-          }
-        },
-        "affiliate_links": {}
       }
     },
     {
@@ -574,18 +172,18 @@
       "model_id": "~deepseek/deepseek-pro-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.1035,
-        "output_per_million": 8.0,
-        "cache_read_per_million": 0.1,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.0963,
         "output_per_million": 8.0,
         "cache_read_per_million": 0.0963,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.0927,
+        "output_per_million": 8.0,
+        "cache_read_per_million": 0.0927,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -593,11 +191,11 @@
       "model_id": "~deepseek/deepseek-pro-latest",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.1,
+        "cache_read_per_million": 0.0963,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0963,
+        "cache_read_per_million": 0.0927,
         "cache_creation_per_million": null
       }
     },
@@ -606,31 +204,18 @@
       "model_id": "~moonshotai/kimi-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.1529,
-        "output_per_million": 10.5572,
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.1824,
         "output_per_million": 10.5572,
         "cache_read_per_million": 0.18,
         "cache_creation_per_million": null,
         "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "~moonshotai/kimi-latest",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.15,
-        "cache_creation_per_million": null
       },
       "after": {
+        "input_per_million": 0.1824,
+        "output_per_million": 9.3388,
         "cache_read_per_million": 0.18,
-        "cache_creation_per_million": null
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     }
   ]

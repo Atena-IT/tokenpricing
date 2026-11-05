@@ -1,9 +1,139 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-05T12:22:23.384670+00:00",
+  "fetched_at": "2026-11-05T18:19:07.430931+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 455,
+  "model_count": 454,
   "data": [
+    {
+      "id": "google/gemini-omni-1.2-flash",
+      "canonical_slug": "google/gemini-omni-1.2-flash-20261105",
+      "hugging_face_id": null,
+      "name": "Google: Gemini Omni 1.2 Flash",
+      "created": 1793898961,
+      "description": "Gemini Omni 1.2 Flash is Google's native multimodal video generation and editing model, the successor to Gemini Omni 1.1 Flash. It generates clips up to 15 seconds long with native...",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image+video->text+video",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text",
+          "video"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.000009",
+        "web_search": "0.014"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "seed",
+        "temperature",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/google/gemini-omni-1.2-flash-20261105/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses",
+        "/api/v1/videos"
+      ],
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "high",
+          "low"
+        ],
+        "default_effort": "low"
+      }
+    },
+    {
+      "id": "google/gemini-omni-1.1-flash",
+      "canonical_slug": "google/gemini-omni-1.1-flash-20260911",
+      "hugging_face_id": null,
+      "name": "Google: Gemini Omni 1.1 Flash",
+      "created": 1793825668,
+      "description": "Gemini Omni 1.1 Flash is Google's native multimodal video generation and editing model, the generally available successor to Gemini Omni Flash Preview. It is suited for text-to-video, image-to-video, first and...",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image+video->text+video",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text",
+          "video"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.000009",
+        "web_search": "0.014"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "seed",
+        "temperature",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/google/gemini-omni-1.1-flash-20260911/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses",
+        "/api/v1/videos"
+      ],
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "high",
+          "low"
+        ],
+        "default_effort": "low"
+      }
+    },
     {
       "id": "ricursiveai/ripple-65b-preview",
       "canonical_slug": "ricursiveai/ripple-65b-preview-20261104",
@@ -983,9 +1113,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -9862,9 +9992,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -13361,7 +13491,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000059",
+        "prompt": "0.0000000434",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -13440,7 +13570,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000059",
+        "prompt": "0.0000000434",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -17318,9 +17448,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -18497,7 +18627,7 @@
       "pricing": {
         "prompt": "0.0000006",
         "completion": "0.0000035",
-        "input_cache_read": "0.00000015"
+        "input_cache_read": "0.00000016"
       },
       "top_provider": {
         "context_length": 262144,
@@ -25617,9 +25747,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000034",
-        "completion": "0.000000103",
-        "input_cache_read": "0.000000017"
+        "prompt": "0.000000049",
+        "completion": "0.000000146",
+        "input_cache_read": "0.000000024"
       },
       "top_provider": {
         "context_length": 262144,
@@ -26754,13 +26884,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000006"
+        "prompt": "0.00000021",
+        "completion": "0.00000084",
+        "input_cache_read": "0.000000042"
       },
       "top_provider": {
-        "context_length": 204800,
-        "max_completion_tokens": 131072,
+        "context_length": 196608,
+        "max_completion_tokens": 176947,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -26792,7 +26922,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": "2026-11-05",
+      "expiration_date": null,
       "links": {
         "details": "/api/v1/models/minimax/minimax-m2.7-20260318/endpoints"
       },
@@ -31510,59 +31640,6 @@
       }
     },
     {
-      "id": "minimax/minimax-m2-her",
-      "canonical_slug": "minimax/minimax-m2-her-20260123",
-      "hugging_face_id": "",
-      "name": "MiniMax: MiniMax M2-her",
-      "created": 1769177239,
-      "description": "MiniMax M2-her is a dialogue-first large language model built for immersive roleplay, character-driven chat, and expressive multi-turn conversations. Designed to stay consistent in tone and personality, it supports rich message...",
-      "context_length": 65536,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000003"
-      },
-      "top_provider": {
-        "context_length": 65536,
-        "max_completion_tokens": 2048,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "temperature",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 1,
-        "top_p": 0.95,
-        "frequency_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-05",
-      "links": {
-        "details": "/api/v1/models/minimax/minimax-m2-her-20260123/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ]
-    },
-    {
       "id": "writer/palmyra-x5",
       "canonical_slug": "writer/palmyra-x5-20250428",
       "hugging_face_id": "",
@@ -32131,120 +32208,6 @@
       ],
       "reasoning": {
         "mandatory": false
-      }
-    },
-    {
-      "id": "minimax/minimax-m2.1",
-      "canonical_slug": "minimax/minimax-m2.1",
-      "hugging_face_id": "MiniMaxAI/MiniMax-M2.1",
-      "name": "MiniMax: MiniMax M2.1",
-      "created": 1766454997,
-      "description": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world...",
-      "context_length": 204800,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000003"
-      },
-      "top_provider": {
-        "context_length": 204800,
-        "max_completion_tokens": 131072,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "response_format",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 1,
-        "top_p": 0.9,
-        "frequency_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-05",
-      "links": {
-        "details": "/api/v1/models/minimax/minimax-m2.1/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1162,
-            "win_rate": 57.5,
-            "rank": 65
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1188,
-            "win_rate": 55.3,
-            "rank": 64
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1206,
-            "win_rate": 57,
-            "rank": 57
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 1134,
-            "win_rate": 50.4,
-            "rank": 85
-          },
-          {
-            "arena": "models",
-            "category": "svg",
-            "elo": 1128,
-            "win_rate": 55.4,
-            "rank": 59
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1218,
-            "win_rate": 60.9,
-            "rank": 54
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1201,
-            "win_rate": 55.4,
-            "rank": 64
-          }
-        ]
-      },
-      "reasoning": {
-        "mandatory": true
       }
     },
     {
@@ -35586,118 +35549,6 @@
       }
     },
     {
-      "id": "minimax/minimax-m2",
-      "canonical_slug": "minimax/minimax-m2",
-      "hugging_face_id": "MiniMaxAI/MiniMax-M2",
-      "name": "MiniMax: MiniMax M2",
-      "created": 1761252093,
-      "description": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows. With 10 billion activated parameters (230 billion total), it delivers near-frontier intelligence across general reasoning,...",
-      "context_length": 204800,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.000000255",
-        "completion": "0.00000102"
-      },
-      "top_provider": {
-        "context_length": 204800,
-        "max_completion_tokens": 131072,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 1,
-        "top_p": 0.95,
-        "frequency_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-05",
-      "links": {
-        "details": "/api/v1/models/minimax/minimax-m2/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1095,
-            "win_rate": 48.3,
-            "rank": 92
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1133,
-            "win_rate": 48.1,
-            "rank": 99
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1140,
-            "win_rate": 50,
-            "rank": 87
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 1118,
-            "win_rate": 48.1,
-            "rank": 91
-          },
-          {
-            "arena": "models",
-            "category": "svg",
-            "elo": 1096,
-            "win_rate": 55.3,
-            "rank": 66
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1131,
-            "win_rate": 49.2,
-            "rank": 89
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1141,
-            "win_rate": 48,
-            "rank": 99
-          }
-        ]
-      },
-      "reasoning": {
-        "mandatory": true
-      }
-    },
-    {
       "id": "openai/gpt-5-image-mini",
       "canonical_slug": "openai/gpt-5-image-mini",
       "hugging_face_id": "",
@@ -38924,9 +38775,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000075"
+        "prompt": "0.000000022",
+        "completion": "0.00000008",
+        "input_cache_read": "0.00000002"
       },
       "top_provider": {
         "context_length": 131072,
@@ -44261,59 +44112,6 @@
       ]
     },
     {
-      "id": "minimax/minimax-01",
-      "canonical_slug": "minimax/minimax-01",
-      "hugging_face_id": "MiniMaxAI/MiniMax-Text-01",
-      "name": "MiniMax: MiniMax-01",
-      "created": 1736915462,
-      "description": "MiniMax-01 is a combines MiniMax-Text-01 for text generation and MiniMax-VL-01 for image understanding. It has 456 billion parameters, with 45.9 billion parameters activated per inference, and can handle a context...",
-      "context_length": 1000192,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000011"
-      },
-      "top_provider": {
-        "context_length": 1000192,
-        "max_completion_tokens": 900172,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "temperature",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "frequency_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": "2024-03-31",
-      "expiration_date": "2026-11-05",
-      "links": {
-        "details": "/api/v1/models/minimax/minimax-01/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ]
-    },
-    {
       "id": "microsoft/phi-4",
       "canonical_slug": "microsoft/phi-4",
       "hugging_face_id": "microsoft/phi-4",
@@ -44559,13 +44357,13 @@
         "instruct_type": "llama3"
       },
       "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.00000052",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.00000059",
+        "completion": "0.00000079",
+        "input_cache_read": "0.000000295"
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": 128000,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -46899,6 +46697,153 @@
       }
     },
     {
+      "id": "openrouter/auto",
+      "canonical_slug": "openrouter/auto",
+      "hugging_face_id": null,
+      "name": "Auto Router",
+      "created": 1793885889,
+      "description": "Auto is OpenRouter’s flagship model router, built for general-purpose usage. It adapts to each request, choosing cost-optimal models and adjusting reasoning effort. It balances task difficulty, benchmark results, live prices,...",
+      "context_length": 2000000,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "audio",
+          "file",
+          "video"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "top_provider": {
+        "context_length": null,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "prediction",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_a",
+        "top_k",
+        "top_logprobs",
+        "top_p",
+        "web_search_options"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openrouter/auto/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ]
+    },
+    {
+      "id": "openrouter/auto-code",
+      "canonical_slug": "openrouter/auto-code",
+      "hugging_face_id": null,
+      "name": "Auto Code",
+      "created": 1793884321,
+      "description": "Auto Code is OpenRouter’s router built specifically for coding agents and harnesses. It uses the same routing engine as the [Auto Router](https://openrouter.ai/openrouter/auto), with every request treated as part of an...",
+      "context_length": 2000000,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "audio",
+          "file",
+          "video"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "top_provider": {
+        "context_length": null,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_completion_tokens",
+        "max_tokens",
+        "min_p",
+        "parallel_tool_calls",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_a",
+        "top_k",
+        "top_logprobs",
+        "top_p",
+        "verbosity"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openrouter/auto-code/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ]
+    },
+    {
       "id": "typesafe/jev-router",
       "canonical_slug": "typesafe/jev-router",
       "hugging_face_id": null,
@@ -47326,79 +47271,6 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/openrouter/bodybuilder/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ]
-    },
-    {
-      "id": "openrouter/auto",
-      "canonical_slug": "openrouter/auto",
-      "hugging_face_id": null,
-      "name": "Auto Router",
-      "created": 1699401600,
-      "description": "Auto is OpenRouter’s general-purpose router, now powered by [Jev Router](https://openrouter.ai/typesafe/jev-router). It replaces market-spend rankings with request-aware selection of both the model and reasoning effort, weighing task difficulty, measured benchmark results,...",
-      "context_length": 2000000,
-      "architecture": {
-        "modality": "text+image+file+audio+video->text+image",
-        "input_modalities": [
-          "text",
-          "image",
-          "audio",
-          "file",
-          "video"
-        ],
-        "output_modalities": [
-          "text",
-          "image"
-        ],
-        "tokenizer": "Router",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "top_provider": {
-        "context_length": null,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "min_p",
-        "prediction",
-        "presence_penalty",
-        "reasoning",
-        "reasoning_effort",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_a",
-        "top_k",
-        "top_logprobs",
-        "top_p",
-        "web_search_options"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/openrouter/auto/endpoints"
       },
       "endpoints": [
         "/api/v1/chat/completions",

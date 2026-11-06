@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-06T12:21:48.822888+00:00",
+  "fetched_at": "2026-11-06T18:19:40.096808+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 453,
   "data": [
@@ -138,7 +138,7 @@
       "id": "ricursiveai/ripple-65b-preview",
       "canonical_slug": "ricursiveai/ripple-65b-preview-20261104",
       "hugging_face_id": null,
-      "name": "ricursiveAI/Ripple-65B-Preview",
+      "name": "Ricursive: Ripple 65B Preview",
       "created": 1793818990,
       "description": "Ripple-65B-Preview by ricursiveAI, a 65B model with native tool calling, served in BF16.",
       "context_length": 1048576,
@@ -1128,9 +1128,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -6561,7 +6561,6 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -6575,7 +6574,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -10028,9 +10026,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -13541,7 +13539,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000059",
+        "prompt": "0.0000000448",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -13620,7 +13618,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000059",
+        "prompt": "0.0000000448",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -17498,9 +17496,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -23064,9 +23062,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001824",
-        "completion": "0.0000101522",
-        "input_cache_read": "0.00000018"
+        "prompt": "0.0000001624",
+        "completion": "0.0000105572",
+        "input_cache_read": "0.00000016"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -24268,9 +24266,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000811014",
+        "completion": "0.000001622028",
+        "input_cache_read": "0.0000000675845"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -38761,9 +38759,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000029",
-        "completion": "0.000000109",
-        "input_cache_read": "0.000000026"
+        "prompt": "0.000000017",
+        "completion": "0.000000065",
+        "input_cache_read": "0.000000016"
       },
       "top_provider": {
         "context_length": 131072,
@@ -44968,7 +44966,7 @@
       "default_parameters": {},
       "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
-      "expiration_date": "2026-11-15",
+      "expiration_date": "2026-11-20",
       "links": {
         "details": "/api/v1/models/meta-llama/llama-3.2-1b-instruct/endpoints"
       },
@@ -45027,7 +45025,7 @@
       "default_parameters": {},
       "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
-      "expiration_date": "2026-11-15",
+      "expiration_date": "2026-11-20",
       "links": {
         "details": "/api/v1/models/meta-llama/llama-3.2-3b-instruct/endpoints"
       },

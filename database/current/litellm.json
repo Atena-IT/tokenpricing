@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-11-07T12:19:45.519175+00:00",
+  "fetched_at": "2026-11-07T18:16:14.096454+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 4771,
   "data": {
@@ -17595,6 +17595,8 @@
       "supports_reasoning": true
     },
     "codestral/codestral-2405": {
+      "deprecation_date": "2025-06-16",
+      "deprecation_source": "https://docs.mistral.ai/getting-started/models/",
       "input_cost_per_token": 0.0,
       "litellm_provider": "codestral",
       "max_input_tokens": 32000,
@@ -29397,7 +29399,7 @@
       "source": "https://api.friendli.ai/serverless/v1/models"
     },
     "ft:babbage-002": {
-      "deprecation_date": "2026-10-23",
+      "deprecation_date": "2026-09-28",
       "deprecation_source": "https://developers.openai.com/api/docs/deprecations",
       "successor_model": "gpt-5.6-terra",
       "input_cost_per_token": 1.6e-06,
@@ -29411,7 +29413,7 @@
       "source": "https://developers.openai.com/api/docs/pricing"
     },
     "ft:davinci-002": {
-      "deprecation_date": "2026-10-23",
+      "deprecation_date": "2026-09-28",
       "deprecation_source": "https://developers.openai.com/api/docs/deprecations",
       "successor_model": "gpt-5.6-terra",
       "input_cost_per_token": 1.2e-05,
@@ -29470,7 +29472,7 @@
       "supports_tool_choice": true
     },
     "ft:gpt-3.5-turbo-1106": {
-      "deprecation_date": "2026-10-23",
+      "deprecation_date": "2026-09-28",
       "deprecation_source": "https://developers.openai.com/api/docs/deprecations",
       "successor_model": "gpt-5.6-terra",
       "input_cost_per_token": 3e-06,
@@ -49955,6 +49957,8 @@
       "mode": "search"
     },
     "text-completion-codestral/codestral-2405": {
+      "deprecation_date": "2025-06-16",
+      "deprecation_source": "https://docs.mistral.ai/getting-started/models/",
       "input_cost_per_token": 0.0,
       "litellm_provider": "text-completion-codestral",
       "max_input_tokens": 32000,

@@ -1,9 +1,152 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-07T00:34:04.899322+00:00",
+  "fetched_at": "2026-11-07T06:21:26.603404+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 458,
+  "model_count": 460,
   "data": [
+    {
+      "id": "liquid/lfm-3-1.7b",
+      "canonical_slug": "liquid/lfm-3-1.7b-20261106",
+      "hugging_face_id": "LiquidAI/LFM3-1.7B",
+      "name": "LiquidAI: LFM3-1.7B",
+      "created": 1794009477,
+      "description": "A compact 1.7B-parameter text model with a 256K-token context, post-trained for agents, tool calling, and structured outputs. It reasons before it answers. Prompts and outputs may be retained and used...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000008",
+        "completion": "0.0000002",
+        "input_cache_read": "0.00000002"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 8192,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_completion_tokens",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.1,
+        "top_k": 50,
+        "repetition_penalty": 1.1
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/liquid/lfm-3-1.7b-20261106/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": true
+      }
+    },
+    {
+      "id": "liquid/lfm-3-1.7b:free",
+      "canonical_slug": "liquid/lfm-3-1.7b-20261106",
+      "hugging_face_id": "LiquidAI/LFM3-1.7B",
+      "name": "LiquidAI: LFM3-1.7B (free)",
+      "created": 1794009477,
+      "description": "A compact 1.7B-parameter text model with a 256K-token context, post-trained for agents, tool calling, and structured outputs. It reasons before it answers. Prompts and outputs may be retained and used...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 8192,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_completion_tokens",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.1,
+        "top_k": 50,
+        "repetition_penalty": 1.1
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/liquid/lfm-3-1.7b-20261106/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": true
+      }
+    },
     {
       "id": "google/gemini-omni-1.2-flash",
       "canonical_slug": "google/gemini-omni-1.2-flash-20261105",
@@ -1149,9 +1292,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -3787,9 +3930,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.000000225",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.000000045",
+        "completion": "0.000000135",
+        "input_cache_read": "0.000000009"
       },
       "top_provider": {
         "context_length": 1000000,
@@ -5272,6 +5415,7 @@
         "stop",
         "structured_outputs",
         "temperature",
+        "tool_choice",
         "tools",
         "top_k",
         "top_p"
@@ -10177,9 +10321,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000284",
+        "prompt": "0.0000000285",
         "completion": "0.0000000923",
-        "input_cache_read": "0.0000000284"
+        "input_cache_read": "0.0000000285"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -13803,7 +13947,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000434",
+        "prompt": "0.0000000553",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -13882,7 +14026,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000434",
+        "prompt": "0.0000000553",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -23765,8 +23909,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001539",
-        "completion": "0.0000101489",
+        "prompt": "0.0000001548",
+        "completion": "0.000010551",
         "input_cache_read": "0.00000015"
       },
       "top_provider": {
@@ -24969,13 +25113,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000016",
-        "completion": "0.0000032",
-        "input_cache_read": "0.000000135"
+        "prompt": "0.000000849816",
+        "completion": "0.000001699632",
+        "input_cache_read": "0.000000070818"
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 393216,
+        "context_length": 1024000,
+        "max_completion_tokens": 384000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -26605,6 +26749,7 @@
         "include_reasoning",
         "logit_bias",
         "logprobs",
+        "max_completion_tokens",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -39461,9 +39606,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000001",
-        "completion": "0.000000037",
-        "input_cache_read": "0.000000009"
+        "prompt": "0.000000011",
+        "completion": "0.00000004",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 131072,
@@ -43986,6 +44131,8 @@
         "stop",
         "structured_outputs",
         "temperature",
+        "tool_choice",
+        "tools",
         "top_k",
         "top_p"
       ],
@@ -45006,6 +45153,8 @@
         "stop",
         "structured_outputs",
         "temperature",
+        "tool_choice",
+        "tools",
         "top_k",
         "top_p"
       ],
@@ -45520,7 +45669,8 @@
       },
       "pricing": {
         "prompt": "0.0000025",
-        "completion": "0.000005"
+        "completion": "0.000005",
+        "input_cache_read": "0.0000025"
       },
       "top_provider": {
         "context_length": 32768,
@@ -47155,7 +47305,8 @@
       },
       "pricing": {
         "prompt": "0.0000004",
-        "completion": "0.00000075"
+        "completion": "0.00000075",
+        "input_cache_read": "0.0000004"
       },
       "top_provider": {
         "context_length": 8000,
@@ -47215,7 +47366,8 @@
       },
       "pricing": {
         "prompt": "0.00000035",
-        "completion": "0.00000065"
+        "completion": "0.00000065",
+        "input_cache_read": "0.00000035"
       },
       "top_provider": {
         "context_length": 6144,

@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-08T06:22:14.048748+00:00",
+  "fetched_at": "2026-11-08T12:19:30.014950+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 461,
   "data": [
@@ -8250,8 +8250,8 @@
       },
       "pricing": {
         "prompt": "0.000000051",
-        "completion": "0.000000567",
-        "input_cache_read": "0.000000018"
+        "completion": "0.00000041",
+        "input_cache_read": "0.000000022"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -12282,7 +12282,7 @@
       "pricing": {
         "prompt": "0.000000111",
         "completion": "0.00000444",
-        "input_cache_read": "0.000000101"
+        "input_cache_read": "0.000000097"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -16076,9 +16076,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000001084",
+        "prompt": "0.000000997",
         "completion": "0.000006",
-        "input_cache_read": "0.000000267"
+        "input_cache_read": "0.000000246"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -24053,8 +24053,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001662",
-        "completion": "0.0000105448",
+        "prompt": "0.0000001605",
+        "completion": "0.0000101583",
         "input_cache_read": "0.00000016"
       },
       "top_provider": {
@@ -25257,9 +25257,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000393588",
-        "completion": "0.000000787176",
-        "input_cache_read": "0.000000032799"
+        "prompt": "0.000000261696",
+        "completion": "0.000000523392",
+        "input_cache_read": "0.000000021808"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -38364,6 +38364,7 @@
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
+        "logprobs",
         "max_tokens",
         "presence_penalty",
         "repetition_penalty",
@@ -38375,6 +38376,7 @@
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -39611,9 +39613,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000026",
-        "completion": "0.000000095",
-        "input_cache_read": "0.000000023"
+        "prompt": "0.000000021",
+        "completion": "0.000000079",
+        "input_cache_read": "0.000000019"
       },
       "top_provider": {
         "context_length": 131072,

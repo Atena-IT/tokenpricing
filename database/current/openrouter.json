@@ -1,9 +1,81 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-10T00:34:30.086370+00:00",
+  "fetched_at": "2026-11-10T06:23:48.726092+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 464,
+  "model_count": 465,
   "data": [
+    {
+      "id": "nex-agi/nex-n2.6",
+      "canonical_slug": "nex-agi/nex-n2.6-20261110",
+      "hugging_face_id": "nex-agi/Nex-N2.6",
+      "name": "Nex AGI: Nex-N2.6",
+      "created": 1794282379,
+      "description": "Nex-N2.6 is an agentic model from Nex AGI, built on [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash-BF16) with about 321B parameters. It is suited for computer use, coding, and long-horizon tasks that involve tools. Compared with...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000012",
+        "completion": "0.0000004",
+        "input_cache_read": "0.000000024"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "top_k": 40
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/nex-agi/nex-n2.6-20261110/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "high",
+          "medium"
+        ],
+        "default_effort": "high"
+      }
+    },
     {
       "id": "thinkingmachines/inkling-2-small:free",
       "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
@@ -1554,9 +1626,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -11785,7 +11857,7 @@
       "name": "Qwen: Qwen3.8 27B",
       "created": 1786722910,
       "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
-      "context_length": 1024000,
+      "context_length": 1048575,
       "architecture": {
         "modality": "text+image+video->text",
         "input_modalities": [
@@ -19638,9 +19710,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000623",
-        "completion": "0.000001271",
-        "input_cache_read": "0.00000021"
+        "prompt": "0.000000573",
+        "completion": "0.000001169",
+        "input_cache_read": "0.000000194"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -24464,7 +24536,7 @@
       },
       "pricing": {
         "prompt": "0.0000001824",
-        "completion": "0.0000105572",
+        "completion": "0.0000101489",
         "input_cache_read": "0.00000018"
       },
       "top_provider": {

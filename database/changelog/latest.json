@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-10T00:34:30.346887+00:00",
+  "generated_at": "2026-11-10T06:23:48.988292+00:00",
   "summary": {
-    "model_additions": 25,
-    "model_removals": 3,
-    "pricing_changes": 12,
-    "cache_price_changes": 7
+    "model_additions": 3,
+    "model_removals": 0,
+    "pricing_changes": 4,
+    "cache_price_changes": 3
   },
   "changes": [
     {
       "type": "model_added",
-      "model_id": "anthropic.claude-fable-5-2",
+      "model_id": "github_copilot/claude-fable-5.2",
       "model_type": "text",
       "after": {
-        "provider": "bedrock_converse",
-        "model_id": "anthropic.claude-fable-5-2",
-        "display_name": "bedrock_converse",
+        "provider": "github_copilot",
+        "model_id": "github_copilot/claude-fable-5.2",
+        "display_name": "github_copilot",
         "pricing": {
           "input_per_million": 8.0,
           "output_per_million": 40.0,
@@ -22,8 +22,8 @@
           "cache_creation_per_million": 10.0,
           "currency": "USD"
         },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
+        "context_window": 200000,
+        "max_output_tokens": 64000,
         "model_type": "text",
         "supports_vision": true,
         "supports_function_calling": true,
@@ -35,381 +35,7 @@
             "price_output": 40.0,
             "price_cache_read": 0.2,
             "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "anthropic.claude-mythos-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "anthropic.claude-mythos-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "anthropic/claude-fable-5.2",
-      "model_type": "text",
-      "after": {
-        "provider": "anthropic",
-        "model_id": "anthropic/claude-fable-5.2",
-        "display_name": "Anthropic: Claude Fable 5.2",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.086370Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "anthropic/claude-fable-5.2:batch",
-      "model_type": "text",
-      "after": {
-        "provider": "anthropic",
-        "model_id": "anthropic/claude-fable-5.2:batch",
-        "display_name": "Anthropic: Claude Fable 5.2 (batch)",
-        "pricing": {
-          "input_per_million": 4.0,
-          "output_per_million": 20.0,
-          "cache_read_per_million": 0.1,
-          "cache_creation_per_million": 5.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 4.0,
-            "price_output": 20.0,
-            "price_cache_read": 0.1,
-            "price_cache_creation": 5.0,
-            "last_updated": "2026-11-10T00:34:30.086370Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure_ai/claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "azure_ai",
-        "model_id": "azure_ai/claude-fable-5-2",
-        "display_name": "azure_ai",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure_ai/claude-fable-5-2-fast",
-      "model_type": "text",
-      "after": {
-        "provider": "azure_ai",
-        "model_id": "azure_ai/claude-fable-5-2-fast",
-        "display_name": "azure_ai",
-        "pricing": {
-          "input_per_million": 16.0,
-          "output_per_million": 80.0,
-          "cache_read_per_million": 0.4,
-          "cache_creation_per_million": 20.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 16.0,
-            "price_output": 80.0,
-            "price_cache_read": 0.4,
-            "price_cache_creation": 20.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/claude_platform/claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/claude_platform/claude-fable-5-2",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/us-gov-east-1/anthropic.claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/us-gov-east-1/anthropic.claude-fable-5-2",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 9.6,
-          "output_per_million": 48.0,
-          "cache_read_per_million": 0.24,
-          "cache_creation_per_million": 12.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 9.6,
-            "price_output": 48.0,
-            "price_cache_read": 0.24,
-            "price_cache_creation": 12.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/us-gov-east-1/anthropic.claude-mythos-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/us-gov-east-1/anthropic.claude-mythos-5-2",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 9.6,
-          "output_per_million": 48.0,
-          "cache_read_per_million": 0.24,
-          "cache_creation_per_million": 12.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 9.6,
-            "price_output": 48.0,
-            "price_cache_read": 0.24,
-            "price_cache_creation": 12.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/us-gov-west-1/anthropic.claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/us-gov-west-1/anthropic.claude-fable-5-2",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 9.6,
-          "output_per_million": 48.0,
-          "cache_read_per_million": 0.24,
-          "cache_creation_per_million": 12.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 9.6,
-            "price_output": 48.0,
-            "price_cache_read": 0.24,
-            "price_cache_creation": 12.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/us-gov-west-1/anthropic.claude-mythos-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/us-gov-west-1/anthropic.claude-mythos-5-2",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 9.6,
-          "output_per_million": 48.0,
-          "cache_read_per_million": 0.24,
-          "cache_creation_per_million": 12.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 9.6,
-            "price_output": 48.0,
-            "price_cache_read": 0.24,
-            "price_cache_creation": 12.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "anthropic",
-        "model_id": "claude-fable-5-2",
-        "display_name": "anthropic",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
+            "last_updated": "2026-11-10T06:23:48.799915Z"
           }
         },
         "affiliate_links": {}
@@ -417,272 +43,53 @@
     },
     {
       "type": "pricing_changed",
-      "model_id": "deepinfra/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+      "model_id": "minimax/minimax-m3.1-flash",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.085,
-        "output_per_million": 0.4,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.075,
-        "output_per_million": 0.4,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4-pro",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.894012,
-        "output_per_million": 1.788024,
-        "cache_read_per_million": 0.074501,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.95526,
-        "output_per_million": 1.91052,
-        "cache_read_per_million": 0.079605,
-        "cache_creation_per_million": 0.0,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4-pro",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.074501,
-        "cache_creation_per_million": 0.0
-      },
-      "after": {
-        "cache_read_per_million": 0.079605,
-        "cache_creation_per_million": 0.0
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "eu.anthropic.claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "eu.anthropic.claude-fable-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.8,
-          "output_per_million": 44.0,
-          "cache_read_per_million": 0.22,
-          "cache_creation_per_million": 11.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.8,
-            "price_output": 44.0,
-            "price_cache_read": 0.22,
-            "price_cache_creation": 11.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "eu.anthropic.claude-mythos-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "eu.anthropic.claude-mythos-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.8,
-          "output_per_million": 44.0,
-          "cache_read_per_million": 0.22,
-          "cache_creation_per_million": 11.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.8,
-            "price_output": 44.0,
-            "price_cache_read": 0.22,
-            "price_cache_creation": 11.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "global.anthropic.claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "global.anthropic.claude-fable-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "global.anthropic.claude-mythos-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "global.anthropic.claude-mythos-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "google/gemma-4-26b-a4b-it",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.09,
         "output_per_million": 0.3,
-        "cache_read_per_million": 0.05,
+        "cache_read_per_million": 0.0075,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.08,
-        "output_per_million": 0.1,
-        "cache_read_per_million": 0.046,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "google/gemma-4-26b-a4b-it",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.046,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "meta-llama/llama-3.3-70b-instruct",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.59,
-        "output_per_million": 0.79,
-        "cache_read_per_million": 0.295,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.71,
-        "output_per_million": 0.71,
-        "cache_read_per_million": 0.71,
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "cache_read_per_million": 0.015,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_id": "minimax/minimax-m3.1-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.295,
+        "cache_read_per_million": 0.0075,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.71,
+        "cache_read_per_million": 0.015,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "model_added",
-      "model_id": "meta/muse-ember",
+      "model_id": "nex-agi/nex-n2.6",
       "model_type": "text",
       "after": {
-        "provider": "meta",
-        "model_id": "meta/muse-ember",
-        "display_name": "Meta: Muse Ember",
+        "provider": "nex-agi",
+        "model_id": "nex-agi/nex-n2.6",
+        "display_name": "Nex AGI: Nex-N2.6",
         "pricing": {
-          "input_per_million": 0.1,
-          "output_per_million": 0.5,
-          "cache_read_per_million": 0.004,
-          "cache_creation_per_million": 0.125,
+          "input_per_million": 0.12,
+          "output_per_million": 0.4,
+          "cache_read_per_million": 0.024,
+          "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 1048576,
-        "max_output_tokens": 943718,
+        "context_window": 262144,
+        "max_output_tokens": 235929,
         "model_type": "text",
         "supports_vision": true,
         "supports_function_calling": true,
@@ -690,11 +97,11 @@
         "category": "standard",
         "sources": {
           "openrouter": {
-            "price_input": 0.1,
-            "price_output": 0.5,
-            "price_cache_read": 0.004,
-            "price_cache_creation": 0.125,
-            "last_updated": "2026-11-10T00:34:30.086370Z"
+            "price_input": 0.12,
+            "price_output": 0.4,
+            "price_cache_read": 0.024,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-10T06:23:48.726092Z"
           }
         },
         "affiliate_links": {}
@@ -702,33 +109,33 @@
     },
     {
       "type": "model_added",
-      "model_id": "minimax/MiniMax-M3.1-Flash",
+      "model_id": "together_ai/elorian-labs/glimpse-1.0",
       "model_type": "text",
       "after": {
-        "provider": "minimax",
-        "model_id": "minimax/MiniMax-M3.1-Flash",
-        "display_name": "minimax",
+        "provider": "together_ai",
+        "model_id": "together_ai/elorian-labs/glimpse-1.0",
+        "display_name": "together_ai",
         "pricing": {
-          "input_per_million": 0.15,
-          "output_per_million": 0.6,
-          "cache_read_per_million": 0.015,
+          "input_per_million": 0.6,
+          "output_per_million": 3.0,
+          "cache_read_per_million": 0.06,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 1000000,
-        "max_output_tokens": 0,
+        "context_window": 262144,
+        "max_output_tokens": 262144,
         "model_type": "text",
         "supports_vision": true,
-        "supports_function_calling": true,
+        "supports_function_calling": false,
         "supports_streaming": true,
-        "category": "budget",
+        "category": "standard",
         "sources": {
           "litellm": {
-            "price_input": 0.15,
-            "price_output": 0.6,
-            "price_cache_read": 0.015,
+            "price_input": 0.6,
+            "price_output": 3.0,
+            "price_cache_read": 0.06,
             "price_cache_creation": null,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
+            "last_updated": "2026-11-10T06:23:48.799915Z"
           }
         },
         "affiliate_links": {}
@@ -736,425 +143,66 @@
     },
     {
       "type": "pricing_changed",
-      "model_id": "nvidia/nemotron-3.5-super-vl",
+      "model_id": "wandb/deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.5,
-        "cache_read_per_million": 0.02,
+        "input_per_million": 0.13,
+        "output_per_million": 0.65,
+        "cache_read_per_million": 0.002,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.47,
-        "cache_read_per_million": 0.02,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3-14b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.12,
-        "output_per_million": 0.24,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.22,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "tencent/hy3",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.0825,
-        "output_per_million": 0.33,
-        "cache_read_per_million": 0.020625,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.132,
-        "output_per_million": 0.528,
-        "cache_read_per_million": 0.033,
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "cache_read_per_million": 0.006,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "tencent/hy3",
+      "model_id": "wandb/deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.020625,
+        "cache_read_per_million": 0.002,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.033,
+        "cache_read_per_million": 0.006,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "pricing_changed",
-      "model_id": "tencent/hy4-preview",
+      "model_id": "z-ai/glm-5.2:batch",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.7506,
-        "output_per_million": 2.2509,
-        "cache_read_per_million": 0.0378,
+        "input_per_million": 0.623,
+        "output_per_million": 1.271,
+        "cache_read_per_million": 0.21,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.834,
-        "output_per_million": 2.501,
-        "cache_read_per_million": 0.042,
+        "input_per_million": 0.573,
+        "output_per_million": 1.169,
+        "cache_read_per_million": 0.194,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "tencent/hy4-preview",
+      "model_id": "z-ai/glm-5.2:batch",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.0378,
+        "cache_read_per_million": 0.21,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.042,
+        "cache_read_per_million": 0.194,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "thinkingmachines/inkling-2-small:free",
-      "model_type": "text",
-      "after": {
-        "provider": "thinkingmachines",
-        "model_id": "thinkingmachines/inkling-2-small:free",
-        "display_name": "Thinking Machines: Inkling 2 Small (free)",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 131072,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-10T00:34:30.086370Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "us-gov.anthropic.claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "us-gov.anthropic.claude-fable-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 9.6,
-          "output_per_million": 48.0,
-          "cache_read_per_million": 0.24,
-          "cache_creation_per_million": 12.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 9.6,
-            "price_output": 48.0,
-            "price_cache_read": 0.24,
-            "price_cache_creation": 12.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "us-gov.anthropic.claude-mythos-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "us-gov.anthropic.claude-mythos-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 9.6,
-          "output_per_million": 48.0,
-          "cache_read_per_million": 0.24,
-          "cache_creation_per_million": 12.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 9.6,
-            "price_output": 48.0,
-            "price_cache_read": 0.24,
-            "price_cache_creation": 12.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "us.anthropic.claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "us.anthropic.claude-fable-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.8,
-          "output_per_million": 44.0,
-          "cache_read_per_million": 0.22,
-          "cache_creation_per_million": 11.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.8,
-            "price_output": 44.0,
-            "price_cache_read": 0.22,
-            "price_cache_creation": 11.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "us.anthropic.claude-mythos-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "us.anthropic.claude-mythos-5-2",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.8,
-          "output_per_million": 44.0,
-          "cache_read_per_million": 0.22,
-          "cache_creation_per_million": 11.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.8,
-            "price_output": 44.0,
-            "price_cache_read": 0.22,
-            "price_cache_creation": 11.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "vertex_ai/claude-fable-5-2",
-      "model_type": "text",
-      "after": {
-        "provider": "vertex_ai-anthropic_models",
-        "model_id": "vertex_ai/claude-fable-5-2",
-        "display_name": "vertex_ai-anthropic_models",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "vertex_ai/claude-fable-5-2@default",
-      "model_type": "text",
-      "after": {
-        "provider": "vertex_ai-anthropic_models",
-        "model_id": "vertex_ai/claude-fable-5-2@default",
-        "display_name": "vertex_ai-anthropic_models",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-10T00:34:30.131653Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.3-flash",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.0335,
-        "output_per_million": 0.083,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.5,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.3-flash:batch",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.043,
-        "output_per_million": 0.087,
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.03,
-        "output_per_million": 0.061,
-        "cache_read_per_million": 0.013,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "z-ai/glm-5.3-flash:batch",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.013,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "~anthropic/claude-fable-latest",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 10.0,
-        "output_per_million": 50.0,
-        "cache_read_per_million": 0.25,
-        "cache_creation_per_million": 12.5,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 8.0,
-        "output_per_million": 40.0,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": 10.0,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "~anthropic/claude-fable-latest",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.25,
-        "cache_creation_per_million": 12.5
-      },
-      "after": {
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": 10.0
       }
     },
     {
@@ -1163,119 +211,17 @@
       "model_type": "text",
       "before": {
         "input_per_million": 0.1824,
-        "output_per_million": 9.7471,
+        "output_per_million": 10.5572,
         "cache_read_per_million": 0.18,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
         "input_per_million": 0.1824,
-        "output_per_million": 10.5572,
+        "output_per_million": 10.1489,
         "cache_read_per_million": 0.18,
         "cache_creation_per_million": null,
         "currency": "USD"
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "friendliai/MiniMaxAI/MiniMax-M2.5",
-      "model_type": "text",
-      "before": {
-        "provider": "friendliai",
-        "model_id": "friendliai/MiniMaxAI/MiniMax-M2.5",
-        "display_name": "friendliai",
-        "pricing": {
-          "input_per_million": 0.3,
-          "output_per_million": 1.2,
-          "cache_read_per_million": 0.06,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 196608,
-        "max_output_tokens": 196608,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.3,
-            "price_output": 1.2,
-            "price_cache_read": 0.06,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-09T18:19:18.077868Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "friendliai/deepseek-ai/DeepSeek-V3.2",
-      "model_type": "text",
-      "before": {
-        "provider": "friendliai",
-        "model_id": "friendliai/deepseek-ai/DeepSeek-V3.2",
-        "display_name": "friendliai",
-        "pricing": {
-          "input_per_million": 0.5,
-          "output_per_million": 1.5,
-          "cache_read_per_million": 0.25,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 163840,
-        "max_output_tokens": 163840,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.5,
-            "price_output": 1.5,
-            "price_cache_read": 0.25,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-09T18:19:18.077868Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_removed",
-      "model_id": "stealth/crouton-alpha",
-      "model_type": "text",
-      "before": {
-        "provider": "stealth",
-        "model_id": "stealth/crouton-alpha",
-        "display_name": "Crouton Alpha",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 1048576,
-        "max_output_tokens": 943718,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "openrouter": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-09T18:19:18.033773Z"
-          }
-        },
-        "affiliate_links": {}
       }
     }
   ]

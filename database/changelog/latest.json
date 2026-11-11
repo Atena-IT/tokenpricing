@@ -1,20 +1,177 @@
 {
-  "generated_at": "2026-11-11T12:22:04.743433+00:00",
+  "generated_at": "2026-11-11T18:17:06.201831+00:00",
   "summary": {
-    "model_additions": 1,
-    "model_removals": 1,
-    "pricing_changes": 2,
-    "cache_price_changes": 2
+    "model_additions": 21,
+    "model_removals": 3,
+    "pricing_changes": 8,
+    "cache_price_changes": 4
   },
   "changes": [
     {
       "type": "model_added",
-      "model_id": "baidu/ernie-5.5-flash-preview:free",
+      "model_id": "databricks/databricks-gemini-4-carbon",
       "model_type": "text",
       "after": {
-        "provider": "baidu",
-        "model_id": "baidu/ernie-5.5-flash-preview:free",
-        "display_name": "Baidu: ERNIE-5.5-Flash-Preview (free)",
+        "provider": "databricks",
+        "model_id": "databricks/databricks-gemini-4-carbon",
+        "display_name": "databricks",
+        "pricing": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0,
+          "cache_read_per_million": 2.0,
+          "cache_creation_per_million": 2.0,
+          "currency": "USD"
+        },
+        "context_window": 1048576,
+        "max_output_tokens": 1048576,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 2.0,
+            "price_output": 10.0,
+            "price_cache_read": 2.0,
+            "price_cache_creation": 2.0,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "databricks/system.ai.gemini-4-carbon",
+      "model_type": "text",
+      "after": {
+        "provider": "databricks",
+        "model_id": "databricks/system.ai.gemini-4-carbon",
+        "display_name": "databricks",
+        "pricing": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0,
+          "cache_read_per_million": 2.0,
+          "cache_creation_per_million": 2.0,
+          "currency": "USD"
+        },
+        "context_window": 1048576,
+        "max_output_tokens": 1048576,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 2.0,
+            "price_output": 10.0,
+            "price_cache_read": 2.0,
+            "price_cache_creation": 2.0,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "deepinfra/anthropic/claude-sonnet-5",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 2.0,
+        "output_per_million": 10.0,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "deepinfra/mistralai/Mistral-Nemo-Instruct-2407",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.019,
+        "output_per_million": 0.03,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.029,
+        "output_per_million": 0.03,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "deepinfra/nvidia/NVIDIA-Nemotron-3.5-Lightning",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.2,
+        "cache_read_per_million": 0.04,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.06,
+        "output_per_million": 0.16,
+        "cache_read_per_million": 0.04,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "deepseek/deepseek-v4-pro",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.95526,
+        "output_per_million": 1.91052,
+        "cache_read_per_million": 0.079605,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.883746,
+        "output_per_million": 1.767492,
+        "cache_read_per_million": 0.073646,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-v4-pro",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.079605,
+        "cache_creation_per_million": 0.0
+      },
+      "after": {
+        "cache_read_per_million": 0.073646,
+        "cache_creation_per_million": 0.0
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/bytedance/seedream/v5/pro/layerize",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/bytedance/seedream/v5/pro/layerize",
+        "display_name": "fal_ai",
         "pricing": {
           "input_per_million": 0.0,
           "output_per_million": 0.0,
@@ -22,17 +179,778 @@
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 1024000,
-        "max_output_tokens": 921600,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": true,
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
         "supports_streaming": true,
-        "category": "budget",
+        "category": "flagship",
         "sources": {
-          "openrouter": {
+          "litellm": {
             "price_input": 0.0,
             "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/flux-2-max",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/flux-2-max",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/flux-2-max/edit",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/flux-2-max/edit",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/flux-2-pro",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/flux-2-pro",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/flux-2-pro/edit",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/flux-2-pro/edit",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/flux-2-pro/outpaint",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/flux-2-pro/outpaint",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/flux-pro/v1/erase",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/flux-pro/v1/erase",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/kling-video/v2.6/pro/image-to-video",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/kling-video/v2.6/pro/image-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/smart-resize",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/smart-resize",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/vidu/image-to-video",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/vidu/image-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/vidu/reference-to-video",
+      "model_type": "video",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/vidu/reference-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "video",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/fal-ai/vidu/start-end-to-video",
+      "model_type": "video",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/fal-ai/vidu/start-end-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "video",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/luma/agent/ray/v3.2/image-to-video",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/luma/agent/ray/v3.2/image-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/luma/agent/ray/v3.2/text-to-video",
+      "model_type": "video",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/luma/agent/ray/v3.2/text-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "video",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/luma/agent/ray/v3.2/video-to-video",
+      "model_type": "video",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/luma/agent/ray/v3.2/video-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "video",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/luma/agent/uni-1/v1/edit",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/luma/agent/uni-1/v1/edit",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/luma/agent/uni-1/v1/max/edit",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/luma/agent/uni-1/v1/max/edit",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/pixverse/v6/max/image-to-video",
+      "model_type": "image",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/pixverse/v6/max/image-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "image",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "fal_ai/pixverse/v6/max/text-to-video",
+      "model_type": "video",
+      "after": {
+        "provider": "fal_ai",
+        "model_id": "fal_ai/pixverse/v6/max/text-to-video",
+        "display_name": "fal_ai",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "video",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T18:17:05.933687Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "google/gemma-3-27b-it",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.45,
+        "cache_read_per_million": 0.04,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.35,
+        "cache_read_per_million": 0.04,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "minimax/minimax-m3.1-flash",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "cache_read_per_million": 0.015,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.075,
+        "output_per_million": 0.3,
+        "cache_read_per_million": 0.0075,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "minimax/minimax-m3.1-flash",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.015,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.0075,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "tencent/hy3",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.132,
+        "output_per_million": 0.528,
+        "cache_read_per_million": 0.033,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.0825,
+        "output_per_million": 0.33,
+        "cache_read_per_million": 0.020625,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "tencent/hy3",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.033,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.020625,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "tencent/hy4-preview",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.834,
+        "output_per_million": 2.501,
+        "cache_read_per_million": 0.042,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.7506,
+        "output_per_million": 2.2509,
+        "cache_read_per_million": 0.0378,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "tencent/hy4-preview",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.042,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.0378,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "bytedance-seed/seed-1.6",
+      "model_type": "text",
+      "before": {
+        "provider": "bytedance-seed",
+        "model_id": "bytedance-seed/seed-1.6",
+        "display_name": "ByteDance Seed: Seed 1.6",
+        "pricing": {
+          "input_per_million": 0.25,
+          "output_per_million": 2.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.25,
+            "price_output": 2.0,
             "price_cache_read": null,
             "price_cache_creation": null,
             "last_updated": "2026-11-11T12:22:04.403619Z"
@@ -42,98 +960,68 @@
       }
     },
     {
-      "type": "pricing_changed",
-      "model_id": "minimax/minimax-m2.5",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.3,
-        "output_per_million": 1.2,
-        "cache_read_per_million": 0.06,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.27,
-        "output_per_million": 1.08,
-        "cache_read_per_million": 0.027,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "minimax/minimax-m2.5",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.06,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.027,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.3-flash:batch",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.042,
-        "output_per_million": 0.061,
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.047,
-        "output_per_million": 0.061,
-        "cache_read_per_million": 0.02,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "z-ai/glm-5.3-flash:batch",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.02,
-        "cache_creation_per_million": null
-      }
-    },
-    {
       "type": "model_removed",
-      "model_id": "baidu/ernie-5.5-flash-preview",
+      "model_id": "bytedance-seed/seed-1.6-flash",
       "model_type": "text",
       "before": {
-        "provider": "baidu",
-        "model_id": "baidu/ernie-5.5-flash-preview",
-        "display_name": "Baidu: ERNIE-5.5-Flash-Preview",
+        "provider": "bytedance-seed",
+        "model_id": "bytedance-seed/seed-1.6-flash",
+        "display_name": "ByteDance Seed: Seed 1.6 Flash",
         "pricing": {
-          "input_per_million": 0.28,
-          "output_per_million": 1.13,
-          "cache_read_per_million": 0.028,
+          "input_per_million": 0.075,
+          "output_per_million": 0.3,
+          "cache_read_per_million": null,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 1024000,
-        "max_output_tokens": 921600,
+        "context_window": 262144,
+        "max_output_tokens": 32768,
         "model_type": "text",
-        "supports_vision": false,
+        "supports_vision": true,
         "supports_function_calling": true,
         "supports_streaming": true,
         "category": "budget",
         "sources": {
           "openrouter": {
-            "price_input": 0.28,
-            "price_output": 1.13,
-            "price_cache_read": 0.028,
+            "price_input": 0.075,
+            "price_output": 0.3,
+            "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-11-11T06:24:17.508395Z"
+            "last_updated": "2026-11-11T12:22:04.403619Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "bytedance-seed/seed-2.0-code",
+      "model_type": "text",
+      "before": {
+        "provider": "bytedance-seed",
+        "model_id": "bytedance-seed/seed-2.0-code",
+        "display_name": "ByteDance Seed: Seed-2.0-Code",
+        "pricing": {
+          "input_per_million": 0.5,
+          "output_per_million": 3.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 262144,
+        "max_output_tokens": 131072,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.5,
+            "price_output": 3.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-11T12:22:04.403619Z"
           }
         },
         "affiliate_links": {}

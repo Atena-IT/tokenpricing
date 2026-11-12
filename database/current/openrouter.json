@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-12T00:36:45.280498+00:00",
+  "fetched_at": "2026-11-12T06:25:02.572466+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 467,
+  "model_count": 468,
   "data": [
     {
       "id": "baidu/ernie-5.5-flash-preview:free",
@@ -1974,8 +1974,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000002",
-        "completion": "0.00001",
+        "prompt": "0.0000002375",
+        "completion": "0.0000084085",
         "input_cache_read": "0.0000002"
       },
       "top_provider": {
@@ -2020,6 +2020,188 @@
         "/api/v1/completions",
         "/api/v1/messages",
         "/api/v1/responses"
+      ],
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "agents",
+            "category": "androidnative",
+            "elo": 1152,
+            "win_rate": 42.6,
+            "rank": 28
+          },
+          {
+            "arena": "agents",
+            "category": "codetovideo",
+            "elo": 1233,
+            "win_rate": 58.8,
+            "rank": 5
+          },
+          {
+            "arena": "agents",
+            "category": "fullstack",
+            "elo": 1325,
+            "win_rate": 61.9,
+            "rank": 2
+          },
+          {
+            "arena": "agents",
+            "category": "mobileapps",
+            "elo": 1274,
+            "win_rate": 59.6,
+            "rank": 4
+          },
+          {
+            "arena": "agents",
+            "category": "pdf",
+            "elo": 1239,
+            "win_rate": 58.8,
+            "rank": 8
+          },
+          {
+            "arena": "agents",
+            "category": "python-pptxslides",
+            "elo": 1289,
+            "win_rate": 67.2,
+            "rank": 3
+          },
+          {
+            "arena": "agents",
+            "category": "webapps",
+            "elo": 1296,
+            "win_rate": 58.8,
+            "rank": 3
+          },
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1442,
+            "win_rate": 70.7,
+            "rank": 3
+          },
+          {
+            "arena": "models",
+            "category": "asciiart",
+            "elo": 1297,
+            "win_rate": 58.5,
+            "rank": 5
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1350,
+            "win_rate": 60.7,
+            "rank": 5
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1306,
+            "win_rate": 56.4,
+            "rank": 12
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1406,
+            "win_rate": 66.4,
+            "rank": 4
+          },
+          {
+            "arena": "models",
+            "category": "svg",
+            "elo": 1323,
+            "win_rate": 62,
+            "rank": 2
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1392,
+            "win_rate": 65.8,
+            "rank": 1
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1319,
+            "win_rate": 57.5,
+            "rank": 7
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 46.5,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "max"
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro:batch",
+      "canonical_slug": "moonshotai/kimi-k3.1-pro-20261023",
+      "hugging_face_id": "moonshotai/Kimi-K3.1-Pro",
+      "name": "MoonshotAI: Kimi K3.1 Pro (batch)",
+      "created": 1792778188,
+      "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000007",
+        "completion": "0.000006",
+        "input_cache_read": "0.0000001"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "seed",
+        "stop",
+        "temperature",
+        "top_k"
+      ],
+      "default_parameters": {
+        "top_p": 0.95
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/moonshotai/kimi-k3.1-pro-20261023/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/batches"
       ],
       "benchmarks": {
         "design_arena": [
@@ -2228,9 +2410,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -2330,13 +2512,94 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000006",
-        "completion": "0.0000005",
-        "input_cache_read": "0.000000005"
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
+        "overrides": [
+          {
+            "utc_days": [
+              "saturday",
+              "sunday"
+            ],
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 0,
+            "utc_end": 100,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 100,
+            "utc_end": 400,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 400,
+            "utc_end": 600,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 600,
+            "utc_end": 1000,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 1000,
+            "utc_end": 0,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          }
+        ]
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -8454,9 +8717,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000006",
-        "completion": "0.0000005",
-        "input_cache_read": "0.000000005"
+        "prompt": "0.000000022",
+        "completion": "0.0000004",
+        "input_cache_read": "0.000000004"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -9236,9 +9499,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000006",
-        "completion": "0.0000005",
-        "input_cache_read": "0.000000005"
+        "prompt": "0.000000022",
+        "completion": "0.0000004",
+        "input_cache_read": "0.000000004"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11591,13 +11854,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000047",
-        "completion": "0.000000061",
-        "input_cache_read": "0.00000002"
+        "prompt": "0.00000005",
+        "completion": "0.00000018",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -29724,9 +29987,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000017",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000153"
+        "prompt": "0.000000052",
+        "completion": "0.000000076",
+        "input_cache_read": "0.000000047"
       },
       "top_provider": {
         "context_length": 262144,

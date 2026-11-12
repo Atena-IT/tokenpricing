@@ -1,9 +1,94 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-12T12:22:46.677227+00:00",
+  "fetched_at": "2026-11-12T18:18:30.429560+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 468,
+  "model_count": 469,
   "data": [
+    {
+      "id": "google/gemini-4-hydrogen",
+      "canonical_slug": "google/gemini-4-hydrogen-20261112",
+      "hugging_face_id": null,
+      "name": "Google: Gemini 4 Hydrogen",
+      "created": 1794506460,
+      "description": "Gemini 4 Hydrogen is the high-efficiency workhorse model of the Gemini 4 family from Google, built for high-throughput agentic workflows, coding and multi-model routing at lower cost and latency than...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text",
+        "input_modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.0000075",
+        "image": "0.0000015",
+        "audio": "0.0000015",
+        "input_audio_cache": "0.000000075",
+        "web_search": "0.014",
+        "internal_reasoning": "0.0000075",
+        "input_cache_read": "0.000000075",
+        "input_cache_write": "0.0000000833333333333333"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/google/gemini-4-hydrogen-20261112/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      }
+    },
     {
       "id": "baidu/ernie-5.5-flash-preview:free",
       "canonical_slug": "baidu/ernie-5.5-flash-preview-20261110",
@@ -1989,8 +2074,8 @@
       },
       "pricing": {
         "prompt": "0.0000002375",
-        "completion": "0.0000084085",
-        "input_cache_read": "0.0000002"
+        "completion": "0.0000087856",
+        "input_cache_read": "0.00000019"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -2424,9 +2509,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -2759,32 +2844,26 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000011",
-        "completion": "0.0000002",
-        "input_cache_read": "0.000000002"
+        "prompt": "0.00000005",
+        "completion": "0.00000015",
+        "input_cache_read": "0.000000004"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 384000,
         "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
-        "repetition_penalty",
         "seed",
         "stop",
-        "structured_outputs",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_k",
         "top_p"
       ],
@@ -9513,9 +9592,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000022",
-        "completion": "0.0000004",
-        "input_cache_read": "0.000000004"
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11471,9 +11550,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -12576,13 +12655,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000322",
-        "completion": "0.000000989",
-        "input_cache_read": "0.000000109"
+        "prompt": "0.00000045",
+        "completion": "0.000002",
+        "input_cache_read": "0.0000001"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12590,7 +12669,6 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -12605,7 +12683,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -19335,9 +19412,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -26540,9 +26617,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000892272",
+        "completion": "0.000001784544",
+        "input_cache_read": "0.000000074356"
       },
       "top_provider": {
         "context_length": 1024000,
@@ -28005,9 +28082,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000008",
-        "completion": "0.0000001",
-        "input_cache_read": "0.000000046"
+        "prompt": "0.00000009",
+        "completion": "0.00000028",
+        "input_cache_read": "0.000000049"
       },
       "top_provider": {
         "context_length": 256000,
@@ -30001,9 +30078,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000061",
-        "completion": "0.00000009",
-        "input_cache_read": "0.000000055"
+        "prompt": "0.00000017",
+        "completion": "0.00000025",
+        "input_cache_read": "0.000000153"
       },
       "top_provider": {
         "context_length": 262144,
@@ -33596,13 +33673,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000532",
-        "completion": "0.000003325",
-        "input_cache_read": "0.000000209"
+        "prompt": "0.0000005",
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000015"
       },
       "top_provider": {
-        "context_length": 256000,
-        "max_completion_tokens": 65536,
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -33637,7 +33714,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": "2026-11-18",
+      "expiration_date": null,
       "links": {
         "details": "/api/v1/models/moonshotai/kimi-k2.5-0127/endpoints"
       },

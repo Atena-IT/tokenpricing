@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-11-13T06:24:01.460887+00:00",
+  "fetched_at": "2026-11-13T12:21:54.828592+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 5979,
+  "model_count": 5980,
   "data": {
     "azure/gpt-realtime-2.1-2026-07-07": {
       "cache_creation_input_audio_token_cost": 4e-07,
@@ -22740,6 +22740,9 @@
       "output_cost_per_token_priority": 6.75003e-06,
       "cache_read_input_token_cost_priority": 1.3503e-07,
       "cache_creation_input_token_cost_priority": 1.35002e-06,
+      "deprecation_date": "2026-11-19",
+      "deprecation_source": "https://docs.databricks.com/aws/en/machine-learning/retired-models-policy",
+      "successor_model": "databricks/databricks-gemini-3-8-flash",
       "supports_audio_input": true,
       "supports_video_input": true
     },
@@ -36627,6 +36630,7 @@
       "mode": "chat",
       "output_cost_per_audio_token": 2e-05,
       "output_cost_per_token": 6e-07,
+      "successor_model": "gpt-audio-1.5",
       "supports_audio_input": true,
       "supports_audio_output": true,
       "supports_function_calling": true,
@@ -36647,6 +36651,7 @@
       "mode": "realtime",
       "output_cost_per_audio_token": 2e-05,
       "output_cost_per_token": 2.4e-06,
+      "successor_model": "gpt-realtime-2.1-mini",
       "supports_audio_input": true,
       "supports_audio_output": true,
       "supports_function_calling": true,
@@ -54835,6 +54840,20 @@
       "supports_video_input": true,
       "supports_vision": true,
       "supports_web_search": true,
+      "web_search_billing_unit": "per_query"
+    },
+    "vertex_ai/deep-research-preview-04-2026": {
+      "cache_read_input_token_cost": 2e-07,
+      "input_cost_per_token": 2e-06,
+      "litellm_provider": "vertex_ai",
+      "mode": "chat",
+      "output_cost_per_token": 1.2e-05,
+      "search_context_cost_per_query": {
+        "search_context_size_low": 0.014,
+        "search_context_size_medium": 0.014,
+        "search_context_size_high": 0.014
+      },
+      "source": "https://cloud.google.com/model-garden/pricing",
       "web_search_billing_unit": "per_query"
     },
     "vertex_ai/deep-research-pro-preview-12-2025": {

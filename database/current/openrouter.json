@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-13T12:21:54.780489+00:00",
+  "fetched_at": "2026-11-13T18:17:04.475363+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 472,
+  "model_count": 470,
   "data": [
     {
       "id": "google/gemini-4-hydrogen",
@@ -2832,9 +2832,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -8932,6 +8932,7 @@
         "reasoning",
         "reasoning_effort",
         "response_format",
+        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
@@ -11815,9 +11816,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -14429,165 +14430,6 @@
           "low"
         ],
         "default_effort": "high"
-      }
-    },
-    {
-      "id": "liquid/lfm-2.5-2.6b",
-      "canonical_slug": "liquid/lfm-2.5-2.6b-20260811",
-      "hugging_face_id": "LiquidAI/LFM2.5-2.6B",
-      "name": "LiquidAI: LFM2.5-2.6B",
-      "created": 1786470519,
-      "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000035",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000004"
-      },
-      "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 8192,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logprobs",
-        "max_completion_tokens",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_logprobs",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.1,
-        "top_k": 50,
-        "repetition_penalty": 1.1
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-13",
-      "links": {
-        "details": "/api/v1/models/liquid/lfm-2.5-2.6b-20260811/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [],
-        "artificial_analysis": {
-          "intelligence_index": null,
-          "coding_index": 7.7,
-          "agentic_index": null
-        }
-      },
-      "reasoning": {
-        "mandatory": true
-      }
-    },
-    {
-      "id": "liquid/lfm-2.5-2.6b:free",
-      "canonical_slug": "liquid/lfm-2.5-2.6b-20260811",
-      "hugging_face_id": "LiquidAI/LFM2.5-2.6B",
-      "name": "LiquidAI: LFM2.5-2.6B (free)",
-      "created": 1786470519,
-      "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
-      "context_length": 65536,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 65536,
-        "max_completion_tokens": 8192,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logprobs",
-        "max_completion_tokens",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_logprobs",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.1,
-        "top_k": 50,
-        "repetition_penalty": 1.1
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-13",
-      "links": {
-        "details": "/api/v1/models/liquid/lfm-2.5-2.6b-20260811/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [],
-        "artificial_analysis": {
-          "intelligence_index": null,
-          "coding_index": 7.7,
-          "agentic_index": null
-        }
-      },
-      "reasoning": {
-        "mandatory": true
       }
     },
     {
@@ -19679,9 +19521,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -30354,9 +30196,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000023",
-        "completion": "0.000000034",
-        "input_cache_read": "0.000000021"
+        "prompt": "0.000000132",
+        "completion": "0.000000195",
+        "input_cache_read": "0.000000119"
       },
       "top_provider": {
         "context_length": 262144,

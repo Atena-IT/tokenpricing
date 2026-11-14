@@ -1,61 +1,29 @@
 {
-  "generated_at": "2026-11-14T06:21:42.947158+00:00",
+  "generated_at": "2026-11-14T12:18:55.526363+00:00",
   "summary": {
     "model_additions": 0,
     "model_removals": 0,
-    "pricing_changes": 4,
-    "cache_price_changes": 4
+    "pricing_changes": 3,
+    "cache_price_changes": 3
   },
   "changes": [
-    {
-      "type": "pricing_changed",
-      "model_id": "minimax/minimax-m3.1-flash",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.075,
-        "output_per_million": 0.3,
-        "cache_read_per_million": 0.0075,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.6,
-        "cache_read_per_million": 0.015,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "minimax/minimax-m3.1-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.0075,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.015,
-        "cache_creation_per_million": null
-      }
-    },
     {
       "type": "pricing_changed",
       "model_id": "openai/gpt-oss-20b",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.03,
-        "output_per_million": 0.13,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.018,
         "output_per_million": 0.09,
         "cache_read_per_million": 0.009,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.03,
+        "output_per_million": 0.13,
+        "cache_read_per_million": 0.03,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -63,11 +31,11 @@
       "model_id": "openai/gpt-oss-20b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.03,
+        "cache_read_per_million": 0.009,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.009,
+        "cache_read_per_million": 0.03,
         "cache_creation_per_million": null
       }
     },
@@ -76,18 +44,18 @@
       "model_id": "qwen/qwen3.5-9b",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.164,
-        "output_per_million": 0.24,
-        "cache_read_per_million": 0.147,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.069,
         "output_per_million": 0.102,
         "cache_read_per_million": 0.063,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.17,
+        "output_per_million": 0.25,
+        "cache_read_per_million": 0.153,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -95,11 +63,11 @@
       "model_id": "qwen/qwen3.5-9b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.147,
+        "cache_read_per_million": 0.063,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.063,
+        "cache_read_per_million": 0.153,
         "cache_creation_per_million": null
       }
     },
@@ -108,16 +76,16 @@
       "model_id": "z-ai/glm-5.2:batch",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.322,
-        "output_per_million": 0.989,
-        "cache_read_per_million": 0.109,
+        "input_per_million": 0.347,
+        "output_per_million": 1.068,
+        "cache_read_per_million": 0.117,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.347,
-        "output_per_million": 1.068,
-        "cache_read_per_million": 0.117,
+        "input_per_million": 0.322,
+        "output_per_million": 0.989,
+        "cache_read_per_million": 0.109,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -127,11 +95,11 @@
       "model_id": "z-ai/glm-5.2:batch",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.109,
+        "cache_read_per_million": 0.117,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.117,
+        "cache_read_per_million": 0.109,
         "cache_creation_per_million": null
       }
     }

@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-11-14T18:16:28.712940+00:00",
+  "fetched_at": "2026-11-15T00:39:12.986203+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 5992,
+  "model_count": 5994,
   "data": {
     "azure/gpt-realtime-2.1-2026-07-07": {
       "cache_creation_input_audio_token_cost": 4e-07,
@@ -103471,6 +103471,36 @@
       "supports_parallel_function_calling": true,
       "supports_reasoning": true,
       "supports_vision": true
+    },
+    "fal_ai/bytedance/seedream/v5/pro/us/edit": {
+      "litellm_provider": "fal_ai",
+      "metadata": {
+        "comment": "per output image by total pixel area at the default image_size auto_2K with one input image; outputs up to and including 1536x1536 pixels are $0.0675 and outputs above that up to 2048x2048 are $0.135; the first input image is free and each additional input image adds $0.0045 per output, which is not modeled; fal calls this pricing tentative"
+      },
+      "mode": "image_generation",
+      "output_cost_per_image": 0.135,
+      "output_cost_per_image_1K": 0.0675,
+      "output_cost_per_image_2K": 0.135,
+      "source": "https://fal.ai/models/bytedance/seedream/v5/pro/us/edit",
+      "supported_endpoints": [
+        "/v1/images/edits",
+        "/v1/images/generations"
+      ],
+      "supports_vision": true
+    },
+    "fal_ai/bytedance/seedream/v5/pro/us/text-to-image": {
+      "litellm_provider": "fal_ai",
+      "metadata": {
+        "comment": "per output image by total pixel area at the default image_size auto_2K; outputs up to and including 1536x1536 pixels are $0.0675 and outputs above that up to 2048x2048 are $0.135, so 1.5K has no catalog field"
+      },
+      "mode": "image_generation",
+      "output_cost_per_image": 0.135,
+      "output_cost_per_image_1K": 0.0675,
+      "output_cost_per_image_2K": 0.135,
+      "source": "https://fal.ai/models/bytedance/seedream/v5/pro/us/text-to-image",
+      "supported_endpoints": [
+        "/v1/images/generations"
+      ]
     }
   }
 }

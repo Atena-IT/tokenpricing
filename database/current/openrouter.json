@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-15T12:19:14.689648+00:00",
+  "fetched_at": "2026-11-15T18:16:56.093186+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 470,
+  "model_count": 467,
   "data": [
     {
       "id": "inclusionai/ling-3.2-flash:free",
@@ -2582,8 +2582,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000002403",
-        "completion": "0.0000084023",
+        "prompt": "0.000002",
+        "completion": "0.00001",
         "input_cache_read": "0.0000002"
       },
       "top_provider": {
@@ -2784,9 +2784,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000033",
-        "completion": "0.00000495",
-        "input_cache_read": "0.000000105"
+        "prompt": "0.0000007",
+        "completion": "0.000006",
+        "input_cache_read": "0.0000001"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -2797,18 +2797,14 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
-        "repetition_penalty",
         "seed",
         "stop",
         "temperature",
-        "top_k",
-        "top_p"
+        "top_k"
       ],
       "default_parameters": {
         "top_p": 0.95
@@ -3036,9 +3032,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -3290,9 +3286,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000023",
-        "completion": "0.0000002",
-        "input_cache_read": "0.000000002"
+        "prompt": "0.000000029",
+        "completion": "0.000000253",
+        "input_cache_read": "0.000000003"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11995,7 +11991,7 @@
       },
       "pricing": {
         "prompt": "0.00000006",
-        "completion": "0.00000025",
+        "completion": "0.00000015",
         "input_cache_read": "0.000000015"
       },
       "top_provider": {
@@ -12081,9 +12077,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -13186,13 +13182,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000386",
-        "completion": "0.000001187",
-        "input_cache_read": "0.00000013"
+        "prompt": "0.00000045",
+        "completion": "0.000002",
+        "input_cache_read": "0.0000001"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -19802,9 +19798,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -22897,7 +22893,7 @@
       "top_provider": {
         "context_length": 1000000,
         "max_completion_tokens": 128000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -30253,9 +30249,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000019",
-        "completion": "0.000000027",
-        "input_cache_read": "0.000000017"
+        "prompt": "0.000000032",
+        "completion": "0.000000046",
+        "input_cache_read": "0.000000028"
       },
       "top_provider": {
         "context_length": 262144,
@@ -33761,70 +33757,6 @@
           "coding_index": 36.2,
           "agentic_index": 0.9
         }
-      }
-    },
-    {
-      "id": "stepfun/step-3.5-flash",
-      "canonical_slug": "stepfun/step-3.5-flash",
-      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
-      "name": "StepFun: Step 3.5 Flash",
-      "created": 1769728337,
-      "description": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token....",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000003"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 65536,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-15",
-      "links": {
-        "details": "/api/v1/models/stepfun/step-3.5-flash/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": true
       }
     },
     {
@@ -38391,73 +38323,6 @@
       }
     },
     {
-      "id": "qwen/qwen3-vl-30b-a3b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-30b-a3b-thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-      "name": "Qwen: Qwen3 VL 30B A3B Thinking",
-      "created": 1759794479,
-      "description": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels...",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Qwen3",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000029",
-        "completion": "0.000001"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 235929,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "response_format",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.8,
-        "top_p": 0.95,
-        "top_k": 20,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": 1
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": "2025-03-31",
-      "expiration_date": "2026-11-15",
-      "links": {
-        "details": "/api/v1/models/qwen/qwen3-vl-30b-a3b-thinking/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": true
-      }
-    },
-    {
       "id": "qwen/qwen3-vl-30b-a3b-instruct",
       "canonical_slug": "qwen/qwen3-vl-30b-a3b-instruct",
       "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Instruct",
@@ -41825,11 +41690,8 @@
       },
       "per_request_limits": null,
       "supported_parameters": [
-        "frequency_penalty",
         "max_tokens",
-        "response_format",
         "stop",
-        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
@@ -42775,63 +42637,6 @@
         "/api/v1/messages",
         "/api/v1/responses"
       ]
-    },
-    {
-      "id": "tencent/hunyuan-a13b-instruct",
-      "canonical_slug": "tencent/hunyuan-a13b-instruct",
-      "hugging_face_id": "tencent/Hunyuan-A13B-Instruct",
-      "name": "Tencent: Hunyuan A13B Instruct",
-      "created": 1751987664,
-      "description": "Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model developed by Tencent, with a total parameter count of 80B and support for reasoning via Chain-of-Thought. It offers competitive benchmark...",
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000057"
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 117964,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "response_format",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2025-03-31",
-      "expiration_date": "2026-11-15",
-      "links": {
-        "details": "/api/v1/models/tencent/hunyuan-a13b-instruct/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": false
-      }
     },
     {
       "id": "morph/morph-v3-large",

@@ -1,9 +1,70 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-16T12:29:48.463745+00:00",
+  "fetched_at": "2026-11-16T18:18:51.509903+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 468,
+  "model_count": 469,
   "data": [
+    {
+      "id": "tencent/hy4-flash",
+      "canonical_slug": "tencent/hy4-flash-20261116",
+      "hugging_face_id": null,
+      "name": "Tencent: Hy4 flash",
+      "created": 1794838706,
+      "description": "Hy4 flash is a cost-efficient variant of [Hy4](https://openrouter.ai/tencent/hy4) from Tencent, served with roughly a quarter of the flagship's parameter count for lower latency and cost. It targets code assistance, agent...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000004375",
+        "completion": "0.000000175625",
+        "input_cache_read": "0.000000001875"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/tencent/hy4-flash-20261116/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true
+      }
+    },
     {
       "id": "qwen/qwen4-max",
       "canonical_slug": "qwen/qwen4-max-20261115",
@@ -2889,9 +2950,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000007",
-        "completion": "0.000006",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.00000036",
+        "completion": "0.000005391",
+        "input_cache_read": "0.000000115"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -2902,14 +2963,18 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "max_tokens",
+        "min_p",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
+        "repetition_penalty",
         "seed",
         "stop",
         "temperature",
-        "top_k"
+        "top_k",
+        "top_p"
       ],
       "default_parameters": {
         "top_p": 0.95
@@ -3137,9 +3202,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -3473,7 +3538,7 @@
       },
       "pricing": {
         "prompt": "0.000000035",
-        "completion": "0.000000312",
+        "completion": "0.000000311",
         "input_cache_read": "0.000000003"
       },
       "top_provider": {
@@ -11853,7 +11918,7 @@
       "top_provider": {
         "context_length": 1000000,
         "max_completion_tokens": 128000,
-        "is_moderated": true
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -12298,9 +12363,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -20021,9 +20086,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -30493,9 +30558,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000017",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000153"
+        "prompt": "0.000000169",
+        "completion": "0.000000248",
+        "input_cache_read": "0.000000152"
       },
       "top_provider": {
         "context_length": 262144,

@@ -1,156 +1,20 @@
 {
-  "generated_at": "2026-11-18T00:36:59.005687+00:00",
+  "generated_at": "2026-11-18T06:24:47.891284+00:00",
   "summary": {
-    "model_additions": 44,
+    "model_additions": 86,
     "model_removals": 0,
-    "pricing_changes": 19,
-    "cache_price_changes": 18
+    "pricing_changes": 5,
+    "cache_price_changes": 5
   },
   "changes": [
     {
       "type": "model_added",
-      "model_id": "azure/apac/gpt-6.2-astra",
+      "model_id": "github_copilot/gpt-6.2-astra",
       "model_type": "text",
       "after": {
-        "provider": "azure",
-        "model_id": "azure/apac/gpt-6.2-astra",
-        "display_name": "azure",
-        "pricing": {
-          "input_per_million": 9.6,
-          "output_per_million": 48.0,
-          "cache_read_per_million": 0.48,
-          "cache_creation_per_million": 12.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 9.6,
-            "price_output": 48.0,
-            "price_cache_read": 0.48,
-            "price_cache_creation": 12.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure/apac/gpt-6.2-sol",
-      "model_type": "text",
-      "after": {
-        "provider": "azure",
-        "model_id": "azure/apac/gpt-6.2-sol",
-        "display_name": "azure",
-        "pricing": {
-          "input_per_million": 2.4,
-          "output_per_million": 12.0,
-          "cache_read_per_million": 0.12,
-          "cache_creation_per_million": 3.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.4,
-            "price_output": 12.0,
-            "price_cache_read": 0.12,
-            "price_cache_creation": 3.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure/eu/gpt-6.2-astra",
-      "model_type": "text",
-      "after": {
-        "provider": "azure",
-        "model_id": "azure/eu/gpt-6.2-astra",
-        "display_name": "azure",
-        "pricing": {
-          "input_per_million": 9.6,
-          "output_per_million": 48.0,
-          "cache_read_per_million": 0.48,
-          "cache_creation_per_million": 12.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 9.6,
-            "price_output": 48.0,
-            "price_cache_read": 0.48,
-            "price_cache_creation": 12.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure/eu/gpt-6.2-sol",
-      "model_type": "text",
-      "after": {
-        "provider": "azure",
-        "model_id": "azure/eu/gpt-6.2-sol",
-        "display_name": "azure",
-        "pricing": {
-          "input_per_million": 2.4,
-          "output_per_million": 12.0,
-          "cache_read_per_million": 0.12,
-          "cache_creation_per_million": 3.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.4,
-            "price_output": 12.0,
-            "price_cache_read": 0.12,
-            "price_cache_creation": 3.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure/gpt-6.2-astra",
-      "model_type": "text",
-      "after": {
-        "provider": "azure",
-        "model_id": "azure/gpt-6.2-astra",
-        "display_name": "azure",
+        "provider": "github_copilot",
+        "model_id": "github_copilot/gpt-6.2-astra",
+        "display_name": "github_copilot",
         "pricing": {
           "input_per_million": 8.0,
           "output_per_million": 40.0,
@@ -171,7 +35,7 @@
             "price_output": 40.0,
             "price_cache_read": 0.4,
             "price_cache_creation": 10.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
+            "last_updated": "2026-11-18T06:24:47.625531Z"
           }
         },
         "affiliate_links": {}
@@ -179,12 +43,12 @@
     },
     {
       "type": "model_added",
-      "model_id": "azure/gpt-6.2-sol",
+      "model_id": "github_copilot/gpt-6.2-sol",
       "model_type": "text",
       "after": {
-        "provider": "azure",
-        "model_id": "azure/gpt-6.2-sol",
-        "display_name": "azure",
+        "provider": "github_copilot",
+        "model_id": "github_copilot/gpt-6.2-sol",
+        "display_name": "github_copilot",
         "pricing": {
           "input_per_million": 2.0,
           "output_per_million": 10.0,
@@ -205,992 +69,10 @@
             "price_output": 10.0,
             "price_cache_read": 0.1,
             "price_cache_creation": 2.5,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
+            "last_updated": "2026-11-18T06:24:47.625531Z"
           }
         },
         "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure/us/gpt-6.2-astra",
-      "model_type": "text",
-      "after": {
-        "provider": "azure",
-        "model_id": "azure/us/gpt-6.2-astra",
-        "display_name": "azure",
-        "pricing": {
-          "input_per_million": 8.8,
-          "output_per_million": 44.0,
-          "cache_read_per_million": 0.44,
-          "cache_creation_per_million": 11.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.8,
-            "price_output": 44.0,
-            "price_cache_read": 0.44,
-            "price_cache_creation": 11.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure/us/gpt-6.2-sol",
-      "model_type": "text",
-      "after": {
-        "provider": "azure",
-        "model_id": "azure/us/gpt-6.2-sol",
-        "display_name": "azure",
-        "pricing": {
-          "input_per_million": 2.2,
-          "output_per_million": 11.0,
-          "cache_read_per_million": 0.11,
-          "cache_creation_per_million": 2.75,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.2,
-            "price_output": 11.0,
-            "price_cache_read": 0.11,
-            "price_cache_creation": 2.75,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "azure_ai/Microsoft-Decision-1.1",
-      "model_type": "text",
-      "after": {
-        "provider": "azure_ai",
-        "model_id": "azure_ai/Microsoft-Decision-1.1",
-        "display_name": "azure_ai",
-        "pricing": {
-          "input_per_million": 0.042,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 32768,
-        "max_output_tokens": 0,
-        "model_type": "text",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.042,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/mantle/anthropic.claude-haiku-5-5",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/mantle/anthropic.claude-haiku-5-5",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 0.11,
-          "output_per_million": 0.55,
-          "cache_read_per_million": 0.011,
-          "cache_creation_per_million": 0.1375,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.11,
-            "price_output": 0.55,
-            "price_cache_read": 0.011,
-            "price_cache_creation": 0.1375,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock/mantle/anthropic.claude-sonnet-5-5",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock",
-        "model_id": "bedrock/mantle/anthropic.claude-sonnet-5-5",
-        "display_name": "bedrock",
-        "pricing": {
-          "input_per_million": 2.2,
-          "output_per_million": 11.0,
-          "cache_read_per_million": 0.11,
-          "cache_creation_per_million": 2.75,
-          "currency": "USD"
-        },
-        "context_window": 1000000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "flagship",
-        "sources": {
-          "litellm": {
-            "price_input": 2.2,
-            "price_output": 11.0,
-            "price_cache_read": 0.11,
-            "price_cache_creation": 2.75,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock_mantle/openai.gpt-6.2-astra",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_mantle",
-        "model_id": "bedrock_mantle/openai.gpt-6.2-astra",
-        "display_name": "bedrock_mantle",
-        "pricing": {
-          "input_per_million": 8.8,
-          "output_per_million": 44.0,
-          "cache_read_per_million": 0.44,
-          "cache_creation_per_million": 11.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.8,
-            "price_output": 44.0,
-            "price_cache_read": 0.44,
-            "price_cache_creation": 11.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "bedrock_mantle/openai.gpt-6.2-sol",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_mantle",
-        "model_id": "bedrock_mantle/openai.gpt-6.2-sol",
-        "display_name": "bedrock_mantle",
-        "pricing": {
-          "input_per_million": 2.2,
-          "output_per_million": 11.0,
-          "cache_read_per_million": 0.11,
-          "cache_creation_per_million": 2.75,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.2,
-            "price_output": 11.0,
-            "price_cache_read": 0.11,
-            "price_cache_creation": 2.75,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "chatgpt/gpt-6.2-astra",
-      "model_type": "text",
-      "after": {
-        "provider": "chatgpt",
-        "model_id": "chatgpt/gpt-6.2-astra",
-        "display_name": "chatgpt",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "chatgpt/gpt-6.2-astra-law",
-      "model_type": "text",
-      "after": {
-        "provider": "chatgpt",
-        "model_id": "chatgpt/gpt-6.2-astra-law",
-        "display_name": "chatgpt",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "chatgpt/gpt-6.2-sol",
-      "model_type": "text",
-      "after": {
-        "provider": "chatgpt",
-        "model_id": "chatgpt/gpt-6.2-sol",
-        "display_name": "chatgpt",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "dashscope/qwen4-max",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.075,
-        "cache_creation_per_million": 1.875
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4.1-flash",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.3,
-        "output_per_million": 1.2,
-        "cache_read_per_million": 0.006,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.051,
-        "output_per_million": 0.567,
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "deepseek/deepseek-v4.1-flash",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.006,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.018,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/heygen/avatar-6/identity-to-video",
-      "model_type": "video",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/heygen/avatar-6/identity-to-video",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "video",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/heygen/avatar-6/image-to-video",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/heygen/avatar-6/image-to-video",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/heygen/avatar-6/ref-video-to-video",
-      "model_type": "video",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/heygen/avatar-6/ref-video-to-video",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "video",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/heygen/avatar-6/turbo/identity-to-video",
-      "model_type": "video",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/heygen/avatar-6/turbo/identity-to-video",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "video",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/heygen/avatar-6/turbo/image-to-video",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/heygen/avatar-6/turbo/image-to-video",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/heygen/avatar-6/turbo/ref-video-to-video",
-      "model_type": "video",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/heygen/avatar-6/turbo/ref-video-to-video",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "video",
-        "supports_vision": false,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/kling/v4/image-to-image",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/kling/v4/image-to-image",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/kling/v4/long-image",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/kling/v4/long-image",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/kling/v4/text-to-image",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/kling/v4/text-to-image",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/microsoft/mai-image-2.7/edit",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/microsoft/mai-image-2.7/edit",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/microsoft/mai-image-2.7/flash/edit",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/microsoft/mai-image-2.7/flash/edit",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/microsoft/mai-image-2.7/flash/text-to-image",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/microsoft/mai-image-2.7/flash/text-to-image",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "fal_ai/microsoft/mai-image-2.7/text-to-image",
-      "model_type": "image",
-      "after": {
-        "provider": "fal_ai",
-        "model_id": "fal_ai/microsoft/mai-image-2.7/text-to-image",
-        "display_name": "fal_ai",
-        "pricing": {
-          "input_per_million": 0.0,
-          "output_per_million": 0.0,
-          "cache_read_per_million": null,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 0,
-        "max_output_tokens": 0,
-        "model_type": "image",
-        "supports_vision": true,
-        "supports_function_calling": false,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.0,
-            "price_output": 0.0,
-            "price_cache_read": null,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "github_copilot/mai-code-2",
-      "model_type": "text",
-      "after": {
-        "provider": "github_copilot",
-        "model_id": "github_copilot/mai-code-2",
-        "display_name": "github_copilot",
-        "pricing": {
-          "input_per_million": 0.5,
-          "output_per_million": 2.5,
-          "cache_read_per_million": 0.025,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 128000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 0.5,
-            "price_output": 2.5,
-            "price_cache_read": 0.025,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "github_copilot/mai-code-2-flash",
-      "model_type": "text",
-      "after": {
-        "provider": "github_copilot",
-        "model_id": "github_copilot/mai-code-2-flash",
-        "display_name": "github_copilot",
-        "pricing": {
-          "input_per_million": 0.05,
-          "output_per_million": 0.25,
-          "cache_read_per_million": 0.005,
-          "cache_creation_per_million": null,
-          "currency": "USD"
-        },
-        "context_window": 128000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "budget",
-        "sources": {
-          "litellm": {
-            "price_input": 0.05,
-            "price_output": 0.25,
-            "price_cache_read": 0.005,
-            "price_cache_creation": null,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "global.openai.gpt-6.2-astra",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "global.openai.gpt-6.2-astra",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.4,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.4,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "global.openai.gpt-6.2-sol",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "global.openai.gpt-6.2-sol",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 2.0,
-          "output_per_million": 10.0,
-          "cache_read_per_million": 0.1,
-          "cache_creation_per_million": 2.5,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.0,
-            "price_output": 10.0,
-            "price_cache_read": 0.1,
-            "price_cache_creation": 2.5,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "google/gemma-3-27b-it",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.08,
-        "output_per_million": 0.35,
-        "cache_read_per_million": 0.04,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.08,
-        "output_per_million": 0.45,
-        "cache_read_per_million": 0.04,
-        "cache_creation_per_million": null,
-        "currency": "USD"
       }
     },
     {
@@ -1198,18 +80,18 @@
       "model_id": "google/gemma-4-26b-a4b-it",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.09,
-        "output_per_million": 0.3,
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.0765,
         "output_per_million": 0.255,
         "cache_read_per_million": 0.0425,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.3,
+        "cache_read_per_million": 0.05,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -1217,114 +99,44 @@
       "model_id": "google/gemma-4-26b-a4b-it",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.05,
+        "cache_read_per_million": 0.0425,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0425,
+        "cache_read_per_million": 0.05,
         "cache_creation_per_million": null
       }
     },
     {
-      "type": "model_added",
-      "model_id": "gpt-6.2-astra",
+      "type": "pricing_changed",
+      "model_id": "minimax/minimax-m3.1-flash",
       "model_type": "text",
+      "before": {
+        "input_per_million": 0.075,
+        "output_per_million": 0.3,
+        "cache_read_per_million": 0.0075,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
       "after": {
-        "provider": "openai",
-        "model_id": "gpt-6.2-astra",
-        "display_name": "openai",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.4,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.4,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "cache_read_per_million": 0.015,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
-      "type": "model_added",
-      "model_id": "gpt-6.2-astra-law",
+      "type": "cache_price_changed",
+      "model_id": "minimax/minimax-m3.1-flash",
       "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.0075,
+        "cache_creation_per_million": null
+      },
       "after": {
-        "provider": "openai",
-        "model_id": "gpt-6.2-astra-law",
-        "display_name": "openai",
-        "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.4,
-          "cache_creation_per_million": 10.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.4,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "gpt-6.2-sol",
-      "model_type": "text",
-      "after": {
-        "provider": "openai",
-        "model_id": "gpt-6.2-sol",
-        "display_name": "openai",
-        "pricing": {
-          "input_per_million": 2.0,
-          "output_per_million": 10.0,
-          "cache_read_per_million": 0.1,
-          "cache_creation_per_million": 2.5,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.0,
-            "price_output": 10.0,
-            "price_cache_read": 0.1,
-            "price_cache_creation": 2.5,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
+        "cache_read_per_million": 0.015,
+        "cache_creation_per_million": null
       }
     },
     {
@@ -1332,18 +144,18 @@
       "model_id": "moonshotai/kimi-k3",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.192,
-        "output_per_million": 16.0,
-        "cache_read_per_million": 0.182,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.2,
         "output_per_million": 16.0,
         "cache_read_per_million": 0.19,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.192,
+        "output_per_million": 16.0,
+        "cache_read_per_million": 0.182,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -1351,43 +163,1199 @@
       "model_id": "moonshotai/kimi-k3",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.182,
-        "cache_creation_per_million": null
-      },
-      "after": {
         "cache_read_per_million": 0.19,
         "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.182,
+        "cache_creation_per_million": null
       }
     },
     {
       "type": "model_added",
-      "model_id": "openai.gpt-6.2-astra",
+      "model_id": "nvidia_nim/01-ai/yi-large",
       "model_type": "text",
       "after": {
-        "provider": "bedrock_converse",
-        "model_id": "openai.gpt-6.2-astra",
-        "display_name": "bedrock_converse",
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/01-ai/yi-large",
+        "display_name": "nvidia_nim",
         "pricing": {
-          "input_per_million": 8.0,
-          "output_per_million": 40.0,
-          "cache_read_per_million": 0.4,
-          "cache_creation_per_million": 10.0,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/adept/fuyu-8b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/adept/fuyu-8b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/ai21labs/jamba-1.5-large-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/ai21labs/jamba-1.5-large-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/aisingapore/sea-lion-7b-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/aisingapore/sea-lion-7b-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/bigcode/starcoder2-15b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/bigcode/starcoder2-15b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/databricks/dbrx-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/databricks/dbrx-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/deepseek-ai/deepseek-coder-6.7b-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/deepseek-ai/deepseek-coder-6.7b-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/deepseek-ai/deepseek-v4.1-flash",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/deepseek-ai/deepseek-v4.1-flash",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 1048576,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/codegemma-1.1-7b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/codegemma-1.1-7b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/codegemma-7b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/codegemma-7b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/deplot",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/deplot",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/diffusiongemma-26b-a4b-it",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/diffusiongemma-26b-a4b-it",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/gemma-2b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/gemma-2b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/gemma-3-12b-it",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/gemma-3-12b-it",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/gemma-3-4b-it",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/gemma-3-4b-it",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/gemma-4-31b-it",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/gemma-4-31b-it",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/google/recurrentgemma-2b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/google/recurrentgemma-2b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/ibm/granite-3.0-3b-a800m-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/ibm/granite-3.0-3b-a800m-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/ibm/granite-3.0-8b-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/ibm/granite-3.0-8b-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/ibm/granite-34b-code-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/ibm/granite-34b-code-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/ibm/granite-8b-code-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/ibm/granite-8b-code-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/meta/codellama-70b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/meta/codellama-70b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/meta/llama-3.2-90b-vision-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/meta/llama-3.2-90b-vision-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
         "model_type": "text",
         "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/meta/llama-guard-4-12b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/meta/llama-guard-4-12b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/meta/llama2-70b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/meta/llama2-70b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/meta/muse-glimmer-30b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/meta/muse-glimmer-30b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 16384,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/microsoft/kosmos-2",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/microsoft/kosmos-2",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/microsoft/phi-3-vision-128k-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/microsoft/phi-3-vision-128k-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/microsoft/phi-3.5-moe-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/microsoft/phi-3.5-moe-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/minimaxai/minimax-m3.1-flash",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/minimaxai/minimax-m3.1-flash",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/mistralai/codestral-22b-instruct-v0.1",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/mistralai/codestral-22b-instruct-v0.1",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/mistralai/mistral-7b-instruct-v0.3",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/mistralai/mistral-7b-instruct-v0.3",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/mistralai/mistral-large",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/mistralai/mistral-large",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/mistralai/mistral-large-2-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/mistralai/mistral-large-2-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/mistralai/mistral-large-4-1t-a52b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/mistralai/mistral-large-4-1t-a52b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 262144,
+        "model_type": "text",
+        "supports_vision": false,
         "supports_function_calling": true,
         "supports_streaming": true,
         "category": "standard",
         "sources": {
           "litellm": {
-            "price_input": 8.0,
-            "price_output": 40.0,
-            "price_cache_read": 0.4,
-            "price_cache_creation": 10.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
           }
         },
         "affiliate_links": {}
@@ -1395,33 +1363,781 @@
     },
     {
       "type": "model_added",
-      "model_id": "openai.gpt-6.2-sol",
+      "model_id": "nvidia_nim/mistralai/mixtral-8x22b-v0.1",
       "model_type": "text",
       "after": {
-        "provider": "bedrock_converse",
-        "model_id": "openai.gpt-6.2-sol",
-        "display_name": "bedrock_converse",
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/mistralai/mixtral-8x22b-v0.1",
+        "display_name": "nvidia_nim",
         "pricing": {
-          "input_per_million": 2.0,
-          "output_per_million": 10.0,
-          "cache_read_per_million": 0.1,
-          "cache_creation_per_million": 2.5,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
+        "context_window": 0,
+        "max_output_tokens": 0,
         "model_type": "text",
-        "supports_vision": true,
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/moonshotai/kimi-k2.6",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/moonshotai/kimi-k2.6",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nv-mistralai/mistral-nemo-12b-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nv-mistralai/mistral-nemo-12b-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/ai-synthetic-video-detector",
+      "model_type": "video",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/ai-synthetic-video-detector",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "video",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/cosmos-reason2-8b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/cosmos-reason2-8b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 4096,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/embed-qa-4",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/embed-qa-4",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/ising-calibration-1.5-31b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/ising-calibration-1.5-31b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-3.1-nemoguard-8b-content-safety",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-3.1-nemoguard-8b-content-safety",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-3.1-nemoguard-8b-topic-control",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-3.1-nemoguard-8b-topic-control",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-3.1-nemotron-51b-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-3.1-nemotron-51b-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-3.1-nemotron-70b-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-3.1-nemotron-70b-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-3.1-nemotron-ultra-253b-v1",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-3.2-nv-embedqa-1b-v1",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-3.2-nv-embedqa-1b-v1",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama-nemotron-embed-vl-1b-v2",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama-nemotron-embed-vl-1b-v2",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/llama3-chatqa-1.5-70b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/llama3-chatqa-1.5-70b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/mistral-nemo-minitron-8b-8k-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/mistral-nemo-minitron-8b-8k-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-3-embed-1b",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3-embed-1b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-3-super-120b-a12b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3-super-120b-a12b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-3-ultra-550b-a55b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3-ultra-550b-a55b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 32768,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "flagship",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-3.5-bolt-e4b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3.5-bolt-e4b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 65536,
+        "model_type": "text",
+        "supports_vision": false,
         "supports_function_calling": true,
         "supports_streaming": true,
         "category": "standard",
         "sources": {
           "litellm": {
-            "price_input": 2.0,
-            "price_output": 10.0,
-            "price_cache_read": 0.1,
-            "price_cache_creation": 2.5,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
           }
         },
         "affiliate_links": {}
@@ -1429,33 +2145,33 @@
     },
     {
       "type": "model_added",
-      "model_id": "openai/gpt-6.2-astra-pro:batch",
+      "model_id": "nvidia_nim/nvidia/nemotron-3.5-content-safety",
       "model_type": "text",
       "after": {
-        "provider": "openai",
-        "model_id": "openai/gpt-6.2-astra-pro:batch",
-        "display_name": "OpenAI: GPT-6.2 Astra Pro (batch)",
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3.5-content-safety",
+        "display_name": "nvidia_nim",
         "pricing": {
-          "input_per_million": 4.0,
-          "output_per_million": 20.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 5.0,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 1050000,
-        "max_output_tokens": 128000,
+        "context_window": 0,
+        "max_output_tokens": 0,
         "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
+        "supports_vision": false,
+        "supports_function_calling": false,
         "supports_streaming": true,
-        "category": "flagship",
+        "category": "standard",
         "sources": {
-          "openrouter": {
-            "price_input": 4.0,
-            "price_output": 20.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 5.0,
-            "last_updated": "2026-11-18T00:36:58.579029Z"
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
           }
         },
         "affiliate_links": {}
@@ -1463,33 +2179,135 @@
     },
     {
       "type": "model_added",
-      "model_id": "openai/gpt-6.2-astra:batch",
-      "model_type": "text",
+      "model_id": "nvidia_nim/nvidia/nemotron-3.5-embed-1b",
+      "model_type": "embeddings",
       "after": {
-        "provider": "openai",
-        "model_id": "openai/gpt-6.2-astra:batch",
-        "display_name": "OpenAI: GPT-6.2 Astra (batch)",
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3.5-embed-1b",
+        "display_name": "nvidia_nim",
         "pricing": {
-          "input_per_million": 4.0,
-          "output_per_million": 20.0,
-          "cache_read_per_million": 0.2,
-          "cache_creation_per_million": 5.0,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 1050000,
-        "max_output_tokens": 128000,
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-3.5-embed-8b",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3.5-embed-8b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-3.5-lightning-30b-a3b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3.5-lightning-30b-a3b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 32768,
         "model_type": "text",
-        "supports_vision": true,
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 131072,
+        "model_type": "text",
+        "supports_vision": false,
         "supports_function_calling": true,
         "supports_streaming": true,
         "category": "standard",
         "sources": {
-          "openrouter": {
-            "price_input": 4.0,
-            "price_output": 20.0,
-            "price_cache_read": 0.2,
-            "price_cache_creation": 5.0,
-            "last_updated": "2026-11-18T00:36:58.579029Z"
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
           }
         },
         "affiliate_links": {}
@@ -1497,33 +2315,33 @@
     },
     {
       "type": "model_added",
-      "model_id": "openai/gpt-6.2-sol-pro:batch",
+      "model_id": "nvidia_nim/nvidia/nemotron-4-340b-instruct",
       "model_type": "text",
       "after": {
-        "provider": "openai",
-        "model_id": "openai/gpt-6.2-sol-pro:batch",
-        "display_name": "OpenAI: GPT-6.2 Sol Pro (batch)",
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-4-340b-instruct",
+        "display_name": "nvidia_nim",
         "pricing": {
-          "input_per_million": 1.0,
-          "output_per_million": 5.0,
-          "cache_read_per_million": 0.05,
-          "cache_creation_per_million": 1.25,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 1050000,
-        "max_output_tokens": 128000,
+        "context_window": 0,
+        "max_output_tokens": 0,
         "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
+        "supports_vision": false,
+        "supports_function_calling": false,
         "supports_streaming": true,
-        "category": "flagship",
+        "category": "standard",
         "sources": {
-          "openrouter": {
-            "price_input": 1.0,
-            "price_output": 5.0,
-            "price_cache_read": 0.05,
-            "price_cache_creation": 1.25,
-            "last_updated": "2026-11-18T00:36:58.579029Z"
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
           }
         },
         "affiliate_links": {}
@@ -1531,87 +2349,682 @@
     },
     {
       "type": "model_added",
-      "model_id": "openai/gpt-6.2-sol:batch",
+      "model_id": "nvidia_nim/nvidia/nemotron-4-340b-reward",
       "model_type": "text",
       "after": {
-        "provider": "openai",
-        "model_id": "openai/gpt-6.2-sol:batch",
-        "display_name": "OpenAI: GPT-6.2 Sol (batch)",
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-4-340b-reward",
+        "display_name": "nvidia_nim",
         "pricing": {
-          "input_per_million": 1.0,
-          "output_per_million": 5.0,
-          "cache_read_per_million": 0.05,
-          "cache_creation_per_million": 1.25,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 1050000,
-        "max_output_tokens": 128000,
+        "context_window": 0,
+        "max_output_tokens": 0,
         "model_type": "text",
-        "supports_vision": true,
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-nano-3-30b-a3b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-nano-3-30b-a3b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-parse",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-parse",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nemotron-parse-2.0",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nemotron-parse-2.0",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/neva-22b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/neva-22b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nv-embedqa-mistral-7b-v2",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nv-embedqa-mistral-7b-v2",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/nvclip",
+      "model_type": "embeddings",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/nvclip",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/riva-translate-4b-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/riva-translate-4b-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/riva-translate-4b-instruct-v2",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/riva-translate-4b-instruct-v2",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 4096,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/nvidia/vila",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/nvidia/vila",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/openai/gpt-oss-20b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/openai/gpt-oss-20b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 4096,
+        "model_type": "text",
+        "supports_vision": false,
         "supports_function_calling": true,
         "supports_streaming": true,
         "category": "standard",
         "sources": {
-          "openrouter": {
-            "price_input": 1.0,
-            "price_output": 5.0,
-            "price_cache_read": 0.05,
-            "price_cache_creation": 1.25,
-            "last_updated": "2026-11-18T00:36:58.579029Z"
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
           }
         },
         "affiliate_links": {}
       }
     },
     {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
+      "type": "model_added",
+      "model_id": "nvidia_nim/poolside/laguna-xs-2.1",
       "model_type": "text",
-      "before": {
-        "input_per_million": 0.09,
-        "output_per_million": 1.1,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
       "after": {
-        "input_per_million": 0.1,
-        "output_per_million": 1.1,
-        "cache_read_per_million": 0.07,
-        "cache_creation_per_million": null,
-        "currency": "USD"
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/poolside/laguna-xs-2.1",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 16384,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
       }
     },
     {
-      "type": "cache_price_changed",
-      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
+      "type": "model_added",
+      "model_id": "nvidia_nim/snowflake/arctic-embed-l",
+      "model_type": "embeddings",
       "after": {
-        "cache_read_per_million": 0.07,
-        "cache_creation_per_million": null
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/snowflake/arctic-embed-l",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "embeddings",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
       }
     },
     {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3.5-27b",
+      "type": "model_added",
+      "model_id": "nvidia_nim/stepfun-ai/step-5-preview",
       "model_type": "text",
-      "before": {
-        "input_per_million": 0.26,
-        "output_per_million": 2.6,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
       "after": {
-        "input_per_million": 0.3,
-        "output_per_million": 2.4,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/stepfun-ai/step-5-preview",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 1048576,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/writer/palmyra-creative-122b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/writer/palmyra-creative-122b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/writer/palmyra-fin-70b-32k",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/writer/palmyra-fin-70b-32k",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/writer/palmyra-med-70b",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/writer/palmyra-med-70b",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/writer/palmyra-med-70b-32k",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/writer/palmyra-med-70b-32k",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/z-ai/glm-5.3-flash",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/z-ai/glm-5.3-flash",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "budget",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "nvidia_nim/zyphra/zamba2-7b-instruct",
+      "model_type": "text",
+      "after": {
+        "provider": "nvidia_nim",
+        "model_id": "nvidia_nim/zyphra/zamba2-7b-instruct",
+        "display_name": "nvidia_nim",
+        "pricing": {
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
+          "cache_read_per_million": null,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 0,
+        "max_output_tokens": 0,
+        "model_type": "text",
+        "supports_vision": false,
+        "supports_function_calling": false,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 0.0,
+            "price_output": 0.0,
+            "price_cache_read": null,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-18T06:24:47.625531Z"
+          }
+        },
+        "affiliate_links": {}
       }
     },
     {
@@ -1619,18 +3032,18 @@
       "model_id": "qwen/qwen3.5-9b",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.17,
-        "output_per_million": 0.25,
-        "cache_read_per_million": 0.153,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.04,
         "output_per_million": 0.058,
         "cache_read_per_million": 0.036,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.147,
+        "output_per_million": 0.216,
+        "cache_read_per_million": 0.132,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -1638,400 +3051,12 @@
       "model_id": "qwen/qwen3.5-9b",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.153,
-        "cache_creation_per_million": null
-      },
-      "after": {
         "cache_read_per_million": 0.036,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "qwen/qwen3.8-27b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.15,
-        "output_per_million": 1.875,
-        "cache_read_per_million": 0.0375,
-        "cache_creation_per_million": null,
-        "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.06,
-        "output_per_million": 2.2,
-        "cache_read_per_million": 0.059,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "qwen/qwen3.8-27b",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.0375,
+        "cache_read_per_million": 0.132,
         "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.059,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "snowflake/claude-4-sonnet",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.3,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.3,
-        "cache_creation_per_million": 3.75
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "snowflake/claude-haiku-4-5",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.1,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.1,
-        "cache_creation_per_million": 1.25
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "snowflake/claude-sonnet-4-5",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.3,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.3,
-        "cache_creation_per_million": 3.75
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "snowflake/claude-sonnet-4-6",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.3,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.3,
-        "cache_creation_per_million": 3.75
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "snowflake/llama3.1-8b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.24,
-        "output_per_million": 0.24,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.22,
-        "output_per_million": 0.22,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "snowflake/llama3.2-1b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.1,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "snowflake/llama3.2-3b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.15,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "snowflake/mistral-7b",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.2,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "snowflake/openai-gpt-5-mini",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.3,
-        "output_per_million": 1.2,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.25,
-        "output_per_million": 2.0,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "snowflake/openai-gpt-5-mini",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "snowflake/openai-gpt-5-nano",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.6,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.06,
-        "output_per_million": 0.44,
-        "cache_read_per_million": 0.01,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "snowflake/openai-gpt-5-nano",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.01,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "tencent/hy3",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.0825,
-        "output_per_million": 0.33,
-        "cache_read_per_million": 0.020625,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.132,
-        "output_per_million": 0.528,
-        "cache_read_per_million": 0.033,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "tencent/hy3",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.020625,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.033,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "tencent/hy4-preview",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.7506,
-        "output_per_million": 2.2509,
-        "cache_read_per_million": 0.0378,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.834,
-        "output_per_million": 2.501,
-        "cache_read_per_million": 0.042,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "tencent/hy4-preview",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.0378,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.042,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "us.openai.gpt-6.2-astra",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "us.openai.gpt-6.2-astra",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 8.8,
-          "output_per_million": 44.0,
-          "cache_read_per_million": 0.44,
-          "cache_creation_per_million": 11.0,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 8.8,
-            "price_output": 44.0,
-            "price_cache_read": 0.44,
-            "price_cache_creation": 11.0,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "model_added",
-      "model_id": "us.openai.gpt-6.2-sol",
-      "model_type": "text",
-      "after": {
-        "provider": "bedrock_converse",
-        "model_id": "us.openai.gpt-6.2-sol",
-        "display_name": "bedrock_converse",
-        "pricing": {
-          "input_per_million": 2.2,
-          "output_per_million": 11.0,
-          "cache_read_per_million": 0.11,
-          "cache_creation_per_million": 2.75,
-          "currency": "USD"
-        },
-        "context_window": 922000,
-        "max_output_tokens": 128000,
-        "model_type": "text",
-        "supports_vision": true,
-        "supports_function_calling": true,
-        "supports_streaming": true,
-        "category": "standard",
-        "sources": {
-          "litellm": {
-            "price_input": 2.2,
-            "price_output": 11.0,
-            "price_cache_read": 0.11,
-            "price_cache_creation": 2.75,
-            "last_updated": "2026-11-18T00:36:58.684238Z"
-          }
-        },
-        "affiliate_links": {}
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "z-ai/glm-4.6v",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 0.055,
-        "cache_creation_per_million": null
-      },
-      "after": {
-        "cache_read_per_million": 0.05,
-        "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "z-ai/glm-5.3-flash",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.5,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
-        "input_per_million": 0.0399,
-        "output_per_million": 0.0784,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
       }
     },
     {
@@ -2039,18 +3064,18 @@
       "model_id": "~moonshotai/kimi-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.1824,
-        "output_per_million": 11.0055,
-        "cache_read_per_million": 0.18,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.19,
         "output_per_million": 10.6066,
         "cache_read_per_million": 0.19,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.1824,
+        "output_per_million": 11.0055,
+        "cache_read_per_million": 0.18,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -2058,44 +3083,12 @@
       "model_id": "~moonshotai/kimi-latest",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.18,
-        "cache_creation_per_million": null
-      },
-      "after": {
         "cache_read_per_million": 0.19,
         "cache_creation_per_million": null
-      }
-    },
-    {
-      "type": "pricing_changed",
-      "model_id": "~openai/gpt-astra-latest",
-      "model_type": "text",
-      "before": {
-        "input_per_million": 10.0,
-        "output_per_million": 50.0,
-        "cache_read_per_million": 1.0,
-        "cache_creation_per_million": 12.5,
-        "currency": "USD"
       },
       "after": {
-        "input_per_million": 8.0,
-        "output_per_million": 40.0,
-        "cache_read_per_million": 0.4,
-        "cache_creation_per_million": 10.0,
-        "currency": "USD"
-      }
-    },
-    {
-      "type": "cache_price_changed",
-      "model_id": "~openai/gpt-astra-latest",
-      "model_type": "text",
-      "before": {
-        "cache_read_per_million": 1.0,
-        "cache_creation_per_million": 12.5
-      },
-      "after": {
-        "cache_read_per_million": 0.4,
-        "cache_creation_per_million": 10.0
+        "cache_read_per_million": 0.18,
+        "cache_creation_per_million": null
       }
     }
   ]

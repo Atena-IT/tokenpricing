@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-11-18T06:24:47.625531+00:00",
+  "fetched_at": "2026-11-18T12:21:50.323465+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 6221,
+  "model_count": 6222,
   "data": {
     "azure/gpt-realtime-2.1-2026-07-07": {
       "cache_creation_input_audio_token_cost": 4e-07,
@@ -108123,6 +108123,22 @@
       "supports_parallel_function_calling": true,
       "supports_reasoning": true,
       "supports_response_schema": true,
+      "supports_vision": true
+    },
+    "together_ai/Qwen/Qwen4-Max": {
+      "cache_read_input_token_cost": 7.125e-08,
+      "input_cost_per_token": 1.425e-06,
+      "litellm_provider": "together_ai",
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 1000000,
+      "mode": "chat",
+      "output_cost_per_token": 4.275e-06,
+      "source": "https://api.together.ai/v1/models",
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     }
   }

@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-19T12:21:53.628031+00:00",
+  "fetched_at": "2026-11-19T18:19:30.091838+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 480,
+  "model_count": 479,
   "data": [
     {
       "id": "google/gemini-4-neon",
@@ -589,7 +589,7 @@
       "top_provider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -2090,98 +2090,6 @@
       "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/thinkingmachines/inkling-2-small-20261107/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [],
-        "artificial_analysis": {
-          "intelligence_index": 30.6,
-          "coding_index": null,
-          "agentic_index": null,
-          "finance_and_accounting_index": 44.3,
-          "strategy_and_ops_index": 43.5,
-          "legal_index": 41.6,
-          "healthcare_and_medical_index": 40.8,
-          "engineering_index": 38.9,
-          "economics_index": 43.4,
-          "cyber_index": null,
-          "openness_index": 38.9,
-          "multilingual_index": null,
-          "decision_index": null
-        }
-      },
-      "reasoning": {
-        "mandatory": true,
-        "default_enabled": true,
-        "supported_efforts": [
-          "max",
-          "high",
-          "medium",
-          "low",
-          "minimal"
-        ],
-        "default_effort": "high"
-      }
-    },
-    {
-      "id": "thinkingmachines/inkling-2-small:free",
-      "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
-      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
-      "name": "Thinking Machines: Inkling 2 Small (free)",
-      "created": 1794261847,
-      "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second...",
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 131072,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "reasoning_effort",
-        "seed",
-        "stop",
-        "temperature",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-19",
       "links": {
         "details": "/api/v1/models/thinkingmachines/inkling-2-small-20261107/endpoints"
       },
@@ -4432,9 +4340,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -11115,9 +11023,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000999",
+        "prompt": "0.000000117",
         "completion": "0.000008",
-        "input_cache_read": "0.0000000999"
+        "input_cache_read": "0.00000012"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11199,9 +11107,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000035",
-        "completion": "0.00000015",
-        "input_cache_read": "0.0000000015"
+        "prompt": "0.000000036",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -11681,7 +11589,7 @@
       "top_provider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": true
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -11993,13 +11901,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.000000006"
+        "prompt": "0.0000000507",
+        "completion": "0.0000002028",
+        "input_cache_read": "0.000000001014"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -14089,9 +13997,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -16265,9 +16173,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000111",
-        "completion": "0.00000444",
-        "input_cache_read": "0.000000097"
+        "prompt": "0.00000013",
+        "completion": "0.0000055",
+        "input_cache_read": "0.00000011"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -17791,13 +17699,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000018",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.00000004664",
+        "completion": "0.00000013992",
+        "input_cache_read": "0.000000001484"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 384000,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -21945,7 +21853,7 @@
       "top_provider": {
         "context_length": 500000,
         "max_completion_tokens": 450000,
-        "is_moderated": true
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -22127,9 +22035,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -23543,7 +23451,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000066",
+        "prompt": "0.00000065",
         "completion": "0.0000035",
         "input_cache_read": "0.00000016"
       },
@@ -28209,7 +28117,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001824",
+        "prompt": "0.0000001805",
         "completion": "0.0000110055",
         "input_cache_read": "0.00000018"
       },
@@ -33035,12 +32943,11 @@
       },
       "pricing": {
         "prompt": "0.00000017",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000153"
+        "completion": "0.00000025"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 40960,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -52659,7 +52566,7 @@
       },
       "top_provider": {
         "context_length": null,
-        "max_completion_tokens": 64000,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -52732,7 +52639,7 @@
       },
       "top_provider": {
         "context_length": null,
-        "max_completion_tokens": 64000,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -52850,7 +52757,7 @@
       },
       "top_provider": {
         "context_length": null,
-        "max_completion_tokens": 64000,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,

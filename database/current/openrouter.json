@@ -1,9 +1,187 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-21T00:35:26.203111+00:00",
+  "fetched_at": "2026-11-21T06:23:04.797565+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 476,
   "data": [
+    {
+      "id": "thinkingmachines/inkling-2-mini",
+      "canonical_slug": "thinkingmachines/inkling-2-mini-20261120",
+      "hugging_face_id": "thinkingmachines/Inkling-2-Mini",
+      "name": "Thinking Machines: Inkling 2 Mini",
+      "created": 1795227585,
+      "description": "Inkling 2 Mini is an open-weight multimodal looped transformer from Thinking Machines Lab, with 3.4B active parameters out of 26.4B total (MoE). Its middle layers run three times with shared...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000004",
+        "input_cache_read": "0.00000002"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_completion_tokens",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/thinkingmachines/inkling-2-mini-20261120/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 20.1,
+          "coding_index": null,
+          "agentic_index": null,
+          "finance_and_accounting_index": 35.3,
+          "strategy_and_ops_index": 35.2,
+          "legal_index": 31,
+          "healthcare_and_medical_index": null,
+          "engineering_index": 27.6,
+          "economics_index": 33,
+          "cyber_index": null,
+          "openness_index": null,
+          "multilingual_index": null,
+          "decision_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "medium",
+          "low",
+          "minimal",
+          "none"
+        ],
+        "default_effort": "high"
+      }
+    },
+    {
+      "id": "radixark/daisyrose-27b",
+      "canonical_slug": "radixark/daisyrose-27b-20261120",
+      "hugging_face_id": "RadixArk/DaisyRose-27B",
+      "name": "RadixArk: DaisyRose 27B",
+      "created": 1795222188,
+      "description": "DaisyRose 27B is an open-weight multimodal reasoning model from RadixArk, trained from [Qwen3.8 27B](https://openrouter.ai/qwen/qwen3.8-27b) using reinforcement learning only on long-horizon agent tasks, with no supervised fine-tuning or distillation. It is...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Qwen",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.000001875",
+        "input_cache_read": "0.0000000375"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": 20
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/radixark/daisyrose-27b-20261120/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "xhigh",
+          "medium",
+          "low",
+          "none"
+        ],
+        "default_effort": "xhigh"
+      }
+    },
     {
       "id": "mistralai/pixtral-large-2502",
       "canonical_slug": "mistralai/pixtral-large-2502",
@@ -4490,9 +4668,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -4602,13 +4780,94 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000036",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000003",
+        "overrides": [
+          {
+            "utc_days": [
+              "saturday",
+              "sunday"
+            ],
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 0,
+            "utc_end": 100,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 100,
+            "utc_end": 400,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 400,
+            "utc_end": 600,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 600,
+            "utc_end": 1000,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 1000,
+            "utc_end": 0,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          }
+        ]
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12019,9 +12278,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000507",
-        "completion": "0.0000002028",
-        "input_cache_read": "0.000000001014"
+        "prompt": "0.0000000498",
+        "completion": "0.0000001992",
+        "input_cache_read": "0.000000000996"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -15639,64 +15898,6 @@
           "none"
         ],
         "default_effort": "xhigh"
-      }
-    },
-    {
-      "id": "dots-studio/dots-3-note-preview:free",
-      "canonical_slug": "dots-studio/dots-3-note-preview-20260813",
-      "hugging_face_id": "dots-studio/dots3-note-prev",
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "created": 1786680361,
-      "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
-      "context_length": 512000,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 512000,
-        "max_completion_tokens": 460800,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "response_format",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-12-31",
-      "links": {
-        "details": "/api/v1/models/dots-studio/dots-3-note-preview-20260813/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": false
       }
     },
     {
@@ -19640,90 +19841,6 @@
           "minimal"
         ],
         "default_effort": "minimal"
-      }
-    },
-    {
-      "id": "meituan/longcat-2.0",
-      "canonical_slug": "meituan/longcat-2.0-20260720",
-      "hugging_face_id": "meituan-longcat/LongCat-2.0",
-      "name": "Meituan: LongCat 2.0",
-      "created": 1784554658,
-      "description": "LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, and agentic...",
-      "context_length": 1048756,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.000000006"
-      },
-      "top_provider": {
-        "context_length": 1048756,
-        "max_completion_tokens": 262144,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "seed",
-        "stop",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/meituan/longcat-2.0-20260720/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [],
-        "artificial_analysis": {
-          "intelligence_index": null,
-          "coding_index": null,
-          "agentic_index": null,
-          "finance_and_accounting_index": null,
-          "strategy_and_ops_index": null,
-          "legal_index": null,
-          "healthcare_and_medical_index": null,
-          "engineering_index": null,
-          "economics_index": null,
-          "cyber_index": null,
-          "openness_index": 38.9,
-          "multilingual_index": null,
-          "decision_index": null
-        }
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true,
-        "supports_max_tokens": true
       }
     },
     {
@@ -30490,10 +30607,8 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -33986,10 +34101,8 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -35702,15 +35815,11 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
-        "repetition_penalty",
         "response_format",
-        "seed",
         "stop",
         "structured_outputs",
         "temperature",
@@ -36538,10 +36647,8 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",

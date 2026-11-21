@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-21T12:19:53.083021+00:00",
+  "fetched_at": "2026-11-21T18:16:33.676268+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 476,
   "data": [
@@ -25,9 +25,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000004",
-        "input_cache_read": "0.00000002"
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.000000015"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -4668,9 +4668,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -14374,9 +14374,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -16411,14 +16411,15 @@
         "input_cache_read": "0.00000025"
       },
       "top_provider": {
-        "context_length": 1000000,
-        "max_completion_tokens": 131072,
+        "context_length": 262144,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "logprobs",
         "max_tokens",
         "presence_penalty",
@@ -22280,9 +22281,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -28197,8 +28198,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001805",
-        "completion": "0.0000110055",
+        "prompt": "0.0000001824",
+        "completion": "0.0000106066",
         "input_cache_read": "0.00000018"
       },
       "top_provider": {

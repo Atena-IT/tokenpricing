@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-11-22T06:23:22.039996+00:00",
+  "fetched_at": "2026-11-22T12:19:58.260684+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 7100,
   "data": {
@@ -100,6 +100,9 @@
         "realtime_ga_only": 1
       },
       "source": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real-time-transcription/4517124",
+      "supported_endpoints": [
+        "/v1/realtime/translations"
+      ],
       "supported_modalities": [
         "audio"
       ],
@@ -121,6 +124,9 @@
         "realtime_ga_only": 1
       },
       "source": "https://ai.azure.com/catalog/models/gpt-realtime-translate",
+      "supported_endpoints": [
+        "/v1/realtime/translations"
+      ],
       "supported_modalities": [
         "audio"
       ],
@@ -68588,6 +68594,9 @@
       "litellm_provider": "openai",
       "mode": "realtime",
       "source": "https://developers.openai.com/api/docs/pricing",
+      "supported_endpoints": [
+        "/v1/live/sessions"
+      ],
       "supported_modalities": [
         "text",
         "audio"
@@ -68607,6 +68616,9 @@
       "max_output_tokens": 2000,
       "mode": "realtime",
       "source": "https://developers.openai.com/api/docs/pricing",
+      "supported_endpoints": [
+        "/v1/realtime/translations"
+      ],
       "supported_modalities": [
         "audio"
       ],
@@ -78288,6 +78300,9 @@
       "litellm_provider": "azure",
       "mode": "realtime",
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
+      "supported_endpoints": [
+        "/v1/live/sessions"
+      ],
       "supported_modalities": [
         "text",
         "audio"
@@ -78362,6 +78377,9 @@
       "max_output_tokens": 4096,
       "mode": "realtime",
       "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
+      "supported_endpoints": [
+        "/v1/realtime/translations"
+      ],
       "supported_modalities": [
         "audio"
       ],
@@ -126325,6 +126343,9 @@
       "litellm_provider": "openai",
       "mode": "realtime",
       "source": "https://developers.openai.com/api/docs/pricing",
+      "supported_endpoints": [
+        "/v1/live/sessions"
+      ],
       "supported_modalities": [
         "text",
         "audio"

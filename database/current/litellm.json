@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-11-23T00:39:24.433079+00:00",
+  "fetched_at": "2026-11-23T06:33:41.099404+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 7100,
+  "model_count": 7102,
   "data": {
     "azure/gpt-realtime-2.1-2026-07-07": {
       "cache_creation_input_audio_token_cost": 4e-07,
@@ -26412,6 +26412,25 @@
         "notes": "Nimble Search API pay-as-you-go list price: $5 per 1,000 searches, up to 100 results per search. Volume plans price differently."
       }
     },
+    "gnani/prisma-v2.5": {
+      "litellm_provider": "gnani",
+      "mode": "audio_transcription",
+      "provider_specific_entry": {
+        "gnani_v25_request_fields": 1
+      },
+      "source": "https://docs.gnani.ai/api/STT/models/prisma-v2-5",
+      "supported_endpoints": [
+        "/v1/audio/transcriptions"
+      ]
+    },
+    "gnani/prisma-v3.0": {
+      "litellm_provider": "gnani",
+      "mode": "audio_transcription",
+      "source": "https://docs.gnani.ai/api/STT/models/prisma-v3",
+      "supported_endpoints": [
+        "/v1/audio/transcriptions"
+      ]
+    },
     "elevenlabs/scribe_v1": {
       "input_cost_per_second": 6.11e-05,
       "litellm_provider": "elevenlabs",
@@ -44687,6 +44706,7 @@
       "supports_system_messages": true,
       "supports_native_structured_output": true,
       "supports_response_schema": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "mistral.ministral-3-3b-instruct": {
@@ -44708,6 +44728,7 @@
       "supports_system_messages": true,
       "supports_native_structured_output": true,
       "supports_response_schema": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "mistral.ministral-3-8b-instruct": {
@@ -44729,6 +44750,7 @@
       "supports_system_messages": true,
       "supports_native_structured_output": true,
       "supports_response_schema": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "mistral.mistral-7b-instruct-v0:2": {
@@ -44784,6 +44806,7 @@
       "supports_system_messages": true,
       "supports_native_structured_output": true,
       "supports_response_schema": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "mistral.mistral-small-2402-v1:0": {
@@ -111148,6 +111171,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/ap-northeast-1/mistral.ministral-3-3b-instruct": {
@@ -111167,6 +111191,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/ap-northeast-1/mistral.ministral-3-8b-instruct": {
@@ -111186,6 +111211,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/ap-northeast-1/mistral.mistral-large-3-675b-instruct": {
@@ -111205,6 +111231,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/ap-northeast-1/moonshot.kimi-k2-thinking": {
@@ -111908,6 +111935,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/ap-south-1/mistral.ministral-3-3b-instruct": {
@@ -111927,6 +111955,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/ap-south-1/mistral.ministral-3-8b-instruct": {
@@ -111946,6 +111975,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/ap-south-1/mistral.mistral-7b-instruct-v0:2": {
@@ -111988,6 +112018,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/ap-south-1/mistral.mixtral-8x7b-instruct-v0:1": {
@@ -114357,6 +114388,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-south-1/mistral.ministral-3-3b-instruct": {
@@ -114376,6 +114408,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-south-1/mistral.ministral-3-8b-instruct": {
@@ -114395,6 +114428,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-south-1/mistral.voxtral-mini-3b-2507": {
@@ -115289,6 +115323,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-west-1/mistral.ministral-3-3b-instruct": {
@@ -115308,6 +115343,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-west-1/mistral.ministral-3-8b-instruct": {
@@ -115327,6 +115363,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-west-1/mistral.mistral-7b-instruct-v0:2": {
@@ -115946,6 +115983,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-west-2/mistral.ministral-3-3b-instruct": {
@@ -115965,6 +116003,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-west-2/mistral.ministral-3-8b-instruct": {
@@ -115984,6 +116023,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/eu-west-2/mistral.mistral-7b-instruct-v0:2": {
@@ -116864,6 +116904,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/sa-east-1/mistral.ministral-3-3b-instruct": {
@@ -116883,6 +116924,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/sa-east-1/mistral.ministral-3-8b-instruct": {
@@ -116902,6 +116944,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/sa-east-1/mistral.mistral-7b-instruct-v0:2": {
@@ -116944,6 +116987,7 @@
       "supports_native_structured_output": true,
       "supports_response_schema": true,
       "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_vision": true
     },
     "bedrock/sa-east-1/mistral.mixtral-8x7b-instruct-v0:1": {

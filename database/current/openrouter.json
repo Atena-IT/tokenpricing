@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-23T00:39:24.343626+00:00",
+  "fetched_at": "2026-11-23T06:33:40.986990+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 476,
+  "model_count": 477,
   "data": [
     {
       "id": "thinkingmachines/inkling-2-mini",
@@ -4711,9 +4711,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -4823,9 +4823,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
         "overrides": [
           {
             "utc_days": [
@@ -15958,6 +15958,64 @@
       }
     },
     {
+      "id": "dots-studio/dots-3-note-preview:free",
+      "canonical_slug": "dots-studio/dots-3-note-preview-20260813",
+      "hugging_face_id": "dots-studio/dots3-note-prev",
+      "name": "Dots Studio: Dots3-Note Preview (free)",
+      "created": 1786680361,
+      "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
+      "context_length": 512000,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 512000,
+        "max_completion_tokens": 460800,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": "2026-12-31",
+      "links": {
+        "details": "/api/v1/models/dots-studio/dots-3-note-preview-20260813/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": false
+      }
+    },
+    {
       "id": "google/gemini-3.7-flash",
       "canonical_slug": "google/gemini-3.7-flash-20260813",
       "hugging_face_id": null,
@@ -18100,13 +18158,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000044",
-        "completion": "0.000000132",
-        "input_cache_read": "0.0000000014"
+        "prompt": "0.0000000434",
+        "completion": "0.0000003",
+        "input_cache_read": "0.000000035"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -18179,7 +18237,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000443",
+        "prompt": "0.0000000434",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -24402,7 +24460,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-11-30",
       "links": {
         "details": "/api/v1/models/nvidia/nemotron-3.5-content-safety-20260604/endpoints"
       },
@@ -30657,12 +30715,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000119",
-        "completion": "0.00000374",
-        "input_cache_read": "0.0000006"
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
       },
       "top_provider": {
-        "context_length": 204800,
+        "context_length": 202752,
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
@@ -30913,9 +30971,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000675",
-        "completion": "0.000000225",
-        "input_cache_read": "0.0000000375"
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,

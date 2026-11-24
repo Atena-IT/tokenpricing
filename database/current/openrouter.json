@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-24T00:33:23.806200+00:00",
+  "fetched_at": "2026-11-24T06:25:36.624478+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 476,
+  "model_count": 474,
   "data": [
     {
       "id": "thinkingmachines/inkling-2-mini",
@@ -4260,6 +4260,7 @@
         "logprobs",
         "max_tokens",
         "min_p",
+        "parallel_tool_calls",
         "presence_penalty",
         "reasoning",
         "reasoning_effort",
@@ -4721,9 +4722,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -7524,12 +7525,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000018",
-        "input_cache_read": "0.000000012"
+        "prompt": "0.000000075",
+        "completion": "0.000000225",
+        "input_cache_read": "0.000000015"
       },
       "top_provider": {
-        "context_length": 1000000,
+        "context_length": 1048576,
         "max_completion_tokens": 262144,
         "is_moderated": false
       },
@@ -7541,7 +7542,6 @@
         "max_tokens",
         "presence_penalty",
         "reasoning",
-        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
@@ -11388,13 +11388,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000111",
-        "completion": "0.00000444",
-        "input_cache_read": "0.000000097"
+        "prompt": "0.0000000999",
+        "completion": "0.000005",
+        "input_cache_read": "0.0000000999"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -18089,13 +18089,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000434",
-        "completion": "0.0000003",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.000000044",
+        "completion": "0.000000132",
+        "input_cache_read": "0.0000000014"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -18168,7 +18168,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000434",
+        "prompt": "0.0000000443",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -19196,7 +19196,7 @@
       "name": "inclusionAI: Ling 3.0 Flash",
       "created": 1784818580,
       "description": "*Ling-3.0-flash* is a *124B-parameter Mixture-of-Experts (MoE) model*, with approximately *5.1B parameters activated per token*. The model is designed with *token efficiency and production-scale agentic inference* as key priorities, enabling developers...",
-      "context_length": 262144,
+      "context_length": 131072,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -19209,12 +19209,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000021",
-        "completion": "0.000000063",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.00000006",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000012"
       },
       "top_provider": {
-        "context_length": 262144,
+        "context_length": 131072,
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
@@ -19223,7 +19223,6 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -19236,7 +19235,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -22341,34 +22339,44 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000058",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.000000132",
+        "completion": "0.000000528",
+        "input_cache_read": "0.000000033",
+        "overrides": [
+          {
+            "utc_start": 0,
+            "utc_end": 1600,
+            "prompt": "0.000000132",
+            "completion": "0.000000528",
+            "input_cache_read": "0.000000033"
+          },
+          {
+            "utc_start": 1600,
+            "utc_end": 0,
+            "prompt": "0.0000000825",
+            "completion": "0.00000033",
+            "input_cache_read": "0.000000020625"
+          }
+        ]
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 235929,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
-        "frequency_penalty",
         "include_reasoning",
         "max_completion_tokens",
         "max_tokens",
-        "presence_penalty",
         "reasoning",
         "reasoning_effort",
-        "repetition_penalty",
         "response_format",
-        "seed",
         "stop",
         "structured_outputs",
         "temperature",
         "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
+        "tools"
       ],
       "default_parameters": {
         "temperature": 0.9,
@@ -25459,7 +25467,7 @@
       "name": "StepFun: Step 3.7 Flash",
       "created": 1779985069,
       "description": "Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts model. It pairs a 196B-parameter language backbone with a vision encoder for native image and video understanding, activating roughly 11B parameters...",
-      "context_length": 262144,
+      "context_length": 256000,
       "architecture": {
         "modality": "text+image+video->text",
         "input_modalities": [
@@ -25489,18 +25497,14 @@
         "include_reasoning",
         "logprobs",
         "max_tokens",
-        "presence_penalty",
         "reasoning",
         "reasoning_effort",
-        "repetition_penalty",
         "response_format",
-        "seed",
         "stop",
         "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
-        "top_k",
         "top_logprobs",
         "top_p"
       ],
@@ -29461,9 +29465,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000009",
-        "completion": "0.0000015",
-        "input_cache_read": "0.0000002"
+        "prompt": "0.00000128",
+        "completion": "0.00000256",
+        "input_cache_read": "0.000000108"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -30753,9 +30757,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,
@@ -40371,104 +40375,6 @@
       }
     },
     {
-      "id": "moonshotai/kimi-k2-thinking",
-      "canonical_slug": "moonshotai/kimi-k2-thinking-20251106",
-      "hugging_face_id": "moonshotai/Kimi-K2-Thinking",
-      "name": "MoonshotAI: Kimi K2 Thinking",
-      "created": 1762440622,
-      "description": "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.0000025",
-        "input_cache_read": "0.00000015"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 98304,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/moonshotai/kimi-k2-thinking-20251106/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1153,
-            "win_rate": 48.8,
-            "rank": 114
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": null,
-          "coding_index": null,
-          "agentic_index": null,
-          "finance_and_accounting_index": null,
-          "strategy_and_ops_index": null,
-          "legal_index": null,
-          "healthcare_and_medical_index": null,
-          "engineering_index": null,
-          "economics_index": null,
-          "cyber_index": null,
-          "openness_index": 88.9,
-          "multilingual_index": 0.735,
-          "decision_index": null
-        }
-      },
-      "reasoning": {
-        "mandatory": true,
-        "default_enabled": true
-      }
-    },
-    {
       "id": "amazon/nova-premier-v1",
       "canonical_slug": "amazon/nova-premier-v1",
       "hugging_face_id": "",
@@ -45958,116 +45864,6 @@
           "cyber_index": null,
           "openness_index": 44.4,
           "multilingual_index": null,
-          "decision_index": null
-        }
-      }
-    },
-    {
-      "id": "moonshotai/kimi-k2",
-      "canonical_slug": "moonshotai/kimi-k2",
-      "hugging_face_id": "moonshotai/Kimi-K2-Instruct",
-      "name": "MoonshotAI: Kimi K2 0711",
-      "created": 1752263252,
-      "description": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for...",
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000057",
-        "completion": "0.0000023"
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 98304,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "repetition_penalty",
-        "seed",
-        "stop",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": "2024-12-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/moonshotai/kimi-k2/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1075,
-            "win_rate": 51.7,
-            "rank": 125
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1018,
-            "win_rate": 49.4,
-            "rank": 120
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 946,
-            "win_rate": 46.4,
-            "rank": 134
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1014,
-            "win_rate": 55.1,
-            "rank": 122
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1090,
-            "win_rate": 53.1,
-            "rank": 128
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": null,
-          "coding_index": null,
-          "agentic_index": null,
-          "finance_and_accounting_index": null,
-          "strategy_and_ops_index": null,
-          "legal_index": null,
-          "healthcare_and_medical_index": null,
-          "engineering_index": null,
-          "economics_index": null,
-          "cyber_index": null,
-          "openness_index": 88.9,
-          "multilingual_index": 0.786,
           "decision_index": null
         }
       }

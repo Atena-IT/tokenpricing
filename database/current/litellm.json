@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-11-24T06:25:36.767662+00:00",
+  "fetched_at": "2026-11-24T12:22:56.010707+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 7158,
   "data": {
@@ -5089,6 +5089,9 @@
       "max_output_tokens": 128000,
       "mode": "chat",
       "output_cost_per_token": 3e-05,
+      "reasoning_effort_levels": [
+        "medium"
+      ],
       "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/",
       "supported_endpoints": [
         "/v1/chat/completions",

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-24T12:22:56.310813+00:00",
+  "generated_at": "2026-11-24T18:18:25.683959+00:00",
   "summary": {
-    "model_additions": 0,
-    "model_removals": 1,
-    "pricing_changes": 6,
-    "cache_price_changes": 5
+    "model_additions": 4,
+    "model_removals": 3,
+    "pricing_changes": 10,
+    "cache_price_changes": 9
   },
   "changes": [
     {
@@ -12,14 +12,14 @@
       "model_id": "deepseek/deepseek-v4-flash-0731",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.0443,
+        "input_per_million": 0.047,
         "output_per_million": 0.3,
         "cache_read_per_million": 0.035,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.047,
+        "input_per_million": 0.0456,
         "output_per_million": 0.3,
         "cache_read_per_million": 0.035,
         "cache_creation_per_million": null,
@@ -28,21 +28,53 @@
     },
     {
       "type": "pricing_changed",
-      "model_id": "deepseek/deepseek-v4.1-flash",
+      "model_id": "deepseek/deepseek-v4-flash-vision-exp",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.0498,
-        "output_per_million": 0.1992,
-        "cache_read_per_million": 0.000996,
-        "cache_creation_per_million": null,
+        "input_per_million": 0.2156,
+        "output_per_million": 0.6468,
+        "cache_read_per_million": 0.00686,
+        "cache_creation_per_million": 0.0,
         "currency": "USD"
       },
       "after": {
+        "input_per_million": 0.44,
+        "output_per_million": 1.32,
+        "cache_read_per_million": 0.028,
+        "cache_creation_per_million": 0.0,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "deepseek/deepseek-v4-flash-vision-exp",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.00686,
+        "cache_creation_per_million": 0.0
+      },
+      "after": {
+        "cache_read_per_million": 0.028,
+        "cache_creation_per_million": 0.0
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "deepseek/deepseek-v4.1-flash",
+      "model_type": "text",
+      "before": {
         "input_per_million": 0.14,
         "output_per_million": 0.42,
         "cache_read_per_million": 0.0042,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.0507,
+        "output_per_million": 0.2028,
+        "cache_read_per_million": 0.001014,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -50,43 +82,275 @@
       "model_id": "deepseek/deepseek-v4.1-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.000996,
+        "cache_read_per_million": 0.0042,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0042,
+        "cache_read_per_million": 0.001014,
         "cache_creation_per_million": null
       }
     },
     {
+      "type": "model_added",
+      "model_id": "gpt-6-astra-healthcare",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "gpt-6-astra-healthcare",
+        "display_name": "openai",
+        "pricing": {
+          "input_per_million": 10.0,
+          "output_per_million": 50.0,
+          "cache_read_per_million": 1.0,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 922000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 10.0,
+            "price_output": 50.0,
+            "price_cache_read": 1.0,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-24T18:18:25.425399Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "gpt-6.1-sol-healthcare",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "gpt-6.1-sol-healthcare",
+        "display_name": "openai",
+        "pricing": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0,
+          "cache_read_per_million": 0.1,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 922000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 2.0,
+            "price_output": 10.0,
+            "price_cache_read": 0.1,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-24T18:18:25.425399Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "gpt-6.2-astra-healthcare",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "gpt-6.2-astra-healthcare",
+        "display_name": "openai",
+        "pricing": {
+          "input_per_million": 8.0,
+          "output_per_million": 40.0,
+          "cache_read_per_million": 0.4,
+          "cache_creation_per_million": 10.0,
+          "currency": "USD"
+        },
+        "context_window": 922000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 8.0,
+            "price_output": 40.0,
+            "price_cache_read": 0.4,
+            "price_cache_creation": 10.0,
+            "last_updated": "2026-11-24T18:18:25.425399Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_added",
+      "model_id": "gpt-6.2-sol-healthcare",
+      "model_type": "text",
+      "after": {
+        "provider": "openai",
+        "model_id": "gpt-6.2-sol-healthcare",
+        "display_name": "openai",
+        "pricing": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0,
+          "cache_read_per_million": 0.1,
+          "cache_creation_per_million": 2.5,
+          "currency": "USD"
+        },
+        "context_window": 922000,
+        "max_output_tokens": 128000,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "litellm": {
+            "price_input": 2.0,
+            "price_output": 10.0,
+            "price_cache_read": 0.1,
+            "price_cache_creation": 2.5,
+            "last_updated": "2026-11-24T18:18:25.425399Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
       "type": "pricing_changed",
-      "model_id": "inclusionai/ling-3.0-flash",
+      "model_id": "minimax/minimax-m3.1-flash",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.06,
-        "output_per_million": 0.18,
-        "cache_read_per_million": 0.012,
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "cache_read_per_million": 0.015,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.021,
-        "output_per_million": 0.063,
-        "cache_read_per_million": 0.0042,
+        "input_per_million": 0.075,
+        "output_per_million": 0.3,
+        "cache_read_per_million": 0.0075,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
     },
     {
       "type": "cache_price_changed",
-      "model_id": "inclusionai/ling-3.0-flash",
+      "model_id": "minimax/minimax-m3.1-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.012,
+        "cache_read_per_million": 0.015,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.0042,
+        "cache_read_per_million": 0.0075,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.035,
+        "output_per_million": 1.5,
+        "cache_read_per_million": 0.0175,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.06,
+        "output_per_million": 1.96,
+        "cache_read_per_million": 0.059,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.0175,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.059,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "tencent/hy3",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.132,
+        "output_per_million": 0.528,
+        "cache_read_per_million": 0.033,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.0825,
+        "output_per_million": 0.33,
+        "cache_read_per_million": 0.020625,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "tencent/hy3",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.033,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.020625,
+        "cache_creation_per_million": null
+      }
+    },
+    {
+      "type": "pricing_changed",
+      "model_id": "tencent/hy4-preview",
+      "model_type": "text",
+      "before": {
+        "input_per_million": 0.834,
+        "output_per_million": 2.501,
+        "cache_read_per_million": 0.042,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.7506,
+        "output_per_million": 2.2509,
+        "cache_read_per_million": 0.0378,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "type": "cache_price_changed",
+      "model_id": "tencent/hy4-preview",
+      "model_type": "text",
+      "before": {
+        "cache_read_per_million": 0.042,
+        "cache_creation_per_million": null
+      },
+      "after": {
+        "cache_read_per_million": 0.0378,
         "cache_creation_per_million": null
       }
     },
@@ -95,18 +359,18 @@
       "model_id": "z-ai/glm-5.3-flash",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.0356,
-        "output_per_million": 0.0815,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.12,
         "output_per_million": 0.38,
         "cache_read_per_million": 0.02,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.5,
+        "cache_read_per_million": 0.03,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -114,11 +378,11 @@
       "model_id": "z-ai/glm-5.3-flash",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.03,
+        "cache_read_per_million": 0.02,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.02,
+        "cache_read_per_million": 0.03,
         "cache_creation_per_million": null
       }
     },
@@ -127,18 +391,18 @@
       "model_id": "~deepseek/deepseek-v4-flash-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.044,
-        "output_per_million": 0.132,
-        "cache_read_per_million": 0.0014,
-        "cache_creation_per_million": null,
-        "currency": "USD"
-      },
-      "after": {
         "input_per_million": 0.047,
         "output_per_million": 0.3,
         "cache_read_per_million": 0.035,
         "cache_creation_per_million": null,
         "currency": "USD"
+      },
+      "after": {
+        "input_per_million": 0.04532,
+        "output_per_million": 0.13596,
+        "cache_read_per_million": 0.001442,
+        "cache_creation_per_million": null,
+        "currency": "USD"
       }
     },
     {
@@ -146,11 +410,11 @@
       "model_id": "~deepseek/deepseek-v4-flash-latest",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.0014,
+        "cache_read_per_million": 0.035,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.035,
+        "cache_read_per_million": 0.001442,
         "cache_creation_per_million": null
       }
     },
@@ -159,16 +423,16 @@
       "model_id": "~moonshotai/kimi-latest",
       "model_type": "text",
       "before": {
-        "input_per_million": 0.1824,
-        "output_per_million": 11.0055,
-        "cache_read_per_million": 0.18,
+        "input_per_million": 0.19,
+        "output_per_million": 10.6066,
+        "cache_read_per_million": 0.19,
         "cache_creation_per_million": null,
         "currency": "USD"
       },
       "after": {
-        "input_per_million": 0.19,
-        "output_per_million": 10.6066,
-        "cache_read_per_million": 0.19,
+        "input_per_million": 0.1824,
+        "output_per_million": 11.0055,
+        "cache_read_per_million": 0.18,
         "cache_creation_per_million": null,
         "currency": "USD"
       }
@@ -178,43 +442,111 @@
       "model_id": "~moonshotai/kimi-latest",
       "model_type": "text",
       "before": {
-        "cache_read_per_million": 0.18,
+        "cache_read_per_million": 0.19,
         "cache_creation_per_million": null
       },
       "after": {
-        "cache_read_per_million": 0.19,
+        "cache_read_per_million": 0.18,
         "cache_creation_per_million": null
       }
     },
     {
       "type": "model_removed",
-      "model_id": "moonshotai/kimi-k2-0905",
+      "model_id": "dots-studio/dots-3-note-preview:free",
       "model_type": "text",
       "before": {
-        "provider": "moonshotai",
-        "model_id": "moonshotai/kimi-k2-0905",
-        "display_name": "MoonshotAI: Kimi K2 0905",
+        "provider": "dots-studio",
+        "model_id": "dots-studio/dots-3-note-preview:free",
+        "display_name": "Dots Studio: Dots3-Note Preview (free)",
         "pricing": {
-          "input_per_million": 0.6,
-          "output_per_million": 2.5,
+          "input_per_million": 0.0,
+          "output_per_million": 0.0,
           "cache_read_per_million": null,
           "cache_creation_per_million": null,
           "currency": "USD"
         },
-        "context_window": 262144,
-        "max_output_tokens": 98304,
+        "context_window": 512000,
+        "max_output_tokens": 460800,
         "model_type": "text",
-        "supports_vision": false,
+        "supports_vision": true,
         "supports_function_calling": true,
         "supports_streaming": true,
         "category": "standard",
         "sources": {
           "openrouter": {
-            "price_input": 0.6,
-            "price_output": 2.5,
+            "price_input": 0.0,
+            "price_output": 0.0,
             "price_cache_read": null,
             "price_cache_creation": null,
-            "last_updated": "2026-11-24T06:25:36.624478Z"
+            "last_updated": "2026-11-24T12:22:55.896728Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "mistralai/mistral-medium-3",
+      "model_type": "text",
+      "before": {
+        "provider": "mistralai",
+        "model_id": "mistralai/mistral-medium-3",
+        "display_name": "Mistral: Mistral Medium 3",
+        "pricing": {
+          "input_per_million": 0.44,
+          "output_per_million": 2.2,
+          "cache_read_per_million": 0.044,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 104857,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.44,
+            "price_output": 2.2,
+            "price_cache_read": 0.044,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-24T12:22:55.896728Z"
+          }
+        },
+        "affiliate_links": {}
+      }
+    },
+    {
+      "type": "model_removed",
+      "model_id": "mistralai/mistral-medium-3.1",
+      "model_type": "text",
+      "before": {
+        "provider": "mistralai",
+        "model_id": "mistralai/mistral-medium-3.1",
+        "display_name": "Mistral: Mistral Medium 3.1",
+        "pricing": {
+          "input_per_million": 0.44,
+          "output_per_million": 2.2,
+          "cache_read_per_million": 0.044,
+          "cache_creation_per_million": null,
+          "currency": "USD"
+        },
+        "context_window": 131072,
+        "max_output_tokens": 104857,
+        "model_type": "text",
+        "supports_vision": true,
+        "supports_function_calling": true,
+        "supports_streaming": true,
+        "category": "standard",
+        "sources": {
+          "openrouter": {
+            "price_input": 0.44,
+            "price_output": 2.2,
+            "price_cache_read": 0.044,
+            "price_cache_creation": null,
+            "last_updated": "2026-11-24T12:22:55.896728Z"
           }
         },
         "affiliate_links": {}

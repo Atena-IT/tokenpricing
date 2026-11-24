@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-24T12:22:55.896728+00:00",
+  "fetched_at": "2026-11-24T18:18:25.355181+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 473,
+  "model_count": 470,
   "data": [
     {
       "id": "thinkingmachines/inkling-2-mini",
@@ -38,6 +38,7 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "logprobs",
         "max_completion_tokens",
         "max_tokens",
@@ -708,7 +709,7 @@
       "top_provider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -4722,9 +4723,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -12266,9 +12267,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000042",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.0000000507",
+        "completion": "0.0000002028",
+        "input_cache_read": "0.000000001014"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -14362,9 +14363,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -14628,13 +14629,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000012",
-        "completion": "0.00000038",
-        "input_cache_read": "0.00000002"
+        "prompt": "0.00000015",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000003"
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "context_length": 1048575,
+        "max_completion_tokens": 943717,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -15024,13 +15025,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000002156",
-        "completion": "0.0000006468",
-        "input_cache_read": "0.00000000686"
+        "prompt": "0.00000044",
+        "completion": "0.00000132",
+        "input_cache_read": "0.000000028"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 262144,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -15712,13 +15713,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000035",
-        "completion": "0.0000015",
-        "input_cache_read": "0.0000000175"
+        "prompt": "0.00000006",
+        "completion": "0.00000196",
+        "input_cache_read": "0.000000059"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -15886,64 +15887,6 @@
           "none"
         ],
         "default_effort": "xhigh"
-      }
-    },
-    {
-      "id": "dots-studio/dots-3-note-preview:free",
-      "canonical_slug": "dots-studio/dots-3-note-preview-20260813",
-      "hugging_face_id": "dots-studio/dots3-note-prev",
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "created": 1786680361,
-      "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
-      "context_length": 512000,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 512000,
-        "max_completion_tokens": 460800,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "response_format",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-12-31",
-      "links": {
-        "details": "/api/v1/models/dots-studio/dots-3-note-preview-20260813/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": false
       }
     },
     {
@@ -18089,13 +18032,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000047",
-        "completion": "0.0000003",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.00000004532",
+        "completion": "0.00000013596",
+        "input_cache_read": "0.000000001442"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -18168,7 +18111,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000047",
+        "prompt": "0.0000000456",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -22342,9 +22285,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -28249,9 +28192,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000019",
-        "completion": "0.0000106066",
-        "input_cache_read": "0.00000019"
+        "prompt": "0.0000001824",
+        "completion": "0.0000110055",
+        "input_cache_read": "0.00000018"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -41329,7 +41272,6 @@
       "supported_parameters": [
         "frequency_penalty",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -41342,7 +41284,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -42869,142 +42810,6 @@
       },
       "reasoning": {
         "mandatory": false
-      }
-    },
-    {
-      "id": "mistralai/mistral-medium-3.1",
-      "canonical_slug": "mistralai/mistral-medium-3.1",
-      "hugging_face_id": "",
-      "name": "Mistral: Mistral Medium 3.1",
-      "created": 1755095639,
-      "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.0000022",
-        "input_cache_read": "0.000000044"
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 104857,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.3
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": "2025-06-30",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/mistralai/mistral-medium-3.1/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1046,
-            "win_rate": 44.6,
-            "rank": 107
-          },
-          {
-            "arena": "models",
-            "category": "asciiart",
-            "elo": 987,
-            "win_rate": 30.9,
-            "rank": 76
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1162,
-            "win_rate": 45.1,
-            "rank": 104
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1137,
-            "win_rate": 47.2,
-            "rank": 88
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 1046,
-            "win_rate": 40.8,
-            "rank": 118
-          },
-          {
-            "arena": "models",
-            "category": "svg",
-            "elo": 1033,
-            "win_rate": 38.2,
-            "rank": 96
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1083,
-            "win_rate": 43.6,
-            "rank": 108
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1173,
-            "win_rate": 46,
-            "rank": 105
-          }
-        ],
-        "artificial_analysis": {
-          "intelligence_index": null,
-          "coding_index": null,
-          "agentic_index": null,
-          "finance_and_accounting_index": null,
-          "strategy_and_ops_index": null,
-          "legal_index": null,
-          "healthcare_and_medical_index": null,
-          "engineering_index": null,
-          "economics_index": null,
-          "cyber_index": null,
-          "openness_index": 11.1,
-          "multilingual_index": null,
-          "decision_index": null
-        }
       }
     },
     {
@@ -46713,113 +46518,6 @@
       },
       "reasoning": {
         "mandatory": true
-      }
-    },
-    {
-      "id": "mistralai/mistral-medium-3",
-      "canonical_slug": "mistralai/mistral-medium-3",
-      "hugging_face_id": "",
-      "name": "Mistral: Mistral Medium 3",
-      "created": 1746627341,
-      "description": "Mistral Medium 3 is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances state-of-the-art reasoning and multimodal performance with 8× lower cost...",
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.0000022",
-        "input_cache_read": "0.000000044"
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 104857,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.3
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": "2025-03-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/mistralai/mistral-medium-3/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "benchmarks": {
-        "design_arena": [
-          {
-            "arena": "models",
-            "category": "3d",
-            "elo": 1048,
-            "win_rate": 54.7,
-            "rank": 106
-          },
-          {
-            "arena": "models",
-            "category": "codecategories",
-            "elo": 1110,
-            "win_rate": 48.1,
-            "rank": 120
-          },
-          {
-            "arena": "models",
-            "category": "dataviz",
-            "elo": 1028,
-            "win_rate": 46,
-            "rank": 119
-          },
-          {
-            "arena": "models",
-            "category": "gamedev",
-            "elo": 989,
-            "win_rate": 45.2,
-            "rank": 129
-          },
-          {
-            "arena": "models",
-            "category": "uicomponent",
-            "elo": 1008,
-            "win_rate": 49.6,
-            "rank": 124
-          },
-          {
-            "arena": "models",
-            "category": "website",
-            "elo": 1119,
-            "win_rate": 47.6,
-            "rank": 123
-          }
-        ]
       }
     },
     {

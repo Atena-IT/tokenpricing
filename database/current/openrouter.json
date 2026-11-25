@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-25T12:23:17.675646+00:00",
+  "fetched_at": "2026-11-25T18:17:59.996869+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 472,
+  "model_count": 470,
   "data": [
     {
       "id": "upstage/solar-mini-4-5",
@@ -4955,9 +4955,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -6251,58 +6251,6 @@
       }
     },
     {
-      "id": "unbiased/pareto-26.10",
-      "canonical_slug": "unbiased/pareto-26.10-20261015",
-      "hugging_face_id": null,
-      "name": "Pareto 26.10",
-      "created": 1792073620,
-      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000008",
-        "completion": "0.0000032",
-        "input_cache_read": "0.00000003"
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 131072,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-25",
-      "links": {
-        "details": "/api/v1/models/unbiased/pareto-26.10-20261015/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ]
-    },
-    {
       "id": "~unbiased/pareto-latest",
       "canonical_slug": "~unbiased/pareto-latest",
       "alias_target": {
@@ -6313,7 +6261,7 @@
       "name": "Pareto Latest",
       "created": 1791933050,
       "description": "This model always redirects to the latest model in the Pareto family.",
-      "context_length": 1048576,
+      "context_length": 262144,
       "architecture": {
         "modality": "text+image->text",
         "input_modalities": [
@@ -6327,82 +6275,22 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000008",
-        "completion": "0.0000032",
-        "input_cache_read": "0.00000003"
+        "prompt": "-1",
+        "completion": "-1"
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "context_length": null,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "default_parameters": {},
       "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": "2026-11-25",
+      "expiration_date": null,
       "links": {
         "details": "/api/v1/models/~unbiased/pareto-latest/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ]
-    },
-    {
-      "id": "unbiased/pareto-26.9",
-      "canonical_slug": "unbiased/pareto-26.9-20260917",
-      "hugging_face_id": null,
-      "name": "Pareto 26.9",
-      "created": 1791930537,
-      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.0000075",
-        "input_cache_read": "0.00000025"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 131072,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "response_format",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-25",
-      "links": {
-        "details": "/api/v1/models/unbiased/pareto-26.9-20260917/endpoints"
       },
       "endpoints": [
         "/api/v1/chat/completions",
@@ -7902,59 +7790,6 @@
         "mandatory": false,
         "default_enabled": true
       }
-    },
-    {
-      "id": "unbiased/pareto-26.10-preview",
-      "canonical_slug": "unbiased/pareto-26.10-preview-20260929",
-      "hugging_face_id": null,
-      "name": "Pareto 26.10 Preview",
-      "created": 1790863623,
-      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the...",
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000008",
-        "completion": "0.0000032",
-        "input_cache_read": "0.00000003"
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 131072,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "response_format",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": "2026-11-25",
-      "links": {
-        "details": "/api/v1/models/unbiased/pareto-26.10-preview-20260929/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ]
     },
     {
       "id": "openai/gpt-6.1-sol-pro",
@@ -12580,9 +12415,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000042",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.0000000507",
+        "completion": "0.0000002028",
+        "input_cache_read": "0.000000001014"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -14676,9 +14511,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -18347,13 +18182,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000047",
-        "completion": "0.0000003",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.00000004532",
+        "completion": "0.00000013596",
+        "input_cache_read": "0.000000001442"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -18426,7 +18261,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000047",
+        "prompt": "0.0000000456",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -22602,9 +22437,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -29728,9 +29563,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000128",
-        "completion": "0.00000256",
-        "input_cache_read": "0.000000108"
+        "prompt": "0.000000735242",
+        "completion": "0.0000015016",
+        "input_cache_read": "0.00000021"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -32963,7 +32798,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001",
+        "prompt": "0.00000017",
         "completion": "0.00000025"
       },
       "top_provider": {
@@ -45776,6 +45611,69 @@
       ]
     },
     {
+      "id": "tngtech/deepseek-r1t2-chimera",
+      "canonical_slug": "tngtech/deepseek-r1t2-chimera",
+      "hugging_face_id": "tngtech/DeepSeek-TNG-R1T2-Chimera",
+      "name": "TNG: DeepSeek R1T2 Chimera",
+      "created": 1751986985,
+      "description": "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tech. It is a 671 B-parameter mixture-of-experts text-generation model assembled from DeepSeek-AI’s R1-0528, R1, and V3-0324 checkpoints with an Assembly-of-Experts merge. The...",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "DeepSeek",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000002625",
+        "input_cache_read": "0.00000002"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 32768,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2024-07-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/tngtech/deepseek-r1t2-chimera/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": true
+      }
+    },
+    {
       "id": "morph/morph-v3-large",
       "canonical_slug": "morph/morph-v3-large",
       "hugging_face_id": "",
@@ -46156,7 +46054,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
-      "expiration_date": null,
+      "expiration_date": "2026-12-01",
       "links": {
         "details": "/api/v1/models/google/gemini-2.5-flash/endpoints"
       },
@@ -46307,7 +46205,7 @@
       },
       "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
-      "expiration_date": null,
+      "expiration_date": "2026-12-01",
       "links": {
         "details": "/api/v1/models/google/gemini-2.5-pro/endpoints"
       },

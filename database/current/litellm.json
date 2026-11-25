@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-11-25T06:26:26.417730+00:00",
+  "fetched_at": "2026-11-25T12:23:17.790072+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 7171,
+  "model_count": 7175,
   "data": {
     "azure/gpt-realtime-2.1-2026-07-07": {
       "cache_creation_input_audio_token_cost": 4e-07,
@@ -26548,7 +26548,8 @@
       },
       "source": "https://docs.gnani.ai/api/STT/models/prisma-v2-5",
       "supported_endpoints": [
-        "/v1/audio/transcriptions"
+        "/v1/audio/transcriptions",
+        "/v1/realtime"
       ]
     },
     "gnani/prisma-v3.0": {
@@ -26556,7 +26557,8 @@
       "mode": "audio_transcription",
       "source": "https://docs.gnani.ai/api/STT/models/prisma-v3",
       "supported_endpoints": [
-        "/v1/audio/transcriptions"
+        "/v1/audio/transcriptions",
+        "/v1/realtime"
       ]
     },
     "elevenlabs/scribe_v1": {
@@ -59329,15 +59331,21 @@
       ],
       "cache_read_input_token_cost": 5e-07,
       "cache_read_input_token_cost_above_200k_tokens": 1e-06,
+      "cache_read_input_token_cost_above_200k_tokens_batches": 8e-07,
+      "cache_read_input_token_cost_batches": 4e-07,
       "input_cost_per_image_token": 2e-06,
       "input_cost_per_token": 2e-06,
       "input_cost_per_token_above_200k_tokens": 4e-06,
+      "input_cost_per_token_above_200k_tokens_batches": 3.2e-06,
+      "input_cost_per_token_batches": 1.6e-06,
       "litellm_provider": "xai",
       "max_input_tokens": 500000,
       "max_output_tokens": 500000,
       "mode": "chat",
       "output_cost_per_token": 6e-06,
       "output_cost_per_token_above_200k_tokens": 1.2e-05,
+      "output_cost_per_token_above_200k_tokens_batches": 9.6e-06,
+      "output_cost_per_token_batches": 4.8e-06,
       "source": "https://api.x.ai/v1/language-models",
       "supports_function_calling": true,
       "supports_prompt_caching": true,
@@ -66113,6 +66121,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -66138,6 +66147,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -66163,6 +66173,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -75130,6 +75141,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -75155,6 +75167,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -75180,6 +75193,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -123187,6 +123201,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -123210,6 +123225,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -123233,6 +123249,7 @@
         "/v1/chat/completions",
         "/v1/responses"
       ],
+      "supports_all_json_schema_keywords": false,
       "supports_function_calling": true,
       "supports_parallel_function_calling": false,
       "supports_reasoning": true,
@@ -128895,6 +128912,96 @@
       "supports_tool_choice": true,
       "supports_vision": true,
       "supports_xhigh_reasoning_effort": true
+    },
+    "xai/grok-4.7-latest": {
+      "cache_read_input_token_cost": 5e-07,
+      "cache_read_input_token_cost_above_200k_tokens": 1e-06,
+      "cache_read_input_token_cost_above_200k_tokens_batches": 8e-07,
+      "cache_read_input_token_cost_batches": 4e-07,
+      "input_cost_per_image_token": 2e-06,
+      "input_cost_per_token": 2e-06,
+      "input_cost_per_token_above_200k_tokens": 4e-06,
+      "input_cost_per_token_above_200k_tokens_batches": 3.2e-06,
+      "input_cost_per_token_batches": 1.6e-06,
+      "litellm_provider": "xai",
+      "max_input_tokens": 500000,
+      "max_output_tokens": 500000,
+      "mode": "chat",
+      "output_cost_per_token": 6e-06,
+      "output_cost_per_token_above_200k_tokens": 1.2e-05,
+      "output_cost_per_token_above_200k_tokens_batches": 9.6e-06,
+      "output_cost_per_token_batches": 4.8e-06,
+      "source": "https://api.x.ai/v1/language-models",
+      "supported_modalities": [
+        "text",
+        "image"
+      ],
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_tool_choice": true,
+      "supports_vision": true,
+      "supports_web_search": true
+    },
+    "xai/grok-4.6-latest": {
+      "cache_read_input_token_cost": 5e-07,
+      "cache_read_input_token_cost_above_200k_tokens": 1e-06,
+      "cache_read_input_token_cost_above_200k_tokens_batches": 8e-07,
+      "cache_read_input_token_cost_batches": 4e-07,
+      "input_cost_per_image_token": 2e-06,
+      "input_cost_per_token": 2e-06,
+      "input_cost_per_token_above_200k_tokens": 4e-06,
+      "input_cost_per_token_above_200k_tokens_batches": 3.2e-06,
+      "input_cost_per_token_batches": 1.6e-06,
+      "litellm_provider": "xai",
+      "max_input_tokens": 500000,
+      "max_output_tokens": 500000,
+      "mode": "chat",
+      "output_cost_per_token": 6e-06,
+      "output_cost_per_token_above_200k_tokens": 1.2e-05,
+      "output_cost_per_token_above_200k_tokens_batches": 9.6e-06,
+      "output_cost_per_token_batches": 4.8e-06,
+      "source": "https://api.x.ai/v1/language-models",
+      "supported_modalities": [
+        "text",
+        "image"
+      ],
+      "supports_function_calling": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_tool_choice": true,
+      "supports_vision": true,
+      "supports_web_search": true
+    },
+    "fal_ai/krea/v3/text-to-image/lora": {
+      "litellm_provider": "fal_ai",
+      "metadata": {
+        "comment": "fal prices krea/v3/text-to-image/lora at $0.05 per megapixel, counting the output and reference images, and reports the charge for each request in the x-fal-billable-units response header, priced at output_cost_per_billable_unit dollars per unit. One image is 1.2 units ($0.06) up to 1024x1024 and 2.4 units ($0.12) at 1536x1536, 2048x2048 and the default image_size auto, measured 2026-11-25. The per-image price is used when the header is absent"
+      },
+      "mode": "image_generation",
+      "output_cost_per_billable_unit": 0.05,
+      "output_cost_per_image": 0.12,
+      "source": "https://fal.ai/models/krea/v3/text-to-image/lora",
+      "supported_endpoints": [
+        "/v1/images/generations"
+      ]
+    },
+    "fal_ai/krea/v3/edit/lora": {
+      "litellm_provider": "fal_ai",
+      "metadata": {
+        "comment": "fal prices krea/v3/edit/lora at $0.05 per megapixel, counting the output and reference images, and reports the charge for each request in the x-fal-billable-units response header, priced at output_cost_per_billable_unit dollars per unit. One image with one 1376x768 reference image is 4.0 units ($0.20) up to 1024x1024 and 5.2 units ($0.26) at 2048x2048 and the default image_size auto, and a second reference image adds 2.8 units ($0.14), measured 2026-11-25. The per-image price is used when the header is absent"
+      },
+      "mode": "image_generation",
+      "output_cost_per_billable_unit": 0.05,
+      "output_cost_per_image": 0.26,
+      "source": "https://fal.ai/models/krea/v3/edit/lora",
+      "supported_endpoints": [
+        "/v1/images/edits",
+        "/v1/images/generations"
+      ],
+      "supports_vision": true
     }
   }
 }

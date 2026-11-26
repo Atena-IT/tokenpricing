@@ -1,9 +1,77 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-11-26T12:22:05.305618+00:00",
+  "fetched_at": "2026-11-26T18:19:12.846591+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 474,
+  "model_count": 477,
   "data": [
+    {
+      "id": "inclusionai/lingsante-3.1-air-vl",
+      "canonical_slug": "inclusionai/lingsante-3.1-air-vl-20261126",
+      "hugging_face_id": "inclusionAI/LingSante-3.1-air-VL",
+      "name": "inclusionAI: LingSante 3.1 Air VL",
+      "created": 1795705284,
+      "description": "LingSante 3.1 Air VL is inclusionAI's medical vision-language model, a 124B total / 5.5B active MoE. It takes text and up to 16 images (scans, skin and meal photos, lab...",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000006",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000012"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 32768,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inclusionai/lingsante-3.1-air-vl-20261126/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true
+      }
+    },
     {
       "id": "upstage/solar-mini-4-5",
       "canonical_slug": "upstage/solar-mini-4-5-20261125",
@@ -3982,7 +4050,7 @@
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -4061,7 +4129,7 @@
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -4987,9 +5055,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -12454,9 +12522,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000042",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.0000000507",
+        "completion": "0.0000002028",
+        "input_cache_read": "0.000000001014"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -14550,9 +14618,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000834",
-        "completion": "0.000002501",
-        "input_cache_read": "0.000000042",
+        "prompt": "0.0000007506",
+        "completion": "0.0000022509",
+        "input_cache_read": "0.0000000378",
         "overrides": [
           {
             "utc_start": 0,
@@ -18221,13 +18289,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000047",
-        "completion": "0.0000003",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.00000004532",
+        "completion": "0.00000013596",
+        "input_cache_read": "0.000000001442"
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -18300,7 +18368,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000047",
+        "prompt": "0.0000000456",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -22476,9 +22544,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000528",
-        "input_cache_read": "0.000000033",
+        "prompt": "0.0000000825",
+        "completion": "0.00000033",
+        "input_cache_read": "0.000000020625",
         "overrides": [
           {
             "utc_start": 0,
@@ -29602,9 +29670,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000888188",
-        "completion": "0.0000015082",
-        "input_cache_read": "0.0000002"
+        "prompt": "0.000000767432",
+        "completion": "0.0000015004",
+        "input_cache_read": "0.00000021"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -41827,7 +41895,7 @@
       "name": "Z.ai: GLM 4.6",
       "created": 1759235576,
       "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
-      "context_length": 204800,
+      "context_length": 202752,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -42964,6 +43032,99 @@
           "cyber_index": null,
           "openness_index": 44.4,
           "multilingual_index": null,
+          "decision_index": null
+        }
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k2-0905",
+      "canonical_slug": "moonshotai/kimi-k2-0905",
+      "hugging_face_id": "moonshotai/Kimi-K2-Instruct-0905",
+      "name": "MoonshotAI: Kimi K2 0905",
+      "created": 1757021147,
+      "description": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000006",
+        "completion": "0.0000025"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 98304,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2024-12-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/moonshotai/kimi-k2-0905/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1139,
+            "win_rate": 48.5,
+            "rank": 115
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1147,
+            "win_rate": 48.3,
+            "rank": 117
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": null,
+          "coding_index": null,
+          "agentic_index": null,
+          "finance_and_accounting_index": null,
+          "strategy_and_ops_index": null,
+          "legal_index": null,
+          "healthcare_and_medical_index": null,
+          "engineering_index": null,
+          "economics_index": null,
+          "cyber_index": null,
+          "openness_index": 27.8,
+          "multilingual_index": 0.808,
           "decision_index": null
         }
       }
@@ -46030,6 +46191,116 @@
           "cyber_index": null,
           "openness_index": 44.4,
           "multilingual_index": null,
+          "decision_index": null
+        }
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k2",
+      "canonical_slug": "moonshotai/kimi-k2",
+      "hugging_face_id": "moonshotai/Kimi-K2-Instruct",
+      "name": "MoonshotAI: Kimi K2 0711",
+      "created": 1752263252,
+      "description": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for...",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000057",
+        "completion": "0.0000023"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 98304,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2024-12-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/moonshotai/kimi-k2/endpoints"
+      },
+      "endpoints": [
+        "/api/v1/chat/completions",
+        "/api/v1/completions",
+        "/api/v1/messages",
+        "/api/v1/responses"
+      ],
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1075,
+            "win_rate": 51.7,
+            "rank": 125
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1018,
+            "win_rate": 49.4,
+            "rank": 123
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 945,
+            "win_rate": 46.4,
+            "rank": 135
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1015,
+            "win_rate": 55.1,
+            "rank": 122
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1090,
+            "win_rate": 53.1,
+            "rank": 128
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": null,
+          "coding_index": null,
+          "agentic_index": null,
+          "finance_and_accounting_index": null,
+          "strategy_and_ops_index": null,
+          "legal_index": null,
+          "healthcare_and_medical_index": null,
+          "engineering_index": null,
+          "economics_index": null,
+          "cyber_index": null,
+          "openness_index": 88.9,
+          "multilingual_index": 0.786,
           "decision_index": null
         }
       }
